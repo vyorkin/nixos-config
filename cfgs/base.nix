@@ -24,10 +24,5 @@
     xclip
   ];
 
-  programs = {
-    home-manager = {
-      enable = true;
-      path = "./home-manager";
-    };
-  };
+  programs.home-manager.enable = true;
 }
