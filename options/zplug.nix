@@ -50,7 +50,6 @@ in
 
         ${optionalString (stringLength(cfg.theme) > 0) "zplug '${cfg.theme}', as:theme"}
         ${optionalString (cfg.selfManage) "zplug 'zplug/zplug', hook-build:'zplug --self-manage'"}
-        ${optionalString (length(cfg.plugins) > 0) concatMapStringsSep "\n" (x: "zplug " + x) cfg.plugins}
 
         if ! zplug check; then
           zplug install
