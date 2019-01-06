@@ -10,7 +10,6 @@
     ../cfgs/db.nix
     ../cfgs/network-scanners.nix
     ../cfgs/web-browsers.nix
-    ../cfgs/encryption.nix
     ../cfgs/json.nix
     ../cfgs/instant-messengers.nix
     ../cfgs/haskell.nix
