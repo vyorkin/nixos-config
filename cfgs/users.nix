@@ -4,7 +4,7 @@ let
   authorizedKeys = import ./authorized-keys.nix;
 in
   {
-    users.defaultUserShell = pkgs.zsh
+    users.defaultUserShell = pkgs.zsh;
 
     users.users.root.openssh.authorizedKeys.keys = authorizedKeys;
     users.users.vyorkin = {
