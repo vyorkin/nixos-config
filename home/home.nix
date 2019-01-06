@@ -3,6 +3,8 @@
 {
   imports = [
     ./zsh.nix
+    ./ssh.nix
+    ./git.nix
   ];
 
   programs = {
