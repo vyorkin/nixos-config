@@ -25,6 +25,7 @@ in
           default = [];
           description = "List of plugins to load.";
           example = [
+            "'lib/completion', from:oh-my-zsh"
             "'zsh-users/zsh-syntax-highlighting', defer:2"
           ];
         };

@@ -28,6 +28,6 @@ stdenv.mkDerivation rec {
     homepage        = "https://github.com/zplug/zplug";
     license         = licenses.mit;
     platforms       = platforms.all;
-    maintainers     = with maintainers; [ rummik vyorkin ];
+    maintainers     = with maintainers; [ rummik ];
   };
 }
