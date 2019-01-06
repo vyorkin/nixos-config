@@ -21,7 +21,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "silence";
-  networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Moscow";
 }

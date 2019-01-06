@@ -5,6 +5,7 @@
     ../options/default.nix
     ../cfgs/users.nix
     ../cfgs/base.nix
+    ../cfgs/networkmanager.nix
     ../cfgs/scm.nix
     ../cfgs/compression.nix
     ../cfgs/grep.nix
