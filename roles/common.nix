@@ -3,6 +3,7 @@
 {
   imports = [
     ../options/default.nix
+    ../cfgs/users.nix
     ../cfgs/base.nix
     ../cfgs/scm.nix
     ../cfgs/git.nix

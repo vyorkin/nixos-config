@@ -12,4 +12,15 @@
       ];
     };
   };
+
+
+  home.file = {
+    ".zshrc" = {
+      source = ./dotfiles/zsh/zshrc;
+    };
+
+    ".zsh" = {
+      source = ./dotfiles/zsh/zsh;
+    };
+  };
 }

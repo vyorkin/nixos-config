@@ -4,18 +4,18 @@
   imports = [
     <nixos-hardware/lenovo/thinkpad/x1/6th-gen>
     ../hardware-configuration.nix
-    ../presets/common.nix
-    ../presets/x11.nix
-    ../presets/workstation.nix
-    ../cfg/db.nix
-    ../cfg/network-scanners.nix
-    ../cfg/web-browsers.nix
-    ../cfg/encryption.nix
-    ../cfg/json.nix
-    ../cfg/instant-messengers.nix
-    ../cfg/haskell.nix
-    ../cfg/rust.nix
-    ../cfg/ruby.nix
+    ../roles/common.nix
+    ../roles/x11.nix
+    ../roles/workstation.nix
+    ../cfgs/db.nix
+    ../cfgs/network-scanners.nix
+    ../cfgs/web-browsers.nix
+    ../cfgs/encryption.nix
+    ../cfgs/json.nix
+    ../cfgs/instant-messengers.nix
+    ../cfgs/haskell.nix
+    ../cfgs/rust.nix
+    ../cfgs/ruby.nix
   ];
 
   boot.loader.systemd-boot.enable = true;

@@ -8,7 +8,7 @@
     userEmail = "vasiliy.yorkin@gmail.com";
   };
 
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     git-crypt
     git-lfs
 

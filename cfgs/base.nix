@@ -23,6 +23,4 @@
     xcape
     xclip
   ];
-
-  programs.home-manager.enable = true;
 }

@@ -2,12 +2,25 @@
 
 ### Prerequisites
 
-Make sure you have `git` installed.
-Add and update `nixos-hardware` channel:
+Make sure you have `git` installed:
 
 ```bash
+$ nix-env -iA nixos.git
+```
+
+Setup channels:
+
+```bash
+$ sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
 $ sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
-$ sudo nix-channel --update nixos-hardware
+$ sudo nix-channel --add https://github.com/rycee/home-manager/archive/master.tar.gz home-manager
+$ sudo nix-channel --update
+```
+
+Install home-manager:
+
+```bash
+$ nix-shell '<home-manager>' -A install
 ```
 
 ### Usage
@@ -27,13 +40,27 @@ ln -sr /etc/nixos/hosts/$NIXHOST.nix /etc/nixos/configuration.nix
 SETUP
 ```
 
+Configure the NixOS machine:
+
+```bash
+$ nixos-rebuild switch --upgrade
+```
+
+Symlink and build the home config:
+
+```bash
+$ ln -s /etc/nixos/home /home/vyorkin/.config/nixpkgs
+$ home-manager switch
+```
+
 ### Layout
 
 main:
 
+- `home/` - Home-manager configurations
 - `cfgs/` - Package configurations
 - `hosts/` - Host specific configurations
-- `presets/` - Shared configurations
+- `roles/` - Shared configurations
 - `pkgs/` - Custom packages
 - `options/` - Option files for custom packages
 - `overlays/` - Custom overlays
