@@ -5,8 +5,4 @@
     mosh
     sshuttle
   ];
-
-  programs.ssh = {
-    enable = true;
-  };
 }
