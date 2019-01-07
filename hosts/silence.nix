@@ -13,7 +13,7 @@
     ../cfgs/web-browsers.nix
     ../cfgs/json.nix
     ../cfgs/github-clients.nix
-    ../cfgs/instant-messengers.nix
+    ../cfgs/messaging.nix
     ../cfgs/haskell.nix
     ../cfgs/rust.nix
     ../cfgs/ruby.nix
@@ -24,6 +24,8 @@
     ../cfgs/documentation.nix
     ../cfgs/devops.nix
     ../cfgs/network-scanners.nix
+    ../cfgs/torrent-clients.nix
+    ../cfgs/scraping.nix
     ../cfgs/forensics.nix
   ];
 
