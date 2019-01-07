@@ -9,7 +9,7 @@
     ../cfgs/scm.nix
     ../cfgs/compression.nix
     ../cfgs/encryption.nix
-    ../cfgs/grep.nix
+    ../cfgs/search-tools.nix
     ../cfgs/zsh.nix
     ../cfgs/vim.nix
     ../cfgs/emacs.nix

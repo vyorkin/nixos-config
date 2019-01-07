@@ -5,5 +5,6 @@
     ack
     ripgrep
     ag
+    fzf
   ];
 }
