@@ -3,7 +3,7 @@
 {
   home.file = {
     ".authinfo" = {
-      source = ./dotsecrets/autoinfo;
+      source = ./dotsecrets/authinfo;
     };
 
     ".netrc" = {
