@@ -6,6 +6,7 @@
     git-lfs
     git-crypt
     git-sizer
+    git-latexdiff
     gitAndTools.hub
     gitAndTools.ghq
     gitAndTools.git-hub
