@@ -17,4 +17,6 @@
     ../cfgs/http-clients.nix
     ../cfgs/ssh.nix
   ];
+
+  nixpkgs.config.allowUnfree = true;
 }
