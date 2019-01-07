@@ -5,7 +5,6 @@
     git
     git-lfs
     git-crypt
-    git-quick-stats
     git-sizer
     gitAndTools.hub
     gitAndTools.ghq
