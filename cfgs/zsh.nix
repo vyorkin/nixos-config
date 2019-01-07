@@ -4,7 +4,34 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
+    syntaxHighlighting.enable = true;
+    enableCompletion = true;
 
-    zplug.enable = true;
+    ohMyZsh.enable = true;
+    ohMyZsh.plugins = [
+      "git"
+      "gitignore"
+      "git-extras"
+      "github"
+      "git-auto-fetch"
+      "history-substring-search"
+      "zsh-autosuggestions"
+      "history"
+      "systemd"
+      "rsync"
+      "zsh_reload"
+      "sudo"
+      "tmux"
+      "mix"
+      "stack"
+      "docker"
+      "docker-compose"
+      "emacs"
+      "colored-man-pages"
+      "command-not-found"
+      "extract"
+      "httpie"
+    ];
+    ohMyZsh.theme = "minimal";
   };
 }
