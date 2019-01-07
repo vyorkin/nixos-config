@@ -2,12 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    chromium
-
-    firefox
-    shadowfox
-
-    lynx
-    w3m
+    you-get
+    youtube-dl
   ];
 }
