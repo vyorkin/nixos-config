@@ -4,3 +4,6 @@
 [submodule "home/dotfiles/zsh"]
 	path = home/dotfiles/zsh
 	url = git@bitbucket.org:vyorkin/zshrc.git
+[submodule "home/dotsecrets"]
+	path = home/dotsecrets
+	url = git@bitbucket.org:vyorkin/dotsecrets.git

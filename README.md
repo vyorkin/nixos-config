@@ -49,7 +49,8 @@ $ nixos-rebuild switch --upgrade
 Symlink and build the home config:
 
 ```bash
-$ ln -s /etc/nixos/home /home/vyorkin/.config/nixpkgs
+$ mv ~/.config/nixpkgs ~/.config/nixpkgs-backup
+$ sudo ln -s /etc/nixos/home ~/.config/nixpkgs
 $ home-manager switch
 ```
 
