@@ -11,6 +11,7 @@
     ../cfgs/encryption.nix
     ../cfgs/search-tools.nix
     ../cfgs/zsh.nix
+    ../cfgs/tmux.nix
     ../cfgs/vim.nix
     ../cfgs/emacs.nix
     ../cfgs/http-clients.nix
