@@ -22,6 +22,5 @@
     gitinspector
     gitstats
     mercurial
-    stgit
   ];
 }
