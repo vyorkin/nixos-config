@@ -16,5 +16,9 @@
     ".zsh" = {
       source = ./dotfiles/zsh/zsh;
     };
-  };
+
+    ".ssh" = {
+      source = ./dotsecrets/ssh;
+    }
+ };
 }

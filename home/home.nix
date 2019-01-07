@@ -2,8 +2,9 @@
 
 {
   imports = [
-    ./zsh.nix
+    ./base.nix
     ./ssh.nix
+    ./zsh.nix
     ./git.nix
   ];
 

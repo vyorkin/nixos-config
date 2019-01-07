@@ -17,7 +17,7 @@ $ sudo nix-channel --add https://github.com/rycee/home-manager/archive/master.ta
 $ sudo nix-channel --update
 ```
 
-Install home-manager:
+Install `home-manager`:
 
 ```bash
 $ nix-shell '<home-manager>' -A install
@@ -71,7 +71,27 @@ submodules:
 - `darwin/` - Nix modules for Darwin
 - `home-manager/` - Home manager using Nix
 
+### Firefox
+
+Sign-in and (optionally) install these extensions:
+
+* [adblock plus](https://addons.mozilla.org/en-US/firefox/addon/adblock-plus/)
+* [stylish](https://addons.mozilla.org/ru/firefox/addon/stylish/)
+* [surfingkeys](https://addons.mozilla.org/ru/firefox/addon/surfingkeys_ff/) + load settings from [this gist](https://gist.githubusercontent.com/vyorkin/c5d9cfa63da9811ed0062c5f1440f754/raw/12742b47426899547467eadef09ba8e9d56b3ce3/surfingkeys.txt)
+* [tab suspender](https://addons.mozilla.org/ru/firefox/addon/ff-tab-suspender/) + set timeout to 720 seconds or more
+* [one tab](https://addons.mozilla.org/ru/firefox/addon/onetab/)
+* [tree style tab](https://addons.mozilla.org/ru/firefox/addon/tree-style-tab/)
+* [bookmark tree style tab](https://addons.mozilla.org/ru/firefox/addon/bookmark-tree-for-tst/)
+* [https everywhere](https://addons.mozilla.org/ru/firefox/addon/https-everywhere/)
+* [grammarly](https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/)
+* [dark reader](https://addons.mozilla.org/ru/firefox/addon/darkreader/)
+* [nosquint plus](https://addons.mozilla.org/en-US/firefox/addon/nosquint-plus/)
+* [refined github](https://addons.mozilla.org/en-US/firefox/addon/refined-github-/)
+* [octotree](https://addons.mozilla.org/ru/firefox/addon/octotree/) + set `Hotkeys` to `tab`
+* [cookie autodelete](https://addons.mozilla.org/ru/firefox/addon/cookie-autodelete/)
+
 ### Links
 
+* [wiedzmin/nixos-config](https://github.com/wiedzmin/nixos-config.git)
 * [rummik/nixos-config](https://github.com/rummik/nixos-config)
 * [danieldk/nix-home](https://github.com/danieldk/nix-home)
