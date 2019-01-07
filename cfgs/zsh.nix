@@ -5,8 +5,6 @@
     enable = true;
     enableCompletion = true;
 
-    zplug = {
-       enable = true;
-    };
+    zplug.enable = true;
   };
 }
