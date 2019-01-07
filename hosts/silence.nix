@@ -9,7 +9,7 @@
     ../roles/workstation.nix
     ../cfgs/db.nix
     ../cfgs/db-clients.nix
-    ../cfgs/network-scanners.nix
+    ../cfgs/monitoring.nix
     ../cfgs/web-browsers.nix
     ../cfgs/json.nix
     ../cfgs/github-clients.nix
@@ -23,6 +23,7 @@
     ../cfgs/development.nix
     ../cfgs/documentation.nix
     ../cfgs/devops.nix
+    ../cfgs/network-scanners.nix
     ../cfgs/forensics.nix
   ];
 

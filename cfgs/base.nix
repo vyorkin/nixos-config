@@ -13,7 +13,6 @@
     telnet
 
     bat
-    htop
     ncdu
 
     xorg.xinput

@@ -5,7 +5,7 @@
     ../options/default.nix
     ../cfgs/users.nix
     ../cfgs/base.nix
-    ../cfgs/networkmanager.nix
+    ../cfgs/network.nix
     ../cfgs/scm.nix
     ../cfgs/compression.nix
     ../cfgs/encryption.nix
