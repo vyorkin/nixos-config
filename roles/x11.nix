@@ -17,7 +17,7 @@
       naturalScrolling = true;
     };
 
-    displayManager.gdm.enable = true;
+    displayManager.sddm.enable = true;
     desktopManager.gnome3.enable = true;
   };
 }
