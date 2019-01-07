@@ -8,6 +8,7 @@
     ../cfgs/networkmanager.nix
     ../cfgs/scm.nix
     ../cfgs/compression.nix
+    ../cfgs/encryption.nix
     ../cfgs/grep.nix
     ../cfgs/zsh.nix
     ../cfgs/vim.nix
