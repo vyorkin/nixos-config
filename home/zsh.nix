@@ -19,6 +19,6 @@
 
     ".ssh" = {
       source = ./dotsecrets/ssh;
-    }
+    };
  };
 }
