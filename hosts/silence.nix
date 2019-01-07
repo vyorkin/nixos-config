@@ -20,7 +20,9 @@
     ../cfgs/clojure.nix
     ../cfgs/js.nix
     ../cfgs/automation.nix
+    ../cfgs/development.nix
     ../cfgs/documentation.nix
+    ../cfgs/devops.nix
     ../cfgs/forensics.nix
   ];
 
