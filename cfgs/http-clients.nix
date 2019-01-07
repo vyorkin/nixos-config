@@ -5,5 +5,9 @@
     curl
     wget
     httpie
+    http-prompt
+    httplab
+    wuzz
+    insomnia
   ];
 }

@@ -8,13 +8,20 @@
     ../roles/x11.nix
     ../roles/workstation.nix
     ../cfgs/db.nix
+    ../cfgs/db-clients.nix
     ../cfgs/network-scanners.nix
     ../cfgs/web-browsers.nix
     ../cfgs/json.nix
+    ../cfgs/github-clients.nix
     ../cfgs/instant-messengers.nix
     ../cfgs/haskell.nix
     ../cfgs/rust.nix
     ../cfgs/ruby.nix
+    ../cfgs/clojure.nix
+    ../cfgs/js.nix
+    ../cfgs/automation.nix
+    ../cfgs/documentation.nix
+    ../cfgs/forensics.nix
   ];
 
   boot.loader.systemd-boot.enable = true;

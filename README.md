@@ -90,6 +90,10 @@ Sign-in and (optionally) install these extensions:
 * [octotree](https://addons.mozilla.org/ru/firefox/addon/octotree/) + set `Hotkeys` to `tab`
 * [cookie autodelete](https://addons.mozilla.org/ru/firefox/addon/cookie-autodelete/)
 
+### GitHub
+
+* `gist --login`
+
 ### Links
 
 * [wiedzmin/nixos-config](https://github.com/wiedzmin/nixos-config.git)

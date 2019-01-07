@@ -2,10 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-    rustc
-    rustup
-    rustracer
-    cargo
-    carnix
+    cfr
+    clojure
+    leiningen
   ];
 }
