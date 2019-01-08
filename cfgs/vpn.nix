@@ -2,7 +2,7 @@
 
 {
   services.openvpn = {
-    clients = {
+    servers = {
       home = {
         config = ''config /etc/nixos/home/dotsecrets/vpn/home.ovpn'';
 	autoStart = false;
