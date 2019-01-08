@@ -94,6 +94,10 @@ Sign-in and (optionally) install these extensions:
 
 * `gist --login`
 
+### Other
+
+* `tldr --update`
+
 ### Links
 
 * [wiedzmin/nixos-config](https://github.com/wiedzmin/nixos-config.git)
