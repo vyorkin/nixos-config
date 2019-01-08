@@ -7,3 +7,6 @@
 [submodule "home/dotsecrets"]
 	path = home/dotsecrets
 	url = git@bitbucket.org:vyorkin/dotsecrets.git
+[submodule "home/dotfiles/tmux"]
+	path = home/dotfiles/tmux
+	url = git@bitbucket.org:vyorkin/tmux.conf.git

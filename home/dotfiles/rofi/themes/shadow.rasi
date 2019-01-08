@@ -1,0 +1,77 @@
+// ROFI Color theme
+// User: SmokeKing
+// vim:ft=css
+* {
+    spacing: 1;
+    background-color: rgba (43, 48, 59, 100%);
+    text-color: rgba (255, 255, 255, 100%);
+}
+#window {
+    border: 0;
+    padding: 20;
+}
+#mainbox {
+    border: 0;
+    padding: 10;
+}
+#message {
+    border: 1;
+    padding: 10 2% 10;
+}
+#listview {
+    padding: 10 2% 10;
+    spacing: 2;
+}
+#element {
+    padding: 5 5 9;
+    radius: 4;
+}
+#element.selected {
+    text-color: rgba (23, 147, 209, 100%);
+    background-color: rgba (42, 46, 58, 100%);
+    border: 0 1 3;
+    border-radius: 2;
+    border-color: rgba (10, 10, 10, 100%);
+}
+#scrollbar {
+    width: 4;
+    handle-width: 8;
+}
+#sidebar {
+    padding: 1% 2% 2%;
+}
+#button {
+    padding: 8 0 8;
+}
+#button.selected {
+    padding: 8 0 8;
+    text-color: rgba (23, 147, 209, 100%);
+    background-color: rgba (42, 46, 58, 100%);
+    border: 0 1 3;
+    border-radius: 2;
+    border-color: rgba (10, 10, 10, 100%);
+}
+#inputbar {
+    border: 0 1 3;
+    border-radius: 2;
+    border-color: rgba (10, 10, 10, 100%);
+    background-color: rgba (42, 46, 58, 100%);
+    padding: 0% 1.8% 0% 0.2%;
+}
+#entry {
+    spacing: 5;
+    border: 0;
+    padding: 5 5 5;
+    border-radius: 4;
+    background-color: rgba (42, 46, 58, 100%);
+    border-color: rgba (0, 0, 0, 100%);
+}
+#prompt {
+    spacing: 0;
+    border: 0;
+    border-radius: 4;
+    padding: 5 5 5;
+    background-color: rgba (42, 46, 58, 100%);
+    text-color: rgba (255, 255, 255, 100%);
+    border-color: rgba (0, 0, 0, 100%);
+}

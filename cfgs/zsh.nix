@@ -8,29 +8,29 @@
 
     ohMyZsh.enable = true;
     ohMyZsh.plugins = [
+      "history-substring-search"
+      "zsh-autosuggestions"
       "z"
+      "colored-man-pages"
+      "command-not-found"
+      "tmux"
+      "emacs"
+      "stack"
+      "httpie"
       "git"
       "gitignore"
     # "git-extras"
     # "github"
     # "git-auto-fetch"
-      "history-substring-search"
-      "zsh-autosuggestions"
     # "history"
     # "systemd"
     # "rsync"
     # "zsh_reload"
     # "sudo"
-    # "tmux"
     # "mix"
-    # "stack"
     # "docker"
     # "docker-compose"
-    # "emacs"
-      "colored-man-pages"
-      "command-not-found"
     # "extract"
-      "httpie"
     ];
     ohMyZsh.theme = "minimal";
   };

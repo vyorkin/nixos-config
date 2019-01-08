@@ -26,6 +26,7 @@
     ../cfgs/automation.nix
     ../cfgs/development.nix
     ../cfgs/documentation.nix
+    ../cfgs/file-managers.nix
     ../cfgs/devops.nix
     ../cfgs/network-scanners.nix
     ../cfgs/torrent-clients.nix

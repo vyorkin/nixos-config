@@ -5,5 +5,6 @@
     zip
     unzip
     zstd
+    unrar
   ];
 }

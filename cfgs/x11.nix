@@ -12,5 +12,6 @@
     xorg.xmessage
     xcape
     xclip
+    nitrogen
   ];
 }

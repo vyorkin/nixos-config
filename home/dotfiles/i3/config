@@ -1,0 +1,240 @@
+set $hyper Mod3
+set $mod Mod4
+set $alt Mod1
+set $term alacritty
+set $browser firefox
+
+set $shutdown shutdown -h now
+set $reboot reboot
+set $netrefresh --no-startup-id systemctl restart NetworkManager
+
+set $bg-color            #c6ff00
+set $inactive-bg-color   #c6ff00
+set $text-color          #f3f4f5
+set $inactive-text-color #676E7D
+set $urgent-bg-color     #E53935
+
+font pango:FiraCode 10
+
+new_window pixel 2
+new_float normal
+
+gaps outer 2
+gaps inner 12
+
+smart_gaps on
+smart_borders no_gaps
+
+focus_follows_mouse no
+mouse_warping none
+hide_edge_borders both
+workspace_auto_back_and_forth yes
+force_display_urgency_hint 500 ms
+
+floating_modifier $mod
+
+floating_minimum_size 800 x 600
+floating_maximum_size 1200 x 700
+popup_during_fullscreen leave_fullscreen
+
+bindsym $mod+Return exec $term
+bindsym $mod+Shift+Return exec $term -e tmux
+
+bindsym $mod+q kill
+
+# Danger of accidentally pressing
+# bindsym $hyper+z exec $reboot
+# bindsym $hyper+q exec $shutdown
+
+bindsym $hyper+i exec --no-startup-id xrandr-invert-colors
+bindsym $hyper+h exec $term -e htop
+bindsym $hyper+w exec --no-startup-id $browser
+
+bindsym $mod+space exec rofi -show run -opacity 10 -font "FiraCode 14"
+bindsym $mod+Shift+space exec rofi -show window -i -lines 10 -eh 1
+bindsym $mod+Shift+r exec " dmenu_run -nf '#F3F4F5' -nb '#2F343F' -sb '#1793D1' -sf '#f3f4f5' -fn 'firacode-12' -p 'run:'"
+
+bindsym Mod1+Tab exec --no-startup-id rofi -show window
+
+bindsym --release Print exec "flameshot gui"
+
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+g split h
+bindsym $mod+v split v
+
+bindsym $mod+s gaps inner current plus 5
+bindsym $mod+Shift+s gaps inner current minus 5
+
+bindsym $mod+z gaps outer current plus 5
+bindsym $mod+Shift+z gaps outer current minus 5
+
+bindsym $mod+f fullscreen toggle
+
+# bindsym $mod+s layout stacking
+# bindsym $mod+w layout tabbed
+# bindsym $mod+e layout toggle split
+
+bindsym $mod+Shift+f floating toggle
+bindsym $mod+Shift+t focus mode_toggle
+
+bindsym Print exec --no-startup-id scrot
+bindsym Shift+Print exec --no-startup-id scrot -u
+
+bindsym $mod+a focus parent
+
+set $workspace1 "1"
+set $workspace2 "2"
+set $workspace3 "3"
+set $workspace4 "4"
+set $workspace5 "5"
+set $workspace6 "6"
+set $workspace7 "7"
+set $workspace8 "8"
+set $workspace9 "9"
+set $workspace10 "10"
+
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace $workspace10
+
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
+bindsym $mod+Shift+0 move container to workspace $workspace10
+
+bindsym $hyper+e exec $term -e neomutt
+bindsym $hyper+r exec $term -e ranger
+bindsym $hyper+o exec nautilus
+
+bindsym $hyper+Shift+c reload
+bindsym $hyper+Shift+r restart
+
+mode "resize" {
+  bindsym h resize shrink width 10 px or 10 ppt
+  bindsym j resize grow height 10 px or 10 ppt
+  bindsym k resize shrink height 10 px or 10 ppt
+  bindsym l resize grow width 10 px or 10 ppt
+
+  bindsym Left resize shrink width 10 px or 10 ppt
+  bindsym Down resize grow height 10 px or 10 ppt
+  bindsym Up resize shrink height 10 px or 10 ppt
+  bindsym Right resize grow width 10 px or 10 ppt
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+bindsym $hyper+s exec --no-startup-id systemctl suspend
+bindsym $hyper+n exec --no-startup-id $netrefresh
+
+bindsym XF86ScreenSaver	exec --no-startup-id ~/.i3/bin/lock
+
+bindsym $mod+comma workspace prev
+bindsym $mod+period workspace next
+
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id ~/.i3/bin/lock, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec systemctl suspend, mode "default"
+    bindsym h exec systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Alt_R mode "$mode_system"
+
+bindsym $mod+x exec --no-startup-id ~/.i3/bin/lock
+
+set $display_mode Display [w]ork [h]ome [l]aptop
+bindsym $mod+d mode $display_mode
+mode "$display_mode" {
+  bindsym w exec --no-startup-id ~/.i3/bin/displays/work.sh, mode "default"
+  bindsym h exec --no-startup-id ~/.i3/bin/displays/home.sh, mode "default"
+  bindsym l exec --no-startup-id ~/.i3/bin/displays/laptop.sh, mode "default"
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+bar {
+  font pango:FiraCode 10
+  position top
+  status_command bumblebee-status -m caffeine amixer pasource brightness cpu spotify getcrypto github date time layout-xkb battery -p interval=1 home.path=/home getcrypto.getltc=0 getcrypto.geteth=0 github.token=e6fed7b612143808e139e657e876176e40747a55 ping.address=87.250.250.242 ping.probes=3 ping.interval=120 -t greyish-powerline
+}
+
+# exec_always --no-startup-id ~/.config/polybar/launch.sh
+
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id nm-applet
+exec --no-startup-id ~/.i3/bin/i3nag
+exec --no-startup-id unclutter
+# exec --no-startup-id systemctl --user start redshift-gtk
+
+# Compositing Manager
+exec --no-startup-id compton --xrender-sync-fence
+
+# Tiling Window Manager Notification Daemon
+# exec --no-startup-id twmnd
+exec --no-startup-id dunst
+
+# Move workspaces between output
+bindsym $mod+y move workspace to output left
+
+# Colors
+client.focused          #c6ff00 #c6ff00 #000000 #dddddd
+client.focused_inactive #333333 #333333 #c6ff00 #ffffff
+client.unfocused        #333333 #333333 #888888 #292d2e
+client.urgent           #2f343a #900000 #ffffff #900000
+
+for_window [class="^.*"] border pixel 3
+
+# Windows starting in floating mode
+for_window [class="Transmission"] floating enable border normal
+for_window [class="Nitrogen"] floating enable border normal
+for_window [class="(?i)virtualbox"] floating enable border normal
+for_window [class="Arandr"] floating enable
+
+assign [class="firefox"] 2
+assign [class="slack"] 3
+assign [class="gitter"] 4
+
+# Startup
+exec --no-startup-id i3-msg 'workspace 1; exec alacritty -e tmux'

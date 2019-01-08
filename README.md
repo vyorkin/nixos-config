@@ -71,6 +71,19 @@ submodules:
 - `darwin/` - Nix modules for Darwin
 - `home-manager/` - Home manager using Nix
 
+
+### Rust
+
+```bash
+$ rustup toolchain add nightly
+$ rustup default nightly
+$ rustup component add rust-src
+$ cargo install bingrep
+$ cargo install rusty-tags
+$ rustup component add rustfmt-preview --toolchain nightly
+$ cargo +nightly install racer
+```
+
 ### Firefox
 
 Sign-in and (optionally) install these extensions:
@@ -88,6 +101,7 @@ Sign-in and (optionally) install these extensions:
 * [nosquint plus](https://addons.mozilla.org/en-US/firefox/addon/nosquint-plus/)
 * [refined github](https://addons.mozilla.org/en-US/firefox/addon/refined-github-/)
 * [octotree](https://addons.mozilla.org/ru/firefox/addon/octotree/) + set `Hotkeys` to `tab`
+* [dictionary-anywhere](https://addons.mozilla.org/en-US/firefox/addon/dictionary-anywhere/?src=userprofile)
 * [cookie autodelete](https://addons.mozilla.org/ru/firefox/addon/cookie-autodelete/)
 
 ### GitHub

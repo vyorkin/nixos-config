@@ -7,6 +7,7 @@
     tdesktop
     telegram-cli
     discord
+    gitter
     zoom-us
   ];
 }
