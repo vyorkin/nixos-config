@@ -8,7 +8,6 @@
     gron
     help2man
     noweb
-    ntangle
     pandoc
     par
     pdf2djvu
