@@ -7,6 +7,7 @@
     ../roles/common.nix
     ../roles/x11.nix
     ../roles/workstation.nix
+    ../cfgs/fonts.nix
     ../cfgs/vpn.nix
     ../cfgs/db.nix
     ../cfgs/db-clients.nix

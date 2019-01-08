@@ -6,6 +6,7 @@
     slack
     tdesktop
     telegram-cli
+    discord
     zoom-us
   ];
 }

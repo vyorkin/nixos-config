@@ -24,12 +24,5 @@
 
     bat
     ncdu
-
-    xorg.xinput
-    xorg.xset
-    xorg.setxkbmap
-    xorg.xmodmap
-    xcape
-    xclip
   ];
 }

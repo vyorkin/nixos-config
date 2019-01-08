@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ../cfgs/x11.nix
+  ];
+
   services.xserver = {
     enable = true;
     layout = "us,ru,de";
@@ -20,4 +24,6 @@
     displayManager.sddm.enable = true;
     desktopManager.gnome3.enable = true;
   };
+
+  programs.light.enable = true;
 }
