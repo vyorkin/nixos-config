@@ -8,6 +8,7 @@
 
     ohMyZsh.enable = true;
     ohMyZsh.plugins = [
+      "z"
       "git"
       "gitignore"
     # "git-extras"
