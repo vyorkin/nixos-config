@@ -2,8 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-    zeal
-    doxygen
-    tealdeer
+    alacritty
+    eternal-terminal
+    rxvt_unicode-with-plugins
   ];
 }

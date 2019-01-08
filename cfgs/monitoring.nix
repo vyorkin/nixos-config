@@ -14,6 +14,7 @@
     htop
     gotop
     iotop
+    ctop
     lsof
     diskus
     duc
@@ -33,5 +34,7 @@
     reflex
     up
     watchexec
+
+    glogg
   ];
 }

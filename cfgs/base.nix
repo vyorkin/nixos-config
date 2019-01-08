@@ -13,6 +13,7 @@
     nix-bash-completions
     nix-zsh-completions
 
+    tree
     parted
     binutils
     gcc
