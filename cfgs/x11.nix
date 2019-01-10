@@ -13,5 +13,7 @@
     xcape
     xclip
     nitrogen
+    dunst
+    rofi
   ];
 }

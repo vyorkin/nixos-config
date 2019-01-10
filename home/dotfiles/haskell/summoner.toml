@@ -1,0 +1,4 @@
+owner      = "vyorkin"
+fullName   = "Vasiliy Yorkin"
+email      = "vasiliy.yorkin@gmail.com"
+extensions = ["OverloadedStrings"]

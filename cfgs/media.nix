@@ -5,5 +5,10 @@
     vlc
     mpv
     ffmpeg
+    flac
+    spotify
+    ardour
+    grip
+    lame
   ];
 }

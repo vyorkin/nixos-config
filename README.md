@@ -71,6 +71,16 @@ submodules:
 - `darwin/` - Nix modules for Darwin
 - `home-manager/` - Home manager using Nix
 
+### Cachix
+
+https://cachix.org/
+
+### Haskell
+
+Tools:
+
+* [HIE](https://github.com/domenkozar/hie-nix)
+* [Komposition](https://owickstrom.github.io/komposition/user-guide/installation/)
 
 ### Rust
 
@@ -83,6 +93,13 @@ $ cargo install rusty-tags
 $ rustup component add rustfmt-preview --toolchain nightly
 $ cargo +nightly install racer
 ```
+
+### GNOME
+
+Tweaks:
+
+* Set a dark theme, use Numix icon & cursor themes
+* Activate and setup extensions you like
 
 ### Firefox
 
@@ -103,6 +120,7 @@ Sign-in and (optionally) install these extensions:
 * [octotree](https://addons.mozilla.org/ru/firefox/addon/octotree/) + set `Hotkeys` to `tab`
 * [dictionary-anywhere](https://addons.mozilla.org/en-US/firefox/addon/dictionary-anywhere/?src=userprofile)
 * [cookie autodelete](https://addons.mozilla.org/ru/firefox/addon/cookie-autodelete/)
+* [gnome-shell-integration/](https://addons.mozilla.org/en-US/firefox/addon/gnome-shell-integration/) (for GNOME)
 
 ### GitHub
 

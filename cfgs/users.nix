@@ -10,12 +10,16 @@ in
     users.users.vyorkin = {
       isNormalUser = true;
       uid = 1000;
+      description = "Vasiliy Yorkin";
       home = "/home/vyorkin";
       extraGroups = [
         "wheel"
 	"video"
 	"audio"
 	"networkmanager"
+	"input"
+	"scanner"
+	"lp"
 	"dialout"
 	"vboxusers"
 	"wireshark"
@@ -28,4 +32,6 @@ in
       useDefaultShell = true;
       openssh.authorizedKeys.keys = authorizedKeys;
     };
+
+    nix.trustedUsers = [ "vyorkin" ];
   }

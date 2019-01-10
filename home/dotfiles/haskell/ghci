@@ -1,0 +1,46 @@
+-- :set prompt  "\SOH\ESC]0;GHCi: %s\BEL\ESC[32;1m\STXλ>\SOH\ESC[0m\STX "
+:set prompt "∀x. x ⊢ "
+:set prompt-cont " | "
+
+:set stop :list
+:set +t
+:set +c
+
+-- work with local .ghci
+:def r. const(return ":cmd readFile \".ghci\"")
+:def rr \m -> return (":reload " ++ m ++ "\n:r.")
+:def >> \x -> return (":! echo \"" ++ x ++ "\" >> .ghci")
+
+-- paste and evaluate text from the OS X clipboard. (The pasted text also
+-- prints in yellow unless pasting quietly using :paste-quiet.)
+:set -package process
+
+:def paste \_ -> do { paste <- System.Process.readProcess "pbpaste" [] ""; let cmd = if '\n' `elem` paste then ":{\ntype Ö = ()\n" ++ paste ++ "\n:}" else paste in putStrLn ("\SOH\ESC[33m\STX" ++ paste ++ "\SOH\ESC[0m\STX") >> return (":cmd return " ++ show cmd) }
+
+:def paste-quiet \_ -> do { paste <- System.Process.readProcess "pbpaste" [] ""; let cmd = if '\n' `elem` paste then ":{\ntype Ö = ()\n" ++ paste ++ "\n:}" else paste in return (":cmd return " ++ show cmd) }
+
+-- Hoogle (cabal install hoogle && hoogle data)
+:def hoogle     \str -> return $ ":! hoogle search --color --count=10 " ++ show str
+:def hoogle-all \str -> return $ ":! hoogle search --color "            ++ show str
+:def doc        \str -> return $ ":! hoogle search --color --info "     ++ show str
+
+-- Pointfree and Pointful (cabal install pointfree pointful)
+:def pointfree \str -> return $ ":! pointfree " ++ show str
+:def pf        \str -> return $ ":! pointfree " ++ show str
+:def pointful  \str -> return $ ":! pointful " ++ show str
+
+:def x \_ -> return ":set -XOverloadedStrings -XOverloadedLists"
+
+-- switch to Universum
+:def uni const(return ":set -XNoImplicitPrelude\nimport Universum as U\nimport qualified Prelude")
+
+-- do some Turtle
+:def turt const(return ":set -XOverloadedStrings\nimport Turtle\nimport qualified Data.Text as T")
+
+-- source commands from file
+:def source \fn -> return (":cmd readFile " ++ fn)
+
+-- Some default imports
+import Control.Monad
+import Control.Applicative
+import Control.Arrow

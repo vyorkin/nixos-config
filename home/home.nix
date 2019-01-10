@@ -2,10 +2,19 @@
 
 {
   imports = [
-    ./base.nix
+    ./dotsecrets.nix
     ./ssh.nix
     ./zsh.nix
+    ./tmux.nix
     ./git.nix
+    ./alacritty.nix
+  # ./i3.nix
+    ./idea.nix
+    ./postgresql.nix
+    ./haskell.nix
+    ./ruby.nix
+    ./rust.nix
+    ./clojure.nix
   ];
 
   programs = {

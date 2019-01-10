@@ -20,9 +20,6 @@
       scrollMethod = "twofinger";
       naturalScrolling = true;
     };
-
-    displayManager.sddm.enable = true;
-    desktopManager.gnome3.enable = true;
   };
 
   programs.light.enable = true;

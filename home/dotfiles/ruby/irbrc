@@ -1,0 +1,12 @@
+
+require 'irb/completion'
+require 'irb/ext/save-history'
+
+begin
+  require 'rubygems'
+  require 'pry'
+
+  Pry.start || exit
+rescue LoadError => e
+  puts "unable to load dependency: #{e.inspect}"
+end

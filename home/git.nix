@@ -1,9 +1,9 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
-  programs.git = {
-    enable = true;
-    userName = "Vasiliy Yorkin";
-    userEmail = "vasiliy.yorkin@gmail.com";
+  home.file = {
+    ".gitconfig" = { source = ./dotfiles/git/gitconfig; };
+    ".gitignore" = { source = ./dotfiles/git/gitignore; };
+    ".gitmessage" = { source = ./dotfiles/git/gitmessage; };
   };
 }

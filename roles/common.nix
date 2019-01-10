@@ -19,4 +19,5 @@
   ];
 
   nixpkgs.config.allowUnfree = true;
+  nix.trustedUsers = [ "root" ];
 }
