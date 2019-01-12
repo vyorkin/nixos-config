@@ -12,3 +12,6 @@ templates:
    author-email: vasiliy.yorkin@gmail.com
    copyright: Vasiliy Yorkin aka vyorkin
    github-username: vyorkin
+
+nix:
+  enable: true

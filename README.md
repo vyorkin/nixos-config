@@ -79,7 +79,8 @@ https://cachix.org/
 
 Tools:
 
-* [HIE](https://github.com/domenkozar/hie-nix)
+* [stack2nix](https://github.com/input-output-hk/stack2nix)
+* [HIE](https://github.com/domenkozar/hie-nix) - use cachix
 * [Komposition](https://owickstrom.github.io/komposition/user-guide/installation/)
 
 ### Rust

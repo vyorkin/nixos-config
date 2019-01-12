@@ -6,10 +6,10 @@
         (haskellPackages: with haskellPackages; [
           cabal-install
           alex
-	  happy
+          happy
           hpack
           dhall
-	  dhall-json
+          dhall-json
           styx
         # intero
         # brittany
@@ -19,10 +19,10 @@
           apply-refact
           present
           weeder
-	  ghcid
-	  cpphs
-	  dotgen
-	  fast-tags
+          ghcid
+          cpphs
+          dotgen
+          fast-tags
         ]);
   };
 }

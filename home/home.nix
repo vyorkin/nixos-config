@@ -9,13 +9,19 @@
     ./git.nix
     ./alacritty.nix
   # ./i3.nix
+    ./vim.nix
+    ./emacs.nix
+    ./irc.nix
     ./idea.nix
     ./postgresql.nix
     ./haskell.nix
     ./ruby.nix
+    ./javascript.nix
     ./rust.nix
     ./clojure.nix
   ];
+
+  systemd.user.startServices = true;
 
   programs = {
     home-manager = {

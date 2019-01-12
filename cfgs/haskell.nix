@@ -2,8 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-    cabal2nix
     cabal-install
+    cabal2nix
     ghc
     stack
   ];

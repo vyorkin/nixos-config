@@ -16,3 +16,6 @@
 [submodule "home/dotfiles/ruby/dotpryrc"]
 	path = home/dotfiles/ruby/dotpryrc
 	url = git@github.com:vyorkin-personal/dotpryrc.git
+[submodule "home/dotfiles/emacs"]
+	path = home/dotfiles/emacs
+	url = git@bitbucket.org:vyorkin/emacs.d.git

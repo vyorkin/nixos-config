@@ -35,6 +35,7 @@
     up
     watchexec
 
+    neofetch
     glogg
   ];
 }

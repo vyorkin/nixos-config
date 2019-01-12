@@ -6,8 +6,9 @@
     slack
     tdesktop
     telegram-cli
+    pidgin
     discord
-    gitter
+  # gitter
     zoom-us
   ];
 }

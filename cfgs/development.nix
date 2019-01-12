@@ -9,5 +9,6 @@
     highlight
     hyperfine
     weighttp
+    xxd
   ];
 }

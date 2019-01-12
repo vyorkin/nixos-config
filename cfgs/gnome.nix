@@ -14,6 +14,7 @@
     gnomeExtensions.icon-hider
     gnomeExtensions.nohotcorner
     gnomeExtensions.mediaplayer
+    gnomeExtensions.no-title-bar
 
     gnome3.dconf
     gnome3.glib_networking
@@ -26,6 +27,7 @@
     numix-cursor-theme
   ];
 
+  # watch for: https://github.com/NixOS/nixpkgs/issues/21859
   security.pam.services.gdm.enableGnomeKeyring = true;
 
   services = {
