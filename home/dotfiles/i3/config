@@ -50,13 +50,16 @@ bindsym $hyper+i exec --no-startup-id xrandr-invert-colors
 bindsym $hyper+h exec $term -e htop
 bindsym $hyper+w exec --no-startup-id $browser
 
-bindsym $mod+space exec rofi -show run -opacity 10 -font "FiraCode 14"
+bindsym $mod+space exec rofi -show run -opacity 10 -font "FiraCode 12"
 bindsym $mod+Shift+space exec rofi -show window -i -lines 10 -eh 1
 bindsym $mod+Shift+r exec " dmenu_run -nf '#F3F4F5' -nb '#2F343F' -sb '#1793D1' -sf '#f3f4f5' -fn 'firacode-12' -p 'run:'"
 
 bindsym Mod1+Tab exec --no-startup-id rofi -show window
 
 bindsym --release Print exec "flameshot gui"
+
+# bindsym Print exec --no-startup-id scrot
+# bindsym Shift+Print exec --no-startup-id scrot -u
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -95,9 +98,6 @@ bindsym $mod+f fullscreen toggle
 
 bindsym $mod+Shift+f floating toggle
 bindsym $mod+Shift+t focus mode_toggle
-
-bindsym Print exec --no-startup-id scrot
-bindsym Shift+Print exec --no-startup-id scrot -u
 
 bindsym $mod+a focus parent
 
@@ -142,15 +142,15 @@ bindsym $hyper+Shift+c reload
 bindsym $hyper+Shift+r restart
 
 mode "resize" {
-  bindsym h resize shrink width 10 px or 10 ppt
-  bindsym j resize grow height 10 px or 10 ppt
-  bindsym k resize shrink height 10 px or 10 ppt
-  bindsym l resize grow width 10 px or 10 ppt
+  bindsym h resize shrink width 5 px or 5 ppt
+  bindsym j resize grow height 5 px or 5 ppt
+  bindsym k resize shrink height 5 px or 5 ppt
+  bindsym l resize grow width 5 px or 5 ppt
 
-  bindsym Left resize shrink width 10 px or 10 ppt
-  bindsym Down resize grow height 10 px or 10 ppt
-  bindsym Up resize shrink height 10 px or 10 ppt
-  bindsym Right resize grow width 10 px or 10 ppt
+  bindsym Left resize shrink width 5 px or 5 ppt
+  bindsym Down resize grow height 5 px or 5 ppt
+  bindsym Up resize shrink height 5 px or 5 ppt
+  bindsym Right resize grow width 5 px or 5 ppt
 
   bindsym Return mode "default"
   bindsym Escape mode "default"
@@ -162,14 +162,14 @@ bindsym $mod+r mode "resize"
 bindsym $hyper+s exec --no-startup-id systemctl suspend
 bindsym $hyper+n exec --no-startup-id $netrefresh
 
-bindsym XF86ScreenSaver	exec --no-startup-id ~/.i3/bin/lock
+bindsym XF86ScreenSaver	exec --no-startup-id i3lock-pixeled
 
 bindsym $mod+comma workspace prev
 bindsym $mod+period workspace next
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id ~/.i3/bin/lock, mode "default"
+    bindsym l exec --no-startup-id i3lock-pixeled, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
     bindsym s exec systemctl suspend, mode "default"
     bindsym h exec systemctl hibernate, mode "default"
@@ -181,14 +181,14 @@ mode "$mode_system" {
 }
 bindsym $mod+Alt_R mode "$mode_system"
 
-bindsym $mod+x exec --no-startup-id ~/.i3/bin/lock
+bindsym $mod+x exec --no-startup-id i3lock-pixeled
 
-set $display_mode Display [w]ork [h]ome [l]aptop
+set $display_mode Display [w]ork [h]ome [m]obile
 bindsym $mod+d mode $display_mode
 mode "$display_mode" {
-  bindsym w exec --no-startup-id ~/.i3/bin/displays/work.sh, mode "default"
-  bindsym h exec --no-startup-id ~/.i3/bin/displays/home.sh, mode "default"
-  bindsym l exec --no-startup-id ~/.i3/bin/displays/laptop.sh, mode "default"
+  bindsym w exec --no-startup-id autorandr --load work, mode "default"
+  bindsym h exec --no-startup-id autorandr --load home, mode "default"
+  bindsym m exec --no-startup-id autorandr --load mobile, mode "default"
 
   bindsym Return mode "default"
   bindsym Escape mode "default"
@@ -197,23 +197,8 @@ mode "$display_mode" {
 bar {
   font pango:FiraCode 10
   position top
-  status_command bumblebee-status -m caffeine amixer pasource brightness cpu spotify getcrypto github date time layout-xkb battery -p interval=1 home.path=/home getcrypto.getltc=0 getcrypto.geteth=0 github.token=e6fed7b612143808e139e657e876176e40747a55 ping.address=87.250.250.242 ping.probes=3 ping.interval=120 -t greyish-powerline
+  status_command bumblebee-status -m caffeine amixer pulseaudio brightness cpu getcrypto github date time battery -p interval=1 home.path=/home getcrypto.getltc=0 getcrypto.geteth=0 github.token=e6fed7b612143808e139e657e876176e40747a55 ping.address=87.250.250.242 ping.probes=3 ping.interval=120 -t greyish-powerline
 }
-
-# exec_always --no-startup-id ~/.config/polybar/launch.sh
-
-exec --no-startup-id nitrogen --restore
-exec --no-startup-id nm-applet
-exec --no-startup-id ~/.i3/bin/i3nag
-exec --no-startup-id unclutter
-# exec --no-startup-id systemctl --user start redshift-gtk
-
-# Compositing Manager
-exec --no-startup-id compton --xrender-sync-fence
-
-# Tiling Window Manager Notification Daemon
-# exec --no-startup-id twmnd
-exec --no-startup-id dunst
 
 # Move workspaces between output
 bindsym $mod+y move workspace to output left
@@ -224,7 +209,7 @@ client.focused_inactive #333333 #333333 #c6ff00 #ffffff
 client.unfocused        #333333 #333333 #888888 #292d2e
 client.urgent           #2f343a #900000 #ffffff #900000
 
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 2
 
 # Windows starting in floating mode
 for_window [class="Transmission"] floating enable border normal
@@ -236,5 +221,12 @@ assign [class="firefox"] 2
 assign [class="slack"] 3
 assign [class="gitter"] 4
 
-# Startup
+exec --no-startup-id xcape -e 'Caps_Lock=Escape;Control_L=Escape;Control_R=Escape'
+exec --no-startup-id xmodmap ~/.Xmodmap
+exec --no-startup-id compton --xrender-sync-fence
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id dunst
+exec --no-startup-id flameshot
+exec --no-startup-id nm-applet
+exec --no-startup-id unclutter
 exec --no-startup-id i3-msg 'workspace 1; exec alacritty -e tmux'

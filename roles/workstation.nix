@@ -32,6 +32,14 @@
     tlp.enable = true;
     acpid.enable = true;
     upower.enable = true;
+
+    redshift = {
+      enable = true;
+      latitude = "55.751244";
+      longitude = "55.751244";
+      temperature.day = 5500;
+      temperature.night = 3700;
+    };
   };
 
   security.sudo.wheelNeedsPassword = false;

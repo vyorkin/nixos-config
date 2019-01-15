@@ -121,6 +121,7 @@ Sign-in and (optionally) install these extensions:
 * [octotree](https://addons.mozilla.org/ru/firefox/addon/octotree/) + set `Hotkeys` to `tab`
 * [dictionary-anywhere](https://addons.mozilla.org/en-US/firefox/addon/dictionary-anywhere/?src=userprofile)
 * [cookie autodelete](https://addons.mozilla.org/ru/firefox/addon/cookie-autodelete/)
+* [merge-all-windows](https://addons.mozilla.org/en-US/firefox/addon/merge-window/)
 * [gnome-shell-integration/](https://addons.mozilla.org/en-US/firefox/addon/gnome-shell-integration/) (for GNOME)
 
 ### GitHub

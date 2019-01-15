@@ -1,0 +1,25 @@
+$include /etc/inputrc
+
+set show-mode-in-prompt on
+
+set input-meta on
+set output-meta on
+set convert-meta off
+
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+set echo-control-characters off
+
+set editing-mode emacs
+
+$if mode=vi
+
+set keymap vi-command
+# these are for vi-command mode
+Control-l: clear-screen
+
+set keymap vi-insert
+# these are for vi-insert mode
+Control-l: clear-screen
+$endif

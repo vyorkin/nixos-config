@@ -9,6 +9,8 @@
     ../cfgs/scm.nix
     ../cfgs/compression.nix
     ../cfgs/encryption.nix
+    ../cfgs/tools.nix
+    ../cfgs/keyboard.nix
     ../cfgs/search-tools.nix
     ../cfgs/zsh.nix
     ../cfgs/tmux.nix

@@ -118,10 +118,10 @@
     startup_notification = true
 
     # dmenu path
-    dmenu = /usr/bin/dmenu -p dunst:
+    dmenu = /run/current-system/sw/bin/dmenu -p dunst:
 
     # browser for opening urls in context menu
-    browser = /usr/bin/firefox -new-tab
+    browser = /run/current-system/sw/bin/firefox -new-tab
 
 [frame]
     width = 0
@@ -193,30 +193,3 @@
 ## This notification will not be displayed
 #    summary = "foobar"
 #    format = ""
-
-[signed_on]
-    appname = Pidgin
-    summary = "*signed on*"
-    urgency = low
-
-[signed_off]
-    appname = Pidgin
-    summary = *signed off*
-    urgency = low
-
-[says]
-    appname = Pidgin
-    summary = *says*
-    urgency = critical
-    format  = "%s "%b""
-
-[music]
-    appname = Amarok
-    summary = "Now playing"
-    urgency = low
-
-#[twitter]
-#    appname = Pidgin
-#    summary = *twitter.com*
-#    urgency = normal
-#

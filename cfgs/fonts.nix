@@ -5,6 +5,16 @@
     fontconfig = {
       enable = true;
       useEmbeddedBitmaps = true;
+      ultimate = {
+        enable = true;
+        substitutions = "combi";
+        #useEmbeddedBitmaps = true;
+      };
+      defaultFonts = {
+        monospace = [ "Hack" ];
+        sansSerif = [ "Roboto" ];
+        serif = [ "Roboto Slab" ];
+      };
     };
 
     enableFontDir = true;
@@ -16,13 +26,16 @@
       dejavu_fonts
       dosemu_fonts
       emacs-all-the-icons-fonts
+      league-of-moveable-type
       emojione
       fantasque-sans-mono
       fira
       fira-code
+      fira-code-symbols
       fira-mono
       font-awesome-ttf
       freefont_ttf
+    # nerdfonts
       go-font
       gohufont
       google-fonts

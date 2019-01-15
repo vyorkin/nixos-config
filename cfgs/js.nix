@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    nodejs
     flow
     nodePackages.bower
     nodePackages.yo

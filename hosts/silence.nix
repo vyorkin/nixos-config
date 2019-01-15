@@ -6,7 +6,10 @@
     ../hardware-configuration.nix
     ../roles/common.nix
     ../roles/x11.nix
-    ../cfgs/gnome.nix
+    ../cfgs/gtk.nix
+    ../cfgs/qt.nix
+    ../cfgs/i3.nix
+  # ../cfgs/gnome.nix
     ../roles/workstation.nix
     ../cfgs/fonts.nix
     ../cfgs/vpn.nix
@@ -16,13 +19,15 @@
     ../cfgs/monitoring.nix
     ../cfgs/web-browsers.nix
     ../cfgs/media.nix
+    ../cfgs/emulators.nix
+    ../cfgs/mail.nix
     ../cfgs/json.nix
     ../cfgs/github-clients.nix
   # ../cfgs/streaming.nix
     ../cfgs/security.nix
     ../cfgs/messaging.nix
     ../cfgs/haskell.nix
-  # ../cfgs/purescript.nix
+    ../cfgs/purescript.nix
     ../cfgs/rust.nix
     ../cfgs/python.nix
     ../cfgs/ruby.nix
@@ -37,19 +42,26 @@
     ../cfgs/remote-control.nix
     ../cfgs/devops.nix
     ../cfgs/network-scanners.nix
-    ../cfgs/torrent-clients.nix
+    ../cfgs/torrents.nix
     ../cfgs/reading.nix
     ../cfgs/aspell.nix
     ../cfgs/text-conversion.nix
     ../cfgs/tex.nix
+    ../cfgs/proof-assisants.nix
     ../cfgs/scraping.nix
     ../cfgs/docker.nix
     ../cfgs/wm.nix
     ../cfgs/forensics.nix
   ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+    kernelParams = [ "quiet" ];
+    consoleLogLevel = 0;
+  };
 
   hardware.cpu.intel.updateMicrocode = true;
   hardware.enableAllFirmware = true;

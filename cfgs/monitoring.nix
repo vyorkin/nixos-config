@@ -35,7 +35,10 @@
     up
     watchexec
 
+    conky
     neofetch
     glogg
+
+    cointop
   ];
 }

@@ -23,7 +23,8 @@
           cpphs
           dotgen
           fast-tags
+
+          Agda
         ]);
   };
 }
-

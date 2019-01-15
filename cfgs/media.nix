@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    alsaUtils
     vlc
     mpv
     ffmpeg

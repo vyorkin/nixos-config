@@ -10,5 +10,19 @@
     hyperfine
     weighttp
     xxd
+    asciinema
+
+    # idris
+    nim
+    racket
+    swiProlog
+    # ocaml
+    # opam
+    # reason
+
+    tcl
+    tcllib
+    tcltls
+    tclx
   ];
 }

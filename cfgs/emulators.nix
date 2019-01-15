@@ -2,8 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    gnupg
-    pass
-    tomb
+    bochs
+    qemu
   ];
 }

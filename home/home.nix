@@ -8,9 +8,11 @@
     ./tmux.nix
     ./git.nix
     ./alacritty.nix
-  # ./i3.nix
     ./vim.nix
     ./emacs.nix
+    ./x11.nix
+    ./keyboard.nix
+    ./i3.nix
     ./irc.nix
     ./idea.nix
     ./postgresql.nix

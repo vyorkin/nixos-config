@@ -1,0 +1,76 @@
+// ROFI Color theme
+// User: vyorkin
+// vim:ft=css
+* {
+    spacing: 1;
+    background: rgba (10, 10, 10, 60%);
+    border: rgba (30, 30, 30, 100%);
+    foreground: rgba (200, 200, 200, 100%);
+}
+#window {
+    background-color: @background;
+    border: 0;
+    padding: 20;
+}
+#mainbox {
+    background-color: @background;
+    border: 0;
+    padding: 10;
+}
+#message {
+    background-color: @background;
+    border: 1;
+    padding: 10 2% 10;
+}
+#listview {
+    background-color: @background;
+    padding: 10 2% 10;
+    spacing: 2;
+}
+#element {
+    padding: 5 5 5;
+    background-color: @background;
+}
+#element.selected {
+    border: 0 0 1;
+    border-radius: 0;
+    border-color: @border;
+    background-color: @background;
+    text-color: @foreground;
+}
+#scrollbar {
+    width: 4;
+    handle-width: 8;
+}
+#sidebar {
+    padding: 1% 2% 2%;
+}
+#button {
+    padding: 8 0 8;
+}
+#button.selected {
+    padding: 8 0 8;
+    border: 0 0 1;
+    border-radius: 0;
+    border-color: @border;
+    text-color: @foreground;
+}
+#inputbar {
+    border: 0;
+    padding: 0% 1.8% 0% 0.2%;
+}
+#entry {
+    spacing: 5;
+    border: 0;
+    padding: 5 5 5;
+    border-radius: 4;
+    border-color: rgba (0, 0, 0, 100%);
+}
+#prompt {
+    spacing: 0;
+    border: 0;
+    border-radius: 4;
+    padding: 0;
+    text-color: @foreground;
+    border-color: @border;
+}

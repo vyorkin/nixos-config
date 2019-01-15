@@ -5,6 +5,7 @@
     zlib
     zip
     unzip
+    bzip2
     zstd
     unrar
   ];

@@ -2,7 +2,9 @@
 
 {
   environment.systemPackages = with pkgs; [
-    qbittorrent
-    transmission
+    ckbcomp
+    xkb-switch
+    xkbmon
+    xxkb
   ];
 }
