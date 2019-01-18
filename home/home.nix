@@ -11,6 +11,7 @@
     ./vim.nix
     ./emacs.nix
     ./x11.nix
+    ./gtk.nix
     ./keyboard.nix
     ./i3.nix
     ./irc.nix

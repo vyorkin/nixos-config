@@ -39,11 +39,4 @@ in
       i3lock-pixeled
       i3status-rust
     ];
-
-    home.file = {
-      "i3" = {
-        source = ./dotfiles/i3/lock.png;
-        target = ".config/i3/lock.png";
-      };
-    };
   }

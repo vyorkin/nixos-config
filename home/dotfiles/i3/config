@@ -134,6 +134,17 @@ bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
+workspace 1 output eDP1
+workspace 2 output eDP1
+workspace 3 output eDP1
+workspace 4 output eDP1
+workspace 5 output eDP1
+workspace 6 output HDMI1
+workspace 7 output HDMI1
+workspace 8 output HDMI1
+workspace 9 output HDMI1
+workspace 10 output HDMI1
+
 bindsym $hyper+e exec $term -e neomutt
 bindsym $hyper+r exec $term -e ranger
 bindsym $hyper+o exec nautilus
@@ -182,6 +193,7 @@ mode "$mode_system" {
 bindsym $mod+Alt_R mode "$mode_system"
 
 bindsym $mod+x exec --no-startup-id i3lock-pixeled
+# bindsym $mod+x exec --no-startup-id i3lock-fancy -t "><)))*>"
 
 set $display_mode Display [w]ork [h]ome [m]obile
 bindsym $mod+d mode $display_mode
@@ -197,7 +209,7 @@ mode "$display_mode" {
 bar {
   font pango:FiraCode 10
   position top
-  status_command bumblebee-status -m caffeine amixer pulseaudio brightness cpu getcrypto github date time battery -p interval=1 home.path=/home getcrypto.getltc=0 getcrypto.geteth=0 github.token=e6fed7b612143808e139e657e876176e40747a55 ping.address=87.250.250.242 ping.probes=3 ping.interval=120 -t greyish-powerline
+  status_command bumblebee-status -m amixer pulseaudio brightness cpu getcrypto github date time battery -p interval=1 home.path=/home getcrypto.getltc=0 getcrypto.geteth=0 github.token=e6fed7b612143808e139e657e876176e40747a55 ping.address=87.250.250.242 ping.probes=3 ping.interval=120 -t greyish-powerline
 }
 
 # Move workspaces between output
@@ -209,7 +221,7 @@ client.focused_inactive #333333 #333333 #c6ff00 #ffffff
 client.unfocused        #333333 #333333 #888888 #292d2e
 client.urgent           #2f343a #900000 #ffffff #900000
 
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 
 # Windows starting in floating mode
 for_window [class="Transmission"] floating enable border normal
@@ -223,10 +235,12 @@ assign [class="gitter"] 4
 
 exec --no-startup-id xcape -e 'Caps_Lock=Escape;Control_L=Escape;Control_R=Escape'
 exec --no-startup-id xmodmap ~/.Xmodmap
+
 exec --no-startup-id compton --xrender-sync-fence
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id dunst
 exec --no-startup-id flameshot
 exec --no-startup-id nm-applet
 exec --no-startup-id unclutter
+exec --no-startup-id emacs --daemon
 exec --no-startup-id i3-msg 'workspace 1; exec alacritty -e tmux'
