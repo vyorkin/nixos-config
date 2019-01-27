@@ -6,10 +6,12 @@
     vlc
     mpv
     ffmpeg
+    ffmpegthumbnailer
     flac
     spotify
     ardour
     grip
     lame
+    imagemagick7
   ];
 }

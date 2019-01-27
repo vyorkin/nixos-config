@@ -43,15 +43,15 @@
     ../cfgs/devops.nix
     ../cfgs/network-scanners.nix
     ../cfgs/torrents.nix
-    ../cfgs/reading.nix
+    ../cfgs/text.nix
     ../cfgs/aspell.nix
-    ../cfgs/text-conversion.nix
     ../cfgs/tex.nix
     ../cfgs/proof-assisants.nix
     ../cfgs/scraping.nix
     ../cfgs/docker.nix
     ../cfgs/wm.nix
     ../cfgs/forensics.nix
+  # ../cfgs/avr.nix
   ];
 
   boot = {

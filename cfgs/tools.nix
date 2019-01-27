@@ -9,5 +9,7 @@
     urlscan
     urlview
     urlwatch
+    file
+    mediainfo
   ];
 }
