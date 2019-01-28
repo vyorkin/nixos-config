@@ -1,4 +1,4 @@
-#!/nix/store/can00lfiynqkbsdkkmgp6qg8p8w92cxa-bash-4.4-p23/bin/bash
+#!/nix/store/vs6d2fjkl4kb3jb7rwibsd76k9v2n4xy-bash-4.4-p23/bin/bash
 
 set -o noclobber -o noglob -o nounset -o pipefail
 IFS=$'\n'
@@ -89,7 +89,7 @@ handle_extension() {
 handle_image() {
     local mimetype="${1}"
     case "${mimetype}" in
-        # SVG
+        # SVG (doesn't work)
         # image/svg+xml)
         #     convert "${FILE_PATH}" "${IMAGE_CACHE_PATH}" && exit 6
         #     exit 1;;
@@ -110,19 +110,19 @@ handle_image() {
             exit 7;;
 
         # Video
-        # video/*)
-        #     # Thumbnail
-        #     ffmpegthumbnailer -i "${FILE_PATH}" -o "${IMAGE_CACHE_PATH}" -s 0 && exit 6
-        #     exit 1;;
+        video/*)
+            # Thumbnail
+            ffmpegthumbnailer -i "${FILE_PATH}" -o "${IMAGE_CACHE_PATH}" -s 0 && exit 6
+            exit 1;;
         # PDF
-        # application/pdf)
-        #     pdftoppm -f 1 -l 1 \
-        #              -scale-to-x 1920 \
-        #              -scale-to-y -1 \
-        #              -singlefile \
-        #              -jpeg -tiffcompression jpeg \
-        #              -- "${FILE_PATH}" "${IMAGE_CACHE_PATH%.*}" \
-        #         && exit 6 || exit 1;;
+        application/pdf)
+            pdftoppm -f 1 -l 1 \
+                     -scale-to-x 1920 \
+                     -scale-to-y -1 \
+                     -singlefile \
+                     -jpeg -tiffcompression jpeg \
+                     -- "${FILE_PATH}" "${IMAGE_CACHE_PATH%.*}" \
+                && exit 6 || exit 1;;
 
         # Preview archives using the first image inside.
         # (Very useful for comic book collections for example.)
@@ -179,7 +179,7 @@ handle_mime() {
                 local pygmentize_format='terminal'
                 local highlight_format='ansi'
             fi
-/nix/store/zx80qd6pra0vw5jwlc5ims13bdychh5v-highlight-3.43/bin/highlight --replace-tabs="${HIGHLIGHT_TABWIDTH}" --out-format="${highlight_format}" \
+/nix/store/isc7q8psk28drgyb9jl3g5wv2mdasl6k-highlight-3.43/bin/highlight --replace-tabs="${HIGHLIGHT_TABWIDTH}" --out-format="${highlight_format}" \
                 --style="${HIGHLIGHT_STYLE}" --force -- "${FILE_PATH}" && exit 5
             # pygmentize -f "${pygmentize_format}" -O "style=${PYGMENTIZE_STYLE}" -- "${FILE_PATH}" && exit 5
             exit 2;;

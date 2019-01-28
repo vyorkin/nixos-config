@@ -22,6 +22,7 @@
     xbindkeys
     xbindkeys-config
     xidlehook
+    xautolock
     xcape
     xclip
     xcalib

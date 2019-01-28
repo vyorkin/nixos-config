@@ -14,6 +14,8 @@
     ./gtk.nix
     ./keyboard.nix
     ./i3.nix
+    ./ranger.nix
+    ./qutebrowser.nix
     ./irc.nix
     ./idea.nix
     ./postgresql.nix

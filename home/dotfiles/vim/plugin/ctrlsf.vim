@@ -1,3 +1,5 @@
+nmap     <Leader>f <Plug>CtrlSFPrompt
+
 nmap     <C-F>f <Plug>CtrlSFPrompt
 vmap     <C-F>f <Plug>CtrlSFVwordPath
 vmap     <C-F>F <Plug>CtrlSFVwordExec

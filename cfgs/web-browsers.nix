@@ -10,5 +10,7 @@
 
     lynx
     w3m
+
+    qutebrowser
   ];
 }

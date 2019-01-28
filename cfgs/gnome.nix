@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    gnome3.sushi
     gnome3.gnome-shell
     gnome3.gnome-shell-extensions
     chrome-gnome-shell

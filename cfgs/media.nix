@@ -12,6 +12,8 @@
     ardour
     grip
     lame
+  # imagemagick
     imagemagick7
+    feh
   ];
 }

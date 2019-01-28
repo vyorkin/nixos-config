@@ -22,12 +22,20 @@ in
 
       initExtra = ''
       xrdb -merge -I$HOME ~/.Xresources
-      xbindkeys
 
-      xidlehook --not-when-audio --not-when-fullscreen\
-        --timer normal 150 'notify-send -t 7000 -u critical "Locking in 30 seconds"' ''' \
-        --timer primary 30 'i3lock-pixeled' ''' &
+      autorandr -c
+      nm-applet &
+      dunst &
+      flameshot &
+      unclutter &
 
+      xset r rate 200 70
+
+      xautolock -detectsleep \
+        -time 15 \
+        -locker 'i3lock-pixeled' \
+        -notify 30 \
+        -notifier 'notify-send -t 10000 -a "system" -u critical "locking in 30 seconds"' &
       '';
     };
 
@@ -38,5 +46,9 @@ in
       i3lock-fancy
       i3lock-pixeled
       i3status-rust
+
+      gnome3.nautilus
+      gnome3.sushi
+      gnome3.dconf
     ];
   }

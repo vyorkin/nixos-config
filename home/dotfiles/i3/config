@@ -2,25 +2,19 @@ set $hyper Mod3
 set $mod Mod4
 set $alt Mod1
 set $term alacritty
-set $browser firefox
+set $browser qutebrowser
 
 set $shutdown shutdown -h now
 set $reboot reboot
 set $netrefresh --no-startup-id systemctl restart NetworkManager
 
-set $bg-color            #c6ff00
-set $inactive-bg-color   #c6ff00
-set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
-
 font pango:FiraCode 10
 
-new_window pixel 2
+new_window pixel 1
 new_float normal
 
-gaps outer 2
-gaps inner 12
+gaps outer 0
+gaps inner 1
 
 smart_gaps on
 smart_borders no_gaps
@@ -33,7 +27,7 @@ force_display_urgency_hint 500 ms
 
 floating_modifier $mod
 
-floating_minimum_size 800 x 600
+floating_minimum_size 640 x 480
 floating_maximum_size 1200 x 700
 popup_during_fullscreen leave_fullscreen
 
@@ -41,14 +35,6 @@ bindsym $mod+Return exec $term
 bindsym $mod+Shift+Return exec $term -e tmux
 
 bindsym $mod+q kill
-
-# Danger of accidentally pressing
-# bindsym $hyper+z exec $reboot
-# bindsym $hyper+q exec $shutdown
-
-bindsym $hyper+i exec --no-startup-id xrandr-invert-colors
-bindsym $hyper+h exec $term -e htop
-bindsym $hyper+w exec --no-startup-id $browser
 
 bindsym $mod+space exec rofi -show run -opacity 10 -font "FiraCode 12"
 bindsym $mod+Shift+space exec rofi -show window -i -lines 10 -eh 1
@@ -84,11 +70,11 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+g split h
 bindsym $mod+v split v
 
-bindsym $mod+s gaps inner current plus 5
-bindsym $mod+Shift+s gaps inner current minus 5
+bindsym $mod+s gaps inner current plus 2
+bindsym $mod+Shift+s gaps inner current minus 2
 
-bindsym $mod+z gaps outer current plus 5
-bindsym $mod+Shift+z gaps outer current minus 5
+bindsym $mod+z gaps outer current plus 2
+bindsym $mod+Shift+z gaps outer current minus 2
 
 bindsym $mod+f fullscreen toggle
 
@@ -138,19 +124,41 @@ workspace 1 output eDP1
 workspace 2 output eDP1
 workspace 3 output eDP1
 workspace 4 output eDP1
-workspace 5 output eDP1
+workspace 5 output HDMI1
 workspace 6 output HDMI1
 workspace 7 output HDMI1
 workspace 8 output HDMI1
 workspace 9 output HDMI1
 workspace 10 output HDMI1
 
-bindsym $hyper+e exec $term -e neomutt
+bindsym $hyper+Shift+c reload
+bindsym $hyper+Shift+r restart
+
+bindsym $hyper+Shift+s exec --no-startup-id systemctl suspend
+bindsym $hyper+Shift+n exec --no-startup-id $netrefresh
+
+bindsym $hyper+Shift+i exec --no-startup-id xrandr-invert-colors
+
+# App quick launch
+
+bindsym $hyper+h exec $term -e htop
+bindsym $hyper+w exec $browser
+bindsym $hyper+m exec $term -e neomutt
 bindsym $hyper+r exec $term -e ranger
 bindsym $hyper+o exec nautilus
 
-bindsym $hyper+Shift+c reload
-bindsym $hyper+Shift+r restart
+# App quick focus
+
+bindsym $hyper+e [class="(?i)qutebrowser"] focus
+bindsym $hyper+d [class="Firefox"] focus
+bindsym $hyper+u [class="(?i)Chrome"] focus
+bindsym $hyper+q [class="Telegram"] focus
+bindsym $hyper+s [class="Slack"] focus
+bindsym $hyper+g [class="Gitter"] focus
+bindsym $hyper+k [class="Spotify"] focus
+bindsym $hyper+f [class="Emacs"] focus
+bindsym $hyper+c [class="Code"] focus
+bindsym $hyper+i [class="(?i)Alacritty"] focus
 
 mode "resize" {
   bindsym h resize shrink width 5 px or 5 ppt
@@ -169,9 +177,6 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-bindsym $hyper+s exec --no-startup-id systemctl suspend
-bindsym $hyper+n exec --no-startup-id $netrefresh
 
 bindsym XF86ScreenSaver	exec --no-startup-id i3lock-pixeled
 
@@ -209,17 +214,32 @@ mode "$display_mode" {
 bar {
   font pango:FiraCode 10
   position top
-  status_command bumblebee-status -m amixer pulseaudio brightness cpu getcrypto github date time battery -p interval=1 home.path=/home getcrypto.getltc=0 getcrypto.geteth=0 github.token=e6fed7b612143808e139e657e876176e40747a55 ping.address=87.250.250.242 ping.probes=3 ping.interval=120 -t greyish-powerline
+  status_command bumblebee-status -m amixer pulseaudio brightness cpu getcrypto publicip github date time battery -p interval=1 home.path=/home getcrypto.getltc=0 getcrypto.geteth=0 github.token=e6fed7b612143808e139e657e876176e40747a55 ping.address=87.250.250.242 ping.probes=3 ping.interval=120 -t greyish-powerline
+
+  colors {
+    background #000000
+    statusline #FFFFFF
+    separator  #666666
+
+    focused_workspace  #222222 #4D444E #FFFFFF
+    active_workspace   #222222 #222222 #FFFFFF
+    inactive_workspace #222222 #222222 #888888
+    urgent_workspace   #222222 #900000 #FFFFFF
+    binding_mode       #222222 #900000 #FFFFFF
+  }
 }
 
 # Move workspaces between output
 bindsym $mod+y move workspace to output left
 
-# Colors
-client.focused          #c6ff00 #c6ff00 #000000 #dddddd
-client.focused_inactive #333333 #333333 #c6ff00 #ffffff
-client.unfocused        #333333 #333333 #888888 #292d2e
-client.urgent           #2f343a #900000 #ffffff #900000
+# class                 border  bground text    indicator child_border
+client.focused          #535353 #000000 #FFFFFF #535353   #656565
+client.focused_inactive #333333 #000000 #FFFFFF #333333   #454545
+client.unfocused        #333333 #222222 #888888 #292D2E   #222222
+client.urgent           #540000 #700000 #FFFFFF #900000   #900000
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+
+client.background       #FFFFFF
 
 for_window [class="^.*"] border pixel 1
 
@@ -229,18 +249,20 @@ for_window [class="Nitrogen"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Arandr"] floating enable
 
-assign [class="firefox"] 2
-assign [class="slack"] 3
-assign [class="gitter"] 4
+# Fix for Spotify window
+for_window [class="Spotify"] move to workspace 8
+
+assign [class="Firefox|Opera|Chrome"] 2
+assign [class="emacs|code"] 6
+assign [class="Virtualbox"] 8
+assign [class="Gimp|Vlc|(?i)Spotify"] 9
+assign [class="Skype|Gitter|Slack|Telegram|(?i)Discord"] 10
 
 exec --no-startup-id xcape -e 'Caps_Lock=Escape;Control_L=Escape;Control_R=Escape'
 exec --no-startup-id xmodmap ~/.Xmodmap
+exec --no-startup-id xbindkeys
 
-exec --no-startup-id compton --xrender-sync-fence
-exec --no-startup-id nitrogen --restore
-exec --no-startup-id dunst
-exec --no-startup-id flameshot
-exec --no-startup-id nm-applet
-exec --no-startup-id unclutter
 exec --no-startup-id emacs --daemon
-exec --no-startup-id i3-msg 'workspace 1; exec alacritty -e tmux'
+exec --no-startup-id nitrogen --restore
+
+exec --no-startup-id i3-msg 'workspace 5; exec alacritty -e tmux'

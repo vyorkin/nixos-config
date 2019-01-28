@@ -102,7 +102,7 @@ Plug 'wizicer/vim-jison'
 Plug 'ruanyl/coverage.vim'
 
 " coffeescript
-Plug 'kchmck/vim-coffee-script'
+" Plug 'kchmck/vim-coffee-script'
 
 " typescript
 Plug 'Quramy/tsuquyomi'
@@ -198,7 +198,6 @@ Plug 'neovimhaskell/haskell-vim'
 
 " I use LSP instead
 " Plug 'eagletmt/ghcmod-vim'
-
 
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',

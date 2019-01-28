@@ -22,6 +22,7 @@
 
     telnet
 
+    screenfetch
     bat
     ncdu
   ];

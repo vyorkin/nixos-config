@@ -142,6 +142,9 @@ else
   colorscheme tomorrow
 endif
 
+" get rid of the vertical separator for split windows
+:set fillchars+=vert:\ 
+
 " colorscheme switching for vimdiff
 au FilterWritePre * if &diff | colorscheme strange | AirlineTheme tomorrow | endif
 
