@@ -6,6 +6,7 @@
     flow
     nodePackages.bower
     nodePackages.yo
+    nodePackages.pulp
     nodePackages.node2nix
   # nodePackages.javascript-typescript-langserver
   # nodePackages.flow-language-server

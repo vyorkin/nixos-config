@@ -24,7 +24,7 @@ mouse_warping none
 hide_edge_borders both
 workspace_auto_back_and_forth yes
 force_display_urgency_hint 500 ms
-
+focus_wrapping no
 floating_modifier $mod
 
 floating_minimum_size 640 x 480
@@ -214,7 +214,7 @@ mode "$display_mode" {
 bar {
   font pango:FiraCode 10
   position top
-  status_command bumblebee-status -m amixer pulseaudio brightness cpu getcrypto publicip github date time battery -p interval=1 home.path=/home getcrypto.getltc=0 getcrypto.geteth=0 github.token=e6fed7b612143808e139e657e876176e40747a55 ping.address=87.250.250.242 ping.probes=3 ping.interval=120 -t greyish-powerline
+  status_command bumblebee-status -m amixer pulseaudio brightness getcrypto publicip github date time battery -p interval=1 home.path=/home getcrypto.getltc=0 getcrypto.geteth=0 github.token=e6fed7b612143808e139e657e876176e40747a55 ping.address=87.250.250.242 ping.probes=3 ping.interval=120 -t greyish-powerline
 
   colors {
     background #000000
@@ -233,9 +233,9 @@ bar {
 bindsym $mod+y move workspace to output left
 
 # class                 border  bground text    indicator child_border
-client.focused          #535353 #000000 #FFFFFF #535353   #656565
-client.focused_inactive #333333 #000000 #FFFFFF #333333   #454545
-client.unfocused        #333333 #222222 #888888 #292D2E   #222222
+client.focused          #ffff00 #000000 #FFFFFF #ffff00   #ffff00
+client.focused_inactive #222222 #000000 #FFFFFF #222222   #222222
+client.unfocused        #222222 #222222 #888888 #292D2E   #222222
 client.urgent           #540000 #700000 #FFFFFF #900000   #900000
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 

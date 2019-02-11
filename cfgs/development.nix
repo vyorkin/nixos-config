@@ -16,13 +16,12 @@
     nim
     racket
     swiProlog
-    # ocaml
-    # opam
-    # reason
 
     tcl
     tcllib
     tcltls
     tclx
+
+  # hydra
   ];
 }

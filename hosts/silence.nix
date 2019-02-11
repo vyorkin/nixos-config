@@ -27,6 +27,7 @@
     ../cfgs/security.nix
     ../cfgs/messaging.nix
     ../cfgs/haskell.nix
+    ../cfgs/ocaml.nix
     ../cfgs/purescript.nix
     ../cfgs/rust.nix
     ../cfgs/python.nix
