@@ -10,7 +10,47 @@
 
   services.hoogle = {
     enable = true;
-    packages = (hpkgs: with hpkgs; [text cryptonite]);
+    packages = (hpkgs: with hpkgs; [
+      relude
+      text
+      time
+      bytestring
+      containers
+      mtl
+      natural-transformation
+      lens
+      unliftio
+      unliftio-core
+      async
+      lifted-async
+      exceptions
+      safe-exceptions
+      errors
+      resource-pool
+      turtle
+      co-log
+      cryptonite
+      http-client
+      http-client-tls
+      http-api-data
+      servant
+      servant-client
+      aeson
+      network
+      wreq
+      websockets
+      optparse-applicative
+      parsec
+      megaparsec
+
+      eventful-core
+      # eventful-memory
+      # eventful-postgresql
+      # eventful-test-helpers
+
+      pointfree
+      # pointful
+    ]);
     haskellPackages = pkgs.haskellPackages;
   };
 }

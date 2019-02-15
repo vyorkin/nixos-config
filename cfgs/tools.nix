@@ -10,6 +10,5 @@
     urlview
     urlwatch
     file
-    mediainfo
   ];
 }

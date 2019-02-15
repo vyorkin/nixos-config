@@ -8,7 +8,7 @@
     ffmpeg
     ffmpegthumbnailer
     flac
-    spotify
+  # spotify
     ardour
     grip
     lame

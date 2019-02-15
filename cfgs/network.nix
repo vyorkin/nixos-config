@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
- 
+
 {
   environment.systemPackages = with pkgs; [
     openvpn
@@ -10,7 +10,7 @@
     wirelesstools
     afpfs-ng
   ];
- 
+
   networking.networkmanager = {
     enable = true;
     packages = with pkgs; [ networkmanager_openvpn ];

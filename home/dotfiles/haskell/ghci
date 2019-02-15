@@ -16,7 +16,6 @@
 :set -package process
 
 :def paste \_ -> do { paste <- System.Process.readProcess "pbpaste" [] ""; let cmd = if '\n' `elem` paste then ":{\ntype Ö = ()\n" ++ paste ++ "\n:}" else paste in putStrLn ("\SOH\ESC[33m\STX" ++ paste ++ "\SOH\ESC[0m\STX") >> return (":cmd return " ++ show cmd) }
-
 :def paste-quiet \_ -> do { paste <- System.Process.readProcess "pbpaste" [] ""; let cmd = if '\n' `elem` paste then ":{\ntype Ö = ()\n" ++ paste ++ "\n:}" else paste in return (":cmd return " ++ show cmd) }
 
 -- Hoogle (cabal install hoogle && hoogle data)
@@ -29,10 +28,19 @@
 :def pf        \str -> return $ ":! pointfree " ++ show str
 :def pointful  \str -> return $ ":! pointful " ++ show str
 
+:def pp1 \_ -> return (":set -package pretty-show\nimport Text.Show.Pretty (pPrint, ppShow)\n:set -interactive-print pPrint")
+:def pp2 \_ -> return (":set -package pretty-simple\nimport Text.Pretty.Simple (pPrint)\n:set -interactive-print pPrint")
+:def nopp \_ -> return (":set -interactive-print System.IO.print")
+
 :def x \_ -> return ":set -XOverloadedStrings -XOverloadedLists"
+
+:def nip const(return ":set -XNoImplicitPrelude\nimport qualified Prelude")
 
 -- switch to Universum
 :def uni const(return ":set -XNoImplicitPrelude\nimport Universum as U\nimport qualified Prelude")
+
+-- switch to Relude
+:def rel const(return ":set -XNoImplicitPrelude\nimport Relude as U\nimport qualified Prelude")
 
 -- do some Turtle
 :def turt const(return ":set -XOverloadedStrings\nimport Turtle\nimport qualified Data.Text as T")

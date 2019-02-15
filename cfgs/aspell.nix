@@ -11,7 +11,6 @@
     aspellDicts.ru
     tabula
     ttyplot
-    visidata
     xurls
   ];
 }
