@@ -2,6 +2,8 @@
 
 {
   imports = [
+    ../cfgs/bluetooth.nix
+    ../cfgs/logitech.nix
     ../cfgs/web-browsers.nix
     ../cfgs/media.nix
     ../cfgs/mail.nix

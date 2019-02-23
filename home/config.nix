@@ -15,6 +15,7 @@
         # intero
         # brittany
           hindent
+          stylish-haskell
           hlint
           hasktags
           haskdogs

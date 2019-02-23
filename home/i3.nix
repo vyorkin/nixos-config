@@ -25,6 +25,7 @@ in
 
       autorandr -c
       nm-applet &
+      blueman-applet &
       dunst &
       flameshot &
       unclutter &

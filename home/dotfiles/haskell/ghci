@@ -1,5 +1,5 @@
--- :set prompt  "\SOH\ESC]0;GHCi: %s\BEL\ESC[32;1m\STXλ>\SOH\ESC[0m\STX "
-:set prompt "∀x. x ⊢ "
+-- :set prompt "∀x. x ⊢ "
+:set prompt "ΠΣ: "
 :set prompt-cont " | "
 
 :set stop :list
@@ -10,13 +10,6 @@
 :def r. const(return ":cmd readFile \".ghci\"")
 :def rr \m -> return (":reload " ++ m ++ "\n:r.")
 :def >> \x -> return (":! echo \"" ++ x ++ "\" >> .ghci")
-
--- paste and evaluate text from the OS X clipboard. (The pasted text also
--- prints in yellow unless pasting quietly using :paste-quiet.)
-:set -package process
-
-:def paste \_ -> do { paste <- System.Process.readProcess "pbpaste" [] ""; let cmd = if '\n' `elem` paste then ":{\ntype Ö = ()\n" ++ paste ++ "\n:}" else paste in putStrLn ("\SOH\ESC[33m\STX" ++ paste ++ "\SOH\ESC[0m\STX") >> return (":cmd return " ++ show cmd) }
-:def paste-quiet \_ -> do { paste <- System.Process.readProcess "pbpaste" [] ""; let cmd = if '\n' `elem` paste then ":{\ntype Ö = ()\n" ++ paste ++ "\n:}" else paste in return (":cmd return " ++ show cmd) }
 
 -- Hoogle (cabal install hoogle && hoogle data)
 :def hoogle     \str -> return $ ":! hoogle search --color --count=10 " ++ show str

@@ -4,9 +4,6 @@
   name = Vasiliy Yorkin
   email = vasiliy.yorkin@gmail.com
   signingkey = 78C78F27
-[github]
-  user = vyorkin
-  oauth-token = de0ebaa1ea1d4d88962cf903633f410af08dd32b
 [alias]
   count = !git shortlog -sn
 
