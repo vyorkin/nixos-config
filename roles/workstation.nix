@@ -103,10 +103,11 @@
     powerDownCommands = ''
     '';
     resumeCommands = ''
-      ${pkgs.systemd}/bin/systemctl restart imapfilter.service
       ${pkgs.systemd}/bin/systemctl try-restart sshuttle.service
     '';
-    powertop.enable = true;
+
+    # TODO: try to enable later, see https://bbs.archlinux.org/viewtopic.php?id=244225
+    powertop.enable = false;
   };
 
   system.autoUpgrade.enable = true;
