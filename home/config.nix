@@ -11,6 +11,8 @@
           dhall
           dhall-json
 
+          doctest
+
           styx
         # intero
         # brittany
