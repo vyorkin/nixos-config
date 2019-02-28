@@ -42,6 +42,10 @@
       optparse-applicative
       parsec
       megaparsec
+      hspec
+      tasty
+      tasty-hspec
+      QuickCheck
 
       eventful-core
       # eventful-memory
