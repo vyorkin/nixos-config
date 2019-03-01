@@ -1,0 +1,5 @@
+maxhistorysize: Just 1000
+completionPromptLimit: Just 1000
+historyDuplicates: IgnoreConsecutive
+completionType: MenuCompletion
+bellStyle: VisualBell
