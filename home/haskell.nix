@@ -12,6 +12,7 @@
     ".hspec" = { source = ./dotfiles/haskell/hspec; };
     ".summoner.toml" = { source = ./dotfiles/haskell/summoner.toml; };
     ".hlint.yaml" = { source = ./dotfiles/haskell/hlint.yaml; };
+    ".haskeline" = { source = ./dotfiles/haskell/haskeline; };
 
     ".cabal" = {
       source = ./dotfiles/haskell/cabal;

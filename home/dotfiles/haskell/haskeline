@@ -3,3 +3,6 @@ completionPromptLimit: Just 1000
 historyDuplicates: IgnoreConsecutive
 completionType: MenuCompletion
 bellStyle: VisualBell
+
+bind: f7 : r e l o a d
+keyseq: "\ESC[18~" f7

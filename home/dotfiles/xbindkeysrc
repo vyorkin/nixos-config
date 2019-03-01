@@ -76,9 +76,6 @@
 "amixer set Capture 1+ toggle"
   shift + XF86AudioMute
 
-"arandr"
-  XF86Display
-
 "synclient TouchpadOff=0"
   XF86TouchpadOn
 
