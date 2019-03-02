@@ -5,9 +5,6 @@ nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 nn ; :
 nn : ;
 
-" exit insert mode without using <Esc> + autosave current buffer
-ino jk <Esc>:w<cr>
-
 " start an external command with a single bang
 nn ! :!
 

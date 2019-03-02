@@ -14,22 +14,21 @@ Plug 'tpope/vim-sleuth'               " heuristically set buffer options
 Plug 'tpope/vim-obsession'            " session management
 Plug 'tpope/vim-capslock'             " software capslock (gC or <C-G>c)
 Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-speeddating'          " use <C-a>/<C-x> to increment dates, times and more
 
 " Plug 'w0rp/ale'
 
 Plug 'chrisbra/vim-diff-enhanced'
 Plug 'terryma/vim-expand-region'
 Plug 'Wolfy87/vim-expand'
-Plug 'AndrewRadev/splitjoin.vim'
 Plug 'godlygeek/tabular'
+Plug 'AndrewRadev/splitjoin.vim'
 " Plug 'FooSoft/vim-argwrap'          " Alternative to splitjoin
 " Plug 'vim-scripts/restore_view.vim'
 
 " navigation & search
-Plug 'junegunn/vim-pseudocl'
-Plug 'kshenoy/vim-signature'
-Plug 'junegunn/vim-slash'
+Plug 'kshenoy/vim-signature'          " Plugin to toggle, display and navigate marks
+Plug 'junegunn/vim-slash'             " Enhancing in-buffer search experience
 
 " git
 Plug 'tpope/vim-fugitive'
@@ -43,7 +42,7 @@ Plug 'gregsexton/gitv'
 Plug 'junegunn/gv.vim'
 " Plug 'airblade/vim-gitgutter'
 
-Plug 'miyakogi/seiya.vim'
+Plug 'miyakogi/seiya.vim'             " Clear and make transparent vim's background color in terminal
 
 " color schemes
 Plug 'chriskempson/base16-vim'
