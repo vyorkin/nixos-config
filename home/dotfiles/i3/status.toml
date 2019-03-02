@@ -2,6 +2,11 @@ theme = "plain"
 icons = "awesome"
 
 [[block]]
+block = "custom"
+command = "xkbmon -o -u"
+interval = 1
+
+[[block]]
 block = "sound"
 
 [[block]]

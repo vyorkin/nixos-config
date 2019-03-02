@@ -7,6 +7,7 @@
     variant = "qwerty";
     options = [
       "grp:alt_shift_toggle"
+      "grp:alt_space_toggle"
       "grp_led:caps"
       "caps:ctrl_modifier"
     ];

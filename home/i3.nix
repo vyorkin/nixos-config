@@ -35,7 +35,7 @@ in
       flameshot &
       unclutter &
 
-      xset r rate 300 85
+      xset r rate 300 65
 
       xautolock -detectsleep \
         -time 15 \
