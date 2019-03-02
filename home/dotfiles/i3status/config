@@ -1,7 +1,0 @@
-general {
-  output_format = "i3bar"
-  colors = true
-  color_good = "#00FF00"
-  color_degraded = "#FFFF00"
-  color_bad = "#FF0000"
-}

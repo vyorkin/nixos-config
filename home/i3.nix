@@ -10,6 +10,11 @@ in
       ./twmn.nix
     ];
 
+    home.file."status.toml" = {
+      source = ./dotfiles/i3/status.toml;
+      target = ".config/i3/status.toml";
+    };
+
     xsession = {
       enable = true;
 
