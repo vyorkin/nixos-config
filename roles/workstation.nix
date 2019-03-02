@@ -29,6 +29,7 @@
     ../cfgs/js.nix
     ../cfgs/automation.nix
     ../cfgs/development.nix
+    ../cfgs/opengl.nix
     ../cfgs/hardware.nix
     ../cfgs/documentation.nix
     ../cfgs/file-managers.nix
@@ -53,6 +54,11 @@
   hardware.pulseaudio = {
     enable = true;
     support32Bit = true;
+  };
+
+  hardware.opengl = {
+    enable = true;
+    driSupport32Bit = true;
   };
 
   environment.systemPackages = with pkgs; [
