@@ -118,6 +118,7 @@ Sign-in and (optionally) install these extensions:
 * [dark reader](https://addons.mozilla.org/ru/firefox/addon/darkreader/)
 * [nosquint plus](https://addons.mozilla.org/en-US/firefox/addon/nosquint-plus/)
 * [refined github](https://addons.mozilla.org/en-US/firefox/addon/refined-github-/)
+* [module-linker](https://addons.mozilla.org/en-US/firefox/addon/module-linker/)
 * [octotree](https://addons.mozilla.org/ru/firefox/addon/octotree/) + set `Hotkeys` to `tab`
 * [dictionary-anywhere](https://addons.mozilla.org/en-US/firefox/addon/dictionary-anywhere/?src=userprofile)
 * [cookie autodelete](https://addons.mozilla.org/ru/firefox/addon/cookie-autodelete/)

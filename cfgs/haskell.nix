@@ -42,6 +42,11 @@
       optparse-applicative
       parsec
       megaparsec
+
+      OpenGL
+      GLUT
+      gloss
+
       hspec
       tasty
       tasty-hspec
