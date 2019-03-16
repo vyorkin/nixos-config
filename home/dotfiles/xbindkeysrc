@@ -52,10 +52,10 @@
 #"rxvt"
 #  Control + b:2 + Release
 
-"xbacklight -dec 5"
+"light -U 5"
   XF86MonBrightnessDown
 
-"xbacklight -inc 5"
+"light -A 5"
   XF86MonBrightnessUp
 
 "amixer -q set Master 2%+ unmute"

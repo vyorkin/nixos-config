@@ -1,5 +1,1 @@
 --color
---format=progress
---failure-report .hspec-failures
---rerun
---rerun-all-on-success

@@ -7,7 +7,7 @@
     flamegraph
 
     gdb
-    gdbgui
+    # gdbgui
 
     idutils
     ltrace

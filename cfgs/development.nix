@@ -12,6 +12,7 @@
     xxd
     asciinema
 
+    go
     # idris
     nim
     racket

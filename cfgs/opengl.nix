@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     mesa
-    freeglut
-    glfw
+    libGL
+    libGLU
   ];
 }

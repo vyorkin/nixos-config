@@ -8,7 +8,7 @@
     telegram-cli
     pidgin
     discord
-    franz
+  # franz
   # gitter
     zoom-us
   ];

@@ -51,6 +51,7 @@
       tasty
       tasty-hspec
       QuickCheck
+      hedgehog
 
       eventful-core
       # eventful-memory

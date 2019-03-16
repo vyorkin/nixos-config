@@ -268,5 +268,3 @@ exec --no-startup-id xbindkeys
 
 exec --no-startup-id emacs --daemon
 exec --no-startup-id nitrogen --restore
-
-exec --no-startup-id i3-msg 'workspace 5; exec alacritty -e tmux'

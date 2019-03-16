@@ -78,7 +78,7 @@ extra-prog-path: /home/vyorkin/.cabal/bin
 -- allow-older: False
 -- allow-newer: False
 -- write-ghc-environment-files:
--- documentation: False
+documentation: False
 -- doc-index-file: $datadir/doc/$arch-$os-$compiler/index.html
 -- target-package-db:
 -- max-backjumps: 2000

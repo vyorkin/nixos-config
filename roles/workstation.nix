@@ -30,6 +30,7 @@
     ../cfgs/automation.nix
     ../cfgs/development.nix
     ../cfgs/opengl.nix
+    ../cfgs/sdl.nix
     ../cfgs/hardware.nix
     ../cfgs/documentation.nix
     ../cfgs/file-managers.nix
@@ -40,7 +41,7 @@
     ../cfgs/torrents.nix
     ../cfgs/text.nix
     ../cfgs/aspell.nix
-    ../cfgs/tex.nix
+  # ../cfgs/tex.nix
     ../cfgs/proof-assisants.nix
     ../cfgs/scraping.nix
     ../cfgs/docker.nix
