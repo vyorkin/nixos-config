@@ -28,7 +28,7 @@ let g:ctrlp_map = '<c-q>'
 nn <silent> <C-b> :CtrlPBuffer<CR>
 
 " Alt-p to clear the cache
-nn <Esc>p :ClearCtrlPCache<CR>
+" nn <Esc>p :ClearCtrlPCache<CR>
 
 "Ctrl-m is not good - it overrides behavior of Enter
 nn ,jj :CtrlPBufTag<CR>

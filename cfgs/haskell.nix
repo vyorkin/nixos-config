@@ -5,7 +5,7 @@
     cabal-install
     cabal2nix
     ghc
-    stack
+    # stack
   ];
 
   services.hoogle = {
