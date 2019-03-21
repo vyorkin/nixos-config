@@ -8,7 +8,7 @@
     nix-du
     nix-index
     nix-serve
-    nixops
+    # nixops
 
     nix-bash-completions
     nix-zsh-completions

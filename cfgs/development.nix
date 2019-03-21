@@ -12,6 +12,7 @@
     xxd
     asciinema
 
+    elixir
     go
     # idris
     nim

@@ -4,6 +4,7 @@
 with pkgs;
 let
   my-python-packages = python-packages: with python-packages; [
+    keyring
     python-language-server
   ];
 in

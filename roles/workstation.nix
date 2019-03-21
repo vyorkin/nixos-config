@@ -107,14 +107,9 @@
 
   powerManagement = {
     enable = true;
-    powerDownCommands = ''
-    '';
-    resumeCommands = ''
-      ${pkgs.systemd}/bin/systemctl try-restart sshuttle.service
-    '';
 
     # TODO: try to enable later, see https://bbs.archlinux.org/viewtopic.php?id=244225
-    powertop.enable = false;
+    # powertop.enable = false;
   };
 
   system.autoUpgrade.enable = true;

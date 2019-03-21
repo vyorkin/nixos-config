@@ -9,5 +9,6 @@
     urlview
     urlwatch
     file
+    pmutils
   ];
 }
