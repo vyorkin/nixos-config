@@ -94,6 +94,19 @@
     };
   };
 
+  networking.firewall.allowedTCPPorts = [
+    # ssh:
+    22
+
+    # http:
+    80 8080 8081 8082
+    4000 4001
+    3000 3001 3002 3003
+
+    # postgresql:
+    # 5432
+  ];
+
   security.sudo.wheelNeedsPassword = false;
   security.polkit.extraConfig = ''
     /* Allow users in wheel group to manage systemd units without authentication */
@@ -109,8 +122,9 @@
     enable = true;
 
     # TODO: try to enable later, see https://bbs.archlinux.org/viewtopic.php?id=244225
-    # powertop.enable = false;
+    powertop.enable = false;
   };
 
+  nixpkgs.config.allowBroken = true;
   system.autoUpgrade.enable = true;
 }

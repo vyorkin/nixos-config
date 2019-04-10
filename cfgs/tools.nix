@@ -10,5 +10,6 @@
     urlwatch
     file
     pmutils
+    usbutils
   ];
 }

@@ -16,6 +16,7 @@
       time
       bytestring
       containers
+      stm
       mtl
       natural-transformation
       lens
@@ -28,16 +29,19 @@
       errors
       resource-pool
       turtle
+      data-default-class
       co-log
       cryptonite
+      memory
       http-client
       http-client-tls
       http-api-data
       servant
       servant-client
       aeson
+      aeson-pretty
       network
-      wreq
+      (req.overrideAttrs (old: { doCheck = false; }))
       websockets
       optparse-applicative
       parsec
@@ -49,14 +53,23 @@
 
       hspec
       tasty
+      tasty-hedgehog
       tasty-hspec
       QuickCheck
       hedgehog
+      doctest
 
+      monad-logger
+      persistent
+      persistent-postgresql
+
+      (dotenv.overrideAttrs (old: { doCheck = false; }))
+
+      sum-type-boilerplate
       eventful-core
-      # eventful-memory
-      # eventful-postgresql
-      # eventful-test-helpers
+      eventful-memory
+      (eventful-postgresql.overrideAttrs (old: { doCheck = false; }))
+      eventful-test-helpers
 
       pointfree
       # pointful
