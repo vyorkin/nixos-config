@@ -24,6 +24,7 @@
 
     screenfetch
     bat
+    exa
     ncdu
   ];
 }

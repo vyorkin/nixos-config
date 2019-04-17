@@ -29,7 +29,10 @@
       errors
       resource-pool
       turtle
+
       data-default-class
+      data-default
+
       co-log
       cryptonite
       memory
@@ -44,12 +47,20 @@
       (req.overrideAttrs (old: { doCheck = false; }))
       websockets
       optparse-applicative
+
       parsec
       megaparsec
 
       OpenGL
       GLUT
       gloss
+
+      Glob
+      filepath
+      brick
+      vty
+
+      dhall
 
       hspec
       tasty

@@ -4,12 +4,12 @@
   programs.zsh = {
     enable = true;
     syntaxHighlighting.enable = true;
+    autosuggestions.enable = true;
     enableCompletion = true;
 
     ohMyZsh.enable = true;
     ohMyZsh.plugins = [
       "history-substring-search"
-      "zsh-autosuggestions"
       "z"
       "colored-man-pages"
     # "command-not-found"
