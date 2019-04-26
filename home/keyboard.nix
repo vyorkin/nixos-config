@@ -2,7 +2,7 @@
 
 {
   home.keyboard = {
-    layout = "us,ru,de";
+    layout = "us,ru";
     model = "pc105";
     variant = "qwerty";
     options = [

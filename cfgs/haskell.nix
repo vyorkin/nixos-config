@@ -70,6 +70,9 @@
       hedgehog
       doctest
 
+      suspend
+      timers
+
       monad-logger
       persistent
       persistent-postgresql
