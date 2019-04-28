@@ -93,6 +93,7 @@ $ cargo install bingrep
 $ cargo install rusty-tags
 $ rustup component add rustfmt-preview --toolchain nightly
 $ cargo +nightly install racer
+$ cargo install bootimage cargo-xbuild
 ```
 
 ### GNOME

@@ -74,14 +74,14 @@ Plug 'kocakosm/hilal'
 " html, css, less, sass, stylus, sugarss
 Plug 'othree/html5.vim'
 Plug 'Valloric/MatchTagAlways'
-Plug 'digitaltoad/vim-jade'
 Plug 'mattn/emmet-vim'
 Plug 'groenewege/vim-less'
 Plug 'ap/vim-css-color'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'stephenway/postcss.vim'
 Plug 'wavded/vim-stylus'
-Plug 'hhsnopek/vim-sugarss'
+" Plug 'digitaltoad/vim-jade'
+" Plug 'hhsnopek/vim-sugarss'
 " Plug 'hail2u/vim-css3-syntax'
 
 " javascript, jsx, json, tern
@@ -94,10 +94,12 @@ Plug '1995eaton/vim-better-javascript-completion'
 Plug 'sheerun/vim-json'
 Plug 'gutenye/json5.vim'
 Plug 'marijnh/tern_for_vim'
-Plug 'briancollins/vim-jst'
-Plug 'alunny/pegjs-vim'
-Plug 'wizicer/vim-jison'
+" Plug 'briancollins/vim-jst'
+
+" Plug 'alunny/pegjs-vim'
+" Plug 'wizicer/vim-jison'
 " Plug 'vyorkin/JavaScript-Indent'
+"
 Plug 'ruanyl/coverage.vim'
 
 " coffeescript
@@ -319,7 +321,7 @@ Plug 'xolox/vim-misc'
 " try to use netrw + vinegar instead
 "
 Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
+" Plug 'jistr/vim-nerdtree-tabs'
 
 Plug 'EinfachToll/DidYouMean'
 Plug 'dietsche/vim-lastplace'

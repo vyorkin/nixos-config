@@ -3,6 +3,8 @@
 {
   environment.systemPackages = with pkgs; with ocamlPackages; [
     ocaml
+    ocamlbuild
+    eliom
     opam
     findlib
     utop
