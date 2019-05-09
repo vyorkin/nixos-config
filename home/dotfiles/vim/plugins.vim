@@ -255,10 +255,12 @@ Plug 'tmux-plugins/vim-tmux'
 Plug 'sheerun/vim-yardoc'
 Plug 'stephpy/vim-yaml'
 Plug 'uarun/vim-protobuf'
-Plug 'spwhitt/vim-nix'
 Plug 'tikhomirov/vim-glsl'
 Plug 'zah/nim.vim'
 Plug 'cespare/vim-toml'
+
+" nix
+Plug 'LnL7/vim-nix'
 
 " text objects
 Plug 'kana/vim-textobj-user'
@@ -334,7 +336,7 @@ Plug 'vimwiki/vimwiki'
 Plug 'vitalk/vim-simple-todo'
 Plug 'ledger/vim-ledger'
 " Plug 'dhruvasagar/vim-dotoo'
-" Plug 'jceb/vim-orgmode'
+Plug 'jceb/vim-orgmode'
 
 Plug 'jez/vim-superman'
 " Plug 'dhruvasagar/vim-table-mode'

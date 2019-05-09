@@ -36,12 +36,6 @@ in
       unclutter &
 
       xset r rate 300 65
-
-      xautolock -detectsleep \
-        -time 15 \
-        -locker 'i3lock-pixeled' \
-        -notify 30 \
-        -notifier 'notify-send -t 10000 -a "system" -u critical "locking in 30 seconds"' &
       '';
     };
 

@@ -80,7 +80,7 @@ https://cachix.org/
 Tools:
 
 * [stack2nix](https://github.com/input-output-hk/stack2nix)
-* [HIE](https://github.com/domenkozar/hie-nix) - use cachix
+* [all-hies](https://github.com/Infinisil/all-hies)
 * [Komposition](https://owickstrom.github.io/komposition/user-guide/installation/)
 
 ### Rust
@@ -94,6 +94,7 @@ $ cargo install rusty-tags
 $ rustup component add rustfmt-preview --toolchain nightly
 $ cargo +nightly install racer
 $ cargo install bootimage cargo-xbuild
+$ cargo install hunter
 ```
 
 ### GNOME

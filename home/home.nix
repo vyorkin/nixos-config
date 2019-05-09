@@ -9,7 +9,7 @@
     ./git.nix
     ./alacritty.nix
     ./vim.nix
-    ./emacs.nix
+  # ./emacs.nix
     ./x11.nix
     ./gtk.nix
     ./keyboard.nix

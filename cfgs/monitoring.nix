@@ -21,6 +21,7 @@
     pscircle
     psmisc
     smem
+    dnsutils
 
     iperf
     nethogs

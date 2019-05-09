@@ -9,6 +9,7 @@
     nix-index
     nix-serve
     # nixops
+    any-nix-shell
 
     nix-bash-completions
     nix-zsh-completions

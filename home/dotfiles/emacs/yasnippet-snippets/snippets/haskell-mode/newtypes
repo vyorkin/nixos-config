@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: newtype simple
+# key: nts
+# --
+newtype ${1:T} = $1 ${2:t} deriving (Show$0)

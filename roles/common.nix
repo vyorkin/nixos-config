@@ -12,7 +12,7 @@
     ../cfgs/tools.nix
     ../cfgs/keyboard.nix
     ../cfgs/search-tools.nix
-    ../cfgs/zsh.nix
+  # ../cfgs/zsh.nix
     ../cfgs/tmux.nix
     ../cfgs/vim.nix
     ../cfgs/emacs.nix

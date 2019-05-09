@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: newtype wrapper
+# key: ntw
+# --
+newtype ${1:T} ${2:a} = $1 { un$1 :: $2 } deriving (Show$0)

@@ -25,7 +25,7 @@
     ../cfgs/rust.nix
     ../cfgs/python.nix
     ../cfgs/ruby.nix
-    ../cfgs/clojure.nix
+    ../cfgs/lisp.nix
     ../cfgs/js.nix
     ../cfgs/automation.nix
     ../cfgs/development.nix
