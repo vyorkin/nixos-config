@@ -16,3 +16,9 @@
 [submodule "home/dotfiles/ruby/dotpryrc"]
 	path = home/dotfiles/ruby/dotpryrc
 	url = git@github.com:vyorkin-personal/dotpryrc.git
+[submodule "home/dotfiles/emacs"]
+	path = home/dotfiles/emacs
+	url = https://github.com/vyorkin/emacs.d.git
+[submodule "mozilla"]
+	path = mozilla
+	url = https://github.com/mozilla/nixpkgs-mozilla.git
