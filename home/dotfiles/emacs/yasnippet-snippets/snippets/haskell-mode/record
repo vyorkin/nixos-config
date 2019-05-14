@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: record
-# key: rec
-# --
-data ${1:T} = $1
-  { $0 } deriving (Show)

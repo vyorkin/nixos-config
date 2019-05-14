@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: language pragma
-# key: lang
-# --
-{-# LANGUAGE $0 #-}
