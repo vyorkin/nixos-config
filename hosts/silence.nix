@@ -2,8 +2,9 @@
 
 {
   imports = [
-    <nixos-hardware/lenovo/thinkpad/x1/6th-gen>
-    ../hardware-configuration.nix
+    ../setup.nix
+    ../hardware
+    <home-manager/nixos>
     ../roles/common.nix
     ../roles/x11.nix
     ../cfgs/gtk.nix

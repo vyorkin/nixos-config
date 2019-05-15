@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  bumblebeeStatus = pkgs.callPackage ../pkgs/bumblebee-status {};
+  bumblebeeStatus = pkgs.callPackage ../pkgs/custom/bumblebee-status {};
 in
   {
     imports = [

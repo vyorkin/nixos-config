@@ -69,21 +69,21 @@
 
   hardware.bluetooth.enable = true;
 
+  # Enable Plymouth boot splash screen
   boot.plymouth.enable = true;
 
   services = {
     locate.enable = true;
-    mpd.enable = true;
+
+    # Synchronise time using chrony
     chrony.enable = true;
-    psd = {
-      enable = true;
-      resyncTimer = "30min";
-    };
+
     openssh = {
       enable = true;
       forwardX11 = true;
     };
-    upower.enable = true;
+
+    # upower.enable = true;
 
     redshift = {
       enable = true;
@@ -108,22 +108,6 @@
   ];
 
   security.sudo.wheelNeedsPassword = false;
-  security.polkit.extraConfig = ''
-    /* Allow users in wheel group to manage systemd units without authentication */
-    polkit.addRule(function(action, subject) {
-      if (action.id == "org.freedesktop.systemd1.manage-units" &&
-        subject.isInGroup("wheel")) {
-        return polkit.Result.YES;
-      }
-    });
-  '';
-
-  powerManagement = {
-    enable = true;
-
-    # TODO: try to enable later, see https://bbs.archlinux.org/viewtopic.php?id=244225
-    powertop.enable = false;
-  };
 
   nixpkgs.config.allowBroken = true;
   system.autoUpgrade.enable = true;
