@@ -137,7 +137,7 @@ set nowritebackup               " don't write backups
 set background=dark
 
 if &background=="dark"
-  colorscheme lodestone
+  colorscheme base16-black-metal
 else
   colorscheme tomorrow
 endif

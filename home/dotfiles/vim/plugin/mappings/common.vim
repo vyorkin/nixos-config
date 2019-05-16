@@ -19,11 +19,7 @@ nn ,tt :set invpaste<CR>
 " toggle numbers
 nn <silent> <F12> :set number! relativenumber!<CR>
 
-nn <Leader>w :w<CR>       " faster way to save a file
 nn <Leader><Leader> V     " enter visual model with <Leader><Leader>
-
-" bink K to grep word under cursor
-nn K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " format the entire file
 nn ,ff :normal! gg=G``<CR>
@@ -44,8 +40,8 @@ nn <silent> ,z :bp<CR>
 nn <silent> ,x :bn<CR>
 
 " easily move between next and previous errors
-nn <silent> <leader>J :lnext<CR>
-nn <silent> <leader>K :lprevious<CR>
+nn <silent> <Leader>J :lnext<CR>
+nn <silent> <Leader>K :lprevious<CR>
 
 " copy current filename into system clipboard - mnemonic: (c)urrent(f)ilename
 nn <silent> ,cf :let @* = expand("%:~")<CR>

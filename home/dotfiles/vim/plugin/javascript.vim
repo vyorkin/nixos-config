@@ -7,4 +7,7 @@ let g:javascript_fold = 0
 let g:javascript_plugin_flow = 1
 let g:javascript_plugin_jsdoc = 1
 
-let g:used_javascript_libs = 'jquery,lodash,angularjs,react,redux,flux,mocha,jasmine'
+" othree/javascript-libraries-syntax.vim 
+
+let g:used_javascript_libs = 'jquery,underscore,underscore,backbone,prelude,angularjs,angularui,angularuirouter,react,flux,requirejs,sugar,jasmine,chai,handlebars,ramda,vue,d3,tape'
+

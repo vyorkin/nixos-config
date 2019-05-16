@@ -1,5 +1,5 @@
 set wildignore+=.git,.gitkeep                                     " git related
-set wildignore+=.coverage,coverage/**,.sass-cache/               " caches & rudiments
+set wildignore+=.coverage,coverage/**,.sass-cache/                " caches & rudiments
 set wildignore+=*.o,*.so,*.swp,*.zip,*.pdf,*.psd,*.obj,*~,*.pyc   " non-readable files
 set wildignore+=*/.Trash/**,*.dmg,*/Library/**,*DS_Store*,*.app   " mac os x specific
 set wildignore+=tmp/**,.tmp                                       " temporary
