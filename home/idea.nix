@@ -1,7 +1,5 @@
 { ... }:
 
 {
-  home.file = {
-    ".ideavimrc" = { source = ./dotfiles/idea/ideavimrc; };
-  };
+  home.file = { ".ideavimrc" = { source = ./dotfiles/idea/ideavimrc; }; };
 }

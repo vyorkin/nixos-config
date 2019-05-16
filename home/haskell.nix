@@ -8,7 +8,9 @@
     };
 
     ".hindent.yaml" = { source = ./dotfiles/haskell/hindent.yaml; };
-    ".stylish-haskell.yaml" = { source = ./dotfiles/haskell/stylish-haskell.yaml; };
+    ".stylish-haskell.yaml" = {
+      source = ./dotfiles/haskell/stylish-haskell.yaml;
+    };
     ".hspec" = { source = ./dotfiles/haskell/hspec; };
     ".summoner.toml" = { source = ./dotfiles/haskell/summoner.toml; };
     ".hlint.yaml" = { source = ./dotfiles/haskell/hlint.yaml; };

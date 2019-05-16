@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
-{
+let
+  nixfmt = import ../pkgs/custom/nixfmt;
+in {
   environment.systemPackages = with pkgs; [
     pkgconfig
     nix-prefetch-scripts
@@ -13,6 +15,8 @@
 
     nix-bash-completions
     nix-zsh-completions
+
+    nixfmt
 
     tree
     parted

@@ -13,12 +13,10 @@ in {
     "mozilla=/etc/nixos/pkgs/mozilla"
   ];
 
-  nixpkgs.overlays = map (n: import (path + ("/" + n)))
-    (builtins.filter (n: builtins.match ".*\\.nix" n != null || builtins.pathExists (path + ("/" + n + "/default.nix")))
-      (lib.attrNames content));
+  nixpkgs.overlays = map (n: import (path + ("/" + n))) (builtins.filter (n:
+  builtins.match ".*\\.nix" n != null || builtins.pathExists
+  (path + ("/" + n + "/default.nix"))) (lib.attrNames content));
 
-  nix.trustedBinaryCaches = [
-    "http://hydra.nixos.org"
-    "http://cache.nixos.org"
-  ];
+  nix.trustedBinaryCaches =
+  [ "http://hydra.nixos.org" "http://cache.nixos.org" ];
 }

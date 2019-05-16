@@ -10,7 +10,7 @@
     ../cfgs/gtk.nix
     ../cfgs/qt.nix
     ../cfgs/i3.nix
-  # ../cfgs/gnome.nix
+    # ../cfgs/gnome.nix
     ../roles/workstation.nix
   ];
 
@@ -19,7 +19,7 @@
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
-    kernelParams = [ "quiet" ];
+    kernelParams = ["quiet"];
     consoleLogLevel = 0;
   };
 

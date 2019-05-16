@@ -8,9 +8,9 @@
     firefox
     shadowfox
 
-    lynx
-    w3m
+    # lynx
+    # w3m
 
-    qutebrowser
+    # qutebrowser
   ];
 }

@@ -16,7 +16,7 @@
     ../cfgs/emulators.nix
     ../cfgs/json.nix
     ../cfgs/github-clients.nix
-  # ../cfgs/streaming.nix
+    # ../cfgs/streaming.nix
     ../cfgs/security.nix
     ../cfgs/messaging.nix
     ../cfgs/haskell.nix
@@ -41,14 +41,14 @@
     ../cfgs/torrents.nix
     ../cfgs/text.nix
     ../cfgs/aspell.nix
-  # ../cfgs/tex.nix
+    # ../cfgs/tex.nix
     ../cfgs/proof-assisants.nix
     ../cfgs/scraping.nix
     ../cfgs/docker.nix
     ../cfgs/wm.nix
     ../cfgs/forensics.nix
     ../cfgs/dropbox.nix
-  # ../cfgs/avr.nix
+    # ../cfgs/avr.nix
   ];
 
   sound.enable = true;
@@ -62,10 +62,7 @@
     driSupport32Bit = true;
   };
 
-  environment.systemPackages = with pkgs; [
-    pasystray
-    pavucontrol
-  ];
+  environment.systemPackages = with pkgs; [ pasystray pavucontrol ];
 
   hardware.bluetooth.enable = true;
 
@@ -83,7 +80,7 @@
       forwardX11 = true;
     };
 
-    # upower.enable = true;
+    upower.enable = true;
 
     redshift = {
       enable = true;
@@ -99,9 +96,16 @@
     22
 
     # http:
-    80 8080 8081 8082
-    4000 4001
-    3000 3001 3002 3003
+    80
+    8080
+    8081
+    8082
+    4000
+    4001
+    3000
+    3001
+    3002
+    3003
 
     # postgresql:
     # 5432
