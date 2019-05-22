@@ -9,7 +9,7 @@
     nodePackages.pulp
     nodePackages.node2nix
     nodePackages.http-server
-  # nodePackages.javascript-typescript-langserver
+    nodePackages.javascript-typescript-langserver
   # nodePackages.flow-language-server
   # nodePackages.typescript-language-server
   # nodePackages.vscode-css-languageserver-bin

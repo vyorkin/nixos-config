@@ -2,8 +2,10 @@
 
 {
   environment.systemPackages = with pkgs; [
-    mycli
-    pgcli
-    pgcenter
+    clang
+    cmake
+    llvm
+    ccls
+    boost
   ];
 }

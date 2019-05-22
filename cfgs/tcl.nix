@@ -2,8 +2,9 @@
 
 {
   environment.systemPackages = with pkgs; [
-    mycli
-    pgcli
-    pgcenter
+    tcl
+    tcllib
+    tcltls
+    tclx
   ];
 }

@@ -10,13 +10,13 @@
     ../cfgs/db.nix
     ../cfgs/db-clients.nix
     ../cfgs/fonts.nix
-    ../cfgs/vpn.nix
+    # ../cfgs/vpn.nix
     ../cfgs/terminal.nix
     ../cfgs/monitoring.nix
     ../cfgs/emulators.nix
     ../cfgs/json.nix
     ../cfgs/github-clients.nix
-    # ../cfgs/streaming.nix
+    ../cfgs/streaming.nix
     ../cfgs/security.nix
     ../cfgs/messaging.nix
     ../cfgs/haskell.nix
@@ -26,6 +26,8 @@
     ../cfgs/python.nix
     ../cfgs/ruby.nix
     ../cfgs/lisp.nix
+    ../cfgs/ccpp.nix
+    ../cfgs/tcl.nix
     ../cfgs/js.nix
     ../cfgs/automation.nix
     ../cfgs/development.nix
@@ -79,8 +81,6 @@
       enable = true;
       forwardX11 = true;
     };
-
-    upower.enable = true;
 
     redshift = {
       enable = true;

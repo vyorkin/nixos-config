@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    bbe
     scrot
     flameshot
     aria2

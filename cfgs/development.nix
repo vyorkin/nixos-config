@@ -19,14 +19,6 @@
     racket
     swiProlog
 
-    cmake
-    boost
-
-    tcl
-    tcllib
-    tcltls
-    tclx
-
   # hydra
   ];
 }

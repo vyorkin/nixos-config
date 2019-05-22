@@ -140,16 +140,6 @@
         };
       }
       {
-        name = "enhancd";
-        file = "init.sh";
-        src = fetchFromGitHub {
-          owner = "b4b4r07";
-          repo = "enhancd";
-          rev = "a708e6dc1029de310c3b73c2a9d34f33a6e24d14";
-          sha256 = "0bxpif2id1kmh48zv96hzgcx3m4qwl0cppaiya868cnlyrb2x9k1";
-        };
-      }
-      {
         name = "zsh-command-time";
         file = "command-time.plugin.zsh";
         src = fetchFromGitHub {

@@ -5,15 +5,21 @@
     alsaUtils
     vlc
     mpv
-    ffmpeg
+    ffmpeg-full
     ffmpegthumbnailer
     flac
-  # spotify
+
     ardour
     grip
     lame
-  # imagemagick
     imagemagick7
     feh
+
+    # 3d & video editing
+
+    # blender
+
+    # kdeApplications.kdenlive
+    # frei0r
   ];
 }

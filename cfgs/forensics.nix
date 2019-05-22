@@ -3,11 +3,12 @@
 {
   environment.systemPackages = with pkgs; [
     datefudge
+    diffoscope
     elfinfo
     flamegraph
 
     gdb
-    # gdbgui
+    gdbgui
 
     idutils
     ltrace
@@ -25,5 +26,9 @@
     retdec
     rr
     valgrind
+
+    sysdig
+    vmtouch
+    vulnix
   ];
 }

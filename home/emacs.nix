@@ -2,14 +2,24 @@
 
 {
   home.file = {
-    "init.el" = {
-      source = ./dotfiles/emacs/init.el;
-      target = ".emacs.d/init.el";
+    "setup.el" = {
+      source = ./dotfiles/emacs/setup.el;
+      target = ".emacs.d/setup.el";
     };
 
-    "config.org" = {
-      source = ./dotfiles/emacs/config.org;
-      target = ".emacs.d/config.org";
+    "init.org" = {
+      source = ./dotfiles/emacs/init.org;
+      target = ".emacs.d/init.org";
+    };
+
+    "purescript-mode" = {
+      source = ./dotfiles/emacs/purescript-mode;
+      target = ".emacs.d/purescript-mode";
+    };
+
+    "PG" = {
+      source = ./dotfiles/emacs/lisp/PG;
+      target = ".emacs.d/lisp/PG";
     };
 
     "yasnippet-snippets" = {

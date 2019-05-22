@@ -288,7 +288,6 @@ Plug 'wellle/tmux-complete.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'vitalk/vim-simple-todo'
 Plug 'ledger/vim-ledger'
-Plug 'jceb/vim-orgmode'
 
 Plug 'jez/vim-superman'
 

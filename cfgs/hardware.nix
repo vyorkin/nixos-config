@@ -9,5 +9,6 @@
     openscad
     geda
     ngspice
+    kicad
   ];
 }

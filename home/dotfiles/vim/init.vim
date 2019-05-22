@@ -106,8 +106,8 @@ set showmatch                   " briefly jump to the matching bracket
 set matchtime=1                 " how long to show matching paren
 
 " don't squeeze window too much
-set winwidth=50
-set winminwidth=30
+set winwidth=20
+set winminwidth=20
 
 " window splitting
 set splitbelow                  " put a new window on the right side
