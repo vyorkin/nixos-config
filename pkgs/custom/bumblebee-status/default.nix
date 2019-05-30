@@ -1,4 +1,5 @@
 { stdenv, fetchgit, python3 }:
+
 let version = "1.7.0";
 in stdenv.mkDerivation {
   name = "bumblebee-status-${version}";
@@ -19,3 +20,4 @@ in stdenv.mkDerivation {
   '';
   meta = { };
 }
+

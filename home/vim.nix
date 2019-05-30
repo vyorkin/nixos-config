@@ -7,6 +7,11 @@
       target = ".config/nvim/init.vim";
     };
 
+    "ginit.vim" = {
+      source = ./dotfiles/vim/ginit.vim;
+      target = ".config/nvim/ginit.vim";
+    };
+
     "after" = {
       source = ./dotfiles/vim/after;
       target = ".config/nvim/after";

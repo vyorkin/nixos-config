@@ -1,8 +1,11 @@
 set $hyper Mod3
 set $mod Mod4
 set $alt Mod1
-set $term alacritty
-set $browser qutebrowser
+
+set $term kitty
+set $browser1 firefox
+set $browser2 google-chrome-stable
+set $browser3 qutebrowser
 
 set $shutdown shutdown -h now
 set $reboot reboot
@@ -140,7 +143,7 @@ bindsym $hyper+Shift+i exec --no-startup-id xrandr-invert-colors
 # App quick launch
 
 bindsym $hyper+h exec $term -e htop
-bindsym $hyper+w exec $browser
+bindsym $hyper+w exec $browser3
 bindsym $hyper+m exec $term -e neomutt
 bindsym $hyper+r exec $term -e ranger
 bindsym $hyper+o exec nautilus
@@ -150,13 +153,14 @@ bindsym $hyper+o exec nautilus
 bindsym $hyper+e [class="(?i)qutebrowser"] focus
 bindsym $hyper+d [class="Firefox"] focus
 bindsym $hyper+u [class="(?i)Chrome"] focus
+
 bindsym $hyper+q [class="Telegram"] focus
 bindsym $hyper+s [class="Slack"] focus
 bindsym $hyper+g [class="Gitter"] focus
 bindsym $hyper+k [class="Spotify"] focus
 bindsym $hyper+f [class="Emacs"] focus
 bindsym $hyper+c [class="Code"] focus
-bindsym $hyper+i [class="(?i)Alacritty"] focus
+bindsym $hyper+i [class="kitty"] focus
 
 mode "resize" {
   bindsym h resize shrink width 5 px or 5 ppt
@@ -253,12 +257,12 @@ for_window [class="Arandr"] floating enable
 # Fix for Spotify window
 for_window [class="Spotify"] move to workspace 8
 
-# assign [class="Firefox|Opera|Chrome"] 2
+assign [class="Firefox"] 2
+assign [class="Opera|Chrome"] 3
 
-assign [class="emacs*|code"] 6
 assign [class="Virtualbox"] 8
-assign [class="Gimp|Vlc|(?i)Spotify"] 9
-assign [class="Skype|Gitter|Slack|Telegram|(?i)Discord"] 10
+assign [class="Gimp|Vlc|Slack|(?i)Spotify"] 9
+assign [class="Skype|Gitter|Telegram|(?i)Discord"] 10
 
 exec --no-startup-id xcape -e 'Caps_Lock=Escape;Control_L=Escape;Control_R=Escape'
 exec --no-startup-id xmodmap ~/.Xmodmap

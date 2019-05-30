@@ -11,6 +11,6 @@
     # lynx
     # w3m
 
-    # qutebrowser
+    qutebrowser
   ];
 }

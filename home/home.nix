@@ -7,7 +7,7 @@
     ./zsh.nix
     ./tmux.nix
     ./git.nix
-    ./alacritty.nix
+    ./terminal.nix
     ./vim.nix
     ./emacs.nix
     ./x11.nix
