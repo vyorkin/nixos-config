@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -7,6 +7,8 @@
     networkmanagerapplet
     ssh-agents
   ];
+
+  systemd.services.dhcpcd.serviceConfig.Type = lib.mkForce "simple";
 
   networking.networkmanager = {
     enable = true;

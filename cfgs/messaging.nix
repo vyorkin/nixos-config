@@ -8,8 +8,9 @@
     telegram-cli
     pidgin
     discord
+    riot-web
   # franz
-  # gitter
+    gitter
     zoom-us
   ];
 }

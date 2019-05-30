@@ -1,7 +1,9 @@
 { ... }:
 
 {
-  home.file = {
-    ".npmrc" = { source = ./dotfiles/javascript/npmrc; };
+  home-manager.users.vyorkin = {
+    home.file = {
+      ".npmrc" = { source = ./dotfiles/javascript/npmrc; };
+    };
   };
 }

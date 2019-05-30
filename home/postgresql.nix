@@ -1,12 +1,14 @@
 { ... }:
 
 {
-  home.file = {
-    ".psqlrc" = { source = ./dotfiles/postgresql/psqlrc; };
+  home-manager.users.vyorkin = {
+    home.file = {
+      ".psqlrc" = { source = ./dotfiles/postgresql/psqlrc; };
 
-    "pgcli" = {
-      source = ./dotfiles/postgresql/pgcli;
-      target = ".config/pgcli/config";
+      "pgcli" = {
+        source = ./dotfiles/postgresql/pgcli;
+        target = ".config/pgcli/config";
+      };
     };
   };
 }

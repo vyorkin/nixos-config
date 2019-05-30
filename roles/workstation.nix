@@ -44,7 +44,7 @@
     ../cfgs/text.nix
     ../cfgs/aspell.nix
     # ../cfgs/tex.nix
-    ../cfgs/proof-assisants.nix
+    ../cfgs/proof-assistants.nix
     ../cfgs/scraping.nix
     ../cfgs/docker.nix
     ../cfgs/wm.nix

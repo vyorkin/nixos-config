@@ -1,20 +1,22 @@
 { pkgs, ... }:
 
 {
-  home.file = {
-    ".weechat" = {
-      source = ./dotfiles/weechat;
-      recursive = true;
+  home-manager.users.vyorkin = {
+    home.file = {
+      ".weechat" = {
+        source = ./dotfiles/weechat;
+        recursive = true;
+      };
+
+      ".irssi" = {
+        source = ./dotfiles/irssi;
+        recursive = true;
+      };
     };
 
-    ".irssi" = {
-      source = ./dotfiles/irssi;
-      recursive = true;
-    };
+    home.packages = with pkgs; [
+      irssi
+      weechat
+    ];
   };
-
-  home.packages = with pkgs; [
-    irssi
-    weechat
-  ];
 }

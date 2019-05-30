@@ -1,5 +1,7 @@
 { ... }:
 
 {
-  home.file = { ".ideavimrc" = { source = ./dotfiles/idea/ideavimrc; }; };
+  home-manager.users.vyorkin = {
+    home.file = { ".ideavimrc" = { source = ./dotfiles/idea/ideavimrc; }; };
+  };
 }

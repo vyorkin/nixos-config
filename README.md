@@ -8,25 +8,9 @@ Make sure you have `git` installed:
 $ nix-env -iA nixos.git
 ```
 
-Setup channels:
-
-```bash
-$ sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
-$ sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
-$ sudo nix-channel --add https://github.com/rycee/home-manager/archive/master.tar.gz home-manager
-$ sudo nix-channel --update
-```
-
-Install `home-manager`:
-
-```bash
-$ nix-shell '<home-manager>' -A install
-```
-
 ### Usage
 
 Symlink host file from `hosts/<hostname>.nix` to `configuration.nix`.
-
 
 ```bash
 export NIXHOST=<HOST_NAME>
@@ -46,14 +30,6 @@ Configure the NixOS machine:
 $ nixos-rebuild switch --upgrade
 ```
 
-Symlink and build the home config:
-
-```bash
-$ mv ~/.config/nixpkgs ~/.config/nixpkgs-backup
-$ sudo ln -s /etc/nixos/home ~/.config/nixpkgs
-$ home-manager switch
-```
-
 ### Layout
 
 main:
@@ -68,12 +44,10 @@ main:
 
 submodules:
 
-- `darwin/` - Nix modules for Darwin
-- `home-manager/` - Home manager using Nix
-
-### Cachix
-
-https://cachix.org/
+- `pkgs/home-manager`
+- `pkgs/mozilla`
+- `pkgs/nixos-hardware`
+- `pkgs/nixpkgs-channel`
 
 ### Haskell
 

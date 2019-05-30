@@ -12,6 +12,7 @@
     ../cfgs/i3.nix
     # ../cfgs/gnome.nix
     ../roles/workstation.nix
+    ../home
   ];
 
   boot = {

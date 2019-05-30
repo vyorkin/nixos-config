@@ -26,12 +26,10 @@
     ./clojure.nix
   ];
 
-  systemd.user.startServices = true;
-
-  programs = {
-    home-manager = {
-      enable = true;
-      path = "https://github.com/rycee/home-manager/archive/master.tar.gz";
-    };
+  home-manager.users.vyorkin = {
+    news.display = "silent";
+    xdg.enable = true;
+    services.udiskie.enable = true;
+    systemd.user.startServices = true;
   };
 }
