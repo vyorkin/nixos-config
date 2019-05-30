@@ -1,11 +1,44 @@
 { pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; with haskellPackages; [
     cabal-install
     cabal2nix
     ghc
     stack
+    hpack
+    happy
+    hpack
+
+    dhall
+    dhall-json
+
+    doctest
+
+    styx
+    # intero
+    # brittany
+    hindent
+    stylish-haskell
+    hlint
+    hasktags
+    haskdogs
+    apply-refact
+    present
+    alex
+    weeder
+    ghcid
+    cpphs
+    dotgen
+    fast-tags
+
+    pretty-simple
+    pretty-show
+    ghci-pretty
+
+    pointfree
+
+    Agda
   ];
 
   services.hoogle = {
