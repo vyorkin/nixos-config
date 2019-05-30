@@ -3,8 +3,3 @@ hi VertSplit gui=NONE guifg=NONE guibg=NONE cterm=NONE term=NONE ctermfg=NONE ct
 hi SignColumn guifg=NONE guibg=NONE cterm=NONE term=NONE ctermfg=NONE ctermbg=NONE
 hi ColorColumn ctermbg=NONE guibg=NONE
 hi FoldColumn ctermbg=NONE guibg=NODE
-
-augroup colors
-  autocmd!
-  au ColorScheme * so ~/.config/nvim/plugin/colors.vim
-augroup END

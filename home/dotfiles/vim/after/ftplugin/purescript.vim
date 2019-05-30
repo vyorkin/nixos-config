@@ -1,0 +1,13 @@
+nm <buffer> <silent> <leader>L :Plist<CR>
+nm <buffer> <silent> <leader>l :Pload!<CR>
+nm <buffer> <silent> <leader>r :Prebuild!<CR>
+nm <buffer> <silent> <leader>f :PaddClause<CR>
+nm <buffer> <silent> <leader>t :PaddType<CR>
+nm <buffer> <silent> <leader>a :Papply<CR>
+nm <buffer> <silent> <leader>A :Papply!<CR>
+nm <buffer> <silent> <leader>C :Pcase!<CR>
+nm <buffer> <silent> <leader>i :Pimport<CR>
+nm <buffer> <silent> <leader>qa :PaddImportQualifications<CR>
+nm <buffer> <silent> <leader>g :Pgoto<CR>
+nm <buffer> <silent> <leader>p :Pursuit<CR>
+nm <buffer> <silent> <leader>T :Ptype<CR>

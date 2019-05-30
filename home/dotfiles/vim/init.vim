@@ -27,7 +27,7 @@ filetype plugin on              " ft plugin files
 filetype indent on              " ft indent files
 
 set secure                      " don't allow autocmd, shell and write commands in .vimrc
-set exrc                        " search for .vimrc in the current dir
+set exrc                        " search for .vimrc in the current dir (per-project .vimrc files)
 
 set hidden                      " buffer can be put to the background without writing to disk
 set wildmenu                    " show completion options
@@ -42,14 +42,17 @@ set nonumber                    " turn off line numbers
 " misc
 set mouse=a                     " enable mouse (in all modes)
 set backspace=indent,eol,start  " allow backspace in insert mode
-set history=100                 " how many commands & search patterns to keep in history
+set history=200                 " how many commands & search patterns to keep in history
 set visualbell                  " no sounds
 set lazyredraw                  " don't redraw while in macros
 set ruler                       " always display the current cursor position (row, col)
 set ttyfast                     " use fast terminal connection
 set shortmess=atIO              " use short messages, skip :intro, truncate file msg to fit on the cmd line
+set ffs=unix,mac,dos            " automatic EOL detection
+set nofoldenable                " disable code folding (all folds are open by default)
+set clipboard+=unnamedplus      " use system clipboard for yanks
 
-set termguicolors
+set termguicolors               " enable 24-bit color
 
 " folding
 set foldnestmax=3               " deepest fold in 3 levels
@@ -114,7 +117,7 @@ set splitbelow                  " put a new window on the right side
 set splitright                  " put a new window below the current one (1/10 sec)
 
 " scrolling
-set scrolloff=12                " vertical offset
+set scrolloff=12                " vertical offset (lines around scroll for a context)
 set sidescrolloff=12            " horizontal offset
 set sidescroll=1                " minimal number of columns to scroll horizontally
 
@@ -170,7 +173,22 @@ if has('nvim')
   nmap <BS> <C-W>h
 endif
 
+" commands
+
+" :T creates a new terminal split (VT for a vertical split)
+command! -nargs=* T  below split | terminal <args>
+command! -nargs=* VT below vsplit | terminal <args>
+
+command! SpellEnable  setlocal spell spelllang=en_gb
+command! SpellDisable setlocal nospell
+
 " autocommands
+
+" disable line numbers in terminal
+augroup TerminalStuff
+  au!
+  autocmd TermOpen * setlocal nonumber norelativenumber
+augroup END
 
 " filetype detection
 augroup ftdetection
@@ -178,4 +196,9 @@ augroup ftdetection
   au BufRead,BufNewFile *.tpp,*.inl,*.cxx,*.cc set filetype=cpp
   au BufRead,BufNewFile *.es6 set filetype=javascript
   au BufRead,BufNewFile *.nvim set filetype=vim
+augroup END
+
+augroup colors
+  autocmd!
+  au ColorScheme * so ~/.config/nvim/plugin/colors.vim
 augroup END

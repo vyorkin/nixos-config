@@ -2,7 +2,6 @@
 let $FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
 nn <silent> <C-q> :Files<CR>
-nn <silent> <C-s> :Snippets<CR>
 nn <silent> <C-e> :Commits<CR>
 nn <silent> <C-b> :Buffers<CR>
 

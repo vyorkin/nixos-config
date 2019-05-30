@@ -1,6 +1,6 @@
 " common
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-abolish'              " easily search for, substitute, and abbreviate multiple variants of a word
+Plug 'tpope/vim-commentary'           " plugin to comment/uncomment stuff
 Plug 'tpope/vim-endwise'              " helps to end certain structures automatically
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'             " quoting/parenthesizing
@@ -187,6 +187,7 @@ Plug 'lambdatoast/elm.vim'
 
 " purescript
 Plug 'purescript-contrib/purescript-vim'
+Plug 'FrigoEU/psc-ide-vim'
 
 " idris
 Plug 'idris-hackers/idris-vim'
@@ -285,11 +286,6 @@ Plug 'junegunn/limelight.vim'
 
 Plug 'mhinz/vim-signify'
 Plug 'wellle/tmux-complete.vim'
-Plug 'vimwiki/vimwiki'
-Plug 'vitalk/vim-simple-todo'
-Plug 'ledger/vim-ledger'
-
-Plug 'jez/vim-superman'
 
 Plug 'rizzatti/dash.vim'
 
