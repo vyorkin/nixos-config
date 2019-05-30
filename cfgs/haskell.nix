@@ -5,7 +5,7 @@
     cabal-install
     cabal2nix
     ghc
-    # stack
+    stack
   ];
 
   services.hoogle = {
@@ -54,6 +54,11 @@
       OpenGL
       GLUT
       gloss
+
+      hasbolt
+      hasbolt-extras
+
+      capability
 
       Glob
       filepath

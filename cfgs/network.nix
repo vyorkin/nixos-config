@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     openvpn
     networkmanager
+    networkmanagerapplet
     ssh-agents
   ];
 

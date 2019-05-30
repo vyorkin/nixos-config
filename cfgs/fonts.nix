@@ -60,6 +60,9 @@
       ubuntu_font_family
       unifont
       vistafonts
+      hasklig
+      stix-otf
+      stix-two
     ];
   };
 }

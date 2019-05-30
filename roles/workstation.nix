@@ -83,7 +83,9 @@
     };
 
     redshift = {
-      enable = true;
+      # conflicts with xrandr-invert-colors
+      # see: https://github.com/zoltanp/xrandr-invert-colors#after-a-short-time-the-colors-are-reverted-to-original-ones-there-is-no-error-message
+      enable = false;
       latitude = "55.751244";
       longitude = "37.618423";
       temperature.day = 5500;
