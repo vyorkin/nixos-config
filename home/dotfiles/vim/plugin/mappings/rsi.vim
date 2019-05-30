@@ -14,3 +14,4 @@ nn ' `
 nn ` '
 
 nn <silent> // :nohlsearch<CR>
+nn <silent> <Esc> :nohlsearch<CR>
