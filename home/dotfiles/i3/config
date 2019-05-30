@@ -257,9 +257,6 @@ for_window [class="Arandr"] floating enable
 # Fix for Spotify window
 for_window [class="Spotify"] move to workspace 8
 
-assign [class="Firefox"] 2
-assign [class="Opera|Chrome"] 3
-
 assign [class="Virtualbox"] 8
 assign [class="Gimp|Vlc|Slack|(?i)Spotify"] 9
 assign [class="Skype|Gitter|Telegram|(?i)Discord"] 10
