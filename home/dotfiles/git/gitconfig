@@ -50,6 +50,7 @@
 
   # push
   ps = push
+  psa = !git remote | xargs -L1 git push --all
   put = push origin HEAD
 
   # rebase
