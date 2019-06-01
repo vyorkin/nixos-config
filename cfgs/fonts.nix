@@ -61,6 +61,7 @@
       unifont
       vistafonts
       hasklig
+      symbola
       stix-otf
       stix-two
     ];

@@ -17,6 +17,11 @@ in {
   builtins.match ".*\\.nix" n != null || builtins.pathExists
   (path + ("/" + n + "/default.nix"))) (lib.attrNames content));
 
-  nix.trustedBinaryCaches =
-  [ "http://hydra.nixos.org" "http://cache.nixos.org" ];
+  nix.trustedBinaryCaches = [
+    "http://hydra.nixos.org"
+    "http://cache.nixos.org"
+    "https://meow.cachix.org"
+    "https://nixfmt.cachix.org"
+    "https://all-hies.cachix.org"
+  ];
 }

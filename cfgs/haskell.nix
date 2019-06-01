@@ -1,14 +1,13 @@
 { pkgs, ... }:
 
-{
-  environment.systemPackages = with pkgs; with haskellPackages; [
-    cabal-install
-    cabal2nix
-    ghc
-    stack
+let
+  pkgSet = pkgs.haskell.packages.ghc865;
+  all-hies = import (fetchTarball "https://github.com/infinisil/all-hies/tarball/master") {};
+  # stable HIE for GHC versions 8.6.5 if available and fall back to unstable otherwise
+  hies = all-hies.unstableFallback.selection { selector = p: { inherit (p) ghc865; }; };
+  haskellPkgs = with pkgSet; [
     hpack
     happy
-    hpack
 
     dhall
     dhall-json
@@ -18,6 +17,7 @@
     styx
     # intero
     # brittany
+    hoogle
     hindent
     stylish-haskell
     hlint
@@ -40,6 +40,15 @@
 
     Agda
   ];
+in
+{
+  environment.systemPackages = with pkgs; [
+    cabal-install
+    cabal2nix
+    ghc
+    stack
+    hies
+  ] ++ haskellPkgs;
 
   services.hoogle = {
     enable = true;
@@ -66,7 +75,7 @@
       data-default-class
       data-default
 
-      co-log
+      # co-log
       cryptonite
       memory
       http-client
@@ -126,6 +135,6 @@
       pointfree
       # pointful
     ]);
-    haskellPackages = pkgs.haskellPackages;
+    haskellPackages = pkgSet;
   };
 }

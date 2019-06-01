@@ -3,16 +3,6 @@
 {
   home-manager.users.vyorkin = {
     home.file = {
-      "setup.el" = {
-        source = ./dotfiles/emacs/setup.el;
-        target = ".emacs.d/setup.el";
-      };
-
-      "init.org" = {
-        source = ./dotfiles/emacs/init.org;
-        target = ".emacs.d/init.org";
-      };
-
       "purescript-mode" = {
         source = ./dotfiles/emacs/purescript-mode;
         target = ".emacs.d/purescript-mode";
