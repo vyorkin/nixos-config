@@ -3,6 +3,8 @@
 {
   imports = [
     ./dotsecrets.nix
+    ./db
+    ./development
     ./ssh.nix
     ./zsh.nix
     ./tmux.nix
@@ -15,15 +17,10 @@
     ./keyboard.nix
     ./i3.nix
     ./ranger.nix
+    ./hunter.nix
     ./qutebrowser.nix
     ./irc.nix
     ./idea.nix
-    ./postgresql.nix
-    ./haskell.nix
-    ./ruby.nix
-    ./javascript.nix
-    ./rust.nix
-    ./clojure.nix
   ];
 
   home-manager.users.vyorkin = {

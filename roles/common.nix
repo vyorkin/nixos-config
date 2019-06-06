@@ -2,9 +2,8 @@
 
 {
   imports = [
-    ../options/default.nix
-    ../cfgs/users.nix
-    ../cfgs/base.nix
+    ../cfgs/users
+    ../cfgs/base
     ../cfgs/network.nix
     ../cfgs/scm.nix
     ../cfgs/compression.nix

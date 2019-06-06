@@ -39,7 +39,6 @@ main:
 - `hosts/` - Host specific configurations
 - `roles/` - Shared configurations
 - `pkgs/` - Custom packages
-- `options/` - Option files for custom packages
 - `overlays/` - Custom overlays
 
 submodules:

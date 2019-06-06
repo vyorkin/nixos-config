@@ -2,10 +2,10 @@
 
 {
   environment.systemPackages = with pkgs; [
-    clang
-    cmake
-    llvm
-    ccls
-    boost
+    postgresql
+    redis
+    mysql
+    sqlite
+    mongodb
   ];
 }

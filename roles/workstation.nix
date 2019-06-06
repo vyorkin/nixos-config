@@ -7,8 +7,6 @@
     ../cfgs/web-browsers.nix
     ../cfgs/media.nix
     ../cfgs/mail.nix
-    ../cfgs/db.nix
-    ../cfgs/db-clients.nix
     ../cfgs/fonts.nix
     # ../cfgs/vpn.nix
     ../cfgs/terminal.nix
@@ -19,18 +17,7 @@
     ../cfgs/streaming.nix
     ../cfgs/security.nix
     ../cfgs/messaging.nix
-    ../cfgs/haskell.nix
-    ../cfgs/ocaml.nix
-    ../cfgs/purescript.nix
-    ../cfgs/rust.nix
-    ../cfgs/python.nix
-    ../cfgs/ruby.nix
-    ../cfgs/lisp.nix
-    ../cfgs/ccpp.nix
-    ../cfgs/tcl.nix
-    ../cfgs/js.nix
     ../cfgs/automation.nix
-    ../cfgs/development.nix
     ../cfgs/opengl.nix
     ../cfgs/sdl.nix
     ../cfgs/hardware.nix
@@ -44,13 +31,14 @@
     ../cfgs/text.nix
     ../cfgs/aspell.nix
     # ../cfgs/tex.nix
-    ../cfgs/proof-assistants.nix
     ../cfgs/scraping.nix
     ../cfgs/docker.nix
     ../cfgs/wm.nix
     ../cfgs/forensics.nix
     ../cfgs/dropbox.nix
     # ../cfgs/avr.nix
+    ../cfgs/db
+    ../cfgs/development
   ];
 
   sound.enable = true;

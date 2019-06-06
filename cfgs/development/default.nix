@@ -1,6 +1,20 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ./ccpp.nix
+    ./js.nix
+    ./lisp.nix
+    ./ocaml.nix
+    ./proof-assistants.nix
+    ./purescript.nix
+    ./python.nix
+    ./ruby.nix
+    ./rust.nix
+    ./tcl.nix
+    ./haskell
+  ];
+
   environment.systemPackages = with pkgs; [
     buck
     cloc
@@ -19,6 +33,6 @@
     racket
     swiProlog
 
-  # hydra
+    # hydra
   ];
 }

@@ -15,8 +15,9 @@
     imagemagick7
     feh
 
-    # 3d & video editing
+    # image, 3d, video editing
 
+    gimp-with-plugins
     # blender
 
     # kdeApplications.kdenlive

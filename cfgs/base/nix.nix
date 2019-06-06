@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  nixfmt = import ../pkgs/custom/nixfmt;
+  nixfmt = import ../../pkgs/custom/nixfmt;
 in {
   environment.systemPackages = with pkgs; [
     pkgconfig
@@ -17,19 +17,5 @@ in {
     nix-zsh-completions
 
     nixfmt
-
-    tree
-    parted
-    binutils
-    gcc
-    gnumake
-    openssl
-
-    telnet
-
-    screenfetch
-    bat
-    exa
-    ncdu
   ];
 }

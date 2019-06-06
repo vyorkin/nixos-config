@@ -9,6 +9,7 @@
     xorg.xset
     xorg.xsetroot
     xorg.xkbutils
+    xorg.xkbcomp
     xorg.setxkbmap
     xorg.xmodmap
     xorg.xhost
@@ -31,5 +32,6 @@
     rofi
     compton
     libnotify
+    dzen2
   ];
 }

@@ -3,7 +3,7 @@
 {
   home-manager.users.vyorkin = {
     home.file = {
-      ".npmrc" = { source = ./dotfiles/javascript/npmrc; };
+      ".rustfmt.toml" = { source = ../dotfiles/rust/rustfmt.toml; };
     };
   };
 }
