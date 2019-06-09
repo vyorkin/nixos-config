@@ -187,7 +187,8 @@ Plug 'lambdatoast/elm.vim'
 
 " purescript
 Plug 'purescript-contrib/purescript-vim'
-Plug 'FrigoEU/psc-ide-vim'
+" TODO: configure
+" Plug 'FrigoEU/psc-ide-vim'
 
 " idris
 Plug 'idris-hackers/idris-vim'
