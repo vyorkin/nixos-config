@@ -20,6 +20,5 @@
     ../cfgs/ssh.nix
   ];
 
-  nixpkgs.config.allowUnfree = true;
   nix.trustedUsers = [ "root" ];
 }

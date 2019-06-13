@@ -13,6 +13,7 @@ in {
     "mozilla=/etc/nixos/pkgs/mozilla"
   ];
 
+  nixpkgs.config.allowUnfree = true;
   nixpkgs.overlays = map (n: import (path + ("/" + n))) (builtins.filter (n:
   builtins.match ".*\\.nix" n != null || builtins.pathExists
   (path + ("/" + n + "/default.nix"))) (lib.attrNames content));

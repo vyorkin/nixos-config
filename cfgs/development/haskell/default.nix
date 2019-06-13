@@ -18,6 +18,7 @@ in
       time
       bytestring
       containers
+      parallel
       stm
       mtl
       natural-transformation

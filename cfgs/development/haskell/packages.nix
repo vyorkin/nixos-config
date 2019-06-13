@@ -9,6 +9,8 @@ with packageSet; [
 
   doctest
 
+  # threadscope
+
   styx
   # intero
   # brittany

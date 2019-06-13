@@ -3,7 +3,6 @@
 {
   imports = [
     ./ccpp.nix
-    ./js.nix
     ./lisp.nix
     ./ocaml.nix
     ./proof-assistants.nix
@@ -12,6 +11,8 @@
     ./ruby.nix
     ./rust.nix
     ./tcl.nix
+
+    ./nodejs
     ./haskell
   ];
 
@@ -28,10 +29,14 @@
 
     elixir
     go
-    # idris
+    idris
     nim
     racket
     swiProlog
+    mercury
+    ats
+
+    octave
 
     # hydra
   ];
