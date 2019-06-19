@@ -8,6 +8,13 @@
       ".offlineimaprc" = { source = ./dotsecrets/offlineimaprc; };
       ".goobookrc" = { source = ./dotsecrets/goobookrc; };
       ".goobook_auth.json" = { source = ./dotsecrets/goobook_auth.json; };
+      ".bumblebee-status.conf" = { source = ./dotsecrets/bumblebee-status.conf; };
+
+      "secrets" = {
+        source = ./dotsecrets/emacs;
+        target = ".emacs.d/secrets";
+        recursive = true;
+      };
     };
   };
 }

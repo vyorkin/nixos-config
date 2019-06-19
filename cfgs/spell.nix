@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    hunspell
     aspell
     aspellDicts.en
     aspellDicts.en-computers

@@ -29,7 +29,7 @@
     ../cfgs/network-scanners.nix
     ../cfgs/torrents.nix
     ../cfgs/text.nix
-    ../cfgs/aspell.nix
+    ../cfgs/spell.nix
     # ../cfgs/tex.nix
     ../cfgs/scraping.nix
     ../cfgs/docker.nix

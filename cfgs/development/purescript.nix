@@ -4,14 +4,12 @@ let
   # import the remote nix expression
   easy-purescript = import (pkgs.fetchgit {
     url = "https://github.com/justinwoo/easy-purescript-nix.git";
-    # rev = "0b2c378b360ca0ff92e3fe3a41d191457036b4d6";
-    # sha256 = "0q3z494wizbhyz3ifr8kvbcjmi4220nbzksgkhn58300vqiqpa6z";
+    rev = "e3501174123c884d5878b42a48e361aa113cdead";
+    sha256 = "1c28ml262qnh7c1rsz86gnmrj9k9gi35rxh2mx1mwr2ac5dl213a";
 
-    # rev = "0debbe629de2c2d6278ba772e40a0851a57b9d2f";
-    # sha256 = "1k83gsfgg4p4c2f6ls467fm8v1ixmy1y3jly8id5wc71zc7szs1q";
-
-    rev = "80e6c66c7b5cffefeb823ebebf156d2d7acd3285";
-    sha256 = "0npvnr3h4vnq6ibwi9gvxgijyjnwmmyvqglq471wkkn6b4ygry9v";
+    # url = "https://github.com/vyorkin-forks/easy-purescript-nix.git";
+    # rev = "fd36c21e5d3941b497a5e4988f5e50f761f173ad";
+    # sha256 = "11x53f5qvd7s8b37hhbwhpsz613cqm5k3nzm1ym0zxam9kv1apb1";
   });
 in {
   environment.systemPackages = with easy-purescript.inputs; [
@@ -21,5 +19,6 @@ in {
     psc-package2nix
     spago
     zephyr
+    pscid
   ];
 }

@@ -12,5 +12,6 @@
     file
     pmutils
     usbutils
+    up
   ];
 }

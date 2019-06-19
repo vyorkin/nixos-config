@@ -10,5 +10,7 @@
     ripgrep
     ag
     fzf
+    fzy
+    hstr
   ];
 }

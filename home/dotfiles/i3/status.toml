@@ -23,16 +23,6 @@ format_mem = "{Mup}%"
 format_swap = "{SUp}%"
 
 [[block]]
-block = "disk_space"
-path = "/"
-alias = "/"
-info_type = "available"
-unit = "GB"
-interval = 20
-warning = 20.0
-alert = 10.0
-
-[[block]]
 block = "load"
 interval = 1
 format = "{1m}"
@@ -44,5 +34,5 @@ format = "%F %T"
 
 [[block]]
 block = "battery"
-upower = true
+driver = "upower"
 format = "{percentage}% {time}"

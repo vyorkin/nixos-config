@@ -7,6 +7,7 @@
     ./boot.nix
     ./fs.nix
     ./power.nix
+    ./bluetooth.nix
   ];
 
   nix.maxJobs = lib.mkDefault 8;
