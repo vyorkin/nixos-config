@@ -11,8 +11,8 @@ with packageSet; [
 
   # threadscope
 
-  json-autotype
   # hkgr
+  json-autotype
   styx
   # intero
   # brittany
@@ -38,4 +38,7 @@ with packageSet; [
   pointfree
 
   Agda
+
+  ats-pkg
+  # ats-format
 ]

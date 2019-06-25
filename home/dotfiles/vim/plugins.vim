@@ -193,6 +193,9 @@ Plug 'purescript-contrib/purescript-vim'
 " idris
 Plug 'idris-hackers/idris-vim'
 
+" ats2
+Plug 'bakpakin/ats2.vim'
+
 " arduino
 Plug 'sudar/vim-arduino-syntax'
 
