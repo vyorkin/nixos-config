@@ -217,7 +217,7 @@ bar {
   font pango:FiraCode 10
   position bottom
 
-  status_command bumblebee-status -m amixer brightness publicip date time battery -p interval=1 home.path=/home getcrypto.getltc=0 getcrypto.geteth=0 github.token=e6fed7b612143808e139e657e876176e40747a55 ping.address=87.250.250.242 ping.probes=3 ping.interval=120 -t greyish-powerline
+  status_command bumblebee-status -m amixer brightness date time battery -p interval=1 home.path=/home getcrypto.getltc=0 getcrypto.geteth=0 github.token=e6fed7b612143808e139e657e876176e40747a55 ping.address=87.250.250.242 ping.probes=3 ping.interval=120 -t greyish-powerline
 
   # status_command i3status-rs ~/.config/i3/status.toml
 

@@ -1,16 +1,18 @@
 { pkgs, ... }:
 
-{
+let telega-server = pkgs.callPackage ../pkgs/custom/telega-server { };
+in {
   environment.systemPackages = with pkgs; [
-  # skype
+    # skype
     slack
     tdesktop
     telegram-cli
     pidgin
     discord
     riot-web
-  # franz
+    # franz
     gitter
     zoom-us
+    telega-server
   ];
 }

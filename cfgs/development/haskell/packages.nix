@@ -11,6 +11,7 @@ with packageSet; [
 
   # threadscope
 
+  json-autotype
   styx
   # intero
   # brittany

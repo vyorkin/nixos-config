@@ -19,6 +19,7 @@ in
       bytestring
       containers
       parallel
+      monad-par
       stm
       mtl
       natural-transformation
