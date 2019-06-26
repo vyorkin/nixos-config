@@ -1,6 +1,13 @@
-{ packageSet, ... }:
+{ pkgs, packageSet, ... }:
 
-with packageSet; [
+let
+  ormoluPkg = import (builtins.fetchGit {
+    url = "https://github.com/tweag/ormolu";
+    rev = "bdc8738fa89d37ca330221d8b75427f466f9e08a";
+  });
+in with packageSet; [
+  ormoluPkg.ormolu
+
   hpack
   happy
 
