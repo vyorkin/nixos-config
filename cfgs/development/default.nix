@@ -9,17 +9,18 @@
     ./purescript.nix
     ./python.nix
     ./ruby.nix
+    ./nodejs
     ./rust.nix
     ./tcl.nix
-
-    ./nodejs
     ./haskell
+    ./agda.nix
   ];
 
   environment.systemPackages = with pkgs; [
     buck
     cloc
     sloccount
+    shellcheck
     global
     highlight
     hyperfine
