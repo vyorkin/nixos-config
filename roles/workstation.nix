@@ -28,6 +28,7 @@
     ../cfgs/devops.nix
     ../cfgs/network-scanners.nix
     ../cfgs/torrents.nix
+    ../cfgs/blogging.nix
     ../cfgs/text.nix
     ../cfgs/spell.nix
     # ../cfgs/tex.nix

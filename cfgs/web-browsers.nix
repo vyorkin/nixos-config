@@ -7,6 +7,7 @@
 
     firefox
     shadowfox
+    brave
 
     # lynx
     # w3m
