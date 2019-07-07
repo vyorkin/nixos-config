@@ -14,6 +14,8 @@ in with packageSet; [
   dhall
   dhall-json
 
+  liquidhaskell
+
   doctest
 
   # threadscope

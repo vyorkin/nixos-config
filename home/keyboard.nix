@@ -3,7 +3,7 @@
 {
   home-manager.users.vyorkin = {
     home.keyboard = {
-      layout = "us,ru";
+      layout = "us,ru,de";
       model = "pc105";
       variant = "qwerty";
       options = [

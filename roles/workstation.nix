@@ -31,7 +31,7 @@
     ../cfgs/blogging.nix
     ../cfgs/text.nix
     ../cfgs/spell.nix
-    # ../cfgs/tex.nix
+    ../cfgs/tex.nix
     ../cfgs/scraping.nix
     ../cfgs/docker.nix
     ../cfgs/wm.nix

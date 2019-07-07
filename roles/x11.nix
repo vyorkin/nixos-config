@@ -8,7 +8,7 @@
   services.xserver = {
     enable = true;
 
-    layout = "us,ru";
+    layout = "us,ru,de";
     xkbModel = "pc105";
     xkbVariant = "qwerty";
     xkbOptions = "grp:alt_shift_toggle, grp:alt_space_toggle, grp_led:caps, caps:ctrl_modifier";
