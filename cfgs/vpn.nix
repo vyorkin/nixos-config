@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  openvpnReconnect = pkgs.callPackage ../pkgs/custom/openvpn-reconnect {};
+  openvpnReconnect = pkgs.callPackage ../pkgs/custom/openvpn-reconnect { };
 in
   {
     environment.systemPackages = [ openvpnReconnect ];

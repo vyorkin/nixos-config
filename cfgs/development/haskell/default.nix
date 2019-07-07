@@ -2,7 +2,7 @@
 
 let
   packageSet = pkgs.haskell.packages.ghc865;
-  haskellPackages = import ./packages.nix { inherit pkgs packageSet; };
+  haskellPackages = pkgs.callPackage ./packages { inherit packageSet; };
 in
   {
     imports = [./base.nix];

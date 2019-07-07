@@ -5,6 +5,9 @@ let
     url = "https://github.com/tweag/ormolu";
     rev = "bdc8738fa89d37ca330221d8b75427f466f9e08a";
   });
+
+  liquid = packageSet.callPackage ./liquidhaskell.nix { };
+
 in with packageSet; [
   ormoluPkg.ormolu
 
@@ -14,7 +17,7 @@ in with packageSet; [
   dhall
   dhall-json
 
-  liquidhaskell
+  liquid
 
   doctest
 
