@@ -4,7 +4,7 @@
   environment.systemPackages = with pkgs; [
     rustc
     rustup
-    rustracer
+    # rustracer
     cargo
     carnix
   ];

@@ -195,6 +195,7 @@ Plug 'idris-hackers/idris-vim'
 
 " ats2
 Plug 'bakpakin/ats2.vim'
+" Plug 'vmchale/ats-vim'
 
 " arduino
 Plug 'sudar/vim-arduino-syntax'

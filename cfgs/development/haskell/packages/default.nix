@@ -7,6 +7,7 @@ let
   });
 
   liquid = packageSet.callPackage ./liquidhaskell.nix { };
+  brittany = packageSet.callPackage ./brittany.nix { };
 
 in with packageSet; [
   ormoluPkg.ormolu
@@ -27,7 +28,9 @@ in with packageSet; [
   json-autotype
   styx
   # intero
-  # brittany
+
+  brittany
+
   hoogle
   hindent
   stylish-haskell
