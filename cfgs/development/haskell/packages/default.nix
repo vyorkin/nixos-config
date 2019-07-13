@@ -17,6 +17,7 @@ in with packageSet; [
 
   dhall
   dhall-json
+  expresso
 
   liquid
 

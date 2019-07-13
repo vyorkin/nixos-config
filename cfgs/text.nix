@@ -23,7 +23,7 @@
     djview
     djvulibre
     ghostscript
-    polar-bookshelf
     zathura
+    polar-bookshelf
   ];
 }

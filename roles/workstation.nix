@@ -8,7 +8,7 @@
     ../cfgs/media.nix
     ../cfgs/mail.nix
     ../cfgs/fonts.nix
-    # ../cfgs/vpn.nix
+    ../cfgs/vpn.nix
     ../cfgs/terminal.nix
     ../cfgs/monitoring.nix
     ../cfgs/emulators.nix

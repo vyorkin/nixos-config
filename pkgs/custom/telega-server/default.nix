@@ -1,14 +1,14 @@
-{ pkgs, stdenv }:
+{ pkgs, stdenv, tdlib }:
 
-let tdlib = pkgs.callPackage ../tdlib { };
-in stdenv.mkDerivation rec {
-  name = "telega-server";
+stdenv.mkDerivation rec {
+  version = "2019-07-10";
+  name = "telega-server-${version}";
 
   src = pkgs.fetchFromGitHub {
     owner = "zevlg";
     repo = "telega.el";
     rev = "537a9a6fb93d09b7dfa6e44aa5612a16ca816b98";
-    sha256 = "1kcipwn56vax1ylz5qvr5hip1gy7q9bk1v4ywjvi9pz7hg78xsh9";
+    sha256 = "0iadsr4wl4cj69szxlwfvnspjqyq6q0appc5h0xjfmqnijn1gspg";
   };
 
   buildInputs = [tdlib];

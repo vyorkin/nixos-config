@@ -1,14 +1,13 @@
 { pkgs, ... }:
 
 let
-  ocamlPackages = pkgs.recurseIntoAttrs pkgs.ocamlPackages_latest;
-  ocamlVersion = (builtins.parseDrvName ocamlPackages.ocaml.name).version;
+  ocamlVersion = (builtins.parseDrvName pkgs.ocamlPackages.ocaml.name).version;
 in
   {
     environment.systemPackages = with pkgs; [
       ocaml
     ] ++
-    (with ocamlPackages; [
+    (with pkgs.ocamlPackages; [
       ocamlbuild
       opam
       findlib
@@ -25,6 +24,6 @@ in
     ]);
 
     environment.variables = {
-      findlib = "${ocamlPackages.findlib}/lib/ocaml/${ocamlVersion}/site-lib";
+      findlib = "${pkgs.ocamlPackages.findlib}/lib/ocaml/${ocamlVersion}/site-lib";
     };
   }

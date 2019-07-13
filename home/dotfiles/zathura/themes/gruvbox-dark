@@ -1,0 +1,43 @@
+# gruvbox-dark
+
+set completion-bg "#282828"
+set completion-fg "#fbf1c7"
+set completion-group-bg "#282828"
+set completion-group-fg "#fbf1c7"
+set completion-highlight-bg "#458588"
+set completion-highlight-fg "#fbf1c7"
+
+set default-bg "#282828"
+set default-fg "#fbf1c7"
+
+set inputbar-bg "#282828"
+set inputbar-fg "#fbf1c7"
+
+set notification-bg "#83a598"
+set notification-fg "#282828"
+set notification-error-bg "#fb4934"
+set notification-error-fg "#282828"
+set notification-warning-bg "#fe8019"
+set notification-warning-fg "#282828"
+
+set tabbar-bg "#928374"
+set tabbar-fg "#282828"
+set tabbar-focus-bg "#83a598"
+set tabbar-focus-fg "#fbf1c7"
+
+set statusbar-bg "#282828"
+set statusbar-fg "#fbf1c7"
+
+set highlight-color "#8ec0c7"
+set highlight-active-color "#689d6a"
+
+set recolor-darkcolor "#282828"
+set recolor-lightcolor "#fbf1c7"
+
+set render-loading-bg "#fbf1c7"
+set render-loading-fg "#282828"
+
+set index-bg "#282828"
+set index-fg "#fbf1c7"
+set index-active-bg "#458588"
+set index-active-fg "#fbf1c7"
