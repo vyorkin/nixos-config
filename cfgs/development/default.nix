@@ -5,7 +5,7 @@
     ./ccpp.nix
     ./lisp.nix
     ./ocaml.nix
-    ./proof-assistants.nix
+    ./formalization.nix
     ./purescript.nix
     ./python.nix
     ./ruby.nix

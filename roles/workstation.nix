@@ -22,6 +22,7 @@
     ../cfgs/sdl.nix
     ../cfgs/hardware.nix
     ../cfgs/documentation.nix
+    ../cfgs/office.nix
     ../cfgs/file-managers.nix
     ../cfgs/code-editors.nix
     ../cfgs/remote-control.nix
@@ -74,6 +75,7 @@
     redshift = {
       # conflicts with xrandr-invert-colors
       # see: https://github.com/zoltanp/xrandr-invert-colors#after-a-short-time-the-colors-are-reverted-to-original-ones-there-is-no-error-message
+      # (I use xflux instead)
       enable = false;
       latitude = "55.751244";
       longitude = "37.618423";

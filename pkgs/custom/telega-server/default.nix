@@ -1,6 +1,7 @@
-{ pkgs, stdenv, tdlib }:
+{ pkgs, stdenv }:
 
-stdenv.mkDerivation rec {
+let tdlib = pkgs.callPackage ../../nixpkgs/pkgs/development/libraries/tdlib { };
+in stdenv.mkDerivation rec {
   version = "2019-07-10";
   name = "telega-server-${version}";
 

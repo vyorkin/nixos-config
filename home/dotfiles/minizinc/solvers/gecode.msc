@@ -1,0 +1,6 @@
+name = "Gecode";
+version = "6.2.0";
+id = "org.gecode";
+executable = "/nix/store/8c8g61hixrk6f6m1p07fiqfm558cphbh-gecode-6.2.0/bin/fzn-gecode";
+tags = ["cp","int", "float", "set", "restart"];
+stdFlags = ["-a","-f","-n","-p","-r","-s","-t"];

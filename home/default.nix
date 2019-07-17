@@ -19,6 +19,7 @@
     ./ranger.nix
     ./hunter.nix
     ./zathura.nix
+    ./minizinc.nix
     ./qutebrowser.nix
     ./irc.nix
     ./idea.nix

@@ -13,5 +13,8 @@
     pmutils
     usbutils
     up
+
+    xflux
+    xflux-gui
   ];
 }

@@ -13,5 +13,19 @@ in {
     coq
     oldPkgs.z3
     cvc4
-  ];
+    tlaplus
+    tlaplusToolbox
+    minizinc
+    minizincide
+    why3
+    gecode
+  ] ++ (with pkgs.coqPackages; [
+    ssreflect
+    mathcomp
+    mathcomp-analysis
+    QuickChick
+    # category-theory
+    coq-ext-lib
+    coq-haskell
+  ]);
 }

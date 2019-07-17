@@ -11,9 +11,12 @@ in
       ocamlbuild
       opam
       findlib
+      batteries
       utop
       merlin
       reason
+      camlp5
+      num
       ocp-indent
       core
       core_extended
@@ -23,7 +26,7 @@ in
       js_of_ocaml-ppx
     ]);
 
-    environment.variables = {
-      findlib = "${pkgs.ocamlPackages.findlib}/lib/ocaml/${ocamlVersion}/site-lib";
-    };
+    # environment.variables = {
+    #   findlib = "${pkgs.ocamlPackages.findlib}/lib/ocaml/${ocamlVersion}/site-lib";
+    # };
   }

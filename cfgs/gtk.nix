@@ -9,5 +9,7 @@
     numix-gtk-theme
     numix-icon-theme
     numix-cursor-theme
+    shades-of-gray-theme
+    adapta-gtk-theme
   ];
 }

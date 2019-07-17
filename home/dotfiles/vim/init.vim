@@ -137,12 +137,12 @@ endif
 set noswapfile                  " don't use buffer swap files
 set nowritebackup               " don't write backups
 
-set background=dark
+set background=light
 
 if &background=="dark"
   colorscheme base16-black-metal
 else
-  colorscheme tomorrow
+  colorscheme Tomorrow
 endif
 
 " get rid of the vertical separator for split windows

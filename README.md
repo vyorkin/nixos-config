@@ -70,6 +70,12 @@ $ cargo install bootimage cargo-xbuild
 $ cargo install hunter
 ```
 
+### Why3
+
+```bash
+why3 config --detect
+```
+
 ### GNOME
 
 Tweaks:
