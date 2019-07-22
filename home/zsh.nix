@@ -18,7 +18,7 @@
 
       sessionVariables = {
         FZF_MARKS_JUMP = "^x^j";
-        GEOMETRY_PROMPT_PLUGINS = [ "git" "+rustup" ];
+        GEOMETRY_PROMPT_PLUGINS = [];
         PROMPT_GEOMETRY_COLORIZE_SYMBOL = false;
         ZSH_PLUGINS_ALIAS_TIPS_TEXT = "> ";
       };
@@ -139,16 +139,6 @@
             repo = "zsh-fuzzy-search-and-edit";
             rev = "4fbb3d351b75f1007df0d5cb09292bb2321f903a";
             sha256 = "1shhmda1iqwz79y2ianmjs5623zabckxfj2hqw4gl2axpkwnj1ib";
-          };
-        }
-        {
-          name = "zsh-command-time";
-          file = "command-time.plugin.zsh";
-          src = fetchFromGitHub {
-            owner = "popstas";
-            repo = "zsh-command-time";
-            rev = "afb4a4c9ae7ce64ca9d4f334a79a25e46daad0aa";
-            sha256 = "1bvyjgz6bhgg1nwr56r50p6fblgah6yiql55pgm5abnn2h876fjq";
           };
         }
         {

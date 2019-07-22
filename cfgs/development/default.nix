@@ -14,6 +14,7 @@
     ./tcl.nix
     ./haskell
     ./agda.nix
+    ./java.nix
   ];
 
   environment.systemPackages = with pkgs; [

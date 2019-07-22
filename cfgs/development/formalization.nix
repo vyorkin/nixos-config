@@ -18,7 +18,11 @@ in {
     minizinc
     minizincide
     why3
+    alt-ergo
+    framac
     gecode
+    isabelle
+    alloy
   ] ++ (with pkgs.coqPackages; [
     ssreflect
     mathcomp
