@@ -8,6 +8,7 @@
     gcc
     gnumake
     openssl
+    m4
 
     telnet
 

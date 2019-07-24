@@ -10,6 +10,7 @@ in {
     nix-du
     nix-index
     nix-serve
+    nix-review
     # nixops
     any-nix-shell
 
