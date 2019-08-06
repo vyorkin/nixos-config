@@ -35,12 +35,14 @@
     ../cfgs/tex.nix
     ../cfgs/scraping.nix
     ../cfgs/docker.nix
-    ../cfgs/wm.nix
     ../cfgs/forensics.nix
     ../cfgs/dropbox.nix
     # ../cfgs/avr.nix
     ../cfgs/db
     ../cfgs/development
+
+    # Takes too much time to compile the VirtualBox
+    ../cfgs/wm.nix
   ];
 
   sound.enable = true;

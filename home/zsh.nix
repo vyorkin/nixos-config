@@ -18,9 +18,8 @@
 
       sessionVariables = {
         FZF_MARKS_JUMP = "^x^j";
-        GEOMETRY_PROMPT_PLUGINS = [];
-        PROMPT_GEOMETRY_COLORIZE_SYMBOL = false;
         ZSH_PLUGINS_ALIAS_TIPS_TEXT = "> ";
+        GEOMETRY_PROMPT_SUFFIX="$(if [ ! -z $IN_NIX_SHELL ]; then echo ' [nix]'; fi)";
       };
 
       initExtra = ''
@@ -30,9 +29,9 @@
 
         . ~/.zconfig/setup.zsh
 
-        [[ -f ~/.dotsecrets/secret_tokens ]] && . ~/.dotsecrets/secret_tokens
+        eval "$(direnv hook zsh)"
 
-        any-nix-shell zsh --info-right | source /dev/stdin
+        [[ -f ~/.dotsecrets/secret_tokens ]] && . ~/.dotsecrets/secret_tokens
 
         bindkey '^Y' fuzzy-search-and-edit
       '';

@@ -18,6 +18,7 @@
     ./i3.nix
     ./ranger.nix
     ./hunter.nix
+    ./autorandr.nix
     ./zathura.nix
     ./minizinc.nix
     ./qutebrowser.nix

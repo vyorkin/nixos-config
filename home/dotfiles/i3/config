@@ -219,51 +219,34 @@ bar {
   font pango:FiraCode 10
   position bottom
 
-  status_command bumblebee-status -m amixer brightness date time battery -p interval=1 home.path=/home getcrypto.getltc=0 getcrypto.geteth=0 github.token=e6fed7b612143808e139e657e876176e40747a55 ping.address=87.250.250.242 ping.probes=3 ping.interval=120 -t gruvbox-powerline-light
+  status_command bumblebee-status -m amixer brightness date time battery -p interval=1 home.path=/home getcrypto.getltc=0 getcrypto.geteth=0 github.token=e6fed7b612143808e139e657e876176e40747a55 ping.address=87.250.250.242 ping.probes=3 ping.interval=120 -t gruvbox-powerline
 
   # status_command i3status-rs ~/.config/i3/status.toml
 
   colors {
-    background $base00
-    separator  $base01
-    statusline $base04
+    background #000000
+    statusline #FFFFFF
+    separator  #666666
 
-    # State             Border  BG      Text
-    focused_workspace   $base05 $base0D $base00
-    active_workspace    $base05 $base03 $base00
-    inactive_workspace  $base03 $base01 $base05
-    urgent_workspace    $base08 $base08 $base00
-    binding_mode        $base00 $base0A $base00
+    focused_workspace  #222222 #4D444E #FFFFFF
+    active_workspace   #222222 #222222 #FFFFFF
+    inactive_workspace #222222 #222222 #888888
+    urgent_workspace   #222222 #900000 #FFFFFF
+    binding_mode       #222222 #900000 #FFFFFF
   }
 }
 
 # Move workspaces between output
 bindsym $mod+y move workspace to output left
 
-set $base00 #f7f7f7
-set $base01 #e3e3e3
-set $base02 #b9b9b9
-set $base03 #ababab
-set $base04 #525252
-set $base05 #464646
-set $base06 #252525
-set $base07 #101010
-set $base08 #7c7c7c
-set $base09 #999999
-set $base0A #a0a0a0
-set $base0B #8e8e8e
-set $base0C #868686
-set $base0D #686868
-set $base0E #747474
-set $base0F #5e5e5e
+# class                 border  bground text    indicator child_border
+client.focused          #ffff00 #000000 #FFFFFF #ffff00   #ffff00
+client.focused_inactive #222222 #000000 #FFFFFF #222222   #222222
+client.unfocused        #222222 #222222 #888888 #292D2E   #222222
+client.urgent           #540000 #700000 #FFFFFF #900000   #900000
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
-# Property Name         Border  BG      Text    Indicator Child Border
-client.focused          $base05 $base0D $base00 $base0D $base0C
-client.focused_inactive $base01 $base01 $base05 $base03 $base01
-client.unfocused        $base01 $base00 $base05 $base01 $base01
-client.urgent           $base08 $base08 $base00 $base08 $base08
-client.placeholder      $base00 $base00 $base05 $base00 $base00
-client.background $base07
+client.background       #FFFFFF
 
 for_window [class="^.*"] border pixel 2
 

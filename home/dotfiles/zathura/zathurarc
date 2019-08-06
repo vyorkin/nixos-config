@@ -1,4 +1,4 @@
-include themes/base16-light
+include themes/base16-dark
 
 set selection-clipboard clipboard
 set statusbar-h-padding 0

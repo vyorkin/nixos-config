@@ -76,6 +76,19 @@ $ cargo install hunter
 why3 config --detect
 ```
 
+### MiniZinc
+
+Edit the `gecode.msc` and update the `fzn-gecode`.
+To find the path:
+
+```sh
+readlink -f $(which fzn-gecode)
+```
+
+### OCaml
+
+Remove `OCAML_TOPLEVEL_PATH` from `~/.opam/opam-init/variables.sh`
+
 ### GNOME
 
 Tweaks:

@@ -3,6 +3,7 @@
 let
   ocamlVersion = (builtins.parseDrvName pkgs.ocamlPackages.ocaml.name).version;
   siteLisp = "share/emacs/site-lisp";
+  extraPkgs = pkgs.callPackage ./packages { };
   globalPkgs = with pkgs.ocamlPackages; [
     ocamlbuild
     findlib
@@ -19,11 +20,25 @@ let
     core_kernel
     core_extended
     core_bench
+    bisect_ppx
+    ppx_jane
+    ppx_let
+    ppx_deriving
+    fieldslib
+    lambdaTerm
+    re
+    re2
     eliom
     async
+    yojson
+    cohttp
+    # async_graphics
+    cryptokit
+    menhir
     js_of_ocaml
     js_of_ocaml-ppx
-  ];
+  ] ++ extraPkgs;
+  mkpath = p: "${p}/lib/ocaml/${ocamlVersion}/site-lib";
 in {
   environment.systemPackages = with pkgs; [ ocaml opam dune ] ++ globalPkgs;
   environment.variables = with pkgs.ocamlPackages; {
@@ -31,5 +46,6 @@ in {
     UTOP_SITE_LISP = "${utop}/${siteLisp}";
     MERLIN_SITE_LISP = "${merlin}/${siteLisp}";
     OCP_INDENT_SITE_LISP = "${ocp-indent}/${siteLisp}";
+    OCAML_TOPLEVEL_PATH = "${mkpath findlib}";
   };
 }

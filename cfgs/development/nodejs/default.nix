@@ -28,8 +28,6 @@ let
     bower
     yo
     pulp
-    node2nix
-    bower2nix
     http-server
     javascript-typescript-langserver
     typescript-language-server

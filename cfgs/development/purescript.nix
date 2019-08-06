@@ -12,7 +12,6 @@ in {
     purs
     psc-package
     purp
-    psc-package2nix
     spago
     zephyr
     pscid

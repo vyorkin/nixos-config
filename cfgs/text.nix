@@ -19,7 +19,7 @@
     poppler
     mupdf
 
-    calibre
+    # calibre
     djview
     djvulibre
     ghostscript

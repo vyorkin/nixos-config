@@ -8,8 +8,6 @@ in
 {
   environment.systemPackages = with pkgs; [
     cabal-install
-    cabal2nix
-    # stack2nix
     ghc
     stack
     hie

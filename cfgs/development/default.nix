@@ -4,7 +4,6 @@
   imports = [
     ./ccpp.nix
     ./lisp.nix
-    ./ocaml.nix
     ./formalization.nix
     ./purescript.nix
     ./python.nix
@@ -13,6 +12,7 @@
     ./rust.nix
     ./tcl.nix
     ./haskell
+    ./ocaml
     ./agda.nix
     ./java.nix
   ];
@@ -27,7 +27,9 @@
     hyperfine
     weighttp
     xxd
+    direnv
     asciinema
+    exercism
 
     elixir
     go

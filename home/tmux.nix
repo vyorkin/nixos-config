@@ -28,6 +28,10 @@ in {
           # set -g @themepack 'default'
             set -g @resurrect-strategy-nvim 'session'
             set -g @resurrect-capture-pane-contents 'on'
+            set -g @prefix_highlight_fg 'white'
+            set -g @prefix_highlight_bg 'blue'
+            set -g @online_icon 'online'
+            set -g @offline_icon 'offline'
           '';
         }
         tmuxPlugins.fzf-tmux-url

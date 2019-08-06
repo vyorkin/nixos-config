@@ -137,7 +137,7 @@ endif
 set noswapfile                  " don't use buffer swap files
 set nowritebackup               " don't write backups
 
-set background=light
+set background=dark
 
 if &background=="dark"
   colorscheme base16-black-metal
@@ -146,7 +146,7 @@ else
 endif
 
 " get rid of the vertical separator for split windows
-:set fillchars+=vert:\ 
+:set fillchars+=vert:\
 
 " colorscheme switching for vimdiff
 au FilterWritePre * if &diff | colorscheme strange | AirlineTheme tomorrow | endif

@@ -10,6 +10,9 @@
     openssl
     m4
 
+    fwts
+    lshw
+
     telnet
 
     screenfetch

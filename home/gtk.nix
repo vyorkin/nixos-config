@@ -6,20 +6,20 @@ with import ../const.nix;
     gtk = {
       enable = true;
 
-      # theme = {
-      #   name = "Arc";
-      #   package = pkgs.arc-theme;
-      # };
+      theme = {
+        name = "Arc-Dark";
+        package = pkgs.arc-theme;
+      };
 
       # theme = {
       #   name = "Paper";
       #   package = pkgs.paper-gtk-theme;
       # };
 
-      theme = {
-        name = "Adapta";
-        package = pkgs.adapta-gtk-theme;
-      };
+      # theme = {
+      #   name = "Adapta";
+      #   package = pkgs.adapta-gtk-theme;
+      # };
 
       iconTheme = {
         name = "Paper";
