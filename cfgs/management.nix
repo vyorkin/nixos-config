@@ -2,9 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    neomutt
-    msmtp
-    mu
-    offlineimap
+    taskwarrior
+    taskserver
   ];
 }

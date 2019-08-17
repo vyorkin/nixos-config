@@ -30,6 +30,7 @@
     ../cfgs/network-scanners.nix
     ../cfgs/torrents.nix
     ../cfgs/blogging.nix
+    ../cfgs/management.nix
     ../cfgs/text.nix
     ../cfgs/spell.nix
     ../cfgs/tex.nix
@@ -37,12 +38,13 @@
     ../cfgs/docker.nix
     ../cfgs/forensics.nix
     ../cfgs/dropbox.nix
+    ../cfgs/games.nix
     # ../cfgs/avr.nix
     ../cfgs/db
     ../cfgs/development
 
     # Takes too much time to compile the VirtualBox
-    ../cfgs/wm.nix
+    # ../cfgs/wm.nix
   ];
 
   sound.enable = true;

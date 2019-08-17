@@ -9,6 +9,7 @@
     urlscan
     urlview
     urlwatch
+    html2text
     file
     pmutils
     usbutils

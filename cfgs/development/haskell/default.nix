@@ -54,6 +54,7 @@ in
 
       parsec
       megaparsec
+      parser-combinators
 
       OpenGL
       GLUT

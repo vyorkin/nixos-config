@@ -13,5 +13,6 @@
     tabula
     ttyplot
     xurls
+    wordnet
   ];
 }

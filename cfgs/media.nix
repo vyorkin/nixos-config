@@ -5,6 +5,7 @@
     alsaUtils
     vlc
     mpv
+    recordmydesktop
     ffmpeg-full
     ffmpegthumbnailer
     flac

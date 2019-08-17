@@ -55,6 +55,6 @@ in with packageSet; [
 
   Agda
 
-  ats-pkg
+  # ats-pkg
   # ats-format
 ]

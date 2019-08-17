@@ -45,6 +45,7 @@ in {
       i3lock-fancy
       i3lock-pixeled
       i3status-rust
+      i3-wk-switch
 
       gnome3.nautilus
       gnome3.sushi

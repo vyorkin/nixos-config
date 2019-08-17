@@ -33,7 +33,7 @@
 
     elixir
     go
-    idris
+    # idris
     nim
     racket
     swiProlog
