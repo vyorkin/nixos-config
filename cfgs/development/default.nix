@@ -4,6 +4,7 @@
   imports = [
     ./ccpp.nix
     ./lisp.nix
+    ./clojure.nix
     ./formalization.nix
     ./purescript.nix
     ./python.nix
@@ -11,6 +12,7 @@
     ./nodejs
     ./rust.nix
     ./tcl.nix
+    ./go.nix
     ./haskell
     ./ocaml
     ./agda.nix
@@ -32,8 +34,7 @@
     exercism
 
     elixir
-    go
-    # idris
+    idris
     nim
     racket
     swiProlog

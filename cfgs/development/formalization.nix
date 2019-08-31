@@ -30,6 +30,6 @@ in {
     QuickChick
     # category-theory
     coq-ext-lib
-    coq-haskell
+    # coq-haskell
   ]);
 }

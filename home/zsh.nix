@@ -31,7 +31,7 @@
 
         eval "$(direnv hook zsh)"
 
-        [[ -f ~/.dotsecrets/secret_tokens ]] && . ~/.dotsecrets/secret_tokens
+        [[ -f ~/.secret_tokens ]] && . ~/.secret_tokens
 
         bindkey '^Y' fuzzy-search-and-edit
       '';

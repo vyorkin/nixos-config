@@ -16,7 +16,7 @@ in with packageSet; [
   happy
 
   dhall
-  dhall-json
+  # dhall-json
   expresso
 
   liquid

@@ -40,7 +40,7 @@ let
     create-react-app
     svgo
     prettier
-    jsdoc
+    # jsdoc
     sloc
     js-beautify
     tern

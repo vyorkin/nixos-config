@@ -6,6 +6,7 @@ set $term kitty
 set $browser1 firefox
 set $browser2 google-chrome-stable
 set $browser3 qutebrowser
+set $browser4 tor-browser
 
 set $shutdown shutdown -h now
 set $reboot reboot
@@ -89,38 +90,49 @@ bindsym $mod+Shift+t focus mode_toggle
 
 bindsym $mod+a focus parent
 
-set $workspace1 "1"
-set $workspace2 "2"
-set $workspace3 "3"
-set $workspace4 "4"
-set $workspace5 "5"
-set $workspace6 "6"
-set $workspace7 "7"
-set $workspace8 "8"
-set $workspace9 "9"
-set $workspace10 "10"
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
 
-bindsym $mod+1 workspace $workspace1
-bindsym $mod+2 workspace $workspace2
-bindsym $mod+3 workspace $workspace3
-bindsym $mod+4 workspace $workspace4
-bindsym $mod+5 workspace $workspace5
-bindsym $mod+6 workspace $workspace6
-bindsym $mod+7 workspace $workspace7
-bindsym $mod+8 workspace $workspace8
-bindsym $mod+9 workspace $workspace9
-bindsym $mod+0 workspace $workspace10
+bindsym $hyper+1 workspace 11
+bindsym $hyper+2 workspace 12
+bindsym $hyper+3 workspace 13
+bindsym $hyper+4 workspace 14
+bindsym $hyper+5 workspace 15
+bindsym $hyper+6 workspace 16
+bindsym $hyper+7 workspace 17
+bindsym $hyper+8 workspace 18
+bindsym $hyper+9 workspace 19
+bindsym $hyper+0 workspace 20
 
-bindsym $mod+Shift+1 move container to workspace $workspace1
-bindsym $mod+Shift+2 move container to workspace $workspace2
-bindsym $mod+Shift+3 move container to workspace $workspace3
-bindsym $mod+Shift+4 move container to workspace $workspace4
-bindsym $mod+Shift+5 move container to workspace $workspace5
-bindsym $mod+Shift+6 move container to workspace $workspace6
-bindsym $mod+Shift+7 move container to workspace $workspace7
-bindsym $mod+Shift+8 move container to workspace $workspace8
-bindsym $mod+Shift+9 move container to workspace $workspace9
-bindsym $mod+Shift+0 move container to workspace $workspace10
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+bindsym $hyper+Shift+1 move container to workspace 11
+bindsym $hyper+Shift+2 move container to workspace 12
+bindsym $hyper+Shift+3 move container to workspace 13
+bindsym $hyper+Shift+4 move container to workspace 14
+bindsym $hyper+Shift+5 move container to workspace 15
+bindsym $hyper+Shift+6 move container to workspace 16
+bindsym $hyper+Shift+7 move container to workspace 17
+bindsym $hyper+Shift+8 move container to workspace 18
+bindsym $hyper+Shift+9 move container to workspace 19
+bindsym $hyper+Shift+0 move container to workspace 20
 
 workspace 1 output HDMI-1 eDP-1
 workspace 2 output HDMI-1 eDP-1
@@ -132,6 +144,16 @@ workspace 7 output HDMI-1 eDP-1
 workspace 8 output HDMI-1 eDP-1
 workspace 9 output HDMI-1 eDP-1
 workspace 10 output HDMI-1 eDP-1
+workspace 11 output HDMI-1 eDP-1
+workspace 12 output HDMI-1 eDP-1
+workspace 13 output HDMI-1 eDP-1
+workspace 14 output HDMI-1 eDP-1
+workspace 15 output HDMI-1 eDP-1
+workspace 16 output HDMI-1 eDP-1
+workspace 17 output HDMI-1 eDP-1
+workspace 18 output HDMI-1 eDP-1
+workspace 19 output HDMI-1 eDP-1
+workspace 20 output HDMI-1 eDP-1
 
 bindsym $hyper+Shift+c reload
 bindsym $hyper+Shift+r restart
@@ -148,12 +170,14 @@ bindsym $hyper+m exec $term -e neomutt
 bindsym $hyper+r exec $term -e ranger
 bindsym $hyper+o exec nautilus
 bindsym $hyper+z exec zathura
+bindsym $hyper+space exec emacsclient -nc
 
 # App quick focus
 
 bindsym $hyper+e [class="(?i)qutebrowser"] focus
 bindsym $hyper+d [class="Firefox"] focus
 bindsym $hyper+u [class="(?i)Chrome"] focus
+bindsym $hyper+t [class="Tor"] focus
 
 bindsym $hyper+q [class="Telegram"] focus
 bindsym $hyper+s [class="Slack"] focus
@@ -162,7 +186,7 @@ bindsym $hyper+k [class="Spotify"] focus
 bindsym $hyper+f [class="Emacs"] focus
 bindsym $hyper+c [class="Code"] focus
 bindsym $hyper+i [class="kitty"] focus
-bindsym $hyper+0 [class="Zathura"] focus
+bindsym $hyper+b [class="Zathura"] focus
 
 mode "resize" {
   bindsym h resize shrink width 5 px or 5 ppt

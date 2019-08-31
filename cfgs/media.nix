@@ -9,6 +9,7 @@
     ffmpeg-full
     ffmpegthumbnailer
     flac
+    cmus
 
     ardour
     grip

@@ -2,7 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-    (emacsGit.override { withXwidgets = true; })
+    # emacsGit
+    (emacs.override { withXwidgets = true; })
     cask
   ];
 }

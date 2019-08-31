@@ -2,14 +2,14 @@
 
 let tdlib = pkgs.callPackage ../../nixpkgs/pkgs/development/libraries/tdlib { };
 in stdenv.mkDerivation rec {
-  version = "0.4.0";
+  version = "99a91aaff7fe36570f9af137a5f9904e808978b9";
   pname = "telega-server";
 
   src = pkgs.fetchFromGitHub {
     owner = "zevlg";
     repo = "telega.el";
     rev = version;
-    sha256 = "1a5fxix2zvs461vn6zn36qgpg65bl38gfb3ivr24wmxq1avja5s1";
+    sha256 = "19vr0m8kgjqkl5x89wy2gbpy6qg5b6ack7b6cnrgfk70187jab4g";
   };
 
   buildInputs = [ tdlib ];

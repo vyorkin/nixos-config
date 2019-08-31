@@ -81,11 +81,14 @@
     # (I use xflux instead)
     redshift = {
       enable = false;
-      latitude = "55.751244";
-      longitude = "37.618423";
       temperature.day = 5500;
       temperature.night = 3700;
     };
+  };
+
+  location = {
+    latitude = "55.751244";
+    longitude = "37.618423";
   };
 
   networking.firewall.allowedTCPPorts = [

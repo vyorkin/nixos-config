@@ -13,6 +13,10 @@
     tabula
     ttyplot
     xurls
+
     wordnet
+    sdcv
+
+    translate-shell
   ];
 }

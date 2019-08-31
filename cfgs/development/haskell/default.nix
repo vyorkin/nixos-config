@@ -70,7 +70,7 @@ in
       brick
       vty
 
-      dhall
+      (dhall.overrideAttrs (old: { doCheck = false; }))
 
       hspec
       tasty

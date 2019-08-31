@@ -16,6 +16,7 @@
     ./gtk.nix
     ./keyboard.nix
     ./i3.nix
+    ./mail.nix
     ./ranger.nix
     ./hunter.nix
     ./autorandr.nix

@@ -32,7 +32,6 @@ let
     async
     yojson
     cohttp
-    # async_graphics
     cryptokit
     menhir
     js_of_ocaml

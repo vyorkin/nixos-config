@@ -6,6 +6,7 @@
       "dunst" = {
         source = ./dotfiles/dunst;
         target = ".config/dunst";
+        recursive = true;
       };
     };
   };

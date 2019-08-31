@@ -4,6 +4,7 @@
   home-manager.users.vyorkin = {
     home.file = {
       ".authinfo" = { source = ./dotsecrets/authinfo; };
+      ".secret_tokens" = { source = ./dotsecrets/secret_tokens; };
       ".netrc" = { source = ./dotsecrets/netrc; };
       ".offlineimaprc" = { source = ./dotsecrets/offlineimaprc; };
       ".goobookrc" = { source = ./dotsecrets/goobookrc; };

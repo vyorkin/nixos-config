@@ -1,14 +1,6 @@
 [global]
     font = Monospace 12
 
-    # allow a small subset of html markup:
-    # <b>bold</b>
-    # <i>italic</i>
-    # <s>strikethrough<s/>
-    # <u>underline</u>
-    #
-    # for a complete reference see http://developer.gnome.org/pango/stable/PangoMarkupFormat.html
-    # If markup is not allowed, those tags will be stripped out of the message.
     allow_markup = yes
 
     # The format of the message. Possible variables are:
@@ -104,14 +96,6 @@
     # horizontal padding
     horizontal_padding = 8
 
-    # Define a color for the separator.
-    # possible values are:
-    #  * auto: dunst tries to find a color fitting to the background
-    #  * foreground: use the same color as the foreground
-    #  * frame: use the same color as the frame.
-    #  * anything else will be interpreted as a X color
-    separator_color = frame
-
     # print a notification on startup
     # This is mainly for error detection, since dbus (re-)starts dunst
     # automatically after a crash.
@@ -125,7 +109,6 @@
 
 [frame]
     width = 0
-    color = "#000000"
 
 [shortcuts]
     # shortcuts are specified as [modifier+][modifier+]...key
@@ -145,51 +128,23 @@
     # context menu
     context = mod4+shift+i
 
-[urgency_low]
-    # IMPORTANT: colors have to be defined in quotation marks.
-    # Otherwise the '#' and following  would be interpreted as a comment.
+[base16_low]
+    msg_urgency = low
+    background = "#121212"
+    foreground = "#333333"
+    timeout = 4
+
+[base16_normal]
+    msg_urgency = normal
     background = "#222222"
-    foreground = "#888888"
-    timeout = 10
+    foreground = "#c1c1c1"
+    timeout = 8
 
-[urgency_normal]
-    background = "#285577"
-    foreground = "#ffffff"
-    timeout = 10
-
-[urgency_critical]
-    background = "#900000"
-    foreground = "#ffffff"
+[base16_critical]
+    msg_urgency = critical
+    background = "#5f8787"
+    foreground = "#999999"
     timeout = 0
 
-
-# Every section that isn't one of the above is interpreted as a rules
-# to override settings for certain messages.
-# Messages can be matched by 'appname', 'summary', 'body' or 'icon'
-# and you can override the 'timeout', 'urgency', 'foreground', 'background'
-# and 'format'.
-# Shell-like globbing will get expanded.
-#
-# SCRIPTING
-# you can specify a script that gets run when the rule matches by setting
-# the 'script' option.
-# The script will be called as follows:
-# script appname summary body icon urgency
-# where urgency can be "LOW", "NORMAL" or "CRITICAL".
-#
-# NOTE: if you don't want a notification to be displayed, set the format to ""
-# NOTE: It might be helpful to run dunst -print in a terminal in order to find
-# fitting options for rules.
-
-#[espeak]
-#    summary = "*"
-#    script = dunst_espeak.sh
-
-#[script-test]
-#    summary = "*script*"
-#    script = dunst_test.sh
-
-#[ignore]
-## This notification will not be displayed
-#    summary = "foobar"
-#    format = ""
+    frame_color = "#c1c1c1"
+    separator_color = "#c1c1c1"

@@ -13,5 +13,9 @@
     # w3m
 
     qutebrowser
+
+    # tor
+    # tor-arm
+    # tor-browser-bundle-bin
   ];
 }

@@ -6,7 +6,7 @@ in {
     skype
     slack
     tdesktop
-    telegram-cli
+    # telegram-cli
     pidgin
     discord
     gitter

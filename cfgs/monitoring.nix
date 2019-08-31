@@ -27,6 +27,7 @@
     nethogs
     nload
     speedtest-cli
+    fast-cli
 
     inotify-tools
     multitail
