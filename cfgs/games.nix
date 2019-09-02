@@ -7,5 +7,10 @@
     # zdoom
     # chocolateDoom
     # crispyDoom
+
+    steam
+    minecraft
+    # https://minecraft.gamepedia.com/Server.properties
+    minecraft-server
   ];
 }

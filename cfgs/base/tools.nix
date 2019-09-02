@@ -9,6 +9,7 @@
     gnumake
     openssl
     m4
+    numactl
 
     fwts
     lshw

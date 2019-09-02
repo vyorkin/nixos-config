@@ -16,6 +16,7 @@
 
     wordnet
     sdcv
+    proselint
 
     translate-shell
   ];

@@ -225,8 +225,7 @@ mode "$mode_system" {
 }
 bindsym $mod+Alt_R mode "$mode_system"
 
-#bindsym $mod+x exec --no-startup-id i3lock-pixeled
-bindsym $mod+x exec --no-startup-id i3lock-fancy -t "><)))*>"
+bindsym $mod+x exec --no-startup-id i3lock-pixeled
 
 set $display_mode Display [w]ork [h]ome [t]v [m]obile
 bindsym $mod+d mode $display_mode
