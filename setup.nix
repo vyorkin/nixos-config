@@ -18,6 +18,9 @@ in {
   builtins.match ".*\\.nix" n != null || builtins.pathExists
   (path + ("/" + n + "/default.nix"))) (lib.attrNames content));
 
+  nix.gc.automatic = true;
+  nix.gc.options = "--delete-older-than 7d";
+
   nix.trustedBinaryCaches = [
     "http://hydra.nixos.org"
     "http://cache.nixos.org"
