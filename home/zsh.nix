@@ -19,7 +19,7 @@
       sessionVariables = {
         FZF_MARKS_JUMP = "^x^j";
         ZSH_PLUGINS_ALIAS_TIPS_TEXT = "> ";
-        GEOMETRY_PROMPT_SUFFIX="$(if [ ! -z $IN_NIX_SHELL ]; then echo ' [nix]'; fi)";
+        # GEOMETRY_PROMPT_SUFFIX="$(if [ ! -z $IN_NIX_SHELL ]; then echo ' [nix]'; fi)";
       };
 
       initExtra = ''
@@ -30,6 +30,7 @@
         . ~/.zconfig/setup.zsh
 
         eval "$(direnv hook zsh)"
+        eval "$(starship init zsh)"
 
         [[ -f ~/.secret_tokens ]] && . ~/.secret_tokens
 
@@ -51,16 +52,16 @@
           name = "zsh-history-substring-search";
           src = zsh-history-substring-search;
         }
-        {
-          name = "geometry";
-          file = "geometry.plugin.zsh";
-          src = fetchFromGitHub {
-            owner = "geometry-zsh";
-            repo = "geometry";
-            rev = "d42626ef65fd3b1f8f72d30e9af5d515a0ec5e0b";
-            sha256 = "1a2lccwmk8li7pwwngpbb91ckjdyziim9b5pa2vrygbnhfdfbs21";
-          };
-        }
+        # {
+        #   name = "geometry";
+        #   file = "geometry.plugin.zsh";
+        #   src = fetchFromGitHub {
+        #     owner = "geometry-zsh";
+        #     repo = "geometry";
+        #     rev = "d42626ef65fd3b1f8f72d30e9af5d515a0ec5e0b";
+        #     sha256 = "1a2lccwmk8li7pwwngpbb91ckjdyziim9b5pa2vrygbnhfdfbs21";
+        #   };
+        # }
         {
           name = "zsh-nix-shell";
           file = "nix-shell.plugin.zsh";

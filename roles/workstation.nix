@@ -51,6 +51,8 @@
   hardware.pulseaudio = {
     enable = true;
     support32Bit = true;
+    package = pkgs.pulseaudioFull;
+    extraModules = [ pkgs.pulseaudio-modules-bt ];
   };
 
   hardware.opengl = {
@@ -60,7 +62,13 @@
 
   environment.systemPackages = with pkgs; [ pasystray pavucontrol ];
 
-  hardware.bluetooth.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    extraConfig = "
+      [General]
+      Enable=Source,Sink,Media,Socket
+    ";
+  };
 
   # Enable Plymouth boot splash screen
   boot.plymouth.enable = true;

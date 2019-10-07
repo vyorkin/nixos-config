@@ -5,12 +5,13 @@ in {
   environment.systemPackages = with pkgs; [
     skype
     slack
-    tdesktop
-    # telegram-cli
-    pidgin
+    slack-term
     discord
-    gitter
     zoom-us
     telega-server
+    tdesktop
+    # telegram-cli
+    # pidgin
+    # gitter
   ];
 }

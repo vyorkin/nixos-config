@@ -26,10 +26,11 @@ in {
   ] ++ (with pkgs.coqPackages; [
     ssreflect
     mathcomp
+    mathcomp-ssreflect
     mathcomp-analysis
     QuickChick
-    # category-theory
     coq-ext-lib
+    # category-theory
     # coq-haskell
   ]);
 }

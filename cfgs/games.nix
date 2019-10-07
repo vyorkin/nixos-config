@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    # factorio
     # factorio-experimental
     dwarf-fortress
     # zdoom

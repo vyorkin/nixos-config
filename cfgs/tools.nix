@@ -15,7 +15,12 @@
     usbutils
     up
 
+    extundelete
+
     xflux
     xflux-gui
+
+    xmagnify
+    slop
   ];
 }

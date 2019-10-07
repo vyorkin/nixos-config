@@ -140,8 +140,8 @@ Plug 'toyamarinyon/vim-swift'
 " old
 " Plug 'jrk/vim-ocaml'
 " current
-" Plug 'rgrinberg/vim-ocaml'
-" Plug 'let-def/ocp-indent-vim'
+Plug 'rgrinberg/vim-ocaml'
+Plug 'let-def/ocp-indent-vim'
 
 " erlang, elixir
 Plug 'vim-erlang/vim-erlang-runtime'

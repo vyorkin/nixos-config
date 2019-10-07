@@ -23,9 +23,18 @@
     smem
     dnsutils
 
+    ltrace
+    dstat
+    sysstat
+    linuxPackages.perf
+    linuxPackages.systemtap
+    pcstat
     iperf
+    tiptop
     nethogs
     nload
+    tcpdump
+    iptraf
     speedtest-cli
     fast-cli
 

@@ -10,6 +10,7 @@
     openssl
     m4
     numactl
+    nix-index
 
     fwts
     lshw
@@ -19,6 +20,8 @@
     screenfetch
     bat
     exa
+    fd
+    prettyping
     ncdu
   ];
 }

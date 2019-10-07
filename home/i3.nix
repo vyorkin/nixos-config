@@ -41,9 +41,11 @@ in {
     home.packages = with pkgs; [
       bumblebeeStatus
       unclutter
+      i3lock
       i3lock-color
-      i3lock-fancy
-      i3lock-pixeled
+      # i3lock-fancy
+      # i3lock-pixeled
+      betterlockscreen
       i3status-rust
       i3-wk-switch
 

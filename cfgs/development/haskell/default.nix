@@ -59,6 +59,9 @@ in
       OpenGL
       GLUT
       gloss
+      gloss-juicy
+      apecs
+      apecs-gloss
 
       hasbolt
       hasbolt-extras

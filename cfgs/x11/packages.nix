@@ -16,6 +16,7 @@
     xorg.xmessage
     xorg.xgamma
     xorg.xrandr
+    xorg.xmag
     xrandr-invert-colors
     arandr
     autorandr

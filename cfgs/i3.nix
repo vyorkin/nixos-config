@@ -4,8 +4,8 @@ let
   slim-theme = pkgs.fetchFromGitHub {
     owner = "vyorkin";
     repo = "slim-theme";
-    rev = "203f8b34734efec325e7adb62b297191d276593d";
-    sha256 = "10ij4ibnvvn8zk31bnycq0zybvkaky78qg4xr6039ki3mv1y2cmi";
+    rev = "4b1230cb8ff4b7a5ca24f98bdc0610ecef42ea37";
+    sha256 = "11r1vibkvjxfkkh9aqssivhsm9dcl5kijgslgm80116isj6p7wrh";
   };
 in {
   sound.mediaKeys.enable = true;

@@ -11,7 +11,6 @@
     gdbgui
 
     idutils
-    ltrace
 
     ngrep
 
