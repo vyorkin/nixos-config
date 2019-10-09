@@ -48,6 +48,7 @@ let
 in {
   environment.systemPackages = with pkgs; [
     nodejs
+    yarn
     flow
   ] ++ global1 ++ global2;
 }
