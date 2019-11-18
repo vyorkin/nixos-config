@@ -5,7 +5,7 @@
     curl
     wget
     httpie
-    http-prompt
+    # http-prompt
     httplab
     wuzz
     insomnia

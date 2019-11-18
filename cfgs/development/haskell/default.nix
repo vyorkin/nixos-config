@@ -11,6 +11,8 @@ in
 
     services.hoogle = {
       enable = true;
+      port = 9000;
+
       packages = (hpkgs: with hpkgs; [
       relude
       text

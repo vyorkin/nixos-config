@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    mycli
+    # mycli
     pgcli
     pgcenter
   ];

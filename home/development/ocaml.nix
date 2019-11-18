@@ -3,6 +3,9 @@
 let basePath = ../dotfiles/ocaml;
 in {
   home-manager.users.vyorkin = {
-    home.file = { ".ocamlinit" = { source = basePath + "/ocamlinit"; }; };
+    home.file = {
+      ".utoprc" = { source = basePath + "/utoprc"; };
+      ".ocamlinit" = { source = basePath + "/ocamlinit"; };
+    };
   };
 }

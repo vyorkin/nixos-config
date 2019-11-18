@@ -143,6 +143,9 @@ Plug 'toyamarinyon/vim-swift'
 Plug 'rgrinberg/vim-ocaml'
 Plug 'let-def/ocp-indent-vim'
 
+" coq
+Plug 'the-lambda-church/coquille'
+
 " erlang, elixir
 Plug 'vim-erlang/vim-erlang-runtime'
 Plug 'elixir-lang/vim-elixir'

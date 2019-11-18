@@ -4,7 +4,7 @@
   environment.systemPackages = with pkgs; [
     # factorio
     # factorio-experimental
-    dwarf-fortress
+    # dwarf-fortress
     # zdoom
     # chocolateDoom
     # crispyDoom

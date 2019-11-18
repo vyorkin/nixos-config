@@ -9,6 +9,5 @@
     ccls
     boost
     compcert
-
   ];
 }

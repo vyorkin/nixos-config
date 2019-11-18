@@ -11,12 +11,17 @@ let
 in {
   environment.systemPackages = with pkgs; [
     coq
+    prooftree
+
     oldPkgs.z3
     cvc4
+
     tlaplus
     tlaplusToolbox
+
     minizinc
     minizincide
+
     why3
     alt-ergo
     framac
@@ -28,6 +33,7 @@ in {
     mathcomp
     mathcomp-ssreflect
     mathcomp-analysis
+    mathcomp-algebra
     QuickChick
     coq-ext-lib
     # category-theory

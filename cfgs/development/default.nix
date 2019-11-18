@@ -33,6 +33,8 @@
     asciinema
     exercism
 
+    rakudo
+
     elixir
     idris
     nim
@@ -41,7 +43,10 @@
     mercury
     ats
 
-    octave
+    gnuapl
+    j
+
+    # octave
 
     # hydra
   ];

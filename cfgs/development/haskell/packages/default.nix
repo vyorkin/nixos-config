@@ -44,6 +44,7 @@ in with packageSet; [
   weeder
   ghcid
   cpphs
+  suspend
   dotgen
   fast-tags
 

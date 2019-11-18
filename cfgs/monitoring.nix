@@ -41,7 +41,7 @@
     inotify-tools
     multitail
     lnav
-    ntfy
+    # ntfy
     pv
     reflex
     up

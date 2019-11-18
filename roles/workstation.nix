@@ -44,7 +44,7 @@
     ../cfgs/development
 
     # Takes too much time to compile the VirtualBox
-    # ../cfgs/wm.nix
+    ../cfgs/wm.nix
   ];
 
   sound.enable = true;
@@ -94,10 +94,10 @@
     };
   };
 
-  location = {
-    latitude = "55.751244";
-    longitude = "37.618423";
-  };
+  # location = {
+  #   latitude = "55.751244";
+  #   longitude = "37.618423";
+  # };
 
   networking.firewall.allowedTCPPorts = [
     # ssh:

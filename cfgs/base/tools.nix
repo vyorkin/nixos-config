@@ -23,5 +23,7 @@
     fd
     prettyping
     ncdu
+
+    earlyoom
   ];
 }
