@@ -13,6 +13,11 @@
         target = ".emacs.d/lisp/PG";
       };
 
+      "ats-mode" = {
+        source = ./dotfiles/emacs/lisp/ats-mode.el;
+        target = ".emacs.d/lisp/ats-mode.el";
+      };
+
       "yasnippet-snippets" = {
         source = ./dotfiles/emacs/yasnippet-snippets;
         target = ".emacs.d/yasnippet-snippets";

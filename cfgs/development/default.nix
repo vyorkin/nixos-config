@@ -41,7 +41,8 @@
     racket
     swiProlog
     mercury
-    ats
+    # ats
+    ats2
 
     gnuapl
     j
