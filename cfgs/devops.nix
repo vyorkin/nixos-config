@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     ansible
-    ansible-lint
+    # ansible-lint
     drone
     drone-cli
     terraform

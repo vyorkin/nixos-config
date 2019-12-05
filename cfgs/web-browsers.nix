@@ -22,6 +22,6 @@
 
     # tor
     # tor-arm
-    tor-browser-bundle-bin
+    # tor-browser-bundle-bin
   ];
 }

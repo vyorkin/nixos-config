@@ -19,9 +19,6 @@
 [submodule "pkgs/mozilla"]
 	path = pkgs/mozilla
 	url = https://github.com/mozilla/nixpkgs-mozilla.git
-[submodule "pkgs/nixpkgs-channels"]
-	path = pkgs/nixpkgs-channels
-	url = https://github.com/NixOS/nixpkgs-channels.git
 [submodule "pkgs/nixos-hardware"]
 	path = pkgs/nixos-hardware
 	url = https://github.com/NixOS/nixos-hardware.git

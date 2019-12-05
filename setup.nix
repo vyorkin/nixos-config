@@ -5,7 +5,7 @@ let
   content = builtins.readDir path;
 in {
   nix.nixPath = [
-    "nixpkgs=/etc/nixos/pkgs/nixpkgs-channels"
+    "nixpkgs=/etc/nixos/pkgs/nixpkgs"
     "nixpkgs-overlays=/etc/nixos/overlays"
     "nixos-config=/etc/nixos/configuration.nix"
     "nixos-hardware=/etc/nixos/pkgs/nixos-hardware"

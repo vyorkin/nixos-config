@@ -20,6 +20,7 @@
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
+
     kernelParams = ["quiet"];
     consoleLogLevel = 0;
   };

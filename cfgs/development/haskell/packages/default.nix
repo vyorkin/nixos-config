@@ -50,7 +50,7 @@ in with packageSet; [
 
   pretty-simple
   pretty-show
-  ghci-pretty
+  # ghci-pretty
 
   pointfree
 

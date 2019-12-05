@@ -30,6 +30,7 @@
     nitrogen
     (dunst.override { dunstify = true; })
     dmenu
+    clipmenu
     rofi
     compton
     libnotify

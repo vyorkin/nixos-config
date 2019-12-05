@@ -13,9 +13,6 @@
     gnomeExtensions.remove-dropdown-arrows
     gnomeExtensions.clipboard-indicator
     gnomeExtensions.icon-hider
-    gnomeExtensions.nohotcorner
-    gnomeExtensions.mediaplayer
-  # gnomeExtensions.no-title-bar
 
     gnome3.dconf
     gnome3.glib_networking
@@ -29,9 +26,7 @@
   services = {
     xserver = {
       desktopManager.gnome3.enable = true;
-      displayManager.gdm = {
-        enable = true;
-      };
+      displayManager.gdm.enable = true;
     };
 
     gnome3.chrome-gnome-shell.enable = true;

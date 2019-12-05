@@ -1,74 +1,26 @@
 { pkgs, ... }:
 
-let
-  slim-theme = pkgs.fetchFromGitHub {
-    owner = "vyorkin";
-    repo = "slim-theme";
-    rev = "4b1230cb8ff4b7a5ca24f98bdc0610ecef42ea37";
-    sha256 = "11r1vibkvjxfkkh9aqssivhsm9dcl5kijgslgm80116isj6p7wrh";
-  };
-in {
+{
   sound.mediaKeys.enable = true;
+  # I use Home Manager to manage X session
 
   services.xserver = {
     displayManager = {
-      slim = {
-        enable = true;
-        defaultUser = "vyorkin";
-        theme = slim-theme;
-      };
-
       lightdm = {
         enable = false;
-        greeters.mini = {
-          enable = true;
-          user = "vyorkin";
-          extraConfig = ''
-            [greeter]
-            show-password-label = false
-            show-input-cursor = true
-            invalid-password-text = loh, pidr
-
-            [greeter-hotkeys]
-            mod-key = meta
-            shutdown-key = s
-            restart-key = r
-            hibernate-key = h
-            suspend-key = u
-
-            [greeter-theme]
-            # The font to use for all text
-            font = "Sans"
-            # The font size to use for all text
-            font-size = 1em
-            # The default text color
-            text-color = "#080800"
-            # The color of the error text
-            error-color = "#F8F8F0"
-            # An absolute path to an optional background image.
-            # The image will be displayed centered & unscaled.
-            background-image = ""
-            # The screen's background color.
-            background-color = "#1B1D1E"
-            # The password window's background color
-            window-color = "#F92672"
-            # The color of the password window's border
-            border-color = "#080800"
-            # The width of the password window's border.
-            # A trailing `px` is required.
-            border-width = 2px
-            # The pixels of empty space around the password input.
-            # Do not include a trailing `px`.
-            layout-space = 15
-            # The color of the text in the password input.
-            password-color = "#F8F8F0"
-            # The background color of the password input.
-            password-background-color = "#1B1D1E"
-          '';
-        };
+        autoLogin.user = "vyorkin";
       };
 
-      # I use Home Manager to manage X session
+      sddm = {
+        enable = true;
+        autoLogin.user = "vyorkin";
+      };
+
+      gdm = {
+        enable = false;
+        autoSuspend = false;
+        autoLogin.user = "vyorkin";
+      };
     };
   };
 }

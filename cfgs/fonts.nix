@@ -5,11 +5,7 @@
     fontconfig = {
       enable = true;
       useEmbeddedBitmaps = true;
-      ultimate = {
-        enable = true;
-        substitutions = "combi";
-        #useEmbeddedBitmaps = true;
-      };
+      penultimate.enable = true;
       defaultFonts = {
         monospace = [ "Hack" ];
         sansSerif = [ "Roboto" ];

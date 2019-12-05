@@ -44,10 +44,10 @@ in {
       i3lock
       i3lock-color
       # i3lock-fancy
-      # i3lock-pixeled
+      i3lock-pixeled
       betterlockscreen
       i3status-rust
-      i3-wk-switch
+      # i3-wk-switch
 
       gnome3.nautilus
       gnome3.sushi

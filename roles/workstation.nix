@@ -62,13 +62,7 @@
 
   environment.systemPackages = with pkgs; [ pasystray pavucontrol ];
 
-  hardware.bluetooth = {
-    enable = true;
-    extraConfig = "
-      [General]
-      Enable=Source,Sink,Media,Socket
-    ";
-  };
+  hardware.bluetooth.enable = true;
 
   # Enable Plymouth boot splash screen
   boot.plymouth.enable = true;
@@ -93,11 +87,6 @@
       temperature.night = 3700;
     };
   };
-
-  # location = {
-  #   latitude = "55.751244";
-  #   longitude = "37.618423";
-  # };
 
   networking.firewall.allowedTCPPorts = [
     # ssh:

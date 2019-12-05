@@ -15,7 +15,9 @@
     plantuml
     scdoc
     odt2txt
-    xpdf
+
+    # xpdf (insecure)
+
     poppler
     mupdf
 

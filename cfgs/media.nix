@@ -25,7 +25,7 @@
 
     # image, 3d, video editing
 
-    gimp-with-plugins
+    # gimp-with-plugins
     # blender
 
     # kdeApplications.kdenlive
