@@ -8,8 +8,10 @@
     discord
     zoom-us
     tdesktop
+    spectral
+    riot-desktop
     # telegram-cli
     # pidgin
-    # gitter
+    gitter
   ];
 }

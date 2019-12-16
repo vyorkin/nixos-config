@@ -12,12 +12,12 @@
       };
 
       sddm = {
-        enable = true;
+        enable = false;
         autoLogin.user = "vyorkin";
       };
 
       gdm = {
-        enable = false;
+        enable = true;
         autoSuspend = false;
         autoLogin.user = "vyorkin";
       };

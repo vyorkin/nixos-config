@@ -28,7 +28,7 @@
     # gimp-with-plugins
     # blender
 
-    # kdeApplications.kdenlive
+    kdeApplications.kdenlive
     # frei0r
   ];
 }

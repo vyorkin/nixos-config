@@ -20,8 +20,11 @@
 
     qutebrowser
 
+    # torbrowser
     # tor
     # tor-arm
     # tor-browser-bundle-bin
+
+    rtv
   ];
 }
