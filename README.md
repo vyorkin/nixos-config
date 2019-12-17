@@ -56,6 +56,10 @@ Tools:
 * [all-hies](https://github.com/Infinisil/all-hies)
 * [Komposition](https://owickstrom.github.io/komposition/user-guide/installation/)
 
+### Nix
+
+Lorri: https://github.com/target/lorri/blob/master/contrib/daemon.md
+
 ### Rust
 
 ```bash

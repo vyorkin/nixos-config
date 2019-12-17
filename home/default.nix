@@ -30,7 +30,10 @@
   home-manager.users.vyorkin = {
     news.display = "silent";
     xdg.enable = true;
-    services.udiskie.enable = true;
+    services = {
+      udiskie.enable = true;
+      # lorri.enable = true;
+    };
     systemd.user.startServices = true;
   };
 }
