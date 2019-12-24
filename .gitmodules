@@ -34,3 +34,6 @@
 [submodule "home/dotfiles/kitty/base16-kitty"]
 	path = home/dotfiles/kitty/base16-kitty
 	url = https://github.com/kdrag0n/base16-kitty.git
+[submodule "home/dotfiles/firefox/ghacks-user.js"]
+	path = home/dotfiles/firefox/ghacks-user.js
+	url = https://github.com/ghacksuserjs/ghacks-user.js.git

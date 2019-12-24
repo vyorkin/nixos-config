@@ -1,30 +1,30 @@
 { pkgs, ... }:
 
 let
-  my = pkgs.callPackage ./packages { };
-  # TODO: 404?
-  global1 = with my; [
-    purescript-emmet
-    # git-issues
-    # git-labelmaker
-    # madge
+  customPkgs = pkgs.callPackage ./packages { };
+  custom = with customPkgs; [
+    colorguard
+    # purescript-emmet
+    git-issues
+    git-labelmaker
+    madge
     # import-js
     # how-to-npm
-    # psi
-    # now
-    # json-package
+    psi
+    now
+    json-package
     # doiuse
-    # localtunnel
-    # gitbook-cli
-    # manpm
-    # available-versions
-    # git-recall
-    # jsinspect
-    # tmi
-    # commitizen
+    localtunnel
+    gitbook-cli
+    manpm
+    available-versions
+    git-recall
+    jsinspect
+    tmi
+    commitizen
     # iron-node
   ];
-  global2 = with pkgs.nodePackages; [
+  nixpkgs = with pkgs.nodePackages; [
     bower
     yo
     pulp
@@ -50,5 +50,5 @@ in {
     nodejs
     yarn
     flow
-  ] ++ global1 ++ global2;
+  ] ++ custom ++ nixpkgs;
 }

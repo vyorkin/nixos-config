@@ -17,6 +17,7 @@ npm-debug*
 rethinkdb_data
 .tern-port
 .vscode
+.envrc
 
 *~
 \#*\#

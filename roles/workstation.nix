@@ -73,6 +73,8 @@
     # Synchronise time using chrony
     chrony.enable = true;
 
+    blueman.enable = true;
+
     openssh = {
       enable = true;
       forwardX11 = true;

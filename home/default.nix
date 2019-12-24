@@ -5,6 +5,7 @@
     ./dotsecrets.nix
     ./db
     ./development
+    ./web
     ./ssh.nix
     ./zsh.nix
     ./tmux.nix
@@ -22,7 +23,6 @@
     ./autorandr.nix
     ./zathura.nix
     ./minizinc.nix
-    ./qutebrowser.nix
     ./irc.nix
     ./idea.nix
   ];
@@ -32,6 +32,7 @@
     xdg.enable = true;
     services = {
       udiskie.enable = true;
+      blueman-applet.enable = true;
       # lorri.enable = true;
     };
     systemd.user.startServices = true;

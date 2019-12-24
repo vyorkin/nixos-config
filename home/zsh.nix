@@ -3,11 +3,13 @@
 {
   home-manager.users.vyorkin = {
 
-    home.file.".zshenv" = { source = ./dotfiles/zsh/zshenv; };
-    home.file.".zprofile" = { source = ./dotfiles/zsh/zprofile; };
-    home.file.".zlogin" = { source = ./dotfiles/zsh/zlogin; };
-    home.file.".zlogout" = { source = ./dotfiles/zsh/zlogout; };
-    home.file.".zconfig" = { source = ./dotfiles/zsh/zconfig; };
+    home.file = {
+      ".zshenv" = { source = ./dotfiles/zsh/zshenv; };
+      ".zprofile" = { source = ./dotfiles/zsh/zprofile; };
+      ".zlogin" = { source = ./dotfiles/zsh/zlogin; };
+      ".zlogout" = { source = ./dotfiles/zsh/zlogout; };
+      ".zconfig" = { source = ./dotfiles/zsh/zconfig; };
+    };
 
     programs.zsh = {
       enable = true;

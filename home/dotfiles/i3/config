@@ -11,6 +11,9 @@ set $browser4 tor-browser
 set $shutdown shutdown -h now
 set $reboot reboot
 
+# set $lock betterlockscreen -l blur -t $unlock_text
+set $lock rm -f /tmp/screen.png && i3lock-pixeled
+
 set $unlock_text "unlock me"
 
 set $step 1
@@ -211,14 +214,14 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bindsym XF86ScreenSaver	exec --no-startup-id betterlockscreen -l blur -t $unlock_text
+bindsym XF86ScreenSaver	exec --no-startup-id $lock
 
 bindsym $mod+comma workspace prev
 bindsym $mod+period workspace next
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id betterlockscreen -l blur -t $unlock_text, mode "default"
+    bindsym l exec --no-startup-id $lock, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
     bindsym s exec systemctl suspend, mode "default"
     bindsym h exec systemctl hibernate, mode "default"
@@ -230,7 +233,7 @@ mode "$mode_system" {
 }
 bindsym $mod+Alt_R mode "$mode_system"
 
-bindsym $mod+x exec --no-startup-id betterlockscreen -l blur -t $unlock_text
+bindsym $mod+x exec --no-startup-id $lock
 
 set $display_mode Display [w]ork [h]ome [t]v [m]obile
 bindsym $mod+d mode $display_mode
@@ -304,5 +307,5 @@ exec --no-startup-id emacs --daemon
 exec --no-startup-id guake
 exec --no-startup-id telegram-desktop
 exec --no-startup-id slack
-exec --no-startup-id Discord
+# exec --no-startup-id Discord
 exec --no-startup-id $browser1
