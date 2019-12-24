@@ -13,6 +13,7 @@ in {
     nix-review
     # nixops
     any-nix-shell
+    cachix
 
     nix-bash-completions
     nix-zsh-completions
