@@ -9,6 +9,7 @@
     ../cfgs/mail.nix
     ../cfgs/fonts.nix
     ../cfgs/vpn.nix
+    ../cfgs/vnc.nix
     ../cfgs/terminal.nix
     ../cfgs/monitoring.nix
     ../cfgs/emulators.nix
@@ -105,6 +106,9 @@
     3001
     3002
     3003
+
+    # vnc
+    5900
 
     # postgresql:
     # 5432

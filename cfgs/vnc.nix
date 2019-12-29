@@ -2,8 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    mosh
-    sshuttle
-    ssh-audit
+    x11vnc
+    tigervnc
   ];
 }
