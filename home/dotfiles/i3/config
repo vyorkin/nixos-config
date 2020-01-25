@@ -195,6 +195,7 @@ bindsym $hyper+f [class="Emacs"] focus
 bindsym $hyper+c [class="Code"] focus
 bindsym $hyper+i [class="kitty"] focus
 bindsym $hyper+b [class="Zathura"] focus
+bindsym $hyper+p [class="mpv"] focus
 
 mode "resize" {
   bindsym h resize shrink width $step px or $step ppt
@@ -235,11 +236,12 @@ bindsym $mod+Alt_R mode "$mode_system"
 
 bindsym $mod+x exec --no-startup-id $lock
 
-set $display_mode Display [w]ork [h]ome [t]v [m]obile
+set $display_mode Display [w]ork [h]ome [d]esk [t]v [m]obile
 bindsym $mod+d mode $display_mode
 mode "$display_mode" {
   bindsym w exec --no-startup-id autorandr --load work, mode "default"
   bindsym h exec --no-startup-id autorandr --load home, mode "default"
+  bindsym d exec --no-startup-id autorandr --load desk, mode "default"
   bindsym t exec --no-startup-id autorandr --load tv, mode "default"
   bindsym m exec --no-startup-id autorandr --load mobile, mode "default"
 
@@ -272,15 +274,15 @@ bar {
 bindsym $mod+y move workspace to output left
 
 # class                 border  bground text    indicator child_border
-client.focused          #FF00FF #000000 #FF00FF #FF00FF   #FF00FF
-client.focused_inactive #222222 #000000 #FFFFFF #222222   #222222
+client.focused          #FFAAAA #000000 #FFAAAA #FFAAAA   #FFAAAA
+client.focused_inactive #EE8888 #000000 #ffffff #EE8888   #EE8888
 client.unfocused        #222222 #222222 #888888 #292D2E   #222222
 client.urgent           #540000 #700000 #FFFFFF #900000   #900000
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
 client.background       #FFFFFF
 
-for_window [class="^.*"] border pixel 5
+for_window [class="^.*"] border pixel 2
 
 # Windows starting in floating mode
 for_window [class="Transmission"] floating enable border normal

@@ -48,6 +48,7 @@
     j
 
     # octave
+    julia
 
     # hydra
   ];

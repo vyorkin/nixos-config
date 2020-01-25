@@ -46,8 +46,9 @@
           src = fetchFromGitHub {
             owner = "mafredri";
             repo = "zsh-async";
-            rev = "e6d937228729f934f2033039bb54c3a18f5f1358";
-            sha256 = "0f0bqm4245ghx31x30ircfp4njji834495g25wvrd93k2r96a669";
+            rev = "95c2b1577f455728ec01cec001a86c216d0af2bd";
+            sha256 = "0kp94pqpy7qbmy51s6iwpnc96a1aq0nmmdp5fgssksan070hnw96";
+            # date = 2019-06-20T18:02:16+03:00;
           };
         }
         {
@@ -70,8 +71,9 @@
           src = fetchFromGitHub {
             owner = "chisui";
             repo = "zsh-nix-shell";
-            rev = "b2609ca787803f523a18bb9f53277d0121e30389";
-            sha256 = "01w59zzdj12p4ag9yla9ycxx58pg3rah2hnnf3sw4yk95w3hlzi6";
+            rev = "a65382a353eaee5a98f068c330947c032a1263bb";
+            sha256 = "0l41ac5b7p8yyjvpfp438kw7zl9dblrpd7icjg1v3ig3xy87zv0n";
+            # date = 2019-12-20T12:15:36+01:00;
           };
         }
         {
@@ -80,8 +82,9 @@
           src = fetchFromGitHub {
             owner = "agkozak";
             repo = "zsh-z";
-            rev = "5b903f8f5489783ee2a4af668a941b7d9a02efc9";
-            sha256 = "07h6ksiqgqyf5m84hv5xf4jcqrl8q1cj8wd4z52cjmy82kk10fkn";
+            rev = "a00ea49ff1e11637c479697beafd8514c1720579";
+            sha256 = "19mnmf0agwb03han6879dp5i8yr9lqxh8r2zf8w691ynywy3rl5b";
+            # date = 2020-01-08T10:07:41-08:00;
           };
         }
         {
@@ -92,6 +95,7 @@
             repo = "alias-tips";
             rev = "29bf28c1b6abea03c582e48ee262feb69b324650";
             sha256 = "0fpz0xrqjchzhld45c8y8i9r8s14k2pwc4ccl69idr29v53m8m2m";
+            # date = 2018-12-10T17:45:33+01:00;
           };
         }
         {
@@ -99,8 +103,9 @@
           file = "fzf-marks.plugin.zsh";
           src = fetchgit {
             url = "https://github.com/urbainvaes/fzf-marks";
-            rev = "1.1";
-            sha256 = "0wfh267kfvyx7vcyqpqv7qgi6vcffxziq5avqddnbkm3z51br0n4";
+            rev = "e0c4530d7ece4ecb749023f6663ebd59469ccb74";
+            sha256 = "1znpkxwm0plszp073zyvakkxnjq8fkr9dfkf5lfz3c1xz0ihb63v";
+            # date = 2019-12-31T13:35:03+01:00;
           };
         }
         {
@@ -119,8 +124,9 @@
           src = fetchFromGitHub {
             owner = "unixorn";
             repo = "git-extra-commands";
-            rev = "f03ff8ffce9f3e488b6a0265cb09288cc29899fe";
-            sha256 = "1qlbjn0q87jgjir3k7w4m8p6wqgjl2c7jnilczf7c205fgwksdhi";
+            rev = "323f34756ede38e157263fdb3b145856f6ba23dc";
+            sha256 = "0svs3j1wdlwdxmkrkf2mgywcqc9qlprfhakvsq3yavyymkjpb7fi";
+            # date = 2019-12-16T08:19:35-07:00;
           };
         }
         {
@@ -131,6 +137,7 @@
             repo = "zsh-reentry-hook";
             rev = "8587186df8f08b8a57ae7f87ab0bc7d503909031";
             sha256 = "1jgin1gmw05vxf7vw414zvhq9dg06yzlzxas723f710vs58mf11a";
+            # date = 2016-04-04T14:29:07+02:00;
           };
         }
         {
@@ -139,8 +146,9 @@
           src = fetchFromGitHub {
             owner = "seletskiy";
             repo = "zsh-fuzzy-search-and-edit";
-            rev = "4fbb3d351b75f1007df0d5cb09292bb2321f903a";
-            sha256 = "1shhmda1iqwz79y2ianmjs5623zabckxfj2hqw4gl2axpkwnj1ib";
+            rev = "bd4182bd81b176fedd8fa13c62e2c6662390e025";
+            sha256 = "005l5ihhzlb3rpa34ikwfjc10glcdjph6qzjs5w7vdznd8gdcag2";
+            # date = 2019-12-20T15:20:28+03:00;
           };
         }
         {
@@ -148,8 +156,9 @@
           src = fetchFromGitHub {
             owner = "zdharma";
             repo = "fast-syntax-highlighting";
-            rev = "3601297ebfd67f208f489189e984df665ec9242c";
-            sha256 = "026ykxgfy0p7y3wcsq0z3kmrs0n67rmxf89kqmiw5vxr9l67jr6l";
+            rev = "1daabc228279be7b397f0dab7c13e22e204ff8d5";
+            sha256 = "0gcf65d997nx80rsj18g005vfw5qh20m1391z0y8lcm3l55zmc7q";
+            # date = 2020-01-13T04:45:36+01:00;
           };
         }
       ];
