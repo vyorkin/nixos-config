@@ -17,6 +17,7 @@
     ./ocaml
     ./agda.nix
     ./java.nix
+    ./arduino.nix
   ];
 
   environment.systemPackages = with pkgs; [

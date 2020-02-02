@@ -100,6 +100,8 @@ in
       (eventful-postgresql.overrideAttrs (old: { doCheck = false; }))
       eventful-test-helpers
 
+      autoexporter
+
       pointfree
       # pointful
       ]);
