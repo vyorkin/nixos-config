@@ -3,7 +3,10 @@
 {
   environment.systemPackages = with pkgs; [
     # emacsGit
-    (emacs.override { withXwidgets = true; })
+    (emacs.override {
+      inherit imagemagick;
+      withXwidgets = true;
+    })
     cask
   ];
 }

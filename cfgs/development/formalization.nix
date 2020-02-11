@@ -8,10 +8,25 @@ let
     sha256 = "0v6nycl7lzr1kdsy151j10ywhxvlb4dg82h55hpjs1dxjamms9i3";
   };
   oldPkgs = import oldNixPkgs { };
+
+  # I use opam for managing global / per-switch Coq packages instead
+  coqPkgs = with pkgs.coqPackages; [
+    # ssreflect
+    # mathcomp
+    # mathcomp-ssreflect
+    # mathcomp-analysis
+    # mathcomp-algebra
+    # QuickChick
+    # coq-ext-lib
+    # category-theory
+    # coq-haskell
+  ];
 in {
   environment.systemPackages = with pkgs; [
-    coq
-    prooftree
+    # coq package in the nixpkgs is ancient, so
+    # I usually just install it with opam instead
+    # coq
+    # prooftree
 
     oldPkgs.z3
     cvc4
@@ -28,15 +43,5 @@ in {
     gecode
     isabelle
     alloy
-  ] ++ (with pkgs.coqPackages; [
-    ssreflect
-    mathcomp
-    mathcomp-ssreflect
-    mathcomp-analysis
-    mathcomp-algebra
-    QuickChick
-    coq-ext-lib
-    # category-theory
-    # coq-haskell
-  ]);
+  ] ++ coqPkgs;
 }

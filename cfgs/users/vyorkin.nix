@@ -13,7 +13,10 @@
     "input"
     "scanner"
     "lp"
+
+    # access to the serial and USB ports
     "dialout"
+
     "vboxusers"
     "wireshark"
     "docker"

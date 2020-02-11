@@ -93,6 +93,13 @@ readlink -f $(which fzn-gecode)
 
 Remove `OCAML_TOPLEVEL_PATH` from `~/.opam/opam-init/variables.sh`
 
+### Coq
+
+```sh
+opam repo add coq-released https://coq.inria.fr/opam/released
+opam update
+```
+
 ### GNOME
 
 Tweaks:

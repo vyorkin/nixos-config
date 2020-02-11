@@ -12,6 +12,6 @@ rate 60.00
 output eDP-1
 gamma 1.0:0.769:0.556
 mode 1920x1080
-pos 1920x0
+pos 0x1080
 primary
 rate 60.05

@@ -21,7 +21,6 @@
     ../cfgs/automation.nix
     ../cfgs/opengl.nix
     ../cfgs/sdl.nix
-    ../cfgs/hardware.nix
     ../cfgs/documentation.nix
     ../cfgs/office.nix
     ../cfgs/file-managers.nix
@@ -40,7 +39,7 @@
     ../cfgs/forensics.nix
     ../cfgs/dropbox.nix
     ../cfgs/games.nix
-    # ../cfgs/avr.nix
+    ../cfgs/electronics.nix
     ../cfgs/db
     ../cfgs/development
 

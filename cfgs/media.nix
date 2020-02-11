@@ -20,7 +20,8 @@
     ardour
     grip
     lame
-    imagemagick7
+    imagemagickBig
+    # imagemagick7
     feh
 
     # image, 3d, video editing

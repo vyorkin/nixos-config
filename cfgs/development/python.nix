@@ -3,16 +3,20 @@
 
 with pkgs;
 let
-  my-python-packages = python-packages: with python-packages; [
+  p2-packages = python-packages: with python-packages; [
+    pyserial
+  ];
+  p3-packages = python-packages: with python-packages; [
     keyring
     python-language-server
     virtualenv
     virtualenvwrapper
+    pyserial
   ];
 in
   {
     environment.systemPackages = with pkgs; [
-      python
-      (python3.withPackages my-python-packages)
+      (python.withPackages p2-packages)
+      (python3.withPackages p3-packages)
     ];
   }

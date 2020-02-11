@@ -21,7 +21,7 @@
     qutebrowser
 
     # torbrowser
-    # tor
+    tor
     # tor-arm
     # tor-browser-bundle-bin
 
