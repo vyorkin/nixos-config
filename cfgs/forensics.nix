@@ -10,7 +10,7 @@
     gdb
     gdbgui
 
-    idutils
+    # idutils
 
     ngrep
 
@@ -22,7 +22,7 @@
     radare2
     radare2-cutter
 
-    retdec
+    # retdec
     rr
     valgrind
 

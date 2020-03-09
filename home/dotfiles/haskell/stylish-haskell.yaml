@@ -224,19 +224,26 @@ language_extensions:
   - ConstraintKinds
   - DataKinds
   - DefaultSignatures
+  - DeriveAnyClass
   - DeriveDataTypeable
   - DeriveGeneric
+  - DerivingStrategies
+  - DerivingVia
+  - ExplicitNamespaces
   - FlexibleContexts
   - FlexibleInstances
   - FunctionalDependencies
   - GADTs
   - GeneralizedNewtypeDeriving
+  - InstanceSigs
+  - KindSignatures
   - LambdaCase
   - MultiParamTypeClasses
   - MultiWayIf
   - NamedFieldPuns
   - NoImplicitPrelude
   - OverloadedStrings
+  - QuasiQuotes
   - RecordWildCards
   - ScopedTypeVariables
   - StandaloneDeriving

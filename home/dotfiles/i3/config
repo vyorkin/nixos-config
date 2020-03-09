@@ -156,11 +156,11 @@ workspace 12 output HDMI-1 eDP-1
 workspace 13 output HDMI-1 eDP-1
 workspace 14 output HDMI-1 eDP-1
 workspace 15 output HDMI-1 eDP-1
-workspace 16 output HDMI-1 eDP-1
-workspace 17 output HDMI-1 eDP-1
-workspace 18 output HDMI-1 eDP-1
-workspace 19 output HDMI-1 eDP-1
-workspace 20 output HDMI-1 eDP-1
+workspace 16 output eDP-1 HDMI-1
+workspace 17 output eDP-1 HDMI-1
+workspace 18 output eDP-1 HDMI-1
+workspace 19 output eDP-1 HDMI-1
+workspace 20 output eDP-1 HDMI-1
 
 bindsym $hyper+Shift+c reload
 bindsym $hyper+Shift+r restart
@@ -271,7 +271,20 @@ bar {
 }
 
 # Move workspaces between output
-bindsym $mod+y move workspace to output left
+bindsym $mod+y move workspace to output down
+
+# LIGHT
+
+# class                 border  bground text    indicator child_border
+# client.focused          #DFDFDF #FFFFFF #000000 #2E9EF4   #DDDDDD
+# client.focused_inactive #DFDFDF #F0F0F0 #000000 #484E50   #CCCCCC
+# client.unfocused        #DFDFDF #F0F0F0 #555555 #292D2E   #BBBBBB
+# client.urgent           #2F343A #F5000F #000000 #900000   #AAAAAA
+# client.placeholder      #000000 #FFFFFF #444444 #000000   #EEEEEE
+
+# client.background       #FFFFFF
+
+# DARK
 
 # class                 border  bground text    indicator child_border
 client.focused          #FFAAAA #000000 #FFAAAA #FFAAAA   #FFAAAA

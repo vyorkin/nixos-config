@@ -8,7 +8,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    chromium
+    # chromium
     google-chrome
 
     firefox

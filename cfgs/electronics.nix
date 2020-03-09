@@ -13,12 +13,11 @@
     openscad
     geda
     ngspice
-    kicad
+    # kicad
 
     # Software for Saleae logic analyzers
     saleae-logic
 
-    avrdude
     pkgsCross.avr.avrlibc
     pkgsCross.avr.buildPackages.binutils
     pkgsCross.avr.buildPackages.gcc
@@ -27,7 +26,16 @@
   # avrgcc
   # avrbinutils
     avrdude
-    avrdudess
+    # avrdudess
     avr8burnomat
+
+    dfu-util
+    platformio
+
+    stlink
+
+    verilog
+    gtkwave
+    verilator
   ];
 }

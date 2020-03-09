@@ -1,4 +1,40 @@
-owner      = "vyorkin"
-fullName   = "Vasiliy Yorkin"
-email      = "vasiliy.yorkin@gmail.com"
-extensions = ["OverloadedStrings"]
+owner       = "vyorkin"
+fullName    = "Vasiliy Yorkin"
+email       = "vasiliy.yorkin@gmail.com"
+license     = "MIT"
+cabal       = true
+stack       = true
+github      = true
+noUpload    = true
+private     = false
+travis      = true
+appveyor    = false
+ghcVersions = ["8.4.4", "8.6.5"]
+lib         = true
+exe         = true
+test        = true
+bench       = true
+extensions  = [ "ConstraintKinds"
+              , "DeriveGeneric"
+              , "GeneralizedNewtypeDeriving"
+              , "InstanceSigs"
+              , "KindSignatures"
+              , "LambdaCase"
+              , "OverloadedStrings"
+              , "RecordWildCards"
+              , "ScopedTypeVariables"
+              , "StandaloneDeriving"
+              , "TupleSections"
+              , "TypeApplications"
+              , "ViewPatterns"
+              ]
+
+files =
+    [ { path = ".stylish-haskell.yaml"
+      , url  = "https://raw.githubusercontent.com/vyorkin/nixos-config/master/home/dotfiles/haskell/stylish-haskell.yaml"
+      }
+    ]
+
+[prelude]
+    package  = "relude"
+    module   = "Relude"

@@ -3,23 +3,25 @@
 let
   ormoluPkg = import (builtins.fetchGit {
     url = "https://github.com/tweag/ormolu";
-    rev = "bdc8738fa89d37ca330221d8b75427f466f9e08a";
-  });
+    rev = "55d8b7f8c482655ea575425e55352e650f304ea0";
+  }) { };
 
-  liquid = packageSet.callPackage ./liquidhaskell.nix { };
-  brittany = packageSet.callPackage ./brittany.nix { };
+  # liquid = packageSet.callPackage ./liquidhaskell-0.8.6.0.nix { };
+  # brittany = packageSet.callPackage ./brittany-0.12.0.0.nix { };
 
 in with packageSet; [
   ormoluPkg.ormolu
 
+  # summoner
+
   hpack
   happy
 
-  dhall
+  # dhall
   # dhall-json
-  expresso
+  # expresso
 
-  liquid
+  # liquidhaskell
 
   doctest
 
@@ -30,17 +32,17 @@ in with packageSet; [
   styx
   # intero
 
-  brittany
+  # brittany
 
   hoogle
-  hindent
+  # hindent
   stylish-haskell
   hlint
   hasktags
   haskdogs
-  apply-refact
-  present
-  alex
+  # apply-refact
+  # present
+  # alex
   weeder
   ghcid
   cpphs
@@ -52,9 +54,9 @@ in with packageSet; [
   pretty-show
   # ghci-pretty
 
-  pointfree
+  # pointfree
 
-  Agda
+  # Agda
 
   # ats-pkg
   # ats-format

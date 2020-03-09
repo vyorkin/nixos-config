@@ -36,15 +36,15 @@
     ../cfgs/tex.nix
     ../cfgs/scraping.nix
     ../cfgs/docker.nix
-    ../cfgs/forensics.nix
+    # ../cfgs/forensics.nix
     ../cfgs/dropbox.nix
-    ../cfgs/games.nix
+    # ../cfgs/games.nix
     ../cfgs/electronics.nix
     ../cfgs/db
     ../cfgs/development
 
     # Takes too much time to compile the VirtualBox
-    ../cfgs/wm.nix
+    # ../cfgs/wm.nix
   ];
 
   sound.enable = true;
@@ -65,7 +65,13 @@
   hardware.bluetooth.enable = true;
 
   # Enable Plymouth boot splash screen
-  boot.plymouth.enable = true;
+  boot.plymouth = {
+    enable = true;
+    logo = pkgs.fetchurl {
+      url = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Lambda_Cube_img.svg/1200px-Lambda_Cube_img.svg.png";
+      sha256 = "179x1nm23c7s954789cx4lrbdfyavmyq460kp67n9j5xcczbmlir";
+    };
+  };
 
   services = {
     locate.enable = true;

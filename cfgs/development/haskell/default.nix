@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  packageSet = pkgs.haskell.packages.ghc865;
+  packageSet = pkgs.haskell.packages.ghc882;
   haskellPackages = pkgs.callPackage ./packages { inherit packageSet; };
 in
   {
@@ -10,7 +10,7 @@ in
     environment.systemPackages = haskellPackages;
 
     services.hoogle = {
-      enable = true;
+      enable = false;
       port = 9000;
 
       packages = (hpkgs: with hpkgs; [
@@ -65,8 +65,8 @@ in
       apecs
       apecs-gloss
 
-      hasbolt
-      hasbolt-extras
+      # hasbolt
+      # hasbolt-extras
 
       capability
 
@@ -102,7 +102,7 @@ in
 
       autoexporter
 
-      pointfree
+      # pointfree
       # pointful
       ]);
 

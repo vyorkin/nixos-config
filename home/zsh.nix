@@ -1,6 +1,7 @@
 { pkgs, ... }:
 
-{
+let initExtra = builtins.readFile ./dotfiles/zsh/zshrc;
+in {
   home-manager.users.vyorkin = {
 
     home.file = {
@@ -13,8 +14,7 @@
 
     programs.zsh = {
       enable = true;
-      enableAutosuggestions = true;
-      enableCompletion = true;
+      enableCompletion = false;
 
       history.expireDuplicatesFirst = true;
 
@@ -24,20 +24,7 @@
         # GEOMETRY_PROMPT_SUFFIX="$(if [ ! -z $IN_NIX_SHELL ]; then echo ' [nix]'; fi)";
       };
 
-      initExtra = ''
-        # load custom executable functions and aliases
-        for f in ~/.zconfig/functions/*; do source $f; done
-        for f in ~/.zconfig/aliases/*; do source $f; done
-
-        . ~/.zconfig/setup.zsh
-
-        eval "$(direnv hook zsh)"
-        eval "$(starship init zsh)"
-
-        [[ -f ~/.secret_tokens ]] && . ~/.secret_tokens
-
-        bindkey '^Y' fuzzy-search-and-edit
-      '';
+      inherit initExtra;
 
       plugins = with pkgs; [
         {
@@ -61,8 +48,8 @@
         #   src = fetchFromGitHub {
         #     owner = "geometry-zsh";
         #     repo = "geometry";
-        #     rev = "d42626ef65fd3b1f8f72d30e9af5d515a0ec5e0b";
-        #     sha256 = "1a2lccwmk8li7pwwngpbb91ckjdyziim9b5pa2vrygbnhfdfbs21";
+        #     rev = "fdff57bde4afb43beda73a14dea7738961f99bc2";
+        #     sha256 = "02knbmcf8invkvz0g42xk3dlk4lqffk43bsmi8z4n01508jqkd8g";
         #   };
         # }
         {
@@ -73,7 +60,7 @@
             repo = "zsh-nix-shell";
             rev = "a65382a353eaee5a98f068c330947c032a1263bb";
             sha256 = "0l41ac5b7p8yyjvpfp438kw7zl9dblrpd7icjg1v3ig3xy87zv0n";
-            # date = 2019-12-20T12:15:36+01:00;
+            # date = 2019-09-02T11:00:58-04:00;
           };
         }
         {
@@ -82,9 +69,9 @@
           src = fetchFromGitHub {
             owner = "agkozak";
             repo = "zsh-z";
-            rev = "a00ea49ff1e11637c479697beafd8514c1720579";
-            sha256 = "19mnmf0agwb03han6879dp5i8yr9lqxh8r2zf8w691ynywy3rl5b";
-            # date = 2020-01-08T10:07:41-08:00;
+            rev = "c4cc44af2f8debd27d7aac9bae90264e70c07b28";
+            sha256 = "13k675mx4jjniqqlqjii65vx73zq1mz5x92p2fsmka54cygyij6k";
+            # date = 2020-01-21T19:21:50-08:00;
           };
         }
         {
@@ -103,19 +90,9 @@
           file = "fzf-marks.plugin.zsh";
           src = fetchgit {
             url = "https://github.com/urbainvaes/fzf-marks";
-            rev = "e0c4530d7ece4ecb749023f6663ebd59469ccb74";
-            sha256 = "1znpkxwm0plszp073zyvakkxnjq8fkr9dfkf5lfz3c1xz0ihb63v";
-            # date = 2019-12-31T13:35:03+01:00;
-          };
-        }
-        {
-          name = "zsh-notify";
-          file = "notify.plugin.zsh";
-          src = fetchFromGitHub {
-            owner = "marzocchi";
-            repo = "zsh-notify";
-            rev = "853bc9434771b99b028f069b95e13ecdf06901d0";
-            sha256 = "0bhmv1xfjzmci9b4dy3mix2s31zj0kayrl44xx5xb8rgzlf0qbvr";
+            rev = "6f99132616f0ae57105df5b9de37cad26ad3b763";
+            sha256 = "1i66i7qxgczd8gk5kbdhh7ij5km4312r3iwz3yachz8w0jf0vk5k";
+            # date = 2020-01-21T14:13:18+00:00;
           };
         }
         {
@@ -156,9 +133,9 @@
           src = fetchFromGitHub {
             owner = "zdharma";
             repo = "fast-syntax-highlighting";
-            rev = "1daabc228279be7b397f0dab7c13e22e204ff8d5";
-            sha256 = "0gcf65d997nx80rsj18g005vfw5qh20m1391z0y8lcm3l55zmc7q";
-            # date = 2020-01-13T04:45:36+01:00;
+            rev = "94b6b5b8e58aeecd7587a973dbe110a352d7314d";
+            sha256 = "1lvq9qk0jz65swbghg4j08353z27v7nhd1r5i454y91s6w6n4b46";
+            # date = 2020-02-07T02:39:16+01:00;
           };
         }
       ];

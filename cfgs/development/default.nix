@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./kernel.nix
     ./ccpp.nix
     ./lisp.nix
     ./clojure.nix
@@ -15,7 +16,7 @@
     ./go.nix
     ./haskell
     ./ocaml
-    ./agda.nix
+    # ./agda.nix
     ./java.nix
     ./arduino.nix
   ];
@@ -34,6 +35,8 @@
     asciinema
     exercism
 
+    llvm_9
+
     rakudo
 
     elixir
@@ -41,7 +44,7 @@
     nim
     racket
     swiProlog
-    mercury
+    # mercury
     # ats
     ats2
 

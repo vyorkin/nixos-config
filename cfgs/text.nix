@@ -6,7 +6,7 @@
     ditaa
     gron
     help2man
-    noweb
+    # noweb
     pandoc
     par
     djvu2pdf

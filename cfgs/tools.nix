@@ -22,5 +22,10 @@
 
     xmagnify
     slop
+
+    # Google Drive
+    insync
+    drive
+    gdrive
   ];
 }
