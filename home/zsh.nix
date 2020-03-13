@@ -21,7 +21,13 @@ in {
       sessionVariables = {
         FZF_MARKS_JUMP = "^x^j";
         ZSH_PLUGINS_ALIAS_TIPS_TEXT = "> ";
-        # GEOMETRY_PROMPT_SUFFIX="$(if [ ! -z $IN_NIX_SHELL ]; then echo ' [nix]'; fi)";
+
+        GEOMETRY_PLUGIN_SEPARATOR=" ";
+        GEOMETRY_PROMPT_SUFFIX="$(if [ ! -z $IN_NIX_SHELL ]; then echo ' [nix]'; fi)";
+        GEOMETRY_GIT_SYMBOL_STASHES="x";     # change the git stash indicator to `x`
+        GEOMETRY_GIT_GREP="rg";              # define which grep-like tool to use (By default it looks for rg, ag and finally grep)
+        GEOMETRY_GIT_NO_COMMITS_MESSAGE="";  # hide the 'no commits' message in new repositories
+        GEOMETRY_GIT_TIME_DETAILED=true;     # show full time (e.g. `12h 30m 53s`) instead of the coarsest interval (e.g. `12h`)
       };
 
       inherit initExtra;
@@ -42,16 +48,17 @@ in {
           name = "zsh-history-substring-search";
           src = zsh-history-substring-search;
         }
-        # {
-        #   name = "geometry";
-        #   file = "geometry.plugin.zsh";
-        #   src = fetchFromGitHub {
-        #     owner = "geometry-zsh";
-        #     repo = "geometry";
-        #     rev = "fdff57bde4afb43beda73a14dea7738961f99bc2";
-        #     sha256 = "02knbmcf8invkvz0g42xk3dlk4lqffk43bsmi8z4n01508jqkd8g";
-        #   };
-        # }
+        {
+          name = "geometry";
+          file = "geometry.plugin.zsh";
+          src = fetchFromGitHub {
+            owner = "geometry-zsh";
+            repo = "geometry";
+            rev = "fdff57bde4afb43beda73a14dea7738961f99bc2";
+            sha256 = "02knbmcf8invkvz0g42xk3dlk4lqffk43bsmi8z4n01508jqkd8g";
+            # date = 2019-09-02T11:00:58-04:00;
+          };
+        }
         {
           name = "zsh-nix-shell";
           file = "nix-shell.plugin.zsh";
@@ -60,7 +67,7 @@ in {
             repo = "zsh-nix-shell";
             rev = "a65382a353eaee5a98f068c330947c032a1263bb";
             sha256 = "0l41ac5b7p8yyjvpfp438kw7zl9dblrpd7icjg1v3ig3xy87zv0n";
-            # date = 2019-09-02T11:00:58-04:00;
+            # date = 2019-12-20T12:15:36+01:00;
           };
         }
         {
@@ -69,9 +76,9 @@ in {
           src = fetchFromGitHub {
             owner = "agkozak";
             repo = "zsh-z";
-            rev = "c4cc44af2f8debd27d7aac9bae90264e70c07b28";
-            sha256 = "13k675mx4jjniqqlqjii65vx73zq1mz5x92p2fsmka54cygyij6k";
-            # date = 2020-01-21T19:21:50-08:00;
+            rev = "d203aa3c24892fafa74ec8a65605ffaf2fc7af3d";
+            sha256 = "0h7g6iga7xvkw5y89qbrx3f1c873zs6s04f4yldsrmq9xldx2cdv";
+            # date = 2020-03-11T08:17:22-07:00;
           };
         }
         {
@@ -101,9 +108,9 @@ in {
           src = fetchFromGitHub {
             owner = "unixorn";
             repo = "git-extra-commands";
-            rev = "323f34756ede38e157263fdb3b145856f6ba23dc";
-            sha256 = "0svs3j1wdlwdxmkrkf2mgywcqc9qlprfhakvsq3yavyymkjpb7fi";
-            # date = 2019-12-16T08:19:35-07:00;
+            rev = "a491fd35e9ba9f0a0980081f3d927e5d861ae5fa";
+            sha256 = "1vqbxlvkfqbpiam0g0qykbmxf0lh6pmlcl3ljg4b7wsi31rndyqv";
+            # date = 2020-03-03T09:01:16-07:00;
           };
         }
         {
@@ -133,9 +140,9 @@ in {
           src = fetchFromGitHub {
             owner = "zdharma";
             repo = "fast-syntax-highlighting";
-            rev = "94b6b5b8e58aeecd7587a973dbe110a352d7314d";
-            sha256 = "1lvq9qk0jz65swbghg4j08353z27v7nhd1r5i454y91s6w6n4b46";
-            # date = 2020-02-07T02:39:16+01:00;
+            rev = "303eeee81859094385605f7c978801748d71056c";
+            sha256 = "0y0jgkj9va8ns479x3dhzk8bwd58a1kcvm4s2mk6x3n19w7ynmnv";
+            # date = 2020-03-06T09:48:07+01:00;
           };
         }
       ];

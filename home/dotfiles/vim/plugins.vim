@@ -172,6 +172,7 @@ Plug 'mitsuhiko/vim-python-combined'
 " haskell
 
 Plug 'neovimhaskell/haskell-vim'
+Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 " Plug 'hspec/hspec.vim'
 " Plug 'eagletmt/neco-ghc'
 " Plug 'nbouscal/vim-stylish-haskell'

@@ -28,6 +28,7 @@
     shellcheck
     global
     highlight
+    sourceHighlight
     hyperfine
     weighttp
     xxd

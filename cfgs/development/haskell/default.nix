@@ -10,7 +10,7 @@ in
     environment.systemPackages = haskellPackages;
 
     services.hoogle = {
-      enable = false;
+      enable = true;
       port = 9000;
 
       packages = (hpkgs: with hpkgs; [
@@ -39,43 +39,46 @@ in
       data-default-class
       data-default
 
+      alex
+      happy
+
       # co-log
       cryptonite
       memory
       http-client
       http-client-tls
       http-api-data
-      servant
-      servant-client
+      # servant
+      # servant-client
       aeson
       aeson-pretty
       network
-      (req.overrideAttrs (old: { doCheck = false; }))
+      # (req.overrideAttrs (old: { doCheck = false; }))
       websockets
       optparse-applicative
 
-      parsec
-      megaparsec
-      parser-combinators
+      # parsec
+      # megaparsec
+      # parser-combinators
 
-      OpenGL
-      GLUT
-      gloss
-      gloss-juicy
-      apecs
-      apecs-gloss
+      # OpenGL
+      # GLUT
+      # gloss
+      # gloss-juicy
+      # apecs
+      # apecs-gloss
 
       # hasbolt
       # hasbolt-extras
 
-      capability
+      # capability
 
       Glob
       filepath
       brick
       vty
 
-      (dhall.overrideAttrs (old: { doCheck = false; }))
+      # (dhall.overrideAttrs (old: { doCheck = false; }))
 
       hspec
       tasty
@@ -83,24 +86,24 @@ in
       tasty-hspec
       QuickCheck
       hedgehog
-      doctest
+      # doctest
 
       suspend
       timers
 
       monad-logger
-      persistent
-      persistent-postgresql
+      # persistent
+      # persistent-postgresql
 
       (dotenv.overrideAttrs (old: { doCheck = false; }))
 
-      sum-type-boilerplate
-      eventful-core
-      eventful-memory
-      (eventful-postgresql.overrideAttrs (old: { doCheck = false; }))
-      eventful-test-helpers
+      # sum-type-boilerplate
+      # eventful-core
+      # eventful-memory
+      # (eventful-postgresql.overrideAttrs (old: { doCheck = false; }))
+      # eventful-test-helpers
 
-      autoexporter
+      # autoexporter
 
       # pointfree
       # pointful

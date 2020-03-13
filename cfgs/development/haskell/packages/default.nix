@@ -15,6 +15,7 @@ in with packageSet; [
   # summoner
 
   hpack
+  alex
   happy
 
   # dhall
@@ -42,7 +43,6 @@ in with packageSet; [
   haskdogs
   # apply-refact
   # present
-  # alex
   weeder
   ghcid
   cpphs

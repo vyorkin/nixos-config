@@ -88,9 +88,9 @@ bindsym $mod+Shift+z gaps outer current minus 1
 
 bindsym $mod+f fullscreen toggle
 
-# bindsym $mod+s layout stacking
-# bindsym $mod+w layout tabbed
-# bindsym $mod+e layout toggle split
+bindsym $mod+Shift+u layout stacking
+bindsym $mod+Shift+i layout tabbed
+bindsym $mod+Shift+o layout toggle split
 
 bindsym $mod+Shift+f floating toggle
 bindsym $mod+Shift+t focus mode_toggle

@@ -10,5 +10,7 @@ in {
     tdlib
     libwebp
     librsvg
+    # For xwidget-webkit in Emacs
+    glib-networking
   ];
 }
