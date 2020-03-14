@@ -25,6 +25,7 @@
     ./minizinc.nix
     ./irc.nix
     ./idea.nix
+    ./mps-youtube.nix
   ];
 
   home-manager.users.vyorkin = {

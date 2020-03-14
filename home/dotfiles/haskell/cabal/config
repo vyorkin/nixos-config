@@ -78,7 +78,11 @@ extra-prog-path: /home/vyorkin/.cabal/bin
 -- allow-older: False
 -- allow-newer: False
 -- write-ghc-environment-files:
-documentation: False
+
+-- HIE supports fetching docs from haddock on hover,
+-- so here we enable documentation generation for cabal projects.
+documentation: True
+
 -- doc-index-file: $datadir/doc/$arch-$os-$compiler/index.html
 -- target-package-db:
 -- max-backjumps: 2000

@@ -52,7 +52,7 @@
     enable = true;
     support32Bit = true;
     package = pkgs.pulseaudioFull;
-    extraModules = [ pkgs.pulseaudio-modules-bt ];
+    extraModules = [pkgs.pulseaudio-modules-bt];
   };
 
   hardware.opengl = {
@@ -68,8 +68,9 @@
   boot.plymouth = {
     enable = true;
     logo = pkgs.fetchurl {
-      url = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Lambda_Cube_img.svg/1200px-Lambda_Cube_img.svg.png";
-      sha256 = "179x1nm23c7s954789cx4lrbdfyavmyq460kp67n9j5xcczbmlir";
+      url =
+      "https://raw.githubusercontent.com/njkli/nix-channel/master/nixos-hires-rotated.png";
+      sha256 = "090s5jcaiwnvk4bnfiwkzx73mgws81h1mvk6rh3720xbr9p83xnl";
     };
   };
 

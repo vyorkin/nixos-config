@@ -11,7 +11,11 @@ let
     python-language-server
     virtualenv
     virtualenvwrapper
+
     pyserial
+
+    # Terminal based YouTube player and downloader
+    mps-youtube
   ];
 in
   {
