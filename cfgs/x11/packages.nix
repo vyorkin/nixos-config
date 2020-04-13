@@ -17,6 +17,7 @@
     xorg.xgamma
     xorg.xrandr
     xorg.xmag
+    xorg.xbacklight
     xrandr-invert-colors
     arandr
     autorandr

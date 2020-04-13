@@ -8,6 +8,12 @@
   services.xserver = {
     enable = true;
 
+    useGlamor = true;
+    exportConfiguration = true;
+
+    autoRepeatDelay = 200;
+    autoRepeatInterval = 40;
+
     layout = "us,ru";
     xkbModel = "pc105";
     xkbVariant = "qwerty";

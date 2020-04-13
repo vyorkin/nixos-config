@@ -12,6 +12,8 @@ in {
       ".zconfig" = { source = ./dotfiles/zsh/zconfig; };
     };
 
+    programs.broot.enableZshIntegration = true;
+
     programs.zsh = {
       enable = true;
       enableCompletion = false;

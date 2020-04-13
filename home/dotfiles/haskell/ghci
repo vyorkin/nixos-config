@@ -1,10 +1,15 @@
 -- :set prompt "∀x. x ⊢ "
-:set prompt "ΠΣ: "
+-- :set prompt "ΠΣ: "
+
+:set prompt "\ESC[38;5;208m\STXλ>\ESC[m\STX "
 :set prompt-cont " | "
 
 :set stop :list
 :set +t
 :set +c
+
+-- better errors
+:set -ferror-spans -freverse-errors -fprint-expanded-synonyms
 
 -- work with local .ghci
 :def r. const(return ":cmd readFile \".ghci\"")

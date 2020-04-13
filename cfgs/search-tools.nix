@@ -10,6 +10,7 @@
     ripgrep
     ag
     fzf
+    skim
     fzy
     hstr
   ];

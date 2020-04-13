@@ -1,16 +1,16 @@
 { pkgs, packageSet, ... }:
 
 let
-  ormoluPkg = import (builtins.fetchGit {
+  ormolu = (import (builtins.fetchGit {
     url = "https://github.com/tweag/ormolu";
     rev = "55d8b7f8c482655ea575425e55352e650f304ea0";
-  }) { };
+  }) { }).ormolu;
 
   # liquid = packageSet.callPackage ./liquidhaskell-0.8.6.0.nix { };
   # brittany = packageSet.callPackage ./brittany-0.12.0.0.nix { };
 
 in with packageSet; [
-  ormoluPkg.ormolu
+  ormolu
 
   # summoner
 
@@ -23,6 +23,8 @@ in with packageSet; [
   # expresso
 
   # liquidhaskell
+
+  # cabal-bounds
 
   doctest
 
@@ -39,8 +41,13 @@ in with packageSet; [
   # hindent
   stylish-haskell
   hlint
+
+  # ctags file generator for cabal/stack project dependencies
+  # codex
+
   hasktags
   haskdogs
+
   # apply-refact
   # present
   weeder

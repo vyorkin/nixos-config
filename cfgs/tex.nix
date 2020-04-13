@@ -4,8 +4,9 @@
   environment.systemPackages = with pkgs; [
     auctex
     rubber
-    # texlive.combined.scheme-full
     texmaker
     texstudio
+
+    texlive.combined.scheme-full
   ];
 }

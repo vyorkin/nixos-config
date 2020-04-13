@@ -22,12 +22,14 @@
     pkgsCross.avr.buildPackages.binutils
     pkgsCross.avr.buildPackages.gcc
 
-  # avrlibc
-  # avrgcc
   # avrbinutils
     avrdude
-    # avrdudess
+  # avrdudess
     avr8burnomat
+    simavr
+    avra
+
+    uisp
 
     dfu-util
     platformio
@@ -37,5 +39,18 @@
     verilog
     gtkwave
     verilator
+    # quartus-prime-lite
+
+    minicom
+    uucp
+
+    stm32flash
+    stm32loader
+
+    esphome
+    # esptool
+    # esptool-ck
+    mpfshell
+    mkspiffs
   ];
 }

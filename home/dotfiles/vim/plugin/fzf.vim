@@ -1,14 +1,21 @@
-" let $FZF_DEFAULT_COMMAND='ag -l -g ""'
-let $FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+let $FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 
 nn <silent> <C-q> :Files<CR>
 nn <silent> <C-e> :Commits<CR>
 nn <silent> <C-b> :Buffers<CR>
+nn <silent> <C-m> :Marks<CR>
+nn <silent> <C-s> :Snippets<CR>
 
-" [Buffers] Jump to the existing window if possible
+" [Buffers] jump to the existing window if possible
 let g:fzf_buffers_jump = 1
 
-let g:fzf_layout = { 'down': '~20%' }
+" [[B]Commits] Customize the options used by 'git log':
+let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
+
+" [Tags] Command to generate tags file
+let g:fzf_tags_command = 'ctags -R'
+
+let g:fzf_layout = { 'down': '~30%' }
 
 " mapping selecting mappings
 nmap <leader><tab> <plug>(fzf-maps-n)

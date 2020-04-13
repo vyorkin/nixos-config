@@ -60,6 +60,8 @@
       symbola
       stix-otf
       stix-two
+      lmodern
+      jetbrains-mono
 
       nerdfonts
     ];

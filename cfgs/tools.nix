@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    bc
     bbe
     scrot
     flameshot
@@ -15,10 +16,14 @@
     usbutils
     up
 
+    graphviz
+    zgrviewer
+
     extundelete
 
     xflux
     xflux-gui
+    blugon
 
     xmagnify
     slop

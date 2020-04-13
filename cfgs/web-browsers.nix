@@ -20,6 +20,9 @@
 
     qutebrowser
 
+    ddgr
+    browsh
+
     rtv
 
     # tor-browser-bundle-bin

@@ -1,5 +1,8 @@
 { pkgs, ... }:
 
+
+let angular_plymouth_theme = pkgs.callPackage ../pkgs/custom/plymouth-theme { };
+in
 {
   imports = [
     ../cfgs/bluetooth.nix
@@ -55,6 +58,8 @@
     extraModules = [pkgs.pulseaudio-modules-bt];
   };
 
+  hardware.acpilight.enable = true;
+
   hardware.opengl = {
     enable = true;
     driSupport32Bit = true;
@@ -64,14 +69,13 @@
 
   hardware.bluetooth.enable = true;
 
+  boot.loader.timeout = 0;
+
   # Enable Plymouth boot splash screen
   boot.plymouth = {
     enable = true;
-    logo = pkgs.fetchurl {
-      url =
-      "https://raw.githubusercontent.com/njkli/nix-channel/master/nixos-hires-rotated.png";
-      sha256 = "090s5jcaiwnvk4bnfiwkzx73mgws81h1mvk6rh3720xbr9p83xnl";
-    };
+    theme = "angular";
+    themePackages = with pkgs; [ angular_plymouth_theme ];
   };
 
   services = {
@@ -89,7 +93,7 @@
 
     # Conflicts with xrandr-invert-colors
     # see: https://github.com/zoltanp/xrandr-invert-colors#after-a-short-time-the-colors-are-reverted-to-original-ones-there-is-no-error-message
-    # (I use xflux instead)
+    # (I use xflux / blugon instead)
     redshift = {
       enable = false;
       temperature.day = 5500;

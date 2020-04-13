@@ -8,6 +8,7 @@
     ./web
     ./ssh.nix
     ./zsh.nix
+    # ./fish.nix
     ./tmux.nix
     ./git.nix
     ./terminal.nix
@@ -34,8 +35,12 @@
     services = {
       udiskie.enable = true;
       blueman-applet.enable = true;
-      # lorri.enable = true;
+      lorri.enable = true;
     };
     systemd.user.startServices = true;
+
+    # A better way to navigate directories
+    # https://github.com/Canop/broot
+    programs.broot.enable = true;
   };
 }

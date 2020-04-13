@@ -16,6 +16,11 @@ let
 
     # Terminal based YouTube player and downloader
     mps-youtube
+
+    glances
+    # howdoi
+
+    sphinx
   ];
 in
   {

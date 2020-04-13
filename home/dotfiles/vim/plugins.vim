@@ -16,6 +16,9 @@ Plug 'tpope/vim-capslock'             " software capslock (gC or <C-G>c)
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-speeddating'          " use <C-a>/<C-x> to increment dates, times and more
 
+" displays tags in a window, ordered by scope
+Plug 'majutsushi/tagbar'
+
 Plug 'chrisbra/vim-diff-enhanced'
 Plug 'terryma/vim-expand-region'
 Plug 'Wolfy87/vim-expand'
@@ -137,9 +140,6 @@ Plug 'derekwyatt/vim-scala'
 Plug 'toyamarinyon/vim-swift'
 
 " ocaml
-" old
-" Plug 'jrk/vim-ocaml'
-" current
 Plug 'rgrinberg/vim-ocaml'
 Plug 'let-def/ocp-indent-vim'
 
@@ -163,14 +163,13 @@ Plug 'guns/vim-clojure-static'
 Plug 'guns/vim-clojure-highlight'
 Plug 'vim-scripts/vim-niji'
 
-" it's slow: https://github.com/tpope/vim-salve#faq
+" it is too slow: https://github.com/tpope/vim-salve#faq
 " Plug 'tpope/vim-salve'
 
 " python
 Plug 'mitsuhiko/vim-python-combined'
 
 " haskell
-
 Plug 'neovimhaskell/haskell-vim'
 Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 " Plug 'hspec/hspec.vim'
@@ -178,13 +177,11 @@ Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 " Plug 'nbouscal/vim-stylish-haskell'
 " Plug 'dag/vim2hs'
 
-" I use LSP instead
-" Plug 'eagletmt/ghcmod-vim'
-
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': './install.sh'
-    \ }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'autozimu/LanguageClient-neovim', {
+"     \ 'branch': 'next',
+"     \ 'do': './install.sh'
+"     \ }
 
 " elm
 Plug 'lambdatoast/elm.vim'
@@ -272,7 +269,6 @@ Plug 'matze/vim-move'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
-
 
 " An ack/ag/pt/rg powered code search and view tool
 Plug 'dyng/ctrlsf.vim'

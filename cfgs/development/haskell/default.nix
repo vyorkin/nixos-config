@@ -16,6 +16,7 @@ in
       packages = (hpkgs: with hpkgs; [
       relude
       text
+      utf8-string
       array
       time
       bytestring
@@ -102,6 +103,10 @@ in
       # eventful-memory
       # (eventful-postgresql.overrideAttrs (old: { doCheck = false; }))
       # eventful-test-helpers
+
+      # TODO: base 4.13.0.0 is not on hackage
+      # llvm-hs
+      # llvm-hs-pretty
 
       # autoexporter
 

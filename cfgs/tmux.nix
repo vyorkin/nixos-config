@@ -10,5 +10,8 @@
     tmuxPlugins.resurrect
     tmuxPlugins.fzf-tmux-url
     tmuxinator
+
+    tmate
+    tmate-ssh-server
   ];
 }

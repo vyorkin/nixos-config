@@ -6,10 +6,14 @@ in {
     gmp
     pcre
     gperf
-    ncurses6
+    ncurses
+    # ncurses6
     tdlib
     libwebp
     librsvg
+    libusb
+    libtool
+    texinfo
     # For xwidget-webkit in Emacs
     glib-networking
   ];

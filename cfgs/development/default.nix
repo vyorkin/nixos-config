@@ -22,6 +22,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    universal-ctags
     buck
     cloc
     sloccount
@@ -36,6 +37,8 @@
     asciinema
     exercism
 
+    bison
+    flex
     llvm_9
 
     rakudo

@@ -47,10 +47,19 @@ set visualbell                  " no sounds
 set lazyredraw                  " don't redraw while in macros
 set ruler                       " always display the current cursor position (row, col)
 set ttyfast                     " use fast terminal connection
-set shortmess=atIO              " use short messages, skip :intro, truncate file msg to fit on the cmd line
 set ffs=unix,mac,dos            " automatic EOL detection
 set nofoldenable                " disable code folding (all folds are open by default)
 set clipboard+=unnamedplus      " use system clipboard for yanks
+
+" - use short messages,
+" - skip :intro,
+" - truncate file msg to fit on the cmd line
+" - don't pass messages to |ins-completion-menu
+set shortmess=catIO
+
+" always show the signcolumn, otherwise it
+" would shift the text each time diagnostics appear/become resolved
+set signcolumn=yes
 
 set termguicolors               " enable 24-bit color
 
@@ -87,6 +96,13 @@ set completeopt=menu,preview,longest
 
 " mkview saves all except local buffer/window options
 set viewoptions=cursor,folds,slash,unix
+
+" give more space for displaying messages.
+set cmdheight=2
+
+" having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
 
 " indentation:
 " keep tabstop on 8

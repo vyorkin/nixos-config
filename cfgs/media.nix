@@ -10,6 +10,9 @@
     flac
     cmus
 
+    # ttyrec
+    ttygif
+
     spotify
     spotifywm
 

@@ -27,5 +27,7 @@ in {
     "https://meow.cachix.org"
     "https://nixfmt.cachix.org"
     "https://all-hies.cachix.org"
+    "https://iohk.cachix.org"
+    "https://ghcide-nix.cachix.org"
   ];
 }

@@ -10,6 +10,7 @@
     openssl
     m4
     numactl
+    libedit
     nix-index
 
     fwts

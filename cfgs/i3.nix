@@ -42,10 +42,18 @@ in {
     };
 
     displayManager = {
-      gdm = {
-        enable = false;
-        autoSuspend = false;
-        autoLogin.user = "vyorkin";
+      lightdm = {
+        enable = true;
+        background = "black";
+        greeters.mini = {
+          enable = true;
+          user = "vyorkin";
+        };
+      };
+      gdm.enable = false;
+      job = {
+        logToFile = true;
+        logToJournal = true;
       };
     };
   };
