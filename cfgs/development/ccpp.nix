@@ -11,5 +11,8 @@
     boost
     compcert
     irony-server
+    meson
+    ninja
+    ccache
   ];
 }
