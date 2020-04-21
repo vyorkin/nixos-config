@@ -1,8 +1,9 @@
-{ config, lib, options, modulesPath }:
+{ config, pkgs, lib, options, modulesPath }:
 
 let
   path = ./overlays;
   content = builtins.readDir path;
+  upload-to-cachix = builtins.readFile ./hooks/upload-to-cachix.sh;
 in {
   nix.nixPath = [
     "nixpkgs=/etc/nixos/pkgs/nixpkgs"
@@ -18,16 +19,28 @@ in {
   builtins.match ".*\\.nix" n != null || builtins.pathExists
   (path + ("/" + n + "/default.nix"))) (lib.attrNames content));
 
-  nix.gc.automatic = true;
-  nix.gc.options = "--delete-older-than 7d";
+  nix = {
+    gc.automatic = true;
+    gc.options = "--delete-older-than 7d";
 
-  nix.trustedBinaryCaches = [
-    "http://hydra.nixos.org"
-    "http://cache.nixos.org"
-    "https://meow.cachix.org"
-    "https://nixfmt.cachix.org"
-    "https://all-hies.cachix.org"
-    "https://iohk.cachix.org"
-    "https://ghcide-nix.cachix.org"
-  ];
+    extraOptions = "post-build-hook = ${pkgs.writeShellScript "upload-to-cachix" upload-to-cachix}";
+
+    trustedBinaryCaches = [
+      "http://hydra.nixos.org"
+      "http://cache.nixos.org"
+      "https://silence.cachix.org"
+      "https://nixfmt.cachix.org"
+      "https://all-hies.cachix.org"
+      "https://iohk.cachix.org"
+      "https://ghcide-nix.cachix.org"
+      "https://cache.dhall-lang.org"
+      "https://dhall.cachix.org"
+    ];
+
+    binaryCachePublicKeys = [
+      "cache.dhall-lang.org:I9/H18WHd60olG5GsIjolp7CtepSgJmM2CsO813VTmM="
+      "dhall.cachix.org-1:8laGciue2JBwD49ICFtg+cIF8ddDaW7OFBjDb/dHEAo="
+      "silence.cachix.org-1:os5cpvGmIPGBs7iKjQhD/S+pRS6fTOdSC6BxUi7/P1w="
+    ];
+  };
 }

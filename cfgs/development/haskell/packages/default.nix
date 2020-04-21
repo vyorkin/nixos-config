@@ -48,6 +48,8 @@ in with packageSet; [
   hasktags
   haskdogs
 
+  # lambdabot
+
   # apply-refact
   # present
   weeder

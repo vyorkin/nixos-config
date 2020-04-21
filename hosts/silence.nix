@@ -5,6 +5,7 @@
     ../setup.nix
     ../hardware
     <home-manager/nixos>
+    ../modules
     ../roles/common.nix
     ../roles/x11.nix
     ../cfgs/gtk.nix

@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+  home-manager.users.root = {
+  };
+
   home-manager.users.vyorkin = {
     home.file = {
       ".authinfo" = { source = ./dotsecrets/authinfo; };

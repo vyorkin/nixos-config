@@ -29,7 +29,10 @@
     xclip
     xcalib
     nitrogen
+
     (dunst.override { dunstify = true; })
+    mako
+
     dmenu
     clipmenu
     rofi

@@ -74,6 +74,14 @@ $ cargo install bootimage cargo-xbuild
 $ cargo install hunter navi
 ```
 
+### Go
+
+* `gitbatch` - allows manage your git repositories in one place
+
+```bash
+go get -u github.com/isacikgoz/gitbatch/cmd/gitbatch
+```
+
 ### Why3
 
 ```bash

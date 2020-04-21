@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 
 let angular_plymouth_theme = pkgs.callPackage ../pkgs/custom/plymouth-theme { };
@@ -39,6 +39,7 @@ in
     ../cfgs/tex.nix
     ../cfgs/scraping.nix
     ../cfgs/docker.nix
+    ../cfgs/kubernetes.nix
     # ../cfgs/forensics.nix
     ../cfgs/dropbox.nix
     # ../cfgs/games.nix
@@ -65,7 +66,12 @@ in
     driSupport32Bit = true;
   };
 
-  environment.systemPackages = with pkgs; [ pasystray pavucontrol ];
+  environment = {
+    systemPackages = with pkgs; [ pasystray pavucontrol ];
+    sessionVariables = {
+      CACHIX_SIGNING_KEY = config.secrets.cachix_signing_key;
+    };
+  };
 
   hardware.bluetooth.enable = true;
 

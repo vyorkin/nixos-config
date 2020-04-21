@@ -5,7 +5,10 @@
     bc
     bbe
     scrot
+
     flameshot
+    peek
+
     aria2
     urlscan
     urlview
@@ -15,6 +18,7 @@
     pmutils
     usbutils
     up
+    mdcat
 
     graphviz
     zgrviewer

@@ -12,6 +12,7 @@ let
 in {
   home-manager.users.vyorkin = {
     home.file = { ".tmux" = { source = ./dotfiles/tmux/tmux; }; };
+    home.file = { ".tmate.conf" = { source = ./dotfiles/tmux/tmux.conf; }; };
 
     programs.tmux = {
       enable = true;

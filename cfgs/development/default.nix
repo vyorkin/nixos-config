@@ -43,6 +43,12 @@
 
     rakudo
 
+    dhall
+    dhall-bash
+    dhall-json
+    # dhall-nix
+    dhall-text
+
     elixir
     idris
     nim

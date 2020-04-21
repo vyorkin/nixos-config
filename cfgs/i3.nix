@@ -19,7 +19,6 @@ in {
         dunst &
         flameshot &
         unclutter &
-        lorri daemon &
 
         xset r rate 300 65
       '';

@@ -12,9 +12,17 @@
 -- Cabal library version: 2.4.1.0
 -- cabal-install version: 2.4.1.0
 
+-- NOTE:
+-- We don't want cabal to access hackage since we're using nix
+-- This requires setting CABAL_DIR=./cabal (you project local .cabal dir)
+-- Set this env var in your default.nix or shell.nix:
+--
+-- shellHook = ''
+--   CABAL_DIR=${builtins.toString ./.cabal}
+-- '';
 
-repository hackage.haskell.org
-  url: http://hackage.haskell.org/
+-- repository hackage.haskell.org
+  -- url: http://hackage.haskell.org/
   -- secure: True
   -- root-keys:
   -- key-threshold: 3

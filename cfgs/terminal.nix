@@ -7,6 +7,7 @@
     hyper
     guake
     eternal-terminal
+    cool-retro-term
     # rxvt_unicode-with-plugins
 
     # https://starship.rs/

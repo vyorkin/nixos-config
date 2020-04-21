@@ -13,10 +13,10 @@
     # ttyrec
     ttygif
 
-    spotify
-    spotifywm
+    # spotify
+    # spotifywm
 
-    sunvox
+    # sunvox
     tiled
 
     ardour
