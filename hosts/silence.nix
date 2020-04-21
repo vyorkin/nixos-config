@@ -3,7 +3,7 @@
 {
   imports = [
     ../setup.nix
-    ../hardware
+    ../hardware/silence
     <home-manager/nixos>
     ../modules
     ../roles/common.nix
@@ -11,7 +11,6 @@
     ../cfgs/gtk.nix
     ../cfgs/qt.nix
     ../cfgs/i3.nix
-    # ../cfgs/gnome.nix
     ../roles/workstation.nix
     ../cfgs/users
     ../home

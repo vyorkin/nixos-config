@@ -3,6 +3,7 @@
 {
   imports = [
     ../setup.nix
+    ../hardware/shelter
     <home-manager/nixos>
     ../modules
     ../roles/common.nix
@@ -25,9 +26,6 @@
     kernelParams = ["quiet"];
     consoleLogLevel = 0;
   };
-
-  hardware.cpu.intel.updateMicrocode = true;
-  # hardware.enableAllFirmware = true;
 
   networking.hostName = "shelter";
 
