@@ -1,5 +1,7 @@
 ## My personal NixOS configuration
 
+Don’t even try to use this, it won’t work for you ;)
+
 ### Prerequisites
 
 Make sure you have `git` installed:
@@ -17,9 +19,7 @@ export NIXHOST=<HOST_NAME>
 
 sudo sh <<SETUP
 mv /etc/nixos /etc/nixos-orig
-git clone --recurse-submodules -j8 https://vyorkin@bitbucket.org/vyorkin/nixos-config.git /etc/nixos
-cp /etc/nixos-orig/hardware-configuration.nix /etc/nixos
-[ ! -e hosts/$NIXHOST.nix ] && mv /etc/nixos-orig/configuration.nix /etc/nixos/hosts/$NIXHOST.nix
+git clone --recurse-submodules -j8 --depth=1 https://vyorkin@bitbucket.org/vyorkin/nixos-config.git /etc/nixos
 ln -sr /etc/nixos/hosts/$NIXHOST.nix /etc/nixos/configuration.nix
 SETUP
 ```
@@ -27,7 +27,7 @@ SETUP
 Configure the NixOS machine:
 
 ```bash
-$ nixos-rebuild switch --upgrade
+$ nixos-rebuild switch
 ```
 
 ### Layout
