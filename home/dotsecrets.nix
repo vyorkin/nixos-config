@@ -2,6 +2,12 @@
 
 {
   home-manager.users.root = {
+    home.file = {
+      "cachix.dhall" = {
+        source = ./dotsecrets/cachix.dhall;
+        target = ".config/cachix/cachix.dhall";
+      };
+    };
   };
 
   home-manager.users.vyorkin = {
@@ -13,6 +19,11 @@
       ".goobookrc" = { source = ./dotsecrets/goobookrc; };
       ".goobook_auth.json" = { source = ./dotsecrets/goobook_auth.json; };
       ".bumblebee-status.conf" = { source = ./dotsecrets/bumblebee-status.conf; };
+
+      "cachix.dhall" = {
+        source = ./dotsecrets/cachix.dhall;
+        target = ".config/cachix/cachix.dhall";
+      };
 
       "secrets" = {
         source = ./dotsecrets/emacs;

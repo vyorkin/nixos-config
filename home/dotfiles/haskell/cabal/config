@@ -18,11 +18,11 @@
 -- Set this env var in your default.nix or shell.nix:
 --
 -- shellHook = ''
---   CABAL_DIR=${builtins.toString ./.cabal}
+--   export CABAL_DIR=${builtins.toString ./.cabal}
 -- '';
 
--- repository hackage.haskell.org
-  -- url: http://hackage.haskell.org/
+repository hackage.haskell.org
+  url: http://hackage.haskell.org/
   -- secure: True
   -- root-keys:
   -- key-threshold: 3

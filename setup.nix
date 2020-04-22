@@ -3,7 +3,7 @@
 let
   path = ./overlays;
   content = builtins.readDir path;
-  upload-to-cachix = builtins.readFile ./hooks/upload-to-cachix.sh;
+  # upload-to-cachix = builtins.readFile ./hooks/upload-to-cachix.sh;
 in {
   nix.nixPath = [
     "nixpkgs=/etc/nixos/pkgs/nixpkgs"
@@ -23,7 +23,14 @@ in {
     gc.automatic = true;
     gc.options = "--delete-older-than 7d";
 
-    extraOptions = "post-build-hook = ${pkgs.writeShellScript "upload-to-cachix" upload-to-cachix}";
+    # extraOptions = "post-build-hook = /etc/nixos/hooks/upload-to-cachix.sh";
+    # extraOptions = "post-build-hook = ${pkgs.writeShellScript "upload-to-cachix" "${pkgs.cachix}/bin/cachix push silence"}";
+    # extraOptions = "post-build-hook = ${pkgs.writeShellScript "upload-to-cachix" upload-to-cachix}";
+
+    extraOptions = "post-build-hook = ${pkgs.writeShellScript "upload-to-cachix" ''
+      export HOME=/root
+      echo $OUT_PATHS | ${pkgs.cachix}/bin/cachix push silence --config /root/.config/cachix/cachix.dhall
+    ''}";
 
     trustedBinaryCaches = [
       "http://hydra.nixos.org"

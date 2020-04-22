@@ -84,6 +84,8 @@ in
     themePackages = with pkgs; [ angular_plymouth_theme ];
   };
 
+  systemd.coredump.enable = true;
+
   services = {
     locate.enable = true;
 
