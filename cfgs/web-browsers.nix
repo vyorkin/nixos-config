@@ -25,8 +25,7 @@
 
     rtv
 
-    # tor-browser-bundle-bin
-    # torbrowser
+    torbrowser
 
     # tor
     # tor-arm

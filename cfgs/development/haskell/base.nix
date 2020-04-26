@@ -15,12 +15,18 @@ in
     cabal-install
 
     pkgs.haskell.compiler.ghc883
+    # ghcide883
 
     stack
     # hie
 
     nix-tools
 
-    # ghcide883
+    # ATS
+
+    pkgs.haskellPackages.ats-pkg
+    pkgs.haskellPackages.hs2ats
+    # pkgs.haskellPackages.ats-format
+    # pkgs.haskellPackages.c2ats
   ];
 }
