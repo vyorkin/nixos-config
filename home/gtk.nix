@@ -11,6 +11,16 @@ with import ../const.nix;
         package = pkgs.arc-theme;
       };
 
+      iconTheme = {
+        name = "Papirus Dark";
+        package = pkgs.papirus-icon-theme;
+      };
+
+      font = {
+        package = pkgs.roboto;
+        name = "Roboto 11";
+      };
+
       # theme = {
       #   name = "Paper";
       #   package = pkgs.paper-gtk-theme;
@@ -25,11 +35,6 @@ with import ../const.nix;
       #   name = "Paper";
       #   package = pkgs.paper-icon-theme;
       # };
-
-      iconTheme = {
-        name = "Papirus Dark";
-        package = pkgs.papirus-icon-theme;
-      };
     };
   };
 }

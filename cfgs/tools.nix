@@ -25,6 +25,12 @@
 
     extundelete
 
+    stress
+    ksysguard
+    cpufrequtils
+    linuxPackages.cpupower
+
+
     xflux
     xflux-gui
     blugon

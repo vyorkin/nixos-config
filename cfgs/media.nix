@@ -33,5 +33,8 @@
 
     kdeApplications.kdenlive
     # frei0r
+
+    reaper
+    musescore
   ];
 }

@@ -5,8 +5,8 @@
 :set prompt-cont " | "
 
 :set stop :list
-:set +t
 :set +c
+-- :set +t
 
 -- better errors
 :set -ferror-spans -freverse-errors -fprint-expanded-synonyms

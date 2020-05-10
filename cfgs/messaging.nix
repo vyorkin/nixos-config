@@ -8,6 +8,7 @@
     discord
     zoom-us
     tdesktop
+    nheko
     spectral
     riot-desktop
     # telegram-cli

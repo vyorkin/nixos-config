@@ -12,6 +12,7 @@ in
     ../cfgs/mail.nix
     ../cfgs/fonts.nix
     ../cfgs/vpn.nix
+    # ../cfgs/wireguard.nix
     ../cfgs/vnc.nix
     ../cfgs/terminal.nix
     ../cfgs/monitoring.nix
@@ -86,6 +87,12 @@ in
   };
 
   systemd.coredump.enable = true;
+  systemd.targets = {
+    sleep.enable = false;
+    suspend.enable = false;
+    hibernate.enable = false;
+    hybrid-sleep.enable = false;
+  };
 
   services = {
     locate.enable = true;

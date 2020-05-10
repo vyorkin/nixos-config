@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    cvs
     git
     git-lfs
     git-crypt
