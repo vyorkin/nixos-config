@@ -8,7 +8,7 @@ in {
     gperf
     ncurses
     # ncurses6
-    tdlib
+    # tdlib
     libwebp
     librsvg
     libusb

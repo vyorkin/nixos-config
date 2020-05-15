@@ -27,10 +27,10 @@ in {
     # extraOptions = "post-build-hook = ${pkgs.writeShellScript "upload-to-cachix" "${pkgs.cachix}/bin/cachix push silence"}";
     # extraOptions = "post-build-hook = ${pkgs.writeShellScript "upload-to-cachix" upload-to-cachix}";
 
-    extraOptions = "post-build-hook = ${pkgs.writeShellScript "upload-to-cachix" ''
-      export HOME=/root
-      echo $OUT_PATHS | ${pkgs.cachix}/bin/cachix push silence --config /root/.config/cachix/cachix.dhall
-    ''}";
+    # extraOptions = "post-build-hook = ${pkgs.writeShellScript "upload-to-cachix" ''
+    #  export HOME=/root
+    #  echo $OUT_PATHS | ${pkgs.cachix}/bin/cachix push silence --config /root/.config/cachix/cachix.dhall
+    # ''}";
 
     trustedBinaryCaches = [
       "http://hydra.nixos.org"

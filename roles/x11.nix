@@ -8,6 +8,10 @@
   services.xserver = {
     enable = true;
 
+    # For recent ADM GPU's you most likely want to
+    # keep either the defaults or "amdgpu" (both free)
+    videoDrivers = [ "amdgpu" ];
+
     useGlamor = true;
     exportConfiguration = true;
 

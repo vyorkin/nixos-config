@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    mesa
+    # mesa
     libGL
     libGLU
 

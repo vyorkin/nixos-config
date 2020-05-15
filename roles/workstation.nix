@@ -42,9 +42,9 @@ in
     ../cfgs/scraping.nix
     ../cfgs/docker.nix
     ../cfgs/kubernetes.nix
-    # ../cfgs/forensics.nix
+    ../cfgs/forensics.nix
     ../cfgs/dropbox.nix
-    # ../cfgs/games.nix
+    ../cfgs/games.nix
     ../cfgs/electronics.nix
     ../cfgs/db
     ../cfgs/development

@@ -41,15 +41,20 @@ in {
     };
 
     displayManager = {
+      defaultSession = "none+i3";
       lightdm = {
-        enable = true;
+        enable = false;
+	autoLogin = {
+	  enable = true;
+	  user = "vyorkin";
+	};
         background = "black";
         greeters.mini = {
           enable = true;
           user = "vyorkin";
         };
       };
-      gdm.enable = false;
+      gdm.enable = true;
       job = {
         logToFile = true;
         logToJournal = true;

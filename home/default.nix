@@ -8,7 +8,7 @@
     ./web
     ./ssh.nix
     ./zsh.nix
-    # ./fish.nix
+    ./fish.nix
     ./tmux.nix
     ./git.nix
     ./terminal.nix
