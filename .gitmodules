@@ -10,15 +10,9 @@
 [submodule "home/dotfiles/ruby/dotpryprc"]
 	path = home/dotfiles/ruby/dotpryprc
 	url = git@github.com:vyorkin-personal/dotpryrc.git
-[submodule "home/dotfiles/ruby/dotpryrc"]
-	path = home/dotfiles/ruby/dotpryrc
-	url = git@github.com:vyorkin-personal/dotpryrc.git
 [submodule "home/dotfiles/emacs"]
 	path = home/dotfiles/emacs
 	url = https://github.com/vyorkin/emacs.d.git
-[submodule "pkgs/mozilla"]
-	path = pkgs/mozilla
-	url = https://github.com/mozilla/nixpkgs-mozilla.git
 [submodule "pkgs/nixos-hardware"]
 	path = pkgs/nixos-hardware
 	url = https://github.com/NixOS/nixos-hardware.git
