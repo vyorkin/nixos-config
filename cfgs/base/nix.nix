@@ -1,8 +1,8 @@
 { pkgs, ... }:
 
-let
-  nixfmt = import ../../pkgs/custom/nixfmt;
-in {
+# let
+#   nixfmt = import ../../pkgs/custom/nixfmt;
+{
   environment.systemPackages = with pkgs; [
     pkgconfig
     nix-prefetch-scripts

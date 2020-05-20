@@ -1,26 +1,26 @@
 host: { pkgs, options, ... }:
 
 let
-  const = import ./const.nix;
-
-  pushToCachix = if const.cachix.push then
+  pushToCachix =
     "post-build-hook = ${
       pkgs.writeShellScript "upload-to-cachix" ''
         export HOME=/root
         echo $OUT_PATHS | ${pkgs.cachix}/bin/cachix push ${host} --config /root/.config/cachix/cachix.dhall
       ''
-    }"
-  else
-    "";
+    }";
 in {
   nixpkgs.config = {
     allowUnfree = true;
     allowBroken = true;
+    permittedInsecurePackages = [
+      "p7zip-16.02"
+      "openssl-1.0.2u"
+    ];
   };
 
   # Set the host-related settings
   networking.hostName = host;
-  time.timeZone = const.timeZone;
+  time.timeZone = "Europe/Moscow";
 
   system = {
     # Periodically upgrade NixOS to the latest version.

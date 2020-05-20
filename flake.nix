@@ -39,7 +39,6 @@
       type = "github";
       owner = "nix-community";
       repo = "NUR";
-      flake = false;
     };
 
     # Automated, pre-built packages for Wayland (sway/wlroots)
