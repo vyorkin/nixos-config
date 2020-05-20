@@ -32,13 +32,15 @@ ln -sf nixos-config /etc/nixos
 hostname yourhostname
 ```
 
-5. Create 2 additional files by copying the example files
+5.
 
-* `cp secret.example.nix secret.nix`
-* `cp host.example.nix host.nix`
+Edit `const.nix` and add **your** `secrets` input to registry:
 
-Edit those files (don’t forget to set the host name in
-`host.nix` file) and then configure the NixOS machine:
+```sh
+sudo nix flake add secrets git+ssh://foo/bar.git
+```
+
+Then configure the NixOS machine:
 
 
 ```sh
@@ -49,12 +51,10 @@ sudo nixos-rebuild switch --flake .
 
 - `default.nix` - Configuration “entry point”
 - `flake.nix` - Metadata describing this repository
-- `host.nix` - Host-specific settings
 - `setup.nix` - System and Nix related configuration
 - `support.nix` - Utility functions
 - `secret.nix` - Contains secrets ;)
 - `const.nix` - Various constants
-
 - `hardware/` - Host specific hardware configurations
 - `hosts/` - Host specific configurations
 - `cfgs/` - Package configurations

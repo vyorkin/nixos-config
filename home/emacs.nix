@@ -1,25 +1,25 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   home-manager.users.vyorkin = {
     home.file = {
       "purescript-mode" = {
-        source = ./dotfiles/emacs/purescript-mode;
+        source = "${inputs.emacs}/purescript-mode";
         target = ".emacs.d/purescript-mode";
       };
 
       "PG" = {
-        source = ./dotfiles/emacs/lisp/PG;
+        source = "${inputs.emacs}/lisp/PG";
         target = ".emacs.d/lisp/PG";
       };
 
       "ats-mode" = {
-        source = ./dotfiles/emacs/lisp/ats-mode.el;
+        source = "${inputs.emacs}/lisp/ats-mode.el";
         target = ".emacs.d/lisp/ats-mode.el";
       };
 
       "yasnippet-snippets" = {
-        source = ./dotfiles/emacs/yasnippet-snippets;
+        source = "${inputs.emacs}/yasnippet-snippets";
         target = ".emacs.d/yasnippet-snippets";
       };
     };

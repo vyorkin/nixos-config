@@ -18,6 +18,24 @@
         "type": "github"
       }
     },
+    "base16-kitty": {
+      "flake": false,
+      "info": {
+        "lastModified": 1589263869,
+        "narHash": "sha256-+pdXnjuYl7E++QvKOrdSokBc32mkYf3e4Gmnn0xS2iQ="
+      },
+      "locked": {
+        "owner": "kdrag0n",
+        "repo": "base16-kitty",
+        "rev": "fe5862cec41bfd0b46a1ac3d7565a50680051226",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kdrag0n",
+        "repo": "base16-kitty",
+        "type": "github"
+      }
+    },
     "dotpryrc": {
       "flake": false,
       "info": {
@@ -33,6 +51,24 @@
       "original": {
         "owner": "vyorkin",
         "repo": "dotpryrc",
+        "type": "github"
+      }
+    },
+    "emacs": {
+      "flake": false,
+      "info": {
+        "lastModified": 1589735961,
+        "narHash": "sha256-fyExtxcnXubYdmi3AFg1L8wcCJ6vY+atcWqdK+QwnGY="
+      },
+      "locked": {
+        "owner": "vyorkin",
+        "repo": "emacs.d",
+        "rev": "927517e6af534c4e1026f7fba5e7bf2244cd708c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vyorkin",
+        "repo": "emacs.d",
         "type": "github"
       }
     },
@@ -72,6 +108,24 @@
         "owner": "rycee",
         "ref": "bqv-flakes",
         "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "kitty-themes": {
+      "flake": false,
+      "info": {
+        "lastModified": 1573943989,
+        "narHash": "sha256-DBvkVxInRhKhx5S7dzz5bcSFCf1h6A27h+lIPIXLr4U="
+      },
+      "locked": {
+        "owner": "dexpota",
+        "repo": "kitty-themes",
+        "rev": "fca3335489bdbab4cce150cb440d3559ff5400e2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "dexpota",
+        "repo": "kitty-themes",
         "type": "github"
       }
     },
@@ -166,14 +220,74 @@
     "root": {
       "inputs": {
         "NUR": "NUR",
+        "base16-kitty": "base16-kitty",
         "dotpryrc": "dotpryrc",
+        "emacs": "emacs",
         "ghacks": "ghacks",
         "home-manager": "home-manager",
+        "kitty-themes": "kitty-themes",
         "nixos-fhs-compat": "nixos-fhs-compat",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs",
         "nixpkgs-old": "nixpkgs-old",
-        "nixpkgs-wayland": "nixpkgs-wayland"
+        "nixpkgs-wayland": "nixpkgs-wayland",
+        "secrets": "secrets",
+        "tmux": "tmux",
+        "zsh": "zsh"
+      }
+    },
+    "secrets": {
+      "flake": false,
+      "info": {
+        "lastModified": 1589936573,
+        "narHash": "sha256-YftrUDouvzpdal8iMXEob2Ssgr2FXGStSQrgwd1golw=",
+        "revCount": 34
+      },
+      "locked": {
+        "ref": "master",
+        "rev": "37a0a15b3da6b28a7e9cc966355a2dcd2a076cdb",
+        "type": "git",
+        "url": "ssh://github.com/vyorkin/dotsecrets.git"
+      },
+      "original": {
+        "id": "secrets",
+        "type": "indirect"
+      }
+    },
+    "tmux": {
+      "flake": false,
+      "info": {
+        "lastModified": 1540237956,
+        "narHash": "sha256-jlZQqxZZELjvODrC3/yu8zVPzJmyWFGyI6V649BI6EQ="
+      },
+      "locked": {
+        "owner": "vyorkin",
+        "repo": "tmux.conf",
+        "rev": "60fad045f861ee26f083be1e1212eacff7e914df",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vyorkin",
+        "repo": "tmux.conf",
+        "type": "github"
+      }
+    },
+    "zsh": {
+      "flake": false,
+      "info": {
+        "lastModified": 1589120310,
+        "narHash": "sha256-JiCV8QkTFpIylmGM6Jezs8V/okpNvw47NH9NM9vk6wc="
+      },
+      "locked": {
+        "owner": "vyorkin",
+        "repo": "zshrc",
+        "rev": "a5a589e3552dda841338335a174ce80462ed5f71",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vyorkin",
+        "repo": "zshrc",
+        "type": "github"
       }
     }
   },

@@ -1,7 +1,5 @@
 { pkgs, inputs, ... }:
 
-# let host = import ../host.nix;
-# in
 {
   # home-manager.users.root = {
   #   home.file = {

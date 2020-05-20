@@ -1,8 +1,6 @@
 {
   description = "NixOS configuration of vyorkin's machines";
 
-  edition = 201909;
-
   inputs = {
     nixpkgs = {
       type = "indirect";
@@ -89,11 +87,11 @@
       flake = false;
     };
 
-    # secrets = {
-    #   type = "git";
-    #   url = "git+ssh://github.com/vyorkin/dotsecrets.git";
-    #   flake = false;
-    # };
+    secrets = {
+      type = "indirect";
+      id = "secrets";
+      flake = false;
+    };
 
     zsh = {
       type = "github";
