@@ -5,7 +5,7 @@
     "${inputs.nixpkgs}/nixos/modules/installer/scan/not-detected.nix"
     "${inputs.nixos-hardware}/common/cpu/amd"
     "${inputs.nixos-hardware}/common/pc"
-    "${inputs.nixos-hardware}/common/pc/hdd"
+    # Enables fstrim
     "${inputs.nixos-hardware}/common/pc/ssd"
 
     ./boot.nix

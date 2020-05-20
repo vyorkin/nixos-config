@@ -12,6 +12,7 @@ in {
   nixpkgs.config = {
     allowUnfree = true;
     allowBroken = true;
+
     permittedInsecurePackages = [
       "p7zip-16.02"
       "openssl-1.0.2u"

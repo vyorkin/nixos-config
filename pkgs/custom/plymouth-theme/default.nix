@@ -18,7 +18,10 @@ let
 in stdenv.mkDerivation rec {
   name = "angular";
 
-  src = fetchGit { url = "https://github.com/adi1090x/plymouth-themes"; };
+  src = fetchGit {
+    url = "https://github.com/adi1090x/plymouth-themes";
+    rev = "19139ac5063a89f7f344a18876c17908b65b7c7b";
+  };
 
   buildInputs = [ stdenv ];
 

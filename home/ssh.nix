@@ -1,10 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   home-manager.users.vyorkin = {
     home.file = {
       ".ssh" = {
-        source = ./dotsecrets/ssh;
+        source = "${inputs.secrets}/ssh";
         recursive = true;
       };
     };

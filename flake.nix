@@ -9,6 +9,15 @@
       id = "nixpkgs";
     };
 
+    # Previous stable version of nixpkgs
+    nixpkgs-old = {
+      type = "github";
+      owner = "nixos";
+      repo = "nixpkgs";
+      ref = "nixos-19.03";
+      flake = false;
+    };
+
     # Provides a basic system for managing a user environment
     # using the Nix package manager together with the Nix
     # libraries found in Nixpkgs: https://github.com/rycee/home-manager
@@ -57,6 +66,61 @@
       type = "github";
       owner = "balsoft";
       repo = "nixos-fhs-compat";
+    };
+
+    ghacks = {
+      type = "github";
+      owner = "ghacksuserjs";
+      repo = "ghacks-user.js";
+      flake = false;
+    };
+
+    kitty-themes = {
+      type = "github";
+      owner = "dexpota";
+      repo = "kitty-themes";
+      flake = false;
+    };
+
+    base16-kitty = {
+      type = "github";
+      owner = "kdrag0n";
+      repo = "base16-kitty";
+      flake = false;
+    };
+
+    # secrets = {
+    #   type = "git";
+    #   url = "git+ssh://github.com/vyorkin/dotsecrets.git";
+    #   flake = false;
+    # };
+
+    zsh = {
+      type = "github";
+      owner = "vyorkin";
+      repo = "zshrc";
+      flake = false;
+    };
+
+    tmux = {
+      type = "github";
+      owner = "vyorkin";
+      repo = "tmux.conf";
+      flake = false;
+    };
+
+    emacs = {
+      type = "github";
+      owner = "vyorkin";
+      repo = "emacs.d";
+      flake = false;
+    };
+
+    dotpryrc = {
+      type = "github";
+      owner = "vyorkin";
+      repo = "dotpryrc";
+      flake = false;
     };
   };
 

@@ -1,33 +1,34 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
-let host = import ../host.nix;
-in {
-  home-manager.users.root = {
-    home.file = {
-      "cachix.dhall" = {
-        source = ./dotsecrets/cachix + "/${host.name}.dhall";
-        target = ".config/cachix/cachix.dhall";
-      };
-    };
-  };
+# let host = import ../host.nix;
+# in
+{
+  # home-manager.users.root = {
+  #   home.file = {
+  #     "cachix.dhall" = {
+  #       source = "${inputs.secrets}/cachix + "/${host.name}.dhall";
+  #       target = ".config/cachix/cachix.dhall";
+  #     };
+  #   };
+  # };
 
   home-manager.users.vyorkin = {
     home.file = {
-      ".authinfo" = { source = ./dotsecrets/authinfo; };
-      ".secret_tokens" = { source = ./dotsecrets/secret_tokens; };
-      ".netrc" = { source = ./dotsecrets/netrc; };
-      ".offlineimaprc" = { source = ./dotsecrets/offlineimaprc; };
-      ".goobookrc" = { source = ./dotsecrets/goobookrc; };
-      ".goobook_auth.json" = { source = ./dotsecrets/goobook_auth.json; };
-      ".bumblebee-status.conf" = { source = ./dotsecrets/bumblebee-status.conf; };
+      ".authinfo" = { source = "${inputs.secrets}/authinfo"; };
+      ".secret_tokens" = { source = "${inputs.secrets}/secret_tokens"; };
+      ".netrc" = { source = "${inputs.secrets}/netrc"; };
+      ".offlineimaprc" = { source = "${inputs.secrets}/offlineimaprc"; };
+      ".goobookrc" = { source = "${inputs.secrets}/goobookrc"; };
+      ".goobook_auth.json" = { source = "${inputs.secrets}/goobook_auth.json"; };
+      ".bumblebee-status.conf" = { source = "${inputs.secrets}/bumblebee-status.conf"; };
 
-      "cachix.dhall" = {
-        source = ./dotsecrets/cachix + "/${host.name}.dhall";
-        target = ".config/cachix/cachix.dhall";
-      };
+      # "cachix.dhall" = {
+      #   source = "${inputs.secrets}/cachix + "/${host.name}.dhall";
+      #   target = ".config/cachix/cachix.dhall";
+      # };
 
       "secrets" = {
-        source = ./dotsecrets/emacs;
+        source = "${inputs.secrets}/emacs";
         target = ".emacs.d/secrets";
         recursive = true;
       };

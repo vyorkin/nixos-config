@@ -1,15 +1,15 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
-let initExtra = builtins.readFile ./dotfiles/zsh/zshrc;
+let initExtra = builtins.readFile "${inputs.zsh}/zshrc";
 in {
   home-manager.users.vyorkin = {
 
     home.file = {
-      ".zshenv" = { source = ./dotfiles/zsh/zshenv; };
-      ".zprofile" = { source = ./dotfiles/zsh/zprofile; };
-      ".zlogin" = { source = ./dotfiles/zsh/zlogin; };
-      ".zlogout" = { source = ./dotfiles/zsh/zlogout; };
-      ".zconfig" = { source = ./dotfiles/zsh/zconfig; };
+      ".zshenv" = { source = "${inputs.zsh}/zshenv"; };
+      ".zprofile" = { source = "${inputs.zsh}/zprofile"; };
+      ".zlogin" = { source = "${inputs.zsh}/zlogin"; };
+      ".zlogout" = { source = "${inputs.zsh}/zlogout"; };
+      ".zconfig" = { source = "${inputs.zsh}/zconfig"; };
     };
 
     programs.broot.enableZshIntegration = true;

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 let
   # Additional plugins
@@ -11,12 +11,12 @@ let
   };
 in {
   home-manager.users.vyorkin = {
-    home.file = { ".tmux" = { source = ./dotfiles/tmux/tmux; }; };
-    home.file = { ".tmate.conf" = { source = ./dotfiles/tmux/tmux.conf; }; };
+    home.file = { ".tmux" = { source = "${inputs.tmux}/tmux"; }; };
+    home.file = { ".tmate.conf" = { source = "${inputs.tmux}/tmux.conf"; }; };
 
     programs.tmux = {
       enable = true;
-      extraConfig = builtins.readFile ./dotfiles/tmux/tmux.conf;
+      extraConfig = builtins.readFile "${inputs.tmux}/tmux.conf";
       plugins = with pkgs; [
         tmuxPlugins.yank
         tmuxPlugins.open

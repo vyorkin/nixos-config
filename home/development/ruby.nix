@@ -1,4 +1,4 @@
-{ ... }:
+{ inputs, ... }:
 
 let basePath = ../dotfiles/ruby;
 in {
@@ -12,7 +12,8 @@ in {
       ".pryrc" = { source = basePath + "/pryrc"; };
       ".rdebugrc" = { source = basePath + "/rdebugrc"; };
       ".rspec" = { source = basePath + "/rspec"; };
-      ".dotpryrc" = { source = basePath + "/dotpryrc"; };
+
+      ".dotpryrc" = { source = "${inputs.dotpryrc}/dotpryrc"; };
 
       ".gas" = {
         source = basePath + "/gas";

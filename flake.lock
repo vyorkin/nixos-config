@@ -18,6 +18,42 @@
         "type": "github"
       }
     },
+    "dotpryrc": {
+      "flake": false,
+      "info": {
+        "lastModified": 1429714272,
+        "narHash": "sha256-ImFIXK5sc6NTd/EzZl3VQ7MbRWtQetYc1lZEwGSlw2g="
+      },
+      "locked": {
+        "owner": "vyorkin",
+        "repo": "dotpryrc",
+        "rev": "76eaace4b94c935096ad4fa5476297507d67e4cf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vyorkin",
+        "repo": "dotpryrc",
+        "type": "github"
+      }
+    },
+    "ghacks": {
+      "flake": false,
+      "info": {
+        "lastModified": 1589584691,
+        "narHash": "sha256-hzCY0eog4PlPkdTzknNGFSX/DVwHqPEnURvqbK+icZ4="
+      },
+      "locked": {
+        "owner": "ghacksuserjs",
+        "repo": "ghacks-user.js",
+        "rev": "4bc5b89cfe6f599747ba50160fc4aa3bded421d1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ghacksuserjs",
+        "repo": "ghacks-user.js",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "info": {
         "lastModified": 1589826413,
@@ -90,6 +126,25 @@
         "type": "indirect"
       }
     },
+    "nixpkgs-old": {
+      "flake": false,
+      "info": {
+        "lastModified": 1581379743,
+        "narHash": "sha256-i1XCn9rKuLjvCdu2UeXKzGLF6IuQePQKFt4hEKRU5oc="
+      },
+      "locked": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "34c7eb7545d155cc5b6f499b23a7cb1c96ab4d59",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-19.03",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs-wayland": {
       "flake": false,
       "info": {
@@ -111,10 +166,13 @@
     "root": {
       "inputs": {
         "NUR": "NUR",
+        "dotpryrc": "dotpryrc",
+        "ghacks": "ghacks",
         "home-manager": "home-manager",
         "nixos-fhs-compat": "nixos-fhs-compat",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-old": "nixpkgs-old",
         "nixpkgs-wayland": "nixpkgs-wayland"
       }
     }

@@ -1,8 +1,8 @@
-{ lib, ... }:
+{ lib, inputs, ... }:
 
 let
-  userjs = builtins.readFile ../dotfiles/firefox/ghacks-user.js/user.js;
-  userjs-overrides = builtins.readFile ../dotfiles/firefox/ghacks-user.js/user-overrides.js;
+  userjs = builtins.readFile "${inputs.ghacks}/user.js";
+  userjs-overrides = builtins.readFile ../dotfiles/firefox/ghacks-user-overrides.js;
 in
 with import ../../support.nix { inherit lib; }; {
   home-manager.users.vyorkin = {
