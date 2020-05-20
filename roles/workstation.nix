@@ -5,6 +5,11 @@ let angular_plymouth_theme = pkgs.callPackage ../pkgs/custom/plymouth-theme { };
 in
 {
   imports = [
+    ../cfgs/x11
+    ../cfgs/gtk.nix
+    ../cfgs/qt.nix
+    ../cfgs/i3.nix
+    ../cfgs/pulseaudio.nix
     ../cfgs/bluetooth.nix
     ../cfgs/logitech.nix
     ../cfgs/web-browsers.nix
@@ -54,28 +59,18 @@ in
   ];
 
   sound.enable = true;
-  hardware.pulseaudio = {
-    enable = true;
-    support32Bit = true;
-    package = pkgs.pulseaudioFull;
-    extraModules = [pkgs.pulseaudio-modules-bt];
-  };
-
-  hardware.acpilight.enable = true;
 
   hardware.opengl = {
     enable = true;
+    driSupport = true;
     driSupport32Bit = true;
   };
 
   environment = {
-    systemPackages = with pkgs; [ pasystray pavucontrol ];
     sessionVariables = {
       CACHIX_SIGNING_KEY = config.secrets.cachix_signing_key;
     };
   };
-
-  hardware.bluetooth.enable = true;
 
   boot.loader.timeout = 0;
 
@@ -100,48 +95,37 @@ in
     # Synchronise time using chrony
     chrony.enable = true;
 
-    blueman.enable = true;
-
     openssh = {
       enable = true;
       forwardX11 = true;
     };
-
-    # Conflicts with xrandr-invert-colors
-    # see: https://github.com/zoltanp/xrandr-invert-colors#after-a-short-time-the-colors-are-reverted-to-original-ones-there-is-no-error-message
-    # (I use xflux / blugon instead)
-    redshift = {
-      enable = false;
-      temperature.day = 5500;
-      temperature.night = 3700;
-    };
   };
 
-  networking.firewall.allowedTCPPorts = [
-    # ssh:
-    22
+  networking.firewall = {
+    allowPing = false;
+    allowedTCPPorts = [
+      # ssh:
+      22
 
-    # http:
-    80
-    8080
-    8081
-    8082
-    4000
-    4001
-    3000
-    3001
-    3002
-    3003
+      # http:
+      80
+      8080
+      8081
+      8082
+      4000
+      4001
+      3000
+      3001
+      3002
+      3003
 
-    # vnc
-    5900
+      # vnc
+      5900
 
-    # postgresql:
-    # 5432
-  ];
+      # postgresql:
+      # 5432
+    ];
+  };
 
   security.sudo.wheelNeedsPassword = false;
-
-  nixpkgs.config.allowBroken = true;
-  system.autoUpgrade.enable = true;
 }

@@ -1,9 +1,18 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 {
   imports = [
-    <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
+    "${inputs.nixpkgs}/nixos/modules/installer/scan/not-detected.nix"
+    "${inputs.nixos-hardware}/common/cpu/amd"
+    "${inputs.nixos-hardware}/common/pc"
+    "${inputs.nixos-hardware}/common/pc/hdd"
+    "${inputs.nixos-hardware}/common/pc/ssd"
+
     ./boot.nix
     ./fs.nix
   ];
+
+  # Maximum number of jobs that Nix will try to build in parallel.
+  # Set to the total number of logical cores in the system
+  nix.maxJobs = lib.mkDefault 12;
 }

@@ -16,6 +16,7 @@ in {
         autorandr -c
         nm-applet &
         blueman-applet &
+        pasystray &
         dunst &
         flameshot &
         unclutter &

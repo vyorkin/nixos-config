@@ -14,5 +14,8 @@
     # telegram-cli
     # pidgin
     gitter
+
+    # A chat client for Twitch chat
+    chatterino2
   ];
 }

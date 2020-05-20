@@ -4,7 +4,7 @@ let
   openvpnReconnect = pkgs.callPackage ../pkgs/custom/openvpn-reconnect { };
 in
   {
-    environment.systemPackages = [ openvpnReconnect ];
+    # environment.systemPackages = [ openvpnReconnect ];
 
     services.openvpn = {
       servers = {

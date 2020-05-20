@@ -5,6 +5,8 @@
     bc
     bbe
     scrot
+    # Linux screen capture using pygtk, inspired by scrot
+    escrotum
 
     flameshot
     peek
@@ -29,7 +31,6 @@
     ksysguard
     cpufrequtils
     linuxPackages.cpupower
-
 
     xflux
     xflux-gui

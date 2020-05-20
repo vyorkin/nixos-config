@@ -2,7 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-    alsaUtils
+    # alsaUtils
+
     vlc
     mpv
     ffmpeg-full
@@ -10,8 +11,13 @@
     flac
     cmus
 
+    mplayer
+    smplayer
+
     # ttyrec
     ttygif
+
+    google-play-music-desktop-player
 
     # spotify
     # spotifywm

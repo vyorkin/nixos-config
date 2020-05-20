@@ -19,6 +19,4 @@
     ../cfgs/http-clients.nix
     ../cfgs/ssh.nix
   ];
-
-  nix.trustedUsers = [ "root" ];
 }

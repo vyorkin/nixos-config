@@ -1,52 +1,69 @@
-## My personal NixOS configuration
-
-Don’t even try to use this, it won’t work for you ;)
+## NixOS config for my machines
 
 ### Prerequisites
 
 Make sure you have `git` installed:
 
-```bash
-$ nix-env -iA nixos.git
+```sh
+$ nix profile install git
 ```
 
-### Usage
+### Setup
 
-Symlink host file from `hosts/<hostname>.nix` to `configuration.nix`.
+1. Backup your original config
 
-```bash
-export NIXHOST=<HOST_NAME>
-
-sudo sh <<SETUP
+```sh
 mv /etc/nixos /etc/nixos-orig
-git clone --recurse-submodules -j8 --depth=1 https://vyorkin@bitbucket.org/vyorkin/nixos-config.git /etc/nixos
-ln -sr /etc/nixos/hosts/$NIXHOST.nix /etc/nixos/configuration.nix
-SETUP
 ```
 
-Configure the NixOS machine:
+2. Clone this repository and create a symlink to `/etc/nixos`
 
-```bash
-$ nixos-rebuild switch
+```sh
+mkdir -p ~/projects/personal && cd ~/projects/personal
+git clone --recurse-submodules -j8 --depth=1 https://github.com/vyorkin/nixos-config
+ln -sf nixos-config /etc/nixos
+```
+
+3. Add your new host configuration files to `hardware/yourhost/*.nix`
+
+4. Set `hostname` to the desired one
+
+```sh
+hostname yourhostname
+```
+
+5. Create 2 additional files by copying the example files
+
+* `cp secret.example.nix secret.nix`
+* `cp host.example.nix host.nix`
+
+Edit those files (don’t forget to set the host name in
+`host.nix` file) and then configure the NixOS machine:
+
+
+```sh
+sudo nixos-rebuild switch --flake .
 ```
 
 ### Layout
 
 main:
 
-- `home/` - Home-manager configurations
-- `cfgs/` - Package configurations
+- `default.nix` - Configuration “entry point”
+- `flake.nix` - Metadata describing this repository
+- `host.nix` - Host-specific settings
+- `setup.nix` - System and Nix related configuration
+- `support.nix` - Utility functions
+- `secret.nix` - Contains secrets ;)
+- `const.nix` - Various constants
+
+- `hardware/` - Host specific hardware configurations
 - `hosts/` - Host specific configurations
+- `cfgs/` - Package configurations
 - `roles/` - Shared configurations
-- `pkgs/` - Custom packages
-- `overlays/` - Custom overlays
+- `home/` - Home-manager configurations
+- `pkgs/` - Local/custom derivations
 
-submodules:
-
-- `pkgs/home-manager`
-- `pkgs/mozilla`
-- `pkgs/nixos-hardware`
-- `pkgs/nixpkgs-channel`
 
 ### Haskell
 
@@ -146,8 +163,8 @@ Sign-in and (optionally) install these extensions:
 
 * `tldr --update`
 
-### Links
+### Inspired by
 
 * [wiedzmin/nixos-config](https://github.com/wiedzmin/nixos-config.git)
-* [rummik/nixos-config](https://github.com/rummik/nixos-config)
-* [danieldk/nix-home](https://github.com/danieldk/nix-home)
+* [balsoft/nixos-config](https://github.com/balsoft/nixos-config)
+* [rasendubi/dotfiles](https://github.com/rasendubi/dotfiles)

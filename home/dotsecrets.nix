@@ -1,10 +1,11 @@
 { pkgs, ... }:
 
-{
+let host = import ../host.nix;
+in {
   home-manager.users.root = {
     home.file = {
       "cachix.dhall" = {
-        source = ./dotsecrets/cachix.dhall;
+        source = ./dotsecrets/cachix + "/${host.name}.dhall";
         target = ".config/cachix/cachix.dhall";
       };
     };
@@ -21,7 +22,7 @@
       ".bumblebee-status.conf" = { source = ./dotsecrets/bumblebee-status.conf; };
 
       "cachix.dhall" = {
-        source = ./dotsecrets/cachix.dhall;
+        source = ./dotsecrets/cachix + "/${host.name}.dhall";
         target = ".config/cachix/cachix.dhall";
       };
 

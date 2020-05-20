@@ -10,5 +10,5 @@ in
     users.users.root.openssh.authorizedKeys.keys = authorizedKeys;
     users.users.vyorkin = vyorkin;
 
-    nix.trustedUsers = [ "vyorkin" ];
+    nix.trustedUsers = [ "root" "vyorkin" ];
   }

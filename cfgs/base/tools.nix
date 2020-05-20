@@ -17,6 +17,8 @@
     libedit
     nix-index
 
+    ntfs3g
+
     fwts
     lshw
 

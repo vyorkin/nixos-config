@@ -17,6 +17,9 @@
     # access to the serial and USB ports
     "dialout"
 
+    # grant access to Android Debug Bridge (ADB)
+    "adbusers"
+
     "vboxusers"
     "wireshark"
     "docker"
