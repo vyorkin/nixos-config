@@ -108,29 +108,13 @@
         "type": "github"
       }
     },
-    "nixpkgs_2": {
-      "info": {
-        "lastModified": 1589979471,
-        "narHash": "sha256-wlKljzrx3ifbxUdy4KVYy5Phl4aTKmi7Hz525+BbHxQ="
-      },
-      "locked": {
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "fa65afd3ee6fffc909793c939273b629e85984b5",
-        "type": "github"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
-      }
-    },
     "root": {
       "inputs": {
         "NUR": "NUR",
         "home-manager": "home-manager",
         "nixos-fhs-compat": "nixos-fhs-compat",
         "nixos-hardware": "nixos-hardware",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs",
         "nixpkgs-wayland": "nixpkgs-wayland"
       }
     }
