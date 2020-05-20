@@ -27,7 +27,7 @@ let
   nixpkgs = with pkgs.nodePackages; [
     bower
     yo
-    pulp
+    # pulp
     http-server
     javascript-typescript-langserver
     typescript-language-server

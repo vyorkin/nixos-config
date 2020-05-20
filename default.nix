@@ -3,22 +3,17 @@
 #
 # This is the NixOS configuration "entry point".
 
-{ config, pkgs, lib, inputs, ... }:
-
-let host = import ../host.nix;
-in rec {
+{ config, pkgs, lib, inputs, name, ... }:
+{
   imports = [
     ./hardware/common.nix
-    (./hardware + "/${host.name}")
-    ./setup.nix
+    (./hardware + "/${name}")
+    (import ./setup.nix name)
     inputs.home-manager.nixosModules.home-manager
     ./modules
     ./roles/common.nix
     ./cfgs/users
     ./home
-    (./hosts + "/${host.name}")
+    (./hosts + "/${name}.nix")
   ];
-
-  networking.hostName = host.name;
-  time.timeZone = host.timeZone;
 }

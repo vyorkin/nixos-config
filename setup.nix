@@ -1,4 +1,4 @@
-{ pkgs, options, ... }:
+host: { pkgs, options, ... }:
 
 let
   const = import ./const.nix;
@@ -7,7 +7,7 @@ let
     "post-build-hook = ${
       pkgs.writeShellScript "upload-to-cachix" ''
         export HOME=/root
-        echo $OUT_PATHS | ${pkgs.cachix}/bin/cachix push $(hostname) --config /root/.config/cachix/cachix.dhall
+        echo $OUT_PATHS | ${pkgs.cachix}/bin/cachix push ${host} --config /root/.config/cachix/cachix.dhall
       ''
     }"
   else
@@ -17,6 +17,10 @@ in {
     allowUnfree = true;
     allowBroken = true;
   };
+
+  # Set the host-related settings
+  networking.hostName = host;
+  time.timeZone = const.timeZone;
 
   system = {
     # Periodically upgrade NixOS to the latest version.
