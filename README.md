@@ -47,8 +47,6 @@ sudo nixos-rebuild switch --flake .
 
 ### Layout
 
-main:
-
 - `default.nix` - Configuration “entry point”
 - `flake.nix` - Metadata describing this repository
 - `host.nix` - Host-specific settings
