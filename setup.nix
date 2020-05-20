@@ -2,13 +2,12 @@
 
 let
   const = import ./const.nix;
-  host = import ./host.nix;
 
   pushToCachix = if const.cachix.push then
     "post-build-hook = ${
       pkgs.writeShellScript "upload-to-cachix" ''
         export HOME=/root
-        echo $OUT_PATHS | ${pkgs.cachix}/bin/cachix push ${host.name} --config /root/.config/cachix/cachix.dhall
+        echo $OUT_PATHS | ${pkgs.cachix}/bin/cachix push $(hostname) --config /root/.config/cachix/cachix.dhall
       ''
     }"
   else
