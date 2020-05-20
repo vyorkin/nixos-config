@@ -1,6 +1,8 @@
 {
   description = "NixOS configuration of vyorkin's machines";
 
+  edition = 201909;
+
   inputs = {
     nixpkgs = {
       type = "indirect";

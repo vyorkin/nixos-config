@@ -1,0 +1,124 @@
+{
+  "nodes": {
+    "NUR": {
+      "flake": false,
+      "info": {
+        "lastModified": 1589964431,
+        "narHash": "sha256-6q+8eRT6wuZKnV5y06+d8mbrjV/KAIZ4YdGoWHEQ+5U="
+      },
+      "locked": {
+        "owner": "nix-community",
+        "repo": "NUR",
+        "rev": "6a89c34e7a9bac4f69a5119b6b419a66056e9cd9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "NUR",
+        "type": "github"
+      }
+    },
+    "home-manager": {
+      "info": {
+        "lastModified": 1589826413,
+        "narHash": "sha256-0qaxqdvPhRiaxtRLdhIYS384gP2VtHG2CzlxZzbfhwI="
+      },
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "owner": "rycee",
+        "repo": "home-manager",
+        "rev": "a7a96ab121a3df4386499ebaacf23e726f0c5711",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rycee",
+        "ref": "bqv-flakes",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "nixos-fhs-compat": {
+      "info": {
+        "lastModified": 1588706047,
+        "narHash": "sha256-hrJ99BwzO587/5UKlRwY626dF+KFMPCHFC39HRRqw44="
+      },
+      "locked": {
+        "owner": "balsoft",
+        "repo": "nixos-fhs-compat",
+        "rev": "9bdfc4bcb183362ac68337d2a3ab19cd74165648",
+        "type": "github"
+      },
+      "original": {
+        "owner": "balsoft",
+        "repo": "nixos-fhs-compat",
+        "type": "github"
+      }
+    },
+    "nixos-hardware": {
+      "flake": false,
+      "info": {
+        "lastModified": 1589797638,
+        "narHash": "sha256-rAG5ytoOBBkfUoMP5BrZqdTlrpL/mK6WXNG+hopxY9U="
+      },
+      "locked": {
+        "owner": "NixOS",
+        "repo": "nixos-hardware",
+        "rev": "4b129a0f711aea22c52ad8ff48a3126a1b32a988",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixos-hardware",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "info": {
+        "lastModified": 1589979471,
+        "narHash": "sha256-wlKljzrx3ifbxUdy4KVYy5Phl4aTKmi7Hz525+BbHxQ="
+      },
+      "locked": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "fa65afd3ee6fffc909793c939273b629e85984b5",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs-wayland": {
+      "flake": false,
+      "info": {
+        "lastModified": 1589979934,
+        "narHash": "sha256-TRNLw5NwFtN0EWonf6pxF+VYTIA0YKpy3PS9yOx/J3o="
+      },
+      "locked": {
+        "owner": "colemickens",
+        "repo": "nixpkgs-wayland",
+        "rev": "c055bc7590377a9391a4117ba24202249851f2e0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "colemickens",
+        "repo": "nixpkgs-wayland",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "NUR": "NUR",
+        "home-manager": "home-manager",
+        "nixos-fhs-compat": "nixos-fhs-compat",
+        "nixos-hardware": "nixos-hardware",
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-wayland": "nixpkgs-wayland"
+      }
+    }
+  },
+  "root": "root",
+  "version": 5
+}
