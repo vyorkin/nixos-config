@@ -49,7 +49,6 @@ in
     ../cfgs/kubernetes.nix
     ../cfgs/forensics.nix
     ../cfgs/dropbox.nix
-    ../cfgs/games.nix
     ../cfgs/electronics.nix
     ../cfgs/db
     ../cfgs/development
@@ -66,11 +65,11 @@ in
     driSupport32Bit = true;
   };
 
-  # environment = {
-  #   sessionVariables = {
-  #     CACHIX_SIGNING_KEY = config.secrets.cachix_signing_key;
-  #   };
-  # };
+  environment = {
+    sessionVariables = {
+      CACHIX_SIGNING_KEY = config.secrets.cachix_signing_key;
+    };
+  };
 
   boot.loader.timeout = 0;
 

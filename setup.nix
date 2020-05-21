@@ -1,13 +1,13 @@
 host: { pkgs, options, ... }:
 
 let
-  pushToCachix =
-    "post-build-hook = ${
-      pkgs.writeShellScript "upload-to-cachix" ''
-        export HOME=/root
-        echo $OUT_PATHS | ${pkgs.cachix}/bin/cachix push ${host} --config /root/.config/cachix/cachix.dhall
-      ''
-    }";
+  pushToCachix = "";
+    # "post-build-hook = ${
+    #   pkgs.writeShellScript "upload-to-cachix" ''
+    #     export HOME=/root
+    #     echo $OUT_PATHS | ${pkgs.cachix}/bin/cachix push ${host} --config /root/.config/cachix/cachix.dhall
+    #   ''
+    # }";
 in {
   nixpkgs.config = {
     allowUnfree = true;

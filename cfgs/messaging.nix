@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    # skype
+    skype
     slack
     slack-term
     discord

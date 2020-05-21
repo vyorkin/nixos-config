@@ -1,10 +1,14 @@
 { pkgs, ... }:
 
-with import ../const.nix;
 {
   home-manager.users.vyorkin = {
     gtk = {
       enable = true;
+
+      gtk2.extraConfig = ''
+        gtk-cursor-theme-name = capitaine-cursors;
+      '';
+      gtk3.extraConfig = { gtk-cursor-theme-name = "capitaine-cursors"; };
 
       theme = {
         name = "Arc-Dark";
@@ -20,21 +24,6 @@ with import ../const.nix;
         package = pkgs.roboto;
         name = "Roboto 11";
       };
-
-      # theme = {
-      #   name = "Paper";
-      #   package = pkgs.paper-gtk-theme;
-      # };
-
-      # theme = {
-      #   name = "Adapta";
-      #   package = pkgs.adapta-gtk-theme;
-      # };
-
-      # iconTheme = {
-      #   name = "Paper";
-      #   package = pkgs.paper-icon-theme;
-      # };
     };
   };
 }

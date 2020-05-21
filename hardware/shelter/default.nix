@@ -10,6 +10,7 @@
 
     ./boot.nix
     ./fs.nix
+    ./power.nix
   ];
 
   # Maximum number of jobs that Nix will try to build in parallel.

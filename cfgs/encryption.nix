@@ -4,6 +4,6 @@
   environment.systemPackages = with pkgs; [
     gnupg
     pass
-    # tomb
+    tomb
   ];
 }

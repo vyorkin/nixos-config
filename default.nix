@@ -4,7 +4,7 @@
 # This is the NixOS configuration "entry point".
 
 { config, pkgs, lib, inputs, name, ... }:
-{
+rec {
   imports = [
     ./hardware/common.nix
     (./hardware + "/${name}")
@@ -16,4 +16,6 @@
     ./home
     (./hosts + "/${name}.nix")
   ];
+
+  host = name;
 }
