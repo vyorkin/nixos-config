@@ -9,12 +9,12 @@ rec {
     ./hardware/common.nix
     (./hardware + "/${name}")
     (import ./setup.nix name)
-    inputs.home-manager.nixosModules.home-manager
     ./modules
     ./roles/common.nix
     ./cfgs/users
-    ./home
     (./hosts + "/${name}.nix")
+    inputs.home-manager.nixosModules.home-manager
+    ./home
   ];
 
   host = name;
