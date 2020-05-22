@@ -10,7 +10,8 @@
       fsType = "ext4";
     };
 
-    "/external-ro" = {
+    # Extrnal 4TB HDD
+    "/external" = {
       device = "/dev/disk/by-label/hdd-1";
 
       # System startup will fail if any of the filesystems fails to

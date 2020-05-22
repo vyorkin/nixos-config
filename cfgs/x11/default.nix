@@ -12,7 +12,10 @@
     # keep either the defaults or "amdgpu" (both free)
     videoDrivers = [ "amdgpu" ];
 
+    # Use the Glamor module for 2D acceleration, if possible
     useGlamor = true;
+
+    # Symlink the X server configuration under /etc/X11/xorg.conf
     exportConfiguration = true;
 
     autoRepeatDelay = 200;

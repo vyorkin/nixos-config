@@ -35,7 +35,7 @@
     # image, 3d, video editing
 
     # gimp-with-plugins
-    # blender
+    blender
 
     kdeApplications.kdenlive
     # frei0r

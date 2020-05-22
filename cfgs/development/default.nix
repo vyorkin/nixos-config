@@ -10,7 +10,7 @@
     # ./purescript.nix
     ./python.nix
     ./ruby.nix
-    # ./nodejs
+    ./nodejs
     ./rust.nix
     ./tcl.nix
     ./go.nix
