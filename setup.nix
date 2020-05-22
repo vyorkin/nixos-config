@@ -1,13 +1,13 @@
 host: { pkgs, options, ... }:
 
 let
-  pushToCachix = "";
-    # "post-build-hook = ${
-    #   pkgs.writeShellScript "upload-to-cachix" ''
-    #     export HOME=/root
-    #     echo $OUT_PATHS | ${pkgs.cachix}/bin/cachix push ${host} --config /root/.config/cachix/cachix.dhall
-    #   ''
-    # }";
+  pushToCachix =
+    "post-build-hook = ${
+      pkgs.writeShellScript "upload-to-cachix" ''
+        export HOME=/root
+        echo $OUT_PATHS | ${pkgs.cachix}/bin/cachix push ${host} --config /root/.config/cachix/cachix.dhall --verbose
+      ''
+    }";
 in {
   nixpkgs.config = {
     allowUnfree = true;
@@ -103,7 +103,7 @@ in {
       "dhall.cachix.org-1:8laGciue2JBwD49ICFtg+cIF8ddDaW7OFBjDb/dHEAo="
 
       "silence.cachix.org-1:os5cpvGmIPGBs7iKjQhD/S+pRS6fTOdSC6BxUi7/P1w="
-      "shelter.cachix.org-1:cXcy+gjaAQfUNGNgR+9ZTkGCLDw0yLHXTSRetWQy98U="
+      "shelter.cachix.org-1:kfziONvXrsnqA3k9g90JcblB9awcrfGZyQ8iLnF40zc="
     ];
   };
 }

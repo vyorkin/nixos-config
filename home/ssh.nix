@@ -1,12 +1,12 @@
-{ pkgs, lib, config, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 {
-  home-manager.users = lib.attrsets.genAttrs config.nix.trustedUsers (_: {
+  home-manager.users.vyorkin = {
     home.file = {
       ".ssh" = {
         source = "${inputs.secrets}/ssh";
         recursive = true;
       };
     };
-  });
+  };
 }

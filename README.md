@@ -40,6 +40,8 @@ Edit `const.nix` and add **your** `secrets` input to registry:
 sudo nix flake add secrets git+ssh://foo/bar.git
 ```
 
+(If you’re me then take a look at the dotsecrets README.md)
+
 Then configure the NixOS machine:
 
 

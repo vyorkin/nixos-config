@@ -125,6 +125,4 @@ in
       # 5432
     ];
   };
-
-  security.sudo.wheelNeedsPassword = false;
 }
