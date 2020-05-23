@@ -5,17 +5,17 @@ off
 output HDMI-A-0
 crtc 1
 mode 1920x1080
-pos 1680x0
+pos 0x0
 rate 60.00
 rotate left
 output DisplayPort-1
 crtc 0
 mode 3440x1440
-pos 2760x187
+pos 1080x187
 primary
 rate 50.00
 output HDMI-A-1
 crtc 2
 mode 1680x1050
-pos 0x382
+pos 4520x325
 rate 59.95
