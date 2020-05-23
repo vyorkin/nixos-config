@@ -2,18 +2,20 @@
 
 {
   environment.systemPackages = with pkgs; [
-    alacritty
+    # alacritty
     kitty
-    hyper
-    guake
-    eternal-terminal
+    # hyper
+    # guake
+    # eternal-terminal
     cool-retro-term
     # rxvt_unicode-with-plugins
 
     # https://starship.rs/
-    starship
+    # starship
 
-    cmatrix
-    pipes
+    # Terminal screen-savers
+
+    # cmatrix
+    # pipes
   ];
 }

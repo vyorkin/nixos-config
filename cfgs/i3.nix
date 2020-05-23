@@ -27,12 +27,12 @@ in {
       extraPackages = with pkgs; [
         bumblebeeStatus
         unclutter
-        i3lock
-        i3lock-color
+        # i3lock
+        # i3lock-color
         # i3lock-fancy
         i3lock-pixeled
-        betterlockscreen
-        i3status-rust
+        # betterlockscreen
+        # i3status-rust
         # i3-wk-switch
 
         gnome3.nautilus

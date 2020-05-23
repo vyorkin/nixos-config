@@ -4,14 +4,12 @@ rustPlatform.buildRustPackage rec {
   name = "neovim-gtk-unstable-${version}";
   version = "master";
 
-  src = fetchFromGitHub {
-    owner = "daa84";
-    repo = "neovim-gtk";
-    rev = "dfb97c822337bb83e96c441114334beece471352";
-    sha256 = "1x6bs5i2kwy3zwmpd3qbrkfgfb4fqdqfkqmx1579vg1j4vyzpywb";
+  src = builtins.fetchGit {
+    url = "https://github.com/daa84/neovim-gtk.git";
+    rev = "0af8952171c5375a4435cf3790e08c3b9ee29e8d";
   };
 
-  cargoSha256 = "1glin444bkds5vx98z6kil9g71gc1lv6j320iwp461hdq11cnzz9";
+  cargoSha256 = "CUpCPPOqQQfa1fkdC8BnUp/Et4KICNed4l6V4ol7hGY=";
 
   buildInputs = [ pkgs.gtk3 pkgs.gnome3.vte pkgs.wrapGAppsHook ];
 

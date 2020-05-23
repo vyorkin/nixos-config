@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     qbittorrent
-    transmission
-    buildtorrent
+    # transmission
+    # buildtorrent
   ];
 }

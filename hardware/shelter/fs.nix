@@ -10,6 +10,11 @@
       fsType = "ext4";
     };
 
+    "/files" = {
+      device = "/dev/disk/by-uuid/d328606c-697d-45b1-bee8-fa9005e9534f";
+      fsType = "ext4";
+    };
+
     # Extrnal 4TB HDD
     "/external" = {
       device = "/dev/disk/by-label/hdd-1";

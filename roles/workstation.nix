@@ -13,12 +13,13 @@ in
     ../cfgs/bluetooth.nix
     ../cfgs/logitech.nix
     ../cfgs/web-browsers.nix
+    ../cfgs/tor.nix
     ../cfgs/media.nix
     ../cfgs/mail.nix
     ../cfgs/fonts.nix
     ../cfgs/vpn.nix
     # ../cfgs/wireguard.nix
-    ../cfgs/vnc.nix
+    # ../cfgs/vnc.nix
     ../cfgs/terminal.nix
     ../cfgs/monitoring.nix
     ../cfgs/emulators.nix
@@ -27,28 +28,31 @@ in
     ../cfgs/streaming.nix
     ../cfgs/security.nix
     ../cfgs/messaging.nix
-    ../cfgs/automation.nix
+    # ../cfgs/automation.nix
+
     ../cfgs/opengl.nix
     ../cfgs/vulkan.nix
     ../cfgs/sdl.nix
-    ../cfgs/documentation.nix
-    ../cfgs/office.nix
+
+    # ../cfgs/documentation.nix
+    # ../cfgs/office.nix
+
     ../cfgs/file-managers.nix
     ../cfgs/code-editors.nix
     ../cfgs/remote-control.nix
-    ../cfgs/devops.nix
+    # ../cfgs/devops.nix
     ../cfgs/network-scanners.nix
     ../cfgs/torrents.nix
     ../cfgs/blogging.nix
-    ../cfgs/trading.nix
+    # ../cfgs/trading.nix
     ../cfgs/management.nix
     ../cfgs/text.nix
     ../cfgs/spell.nix
     ../cfgs/tex.nix
-    ../cfgs/scraping.nix
+    # ../cfgs/scraping.nix
     ../cfgs/docker.nix
-    ../cfgs/kubernetes.nix
-    ../cfgs/forensics.nix
+    # ../cfgs/kubernetes.nix
+    # ../cfgs/forensics.nix
     ../cfgs/dropbox.nix
     ../cfgs/electronics.nix
     ../cfgs/db

@@ -2,8 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-    taskwarrior
-    taskserver
+    # taskwarrior
+    # taskserver
     wakatime
   ];
 }

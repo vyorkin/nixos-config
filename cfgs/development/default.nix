@@ -37,6 +37,11 @@
     asciinema
     exercism
 
+    flamegraph
+    gdb
+    gdbgui
+    renderdoc
+
     bison
     flex
     llvm_9

@@ -5,10 +5,6 @@
     datefudge
     diffoscope
     elfinfo
-    flamegraph
-
-    gdb
-    gdbgui
 
     # idutils
 

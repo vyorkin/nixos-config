@@ -24,6 +24,6 @@
     gitAndTools.pass-git-helper
     gitinspector
     gitstats
-    mercurial
+    # mercurial
   ];
 }

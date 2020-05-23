@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    # ib-tws
-    # ib-controller
+    ib-tws
+    ib-controller
   ];
 }

@@ -26,6 +26,6 @@
     djvulibre
     ghostscript
     zathura
-    polar-bookshelf
+    # polar-bookshelf
   ];
 }

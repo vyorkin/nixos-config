@@ -35,12 +35,12 @@
     # image, 3d, video editing
 
     # gimp-with-plugins
-    blender
+    # blender
 
-    kdeApplications.kdenlive
+    # kdeApplications.kdenlive
     # frei0r
 
-    reaper
-    musescore
+    # reaper
+    # musescore
   ];
 }

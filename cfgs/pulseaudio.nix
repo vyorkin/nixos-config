@@ -16,10 +16,10 @@
 
     # Only the full build has Bluetooth support
     package = pkgs.pulseaudioFull;
-    
+
     # While pulseaudio itself only has support for the
     # SBC bluetooth codec there is out-of-tree support for AAC, APTX, APTX-HD and LDAC.
-    extraModules = [pkgs.pulseaudio-modules-bt];
+    # extraModules = [pkgs.pulseaudio-modules-bt];
 
     # For compatibility with 32-bit applications
     support32Bit = true;
@@ -42,11 +42,28 @@
     # pacmd list-sources | grep name:
     # to get a list of available sources on your system.
     # Look for the line that corresponds to your Scarlett.
-    extraConfig = "
-    load-module module-remap-source master=alsa_input.usb-Focusrite_Scarlett_Solo_USB-00.analog-stereo source_name=Mic-Mono master_channel_map=left channel_map=mono
-    # Optional: Select new remap as default
-    set-default-source Mic-Mono
-    ";
+    extraConfig = ''
+      load-module module-remap-source master=alsa_input.usb-Focusrite_Scarlett_Solo_USB-00.analog-stereo source_name=Mic-Mono master_channel_map=left channel_map=mono
+      # Optional: Select new remap as default
+      set-default-source Mic-Mono
+    '';
+
+    # See https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting
+    # and https://nixos.wiki/wiki/PulseAudio
+    configFile = pkgs.runCommand "default.pa" {} ''
+      sed 's/module-udev-detect$/module-udev-detect ignore_dB=1 tsched=0/' \
+      ${pkgs.pulseaudio}/etc/pulse/default.pa > $out
+    '';
+
+    daemon.config = {
+      resample-method = "src-sinc-best-quality";
+      default-sample-format = "s32le";
+      default-sample-rate = 48000;
+      avoid-resampling = "yes";
+      enable-lfe-remixing = "yes";
+      default-fragments = 5;
+      default-fragment-size-msec = 2;
+    };
   };
 
   environment.systemPackages = with pkgs; [
