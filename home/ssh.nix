@@ -5,7 +5,6 @@
     home.file = {
       ".ssh" = {
         source = "${inputs.secrets}/ssh";
-        recursive = true;
       };
     };
   };
