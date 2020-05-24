@@ -3,8 +3,9 @@
 {
   environment.systemPackages = with pkgs; [
     # dhex
-    vscode
     # kakoune
+
+    # vscode
 
     jetbrains.idea-community
     # jetbrains.idea-ultimate

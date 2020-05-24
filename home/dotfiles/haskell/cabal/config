@@ -12,8 +12,8 @@
 -- Cabal library version: 2.4.1.0
 -- cabal-install version: 2.4.1.0
 
--- NOTE:
--- We don't want cabal to access hackage since we're using nix
+-- NOTE: Currently I don't use Nix for Haskell projects, but
+-- We don't want cabal to access hackage if we're always using
 -- This requires setting CABAL_DIR=./cabal (you project local .cabal dir)
 -- Set this env var in your default.nix or shell.nix:
 --

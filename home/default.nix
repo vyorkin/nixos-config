@@ -26,6 +26,7 @@
     ./minizinc.nix
     ./irc.nix
     ./idea.nix
+    ./monitoring.nix
     ./mps-youtube.nix
   ];
 

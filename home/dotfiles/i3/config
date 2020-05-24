@@ -294,7 +294,7 @@ bindsym $mod+y move workspace to output down
 
 # class                 border  bground text    indicator child_border
 # client.focused          #AA0955 #000000 #AA0955 #AA0955   #AA0955
-client.focused          #F59D16 #000000 #F59D16 #F59D16 #F59D16
+client.focused          #FF0000 #000000 #FF0000 #FF0000 #FF0000
 
 client.focused_inactive #EE8888 #000000 #ffffff #EE8888   #EE8888
 client.unfocused        #222222 #222222 #888888 #292D2E   #222222

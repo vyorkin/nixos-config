@@ -64,6 +64,13 @@ sudo nixos-rebuild switch --flake .
 - `home/` - Home-manager configurations
 - `pkgs/` - Local/custom derivations
 
+### Notes for myself
+
+Manual symlinks (on `shelter`):
+
+* `/files/Dropbox/Documents -> ~/Documents`
+* `/files/projects -> ~/projects`
+* `/files/Downloads -> ~/Downloads`
 
 ### Haskell
 
