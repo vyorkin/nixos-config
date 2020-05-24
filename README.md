@@ -72,6 +72,8 @@ Manual symlinks (on `shelter`):
 * `/files/projects -> ~/projects`
 * `/files/Downloads -> ~/Downloads`
 
+Copy `ssh` folder from the dotsecrets repo to the `~/.ssh`.
+
 ### Haskell
 
 Tools:

@@ -6,7 +6,6 @@
     ./db
     ./development
     ./web
-    ./ssh.nix
     ./zsh.nix
     ./fish.nix
     ./tmux.nix
