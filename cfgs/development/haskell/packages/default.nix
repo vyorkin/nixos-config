@@ -1,28 +1,28 @@
 { pkgs, packageSet, ... }:
 
-with packageSet; [
-  # summoner
-
+let
+  # 0.8.6.2: missing or private dependencies: Diff ==0.3.*
+  # 0.8.6.0: Not in scope: data constructor ‘TvBndr’
+  # liquid = packageSet.callPackage ./liquidhaskell-0.8.6.0.nix { };
+in with packageSet; [
   hpack
   alex
   happy
 
-  # dhall
-  # dhall-json
-  # expresso
-
-  # liquidhaskell
+  dhall
+  dhall-json
+  expresso
 
   doctest
 
-  # threadscope
+  threadscope
 
   # hkgr
   json-autotype
   styx
   # intero
 
-  # brittany
+  brittany
 
   hoogle
   # hindent
@@ -31,7 +31,7 @@ with packageSet; [
   codex
   hasktags
   haskdogs
-  # apply-refact
+  apply-refact
   # present
   weeder
   ghcid
@@ -42,12 +42,20 @@ with packageSet; [
 
   pretty-simple
   pretty-show
-  # ghci-pretty
-
-  # pointfree
-
   # Agda
 
-  # ats-pkg
+  # ATS
+
+  ats-pkg
+  hs2ats
+
+  # Broken
+
+  # summoner
+  # liquid
+  # ghci-pretty
+  # pointfree
+
+  # c2ats
   # ats-format
 ]

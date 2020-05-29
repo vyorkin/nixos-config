@@ -4,6 +4,8 @@ let
   compiler = "ghc883";
   packageSet = pkgs.haskell.packages."${compiler}";
   haskellPackages = pkgs.callPackage ./packages { inherit packageSet; };
+
+  addExtraLibrary = pkgs.haskell.lib.addExtraLibrary;
 in {
   imports = [ ./base.nix ];
 
@@ -25,22 +27,37 @@ in {
         array
         time
         bytestring
+        utf8-string
         containers
         parallel
         monad-par
         stm
         mtl
         natural-transformation
+        mmorph
         lens
+        microlens
         unliftio
         unliftio-core
         async
+        vector
+        unordered-containers
+        rio
+        rio-orphans
         lifted-async
         exceptions
         safe-exceptions
         errors
+        resourcet
         resource-pool
         turtle
+
+        contravariant
+        invariant
+
+        llvm-hs-pure
+        llvm-hs
+        llvm-hs-pretty
 
         data-default-class
         data-default
@@ -48,43 +65,60 @@ in {
         alex
         happy
 
-        # co-log
+        co-log
         cryptonite
         memory
         http-client
         http-client-tls
         http-api-data
-        # servant
-        # servant-client
+        servant
+        servant-client
         aeson
         aeson-pretty
         network
-        # (req.overrideAttrs (old: { doCheck = false; }))
+        (req.overrideAttrs (old: { doCheck = false; }))
         websockets
         optparse-applicative
+        prettyprinter
 
-        # parsec
-        # megaparsec
-        # parser-combinators
+        parsec
+        megaparsec
+        parser-combinators
 
-        # OpenGL
-        # GLUT
-        # gloss
-        # gloss-juicy
-        # apecs
-        # apecs-gloss
+        OpenGL
+        GLUT
+        gloss
+        gloss-juicy
+        apecs
+        apecs-gloss
+
+        sdl2
+        sdl2-image
+        sdl2-ttf
+        sdl2-mixer
+        sdl2-gfx
+        sdl2-sprite
+
+        vulkan
+        vulkan-api
+        (addExtraLibrary VulkanMemoryAllocator pkgs.vulkan-headers)
+
+        linear
 
         # hasbolt
         # hasbolt-extras
 
-        # capability
+        capability
+        polysemy
+        fused-effects
+        freer-simple
 
         Glob
         filepath
         brick
         vty
 
-        # (dhall.overrideAttrs (old: { doCheck = false; }))
+        (dhall.overrideAttrs (old: { doCheck = false; }))
 
         hspec
         tasty

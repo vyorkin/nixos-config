@@ -21,12 +21,5 @@ in
     # hie
 
     # nix-tools
-
-    # ATS
-
-    pkgs.haskellPackages.ats-pkg
-    pkgs.haskellPackages.hs2ats
-    # pkgs.haskellPackages.ats-format
-    # pkgs.haskellPackages.c2ats
   ];
 }
