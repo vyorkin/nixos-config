@@ -42,7 +42,6 @@ in with packageSet; [
 
   pretty-simple
   pretty-show
-  # Agda
 
   # ATS
 

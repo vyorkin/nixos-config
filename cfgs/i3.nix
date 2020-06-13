@@ -45,10 +45,10 @@ in {
       defaultSession = "none+i3";
       lightdm = {
         enable = false;
-	autoLogin = {
-	  enable = true;
-	  user = "vyorkin";
-	};
+        autoLogin = {
+          enable = true;
+          user = "vyorkin";
+        };
         background = "black";
         greeters.mini = {
           enable = true;

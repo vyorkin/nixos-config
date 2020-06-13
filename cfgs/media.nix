@@ -23,7 +23,9 @@
     # spotifywm
 
     # sunvox
-    tiled
+    # tiled
+
+    audacity
 
     ardour
     grip

@@ -34,8 +34,8 @@ in {
     tlaplus
     tlaplusToolbox
 
-    minizinc
-    minizincide
+    # minizinc
+    # minizincide
 
     why3
     alt-ergo

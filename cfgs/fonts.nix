@@ -34,7 +34,7 @@
       freefont_ttf
       go-font
       gohufont
-      google-fonts
+      # google-fonts
       hack-font
       inconsolata
       iosevka
@@ -63,7 +63,7 @@
       lmodern
       jetbrains-mono
 
-      nerdfonts
+      # nerdfonts
     ];
   };
 }

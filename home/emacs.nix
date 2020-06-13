@@ -8,9 +8,9 @@
         target = ".emacs.d/purescript-mode";
       };
 
-      "PG" = {
-        source = "${inputs.emacs}/lisp/PG";
-        target = ".emacs.d/lisp/PG";
+      "agda" = {
+        source = "${inputs.emacs}/lisp/agda";
+        target = ".emacs.d/lisp/agda";
       };
 
       "ats-mode" = {

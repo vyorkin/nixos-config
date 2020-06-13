@@ -4,6 +4,6 @@
   environment.systemPackages = with pkgs; [
     bochs
     qemu
-    wine
+    # wine
   ];
 }

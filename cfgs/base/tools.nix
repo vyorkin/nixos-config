@@ -21,6 +21,7 @@
 
     fwts
     lshw
+    pciutils
 
     telnet
 

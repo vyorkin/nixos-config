@@ -1,6 +1,6 @@
 { pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [AgdaStdlib];
-  environment.pathsToLink = ["/share/agda"];
+  environment.systemPackages = with pkgs; [agda agda-pkg];
+  # environment.pathsToLink = ["/share/agda"];
 }

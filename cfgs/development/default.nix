@@ -5,18 +5,18 @@
     ./kernel.nix
     ./ccpp.nix
     ./lisp.nix
-    ./clojure.nix
+    # ./clojure.nix
     ./formalization.nix
     # ./purescript.nix
     ./python.nix
     ./ruby.nix
     ./nodejs
     ./rust.nix
-    ./tcl.nix
+    # ./tcl.nix
     ./go.nix
     ./haskell
     ./ocaml
-    # ./agda.nix
+    ./agda.nix
     ./java.nix
     ./arduino.nix
   ];

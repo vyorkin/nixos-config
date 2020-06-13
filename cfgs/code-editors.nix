@@ -7,7 +7,8 @@
 
     # vscode
 
-    jetbrains.idea-community
+    # jetbrains.idea-community
+
     # jetbrains.idea-ultimate
     # jetbrains.clion
     # jetbrains.datagrip

@@ -14,12 +14,13 @@
   hardware.pulseaudio = {
     enable = true;
 
-    # Only the full build has Bluetooth support
-    package = pkgs.pulseaudioFull;
+    # 1. Only the full build has Bluetooth support
+    # 2. Enable JACK support
+    package = pkgs.pulseaudioFull; # .override { jackaudioSupport = true; };
 
     # While pulseaudio itself only has support for the
     # SBC bluetooth codec there is out-of-tree support for AAC, APTX, APTX-HD and LDAC.
-    # extraModules = [pkgs.pulseaudio-modules-bt];
+    extraModules = [pkgs.pulseaudio-modules-bt];
 
     # For compatibility with 32-bit applications
     support32Bit = true;
@@ -37,33 +38,51 @@
     # master option according to the output from pacmd and don’t forget to
     # remove the brackets! The second line is optional and automatically sets the
     # default source to our new redirected source.
+    # See module-remap-source here:
+    # https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Modules/ for more info
 
     # Run
     # pacmd list-sources | grep name:
     # to get a list of available sources on your system.
     # Look for the line that corresponds to your Scarlett.
-    extraConfig = ''
-      load-module module-remap-source master=alsa_input.usb-Focusrite_Scarlett_Solo_USB-00.analog-stereo source_name=Mic-Mono master_channel_map=left channel_map=mono
-      # Optional: Select new remap as default
-      set-default-source Mic-Mono
-    '';
+
+    # extraConfig = ''
+    #   load-module module-remap-source master=alsa_input.usb-Focusrite_Scarlett_Solo_USB-00.analog-stereo source_name=Mic-Mono master_channel_map=left channel_map=mono
+    #   # Optional: Select new remap as default
+    #   set-default-source Mic-Mono
+    # '';
 
     # See https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting
     # and https://nixos.wiki/wiki/PulseAudio
-    configFile = pkgs.runCommand "default.pa" {} ''
-      sed 's/module-udev-detect$/module-udev-detect ignore_dB=1 tsched=0/' \
-      ${pkgs.pulseaudio}/etc/pulse/default.pa > $out
-    '';
+    # configFile = pkgs.runCommand "default.pa" {} ''
+    #   sed 's/module-udev-detect$/module-udev-detect tsched=0/' \
+    #   ${pkgs.pulseaudio}/etc/pulse/default.pa > $out
+    # '';
+    # sed 's/module-udev-detect$/module-udev-detect tsched=1 fixed_latency_range=0/' \
 
-    daemon.config = {
-      resample-method = "src-sinc-best-quality";
-      default-sample-format = "s32le";
-      default-sample-rate = 48000;
-      avoid-resampling = "yes";
-      enable-lfe-remixing = "yes";
-      default-fragments = 5;
-      default-fragment-size-msec = 2;
-    };
+    # daemon.config = {
+      # warning: May cause high CPU load
+      # resample-method = "src-sinc-best-quality";
+
+      # default-sample-format = "s32le";
+      # default-sample-rate = 48000;
+
+      # warning: May cause distortion
+      # avoid-resampling = "yes";
+
+      # enable-lfe-remixing = "yes";
+
+      # If your kernel supports realtime scheduling (for instance, Realtime kernel or Linux-ck),
+      # set this to yes to ensure PulseAudio can deliver low-latency glitch-free playback
+      # realtime-scheduling = "yes";
+
+      # Audio samples are split into multiple fragments of
+      # default-fragment-size-msec each. The larger the buffer
+      # is, the less likely audio will skip when the system is overloaded
+
+      # default-fragments = 14;
+      # default-fragment-size-msec = 6;
+    # };
   };
 
   environment.systemPackages = with pkgs; [

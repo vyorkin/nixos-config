@@ -9,6 +9,7 @@
     "wheel"
     "video"
     "audio"
+    "jackaudio"
     "networkmanager"
     "input"
     "scanner"

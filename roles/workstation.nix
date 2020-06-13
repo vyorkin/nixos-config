@@ -9,7 +9,10 @@ in
     ../cfgs/gtk.nix
     ../cfgs/qt.nix
     ../cfgs/i3.nix
+
     ../cfgs/pulseaudio.nix
+    # ../cfgs/jack.nix
+
     ../cfgs/bluetooth.nix
     ../cfgs/logitech.nix
     ../cfgs/web-browsers.nix
@@ -74,6 +77,13 @@ in
     # Support Direct Rendering for 32-bit applications (such as Wine).
     # This is currently only supported for the nvidia and ati_unfree drivers, as well as Mesa
     driSupport32Bit = true;
+
+    # See: https://nixos.wiki/wiki/Accelerated_Video_Playback
+    # extraPackages = with pkgs; with pkgs.pkgsi686Linux; [
+    #   libva
+    #   vaapiVdpau
+    #   libvdpau-va-gl
+    # ];
   };
 
   environment = {

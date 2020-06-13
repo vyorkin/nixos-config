@@ -31,7 +31,8 @@ gaps inner 2
 smart_gaps on
 smart_borders on
 
-focus_follows_mouse yes
+# focus_follows_mouse yes
+
 mouse_warping none
 # Hide edge borders only if there is one window with no gaps
 hide_edge_borders smart_no_gaps
@@ -40,7 +41,7 @@ force_display_urgency_hint 500 ms
 focus_wrapping no
 floating_modifier $mod
 
-floating_minimum_size 640 x 480
+floating_minimum_size 320 x 240
 floating_maximum_size 1200 x 700
 popup_during_fullscreen leave_fullscreen
 
@@ -144,32 +145,37 @@ bindsym $hyper+Shift+8 move container to workspace 18
 bindsym $hyper+Shift+9 move container to workspace 19
 bindsym $hyper+Shift+0 move container to workspace 20
 
-workspace 1 output HDMI-1 eDP-1
-workspace 2 output HDMI-1 eDP-1
-workspace 3 output HDMI-1 eDP-1
-workspace 4 output HDMI-1 eDP-1
-workspace 5 output HDMI-1 eDP-1
-workspace 6 output HDMI-1 eDP-1
-workspace 7 output HDMI-1 eDP-1
-workspace 8 output HDMI-1 eDP-1
-workspace 9 output HDMI-1 eDP-1
-workspace 10 output HDMI-1 eDP-1
-workspace 11 output HDMI-1 eDP-1
-workspace 12 output HDMI-1 eDP-1
-workspace 13 output HDMI-1 eDP-1
-workspace 14 output HDMI-1 eDP-1
-workspace 15 output HDMI-1 eDP-1
-workspace 16 output eDP-1 HDMI-1
-workspace 17 output eDP-1 HDMI-1
-workspace 18 output eDP-1 HDMI-1
-workspace 19 output eDP-1 HDMI-1
-workspace 20 output eDP-1 HDMI-1
+workspace 1  output DisplayPort-1 eDP-1
+workspace 2  output DisplayPort-1 eDP-1
+workspace 3  output DisplayPort-1 eDP-1
+workspace 4  output DisplayPort-1 eDP-1
+workspace 5  output DisplayPort-1 eDP-1
+workspace 6  output DisplayPort-1 eDP-1
+
+workspace 7  output HDMI-A-1 DisplayPort-1 eDP-1
+workspace 8  output HDMI-A-1 DisplayPort-1 eDP-1
+
+workspace 9  output HDMI-A-0 DisplayPort-1 eDP-1
+workspace 10 output HDMI-A-0 DisplayPort-1 eDP-1
+
+workspace 11 output DisplayPort-1 HDMI-A-0 eDP-1
+workspace 12 output DisplayPort-1 HDMI-A-0 eDP-1
+
+workspace 13 output HDMI-A-0 DisplayPort-1 eDP-1
+workspace 14 output HDMI-A-0 DisplayPort-1 eDP-1
+
+workspace 15 output HDMI-A-1 DisplayPort-1 eDP-1
+workspace 16 output HDMI-A-1 DisplayPort-1 eDP-1
+
+workspace 17 output DisplayPort-1 HDMI-A-0 eDP-1
+workspace 18 output DisplayPort-1 HDMI-A-0 eDP-1
+workspace 19 output DisplayPort-1 HDMI-A-0 eDP-1
+workspace 20 output DisplayPort-1 HDMI-A-0 eDP-1
 
 bindsym $hyper+Shift+c reload
 bindsym $hyper+Shift+r restart
 
 bindsym $hyper+Shift+s exec --no-startup-id systemctl suspend
-
 bindsym $hyper+Shift+i exec --no-startup-id xrandr-invert-colors
 
 # App quick launch
@@ -259,7 +265,7 @@ bar {
   font pango:FiraCode 10
   position bottom
 
-  status_command bumblebee-status -m pulseaudio date time disk load memory -p interval=1 home.path=/home getcrypto.getltc=0 getcrypto.geteth=0 github.token=e6fed7b612143808e139e657e876176e40747a55 ping.address=87.250.250.242 ping.probes=3 ping.interval=120 -t greyish-powerline
+  status_command bumblebee-status -m date time disk load memory -p interval=1 home.path=/home getcrypto.getltc=0 getcrypto.geteth=0 github.token=e6fed7b612143808e139e657e876176e40747a55 ping.address=87.250.250.242 ping.probes=3 ping.interval=120 -t greyish-powerline
 
   # status_command i3status-rs ~/.config/i3/status.toml
 

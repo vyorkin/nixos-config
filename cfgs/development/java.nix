@@ -5,9 +5,11 @@
     systemPackages = with pkgs; [
       jdk
       jre
-      ant
-      maven
-      eclipses.eclipse-platform
+
+      # ant
+      # maven
+      # eclipses.eclipse-platform
+
       # junit
     ];
 

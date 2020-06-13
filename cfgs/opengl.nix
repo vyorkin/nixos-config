@@ -8,5 +8,7 @@
 
     glslang
     glslviewer
+
+    # amdgpu-pro
   ];
 }
