@@ -54,13 +54,13 @@
 
     # See https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting
     # and https://nixos.wiki/wiki/PulseAudio
-    # configFile = pkgs.runCommand "default.pa" {} ''
-    #   sed 's/module-udev-detect$/module-udev-detect tsched=0/' \
-    #   ${pkgs.pulseaudio}/etc/pulse/default.pa > $out
-    # '';
+    configFile = pkgs.runCommand "default.pa" {} ''
+      sed 's/module-udev-detect$/module-udev-detect tsched=0/' \
+      ${pkgs.pulseaudio}/etc/pulse/default.pa > $out
+    '';
     # sed 's/module-udev-detect$/module-udev-detect tsched=1 fixed_latency_range=0/' \
 
-    # daemon.config = {
+    daemon.config = {
       # warning: May cause high CPU load
       # resample-method = "src-sinc-best-quality";
 
@@ -80,9 +80,9 @@
       # default-fragment-size-msec each. The larger the buffer
       # is, the less likely audio will skip when the system is overloaded
 
-      # default-fragments = 14;
-      # default-fragment-size-msec = 6;
-    # };
+      default-fragments = 14;
+      default-fragment-size-msec = 6;
+    };
   };
 
   environment.systemPackages = with pkgs; [

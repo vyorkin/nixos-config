@@ -61,6 +61,9 @@
     swiProlog
     # mercury
 
+    # Logic Defined Static Analysis
+    souffle
+
     ats
     ats2
 

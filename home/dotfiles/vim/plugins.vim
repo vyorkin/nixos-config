@@ -182,6 +182,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " elm
 Plug 'lambdatoast/elm.vim'
 
+" agda
+Plug 'derekelkins/agda-vim'
+
 " purescript
 Plug 'purescript-contrib/purescript-vim'
 " TODO: configure
