@@ -37,6 +37,8 @@ in {
     # minizinc
     # minizincide
 
+    lean3
+
     why3
     alt-ergo
     framac

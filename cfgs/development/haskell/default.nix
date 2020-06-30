@@ -55,6 +55,10 @@ in {
         contravariant
         invariant
 
+        process
+        typed-process
+        repline
+
         llvm-hs-pure
         llvm-hs
         llvm-hs-pretty
@@ -80,6 +84,7 @@ in {
         websockets
         optparse-applicative
         prettyprinter
+        prettyprinter-ansi-terminal
 
         parsec
         megaparsec

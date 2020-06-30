@@ -31,7 +31,7 @@ gaps inner 2
 smart_gaps on
 smart_borders on
 
-# focus_follows_mouse yes
+focus_follows_mouse no
 
 mouse_warping none
 # Hide edge borders only if there is one window with no gaps

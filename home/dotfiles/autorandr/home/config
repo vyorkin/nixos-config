@@ -14,8 +14,3 @@ mode 3440x1440
 pos 1080x187
 primary
 rate 50.00
-output HDMI-A-1
-crtc 2
-mode 1680x1050
-pos 4520x325
-rate 59.95

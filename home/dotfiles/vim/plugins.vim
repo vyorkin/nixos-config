@@ -142,6 +142,9 @@ Plug 'let-def/ocp-indent-vim'
 " coq
 Plug 'the-lambda-church/coquille'
 
+" lean
+Plug 'leanprover/lean.vim'
+
 " erlang, elixir
 Plug 'vim-erlang/vim-erlang-runtime'
 Plug 'elixir-lang/vim-elixir'
@@ -254,7 +257,6 @@ Plug 'vim-scripts/paredit.vim'
 
 Plug 'scrooloose/syntastic'
 Plug 'myint/syntastic-extras'
-Plug 'roktas/syntastic-more'
 
 Plug 'sbdchd/neoformat'
 
