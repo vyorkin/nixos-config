@@ -79,8 +79,6 @@ in {
       keep-outputs = true
       keep-derivations = true
       http-connections = 10
-
-      ${pushToCachix}
     '';
 
     trustedBinaryCaches = [
