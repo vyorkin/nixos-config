@@ -28,7 +28,7 @@
       fira
       fira-code
       fira-code-symbols
-      monoid
+      # monoid
       fira-mono
       font-awesome-ttf
       freefont_ttf

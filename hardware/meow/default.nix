@@ -17,8 +17,7 @@
   # Set to the total number of logical cores in the system
   nix.maxJobs = lib.mkDefault 12;
 
-  networking.hostname = "meow";
-  networking.wireless.enable = true;
+  # networking.wireless.enable = true;
   networking.useDHCP = false;
   networking.interfaces.enp4s0.useDHCP = true;
   networking.interfaces.wlp3s0.useDHCP = true;

@@ -10,7 +10,7 @@
     tdesktop
     nheko
     spectral
-    riot-desktop
+    # element-desktop
     # telegram-cli
     # pidgin
     gitter
