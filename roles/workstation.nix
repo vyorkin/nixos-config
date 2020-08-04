@@ -1,8 +1,8 @@
 { pkgs, config, ... }:
 
 
-let angular_plymouth_theme = pkgs.callPackage ../pkgs/custom/plymouth-theme { };
-in
+# let angular_plymouth_theme = pkgs.callPackage ../pkgs/custom/plymouth-theme { };
+# in
 {
   imports = [
     ../cfgs/x11
@@ -57,7 +57,7 @@ in
     # ../cfgs/kubernetes.nix
     # ../cfgs/forensics.nix
     ../cfgs/dropbox.nix
-    ../cfgs/electronics.nix
+    # ../cfgs/electronics.nix
     ../cfgs/db
     ../cfgs/development
 
@@ -95,11 +95,11 @@ in
   boot.loader.timeout = 0;
 
   # Enable Plymouth boot splash screen
-  boot.plymouth = {
-    enable = true;
-    theme = "angular";
-    themePackages = with pkgs; [ angular_plymouth_theme ];
-  };
+  # boot.plymouth = {
+  #   enable = false;
+  #   theme = "angular";
+  #   themePackages = with pkgs; [ angular_plymouth_theme ];
+  # };
 
   systemd.coredump.enable = true;
   systemd.targets = {

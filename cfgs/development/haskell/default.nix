@@ -113,7 +113,7 @@ in {
         # hasbolt
         # hasbolt-extras
 
-        capability
+        # capability
         polysemy
         fused-effects
         freer-simple

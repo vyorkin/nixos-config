@@ -14,9 +14,9 @@
     ./rust.nix
     # ./tcl.nix
     ./go.nix
-    ./haskell
+    # ./haskell
     ./ocaml
-    ./agda.nix
+    # ./agda.nix
     ./java.nix
     ./arduino.nix
   ];

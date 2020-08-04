@@ -41,25 +41,7 @@ in {
       ];
     };
 
-    displayManager = {
-      defaultSession = "none+i3";
-      lightdm = {
-        enable = false;
-        autoLogin = {
-          enable = true;
-          user = "vyorkin";
-        };
-        background = "black";
-        greeters.mini = {
-          enable = true;
-          user = "vyorkin";
-        };
-      };
-      gdm.enable = true;
-      job = {
-        logToFile = true;
-        logToJournal = true;
-      };
-    };
+    displayManager.sddm.enable = true;
+    desktopManager.plasma5.enable = true;
   };
 }

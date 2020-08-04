@@ -9,7 +9,7 @@
     cmake
     ccls
     boost
-    compcert
+    # compcert
     irony-server
     meson
     ninja

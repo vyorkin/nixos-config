@@ -10,7 +10,7 @@
 
     # For recent ADM GPU's you most likely want to
     # keep either the defaults or "amdgpu" (both free)
-    videoDrivers = [ "amdgpu" ];
+    # videoDrivers = [ "amdgpu" ];
 
     # Use the Glamor module for 2D acceleration, if possible
     useGlamor = true;
