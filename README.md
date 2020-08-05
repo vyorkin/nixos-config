@@ -73,7 +73,7 @@ Manual symlinks (on `shelter`):
 * `/files/Downloads -> ~/Downloads`
 
 * Copy `ssh` folder from the dotsecrets repo to the `~/.ssh`.
-* Fix permissions for `ssh` folder
+* Fix permissions for `ssh` folder: `chmod 700 -R ~/.ssh`
 
 ### Haskell
 
