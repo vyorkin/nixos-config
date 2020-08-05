@@ -86,6 +86,30 @@ Tools:
 
 Lorri: https://github.com/target/lorri/blob/master/contrib/daemon.md
 
+### Vim
+
+#### OCaml
+
+Note that you need to run:
+
+```vimscript
+:execute "helptags " . substitute(system('opam config var share'),'\n$','','''') .  "/merlin/vim/doc"
+```
+
+to manually to update the documentation.
+
+### OCaml
+
+```
+opam install tuareg merlin ocp-indent odoc ocamlformat
+opam pin add ocaml-lsp-server https://github.com/ocaml/ocaml-lsp.git
+opam install ocaml-lsp-server
+
+opam install core core_bench stdio ppx_deriving ppx_inline_test ppx_expect
+opam install fmt cmdliner lwt js_of_ocaml logs textutils
+opam install alcotest qcheck qcheck-alcotest
+```
+
 ### Rust
 
 ```bash
@@ -97,7 +121,7 @@ $ cargo install rusty-tags
 $ rustup component add rustfmt-preview --toolchain nightly
 $ cargo +nightly install racer
 $ cargo install bootimage cargo-xbuild
-$ cargo install hunter navi
+$ cargo install elba hunter navi
 ```
 
 ### Go

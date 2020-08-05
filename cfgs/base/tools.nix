@@ -11,7 +11,9 @@
     binutils
     gcc
     gnumake
+    pkg-config
     openssl
+    openssl.dev
     m4
     numactl
     libedit
@@ -31,6 +33,7 @@
     fd
     prettyping
     ncdu
+    rlwrap
 
     earlyoom
     screen

@@ -25,7 +25,12 @@ in with packageSet; [
   brittany
 
   hoogle
+
   # hindent
+
+  # Fresh fork of hindent
+  # floskell
+
   stylish-haskell
   hlint
   codex

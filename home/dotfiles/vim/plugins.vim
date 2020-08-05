@@ -97,7 +97,7 @@ Plug 'Shougo/vimproc.vim'
 Plug 'flowtype/vim-flow'
 
 " reasonml
-Plug 'reasonml/vim-reason'
+" Plug 'reasonml/vim-reason'
 
 " julia
 Plug 'dcjones/julia-minimalist-vim'
@@ -134,6 +134,12 @@ Plug 'derekwyatt/vim-scala'
 
 " swift
 Plug 'toyamarinyon/vim-swift'
+
+" slime (just like in Emacs)
+Plug 'jpalardy/vim-slime'
+
+" sml
+Plug 'jez/vim-better-sml'
 
 " ocaml
 Plug 'rgrinberg/vim-ocaml'

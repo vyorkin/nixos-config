@@ -13,13 +13,8 @@ in {
       extraSessionCommands = ''
         xrdb -merge -I$HOME ~/.Xresources
 
-        autorandr -c
-        nm-applet &
-        blueman-applet &
-        pasystray &
         dunst &
-        flameshot &
-        unclutter &
+        autorandr -c
 
         xset r rate 300 65
       '';
@@ -44,18 +39,12 @@ in {
     displayManager = {
       defaultSession = "none+i3";
       lightdm = {
-        enable = false;
-        autoLogin = {
-          enable = true;
-          user = "vyorkin";
-        };
-        background = "black";
+        enable = true;
         greeters.mini = {
           enable = true;
           user = "vyorkin";
         };
       };
-      gdm.enable = true;
       job = {
         logToFile = true;
         logToJournal = true;

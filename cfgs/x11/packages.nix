@@ -20,7 +20,7 @@
     xorg.xbacklight
     xrandr-invert-colors
     arandr
-    autorandr
+    # autorandr
     xbindkeys
     xbindkeys-config
     xidlehook

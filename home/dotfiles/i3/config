@@ -24,7 +24,7 @@ font pango:FiraCode 10
 new_window pixel 0
 new_float normal
 
-gaps outer 2
+gaps outer 0
 gaps inner 2
 
 # Only enable gaps on a workspace when there is at least one container
@@ -265,7 +265,7 @@ bar {
   font pango:FiraCode 10
   position bottom
 
-  status_command bumblebee-status -m date time disk load memory -p interval=1 home.path=/home getcrypto.getltc=0 getcrypto.geteth=0 github.token=e6fed7b612143808e139e657e876176e40747a55 ping.address=87.250.250.242 ping.probes=3 ping.interval=120 -t greyish-powerline
+  # status_command bumblebee-status -m date time disk load memory -p interval=1 home.path=/home getcrypto.getltc=0 getcrypto.geteth=0 github.token=e6fed7b612143808e139e657e876176e40747a55 ping.address=87.250.250.242 ping.probes=3 ping.interval=120 -t greyish-powerline
 
   # status_command i3status-rs ~/.config/i3/status.toml
 
@@ -326,18 +326,18 @@ assign [class="Gimp|Vlc|Slack|(?i)Spotify"] 9
 assign [class="Skype|Gitter|Telegram"] 10
 assign [class="(?i)Discord"] 11
 
-exec --no-startup-id xcape -e 'Caps_Lock=Escape;Control_L=Escape;Control_R=Escape'
-exec --no-startup-id xmodmap ~/.Xmodmap
-exec --no-startup-id xbindkeys
-
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id emacs --daemon
 
 # exec --no-startup-id mako --layer overlay --font 'Roboto 13' --width 500 --height 80 --default-timeout 10000  --max-visible 10 --background-color '#000000' --text-color '#cccccc' --border-color '#111111'
 exec --no-startup-id telegram-desktop
+exec --no-startup-id emacs --daemon
 
 # exec --no-startup-id slack
 
 # exec --no-startup-id Discord
 # exec --no-startup-id $browser1
 # exec --no-startup-id $browser2
+
+exec --no-startup-id xcape -e 'Caps_Lock=Escape;Control_L=Escape;Control_R=Escape'
+exec --no-startup-id xmodmap ~/.Xmodmap
+exec --no-startup-id xbindkeys

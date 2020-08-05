@@ -14,7 +14,9 @@ in {
     libusb
     libtool
     texinfo
+    glib
     # For xwidget-webkit in Emacs
     glib-networking
+    gobject-introspection
   ];
 }

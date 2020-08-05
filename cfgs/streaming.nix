@@ -3,9 +3,10 @@
 {
   environment.systemPackages = with pkgs; [
     obs-studio
-    # obs-linuxbrowser
-
+    obs-linuxbrowser
+    obs-v4l2sink
     # obs-ndi
-    # obs-v4l2sink
+
+    simplescreenrecorder
   ];
 }

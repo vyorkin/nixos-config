@@ -52,6 +52,11 @@ in {
         resource-pool
         turtle
 
+        gi-gtk
+        haskell-gi-base
+        gi-gtk-declarative
+        gi-gtk-declarative-app-simple
+
         contravariant
         invariant
 
@@ -113,7 +118,7 @@ in {
         # hasbolt
         # hasbolt-extras
 
-        capability
+        # capability
         polysemy
         fused-effects
         freer-simple

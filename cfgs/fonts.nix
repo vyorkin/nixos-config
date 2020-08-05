@@ -7,7 +7,7 @@
       useEmbeddedBitmaps = true;
       penultimate.enable = true;
       defaultFonts = {
-        monospace = [ "Monoid" ];
+        monospace = [ "Hack" ];
         sansSerif = [ "Roboto" ];
         serif = [ "Roboto Slab" ];
       };
@@ -28,7 +28,7 @@
       fira
       fira-code
       fira-code-symbols
-      monoid
+      # monoid
       fira-mono
       font-awesome-ttf
       freefont_ttf

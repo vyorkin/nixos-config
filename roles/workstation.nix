@@ -13,10 +13,10 @@ in
     ../cfgs/pulseaudio.nix
     # ../cfgs/jack.nix
 
-    ../cfgs/bluetooth.nix
+    # ../cfgs/bluetooth.nix
     ../cfgs/logitech.nix
     ../cfgs/web-browsers.nix
-    ../cfgs/tor.nix
+    #../cfgs/tor.nix
     ../cfgs/media.nix
     ../cfgs/mail.nix
     ../cfgs/fonts.nix
@@ -24,41 +24,41 @@ in
     # ../cfgs/wireguard.nix
     # ../cfgs/vnc.nix
     ../cfgs/terminal.nix
-    ../cfgs/monitoring.nix
-    ../cfgs/emulators.nix
+    #../cfgs/monitoring.nix
+    #../cfgs/emulators.nix
     ../cfgs/json.nix
-    ../cfgs/github-clients.nix
-    ../cfgs/streaming.nix
-    ../cfgs/security.nix
+    #../cfgs/github-clients.nix
+    #../cfgs/streaming.nix
+    #../cfgs/security.nix
     ../cfgs/messaging.nix
     # ../cfgs/automation.nix
 
     ../cfgs/opengl.nix
-    ../cfgs/vulkan.nix
-    ../cfgs/sdl.nix
+    # ../cfgs/vulkan.nix
+    # ../cfgs/sdl.nix
 
     # ../cfgs/documentation.nix
     # ../cfgs/office.nix
 
     ../cfgs/file-managers.nix
     ../cfgs/code-editors.nix
-    ../cfgs/remote-control.nix
+    # ../cfgs/remote-control.nix
     # ../cfgs/devops.nix
-    ../cfgs/network-scanners.nix
-    ../cfgs/torrents.nix
-    ../cfgs/blogging.nix
+    #../cfgs/network-scanners.nix
+    #../cfgs/torrents.nix
+    #../cfgs/blogging.nix
     # ../cfgs/trading.nix
-    ../cfgs/management.nix
-    ../cfgs/text.nix
-    ../cfgs/spell.nix
-    ../cfgs/tex.nix
+    #../cfgs/management.nix
+    #../cfgs/text.nix
+    #../cfgs/spell.nix
+    #../cfgs/tex.nix
     # ../cfgs/scraping.nix
-    ../cfgs/docker.nix
+    #../cfgs/docker.nix
     # ../cfgs/kubernetes.nix
     # ../cfgs/forensics.nix
     ../cfgs/dropbox.nix
-    ../cfgs/electronics.nix
-    ../cfgs/db
+    # ../cfgs/electronics.nix
+    # ../cfgs/db
     ../cfgs/development
 
     # Takes too much time to compile the VirtualBox

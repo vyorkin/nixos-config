@@ -14,16 +14,6 @@
       device = "/dev/disk/by-uuid/d328606c-697d-45b1-bee8-fa9005e9534f";
       fsType = "ext4";
     };
-
-    # Extrnal 4TB HDD
-    "/external" = {
-      device = "/dev/disk/by-label/hdd-1";
-
-      # System startup will fail if any of the filesystems fails to
-      # mount, dropping you to the emergency shell.
-      # We want make a mount of the external hdd asynchronous and non-critical.
-      options = [ "nofail" ];
-    };
   };
 
   swapDevices = [];

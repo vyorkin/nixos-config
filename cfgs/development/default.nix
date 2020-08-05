@@ -2,23 +2,24 @@
 
 {
   imports = [
-    ./kernel.nix
-    ./ccpp.nix
-    ./lisp.nix
+    #./kernel.nix
+    #./ccpp.nix
+    #./lisp.nix
     # ./clojure.nix
-    ./formalization.nix
+    #./formalization.nix
     # ./purescript.nix
     ./python.nix
-    ./ruby.nix
-    ./nodejs
-    ./rust.nix
+    #./ruby.nix
+    #./nodejs
+    #./rust.nix
     # ./tcl.nix
-    ./go.nix
-    ./haskell
-    ./ocaml
-    ./agda.nix
-    ./java.nix
-    ./arduino.nix
+    #./go.nix
+    # ./haskell
+    # ./ocaml
+    #./sml.nix
+    #./agda.nix
+    # ./java.nix
+    #./arduino.nix
   ];
 
   environment.systemPackages = with pkgs; [
@@ -55,7 +56,10 @@
     # dhall-text
 
     elixir
+
     idris
+    idris2
+
     nim
     racket
     swiProlog
