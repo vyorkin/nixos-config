@@ -20,7 +20,7 @@ in
     stack
     # hie
 
-    nix-tools
+    # nix-tools
 
     # ATS
 

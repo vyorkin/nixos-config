@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [../packages.nix];
+  imports = [./packages.nix];
 
   services.compton = { enable = true; };
 
@@ -10,7 +10,7 @@
 
     # For recent ADM GPU's you most likely want to
     # keep either the defaults or "amdgpu" (both free)
-    videoDrivers = [ "amdgpu" ];
+    # videoDrivers = [ "amdgpu" ];
 
     useGlamor = true;
     exportConfiguration = true;

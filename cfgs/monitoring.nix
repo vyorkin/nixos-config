@@ -35,7 +35,7 @@
     nethogs
     nload
     tcpdump
-    iptraf
+    # iptraf
     speedtest-cli
     fast-cli
 

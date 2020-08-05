@@ -42,6 +42,7 @@ in {
       "https://ghcide-nix.cachix.org"
       "https://cache.dhall-lang.org"
       "https://dhall.cachix.org"
+      "https://bs-platform.cachix.org"
     ];
 
     binaryCachePublicKeys = [

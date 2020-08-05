@@ -19,7 +19,7 @@
     godef
     gogetdoc
     golint
-    gometalinter
+    golangci-lint
     gomodifytags
     gosec
     gotags
