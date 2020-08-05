@@ -11,6 +11,9 @@
     flameshot
     peek
 
+    tldr
+    cheat
+
     aria2
     urlscan
     urlview
