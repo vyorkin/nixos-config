@@ -8,7 +8,7 @@
     # ./clojure.nix
     ./formalization.nix
     # ./purescript.nix
-    # ./python.nix
+    ./python.nix
     ./ruby.nix
     ./nodejs
     ./rust.nix

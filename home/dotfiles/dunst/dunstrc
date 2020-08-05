@@ -105,7 +105,7 @@
     dmenu = /run/current-system/sw/bin/dmenu -p dunst:
 
     # browser for opening urls in context menu
-    browser = /run/current-system/sw/bin/firefox -new-tab
+    browser = /run/current-system/sw/bin/google-chrome-stable
 
 [frame]
     width = 0
