@@ -7,7 +7,7 @@
       useEmbeddedBitmaps = true;
       penultimate.enable = true;
       defaultFonts = {
-        monospace = [ "Monoid" ];
+        monospace = [ "Hack" ];
         sansSerif = [ "Roboto" ];
         serif = [ "Roboto Slab" ];
       };

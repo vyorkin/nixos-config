@@ -94,6 +94,7 @@ in {
 
       "https://silence.cachix.org"
       "https://shelter.cachix.org"
+      "https://bs-platform.cachix.org"
     ];
 
     binaryCachePublicKeys = [

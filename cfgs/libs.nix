@@ -16,5 +16,6 @@ in {
     texinfo
     # For xwidget-webkit in Emacs
     glib-networking
+    grpc
   ];
 }

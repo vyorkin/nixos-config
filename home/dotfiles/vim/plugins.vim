@@ -97,7 +97,7 @@ Plug 'Shougo/vimproc.vim'
 Plug 'flowtype/vim-flow'
 
 " reasonml
-Plug 'reasonml/vim-reason'
+Plug 'reasonml-editor/vim-reason-plus'
 
 " julia
 Plug 'dcjones/julia-minimalist-vim'
