@@ -16,6 +16,9 @@
     scdoc
     odt2txt
 
+    # GhostScript viewer
+    gv
+
     # xpdf (insecure)
 
     poppler

@@ -5,7 +5,7 @@
     arduino
     arduino-core
     arduino-mk
-    fritzing
+    # fritzing
     ino
   ];
 }

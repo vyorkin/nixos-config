@@ -7,7 +7,7 @@
     <home-manager/nixos>
     ../modules
     ../roles/common.nix
-    ../cfgs/x11.nix
+    ../cfgs/x11
     ../cfgs/gtk.nix
     ../cfgs/qt.nix
     ../cfgs/i3.nix

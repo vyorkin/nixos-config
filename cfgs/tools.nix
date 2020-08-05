@@ -30,6 +30,7 @@
     cpufrequtils
     linuxPackages.cpupower
 
+    _1password
 
     xflux
     xflux-gui

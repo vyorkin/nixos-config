@@ -17,7 +17,7 @@ let
     # Terminal based YouTube player and downloader
     mps-youtube
 
-    glances
+    # glances
     # howdoi
 
     sphinx

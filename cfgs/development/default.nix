@@ -7,7 +7,7 @@
     ./lisp.nix
     ./clojure.nix
     ./formalization.nix
-    ./purescript.nix
+    # ./purescript.nix
     ./python.nix
     ./ruby.nix
     ./nodejs
@@ -47,7 +47,7 @@
     dhall-bash
     dhall-json
     # dhall-nix
-    dhall-text
+    # dhall-text
 
     elixir
     idris
@@ -63,7 +63,7 @@
     j
 
     # octave
-    julia
+    # julia
 
     # hydra
   ];
