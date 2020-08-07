@@ -87,6 +87,15 @@ Tools:
 
 Lorri: https://github.com/target/lorri/blob/master/contrib/daemon.md
 
+### NodeJS
+
+The workaround to install node packages globally.
+See `~/.npmrc`:
+
+```bash
+$ mkdir ~/.npm-packages
+```
+
 ### Rust
 
 ```bash
