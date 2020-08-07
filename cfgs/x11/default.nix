@@ -24,7 +24,7 @@
     layout = "us,ru";
     xkbModel = "pc105";
     xkbVariant = "qwerty";
-    xkbOptions = "grp:alt_shift_toggle, grp:alt_space_toggle, grp_led:caps, caps:ctrl_modifier";
+    xkbOptions = "grp:ctrl_shift_toggle, grp_led:caps, caps:ctrl_modifier";
 
   };
 

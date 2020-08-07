@@ -19,14 +19,13 @@ in {
         pasystray &
         dunst &
         flameshot &
-        unclutter &
 
         xset r rate 300 65
       '';
 
       extraPackages = with pkgs; [
         bumblebeeStatus
-        unclutter
+        # unclutter
         # i3lock
         # i3lock-color
         # i3lock-fancy

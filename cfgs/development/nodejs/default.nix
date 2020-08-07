@@ -13,6 +13,9 @@ let
     psi
     now
     json-package
+
+    # firebase-tools
+
     # doiuse
     localtunnel
     gitbook-cli

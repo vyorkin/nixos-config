@@ -24,8 +24,8 @@ font pango:FiraCode 10
 new_window pixel 0
 new_float normal
 
-gaps outer 2
-gaps inner 2
+gaps outer 0
+gaps inner 0
 
 # Only enable gaps on a workspace when there is at least one container
 smart_gaps on
@@ -299,9 +299,7 @@ bindsym $mod+y move workspace to output down
 # DARK
 
 # class                 border  bground text    indicator child_border
-# client.focused          #AA0955 #000000 #AA0955 #AA0955   #AA0955
-client.focused          #F59D16 #000000 #F59D16 #F59D16 #F59D16
-
+client.focused          #FFFF00 #000000 #FFFF00 #FFFF00   #FFFF00
 client.focused_inactive #EE8888 #000000 #ffffff #EE8888   #EE8888
 client.unfocused        #222222 #222222 #888888 #292D2E   #222222
 client.urgent           #540000 #700000 #FFFFFF #900000   #900000
@@ -309,7 +307,7 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
 client.background       #FFFFFF
 
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 2
 
 # Windows starting in floating mode
 for_window [class="Transmission"] floating enable border normal

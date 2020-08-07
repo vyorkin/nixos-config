@@ -6,3 +6,4 @@ init-license=WTFPL
 username=vyorkin
 email=vasiliy.yorkin@gmail.com
 loglevel=warn
+prefix = ${HOME}/.npm-packages

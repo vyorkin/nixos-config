@@ -19,5 +19,9 @@
     nix-zsh-completions
 
     nixfmt
+
+    # see: https://nixos.wiki/wiki/Steam#steam-run
+    steam-run
+    # steam-run-native
   ];
 }
