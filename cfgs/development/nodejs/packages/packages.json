@@ -22,5 +22,6 @@
   "commitizen",
   "rollup",
   "pnpm",
-  "iron-node"
+  "iron-node",
+  "@microsoft/rush"
 ]
