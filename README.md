@@ -129,13 +129,19 @@ $ cargo install elba hunter navi
 * `gitbatch` - allows manage your git repositories in one place
 
 ```bash
-go get -u github.com/isacikgoz/gitbatch/cmd/gitbatch
+$ go get -u github.com/isacikgoz/gitbatch/cmd/gitbatch
+```
+
+### TypeScript
+
+```bash
+$ npm i -g typescript microsoft@rush
 ```
 
 ### Why3
 
 ```bash
-why3 config --detect
+$ why3 config --detect
 ```
 
 ### MiniZinc
@@ -144,7 +150,7 @@ Edit the `gecode.msc` and update the `fzn-gecode`.
 To find the path:
 
 ```sh
-readlink -f $(which fzn-gecode)
+$ readlink -f $(which fzn-gecode)
 ```
 
 ### OCaml
