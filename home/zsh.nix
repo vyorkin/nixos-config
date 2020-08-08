@@ -16,7 +16,7 @@ in {
 
     programs.zsh = {
       enable = true;
-      enableCompletion = false;
+      enableCompletion = true;
 
       history.expireDuplicatesFirst = true;
 
@@ -24,7 +24,6 @@ in {
         FZF_MARKS_JUMP = "^x^j";
         ZSH_PLUGINS_ALIAS_TIPS_TEXT = "> ";
 
-        GEOMETRY_PLUGIN_SEPARATOR=" ";
         GEOMETRY_PROMPT_SUFFIX="$(if [ ! -z $IN_NIX_SHELL ]; then echo ' [nix]'; fi)";
         GEOMETRY_GIT_SYMBOL_STASHES="x";     # change the git stash indicator to `x`
         GEOMETRY_GIT_GREP="rg";              # define which grep-like tool to use (By default it looks for rg, ag and finally grep)
@@ -51,14 +50,23 @@ in {
           src = zsh-history-substring-search;
         }
         {
+          name = "zsh-autosuggestions";
+          file = "zsh-autosuggestions.zsh";
+          src = fetchFromGitHub {
+            owner = "zsh-users";
+            repo = "zsh-autosuggestions";
+            rev = "ae315ded4dba10685dbbafbfa2ff3c1aefeb490d";
+            sha256 = "sha256-xv4eleksJzomCtLsRUj71RngIJFw8+A31O6/p7i4okA=";
+          };
+        }
+        {
           name = "geometry";
           file = "geometry.plugin.zsh";
           src = fetchFromGitHub {
             owner = "geometry-zsh";
             repo = "geometry";
-            rev = "fdff57bde4afb43beda73a14dea7738961f99bc2";
-            sha256 = "02knbmcf8invkvz0g42xk3dlk4lqffk43bsmi8z4n01508jqkd8g";
-            # date = 2019-09-02T11:00:58-04:00;
+            rev = "9a3129a0eb472b4a04230667a90b1c5fb5680bad";
+            sha256 = "sha256-xpw5AbrQiW/V4U5RMhbmBG2LrgH2vT9ehjKjj5sD0TA=";
           };
         }
         {
@@ -70,6 +78,16 @@ in {
             rev = "6ae30544a284301026d4ee1c437b44f5d1a9952e";
             sha256 = "1y6nx0ww2vlgwwbajwlvf1ywczpd8115c1my4mmv4fkb6q97i05g";
             # date = 2020-06-30T18:08:41+02:00;
+          };
+        }
+        {
+          name = "zsh-completions";
+          file = "zsh-completions.plugin.zsh";
+          src = fetchFromGitHub {
+            owner = "zsh-users";
+            repo = "zsh-completions";
+            rev = "4407a48b961128bf5e6f3b9310808157f2be1a07";
+            sha256 = "sha256-XmU4cYGQt7O3icPN1HyfkFjh2EossAHKuWTaKcocpX0=";
           };
         }
         {
@@ -113,17 +131,6 @@ in {
             rev = "547f215b81e3ded4f9fe19d0835b22fa65e06bd2";
             sha256 = "1p8ka9dabbr9k40xchr09mwcalq265rg9hiq5prbg86b9aj380kj";
             # date = 2020-06-20T08:47:00-06:00;
-          };
-        }
-        {
-          name = "zsh-reentry-hook";
-          file = "zsh-reentry-hook.plugin.zsh";
-          src = fetchFromGitHub {
-            owner = "RobSis";
-            repo = "zsh-reentry-hook";
-            rev = "8587186df8f08b8a57ae7f87ab0bc7d503909031";
-            sha256 = "1jgin1gmw05vxf7vw414zvhq9dg06yzlzxas723f710vs58mf11a";
-            # date = 2016-04-04T14:29:07+02:00;
           };
         }
         {

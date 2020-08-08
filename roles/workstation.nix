@@ -106,7 +106,10 @@ in
     };
   };
 
+  # Whether core dumps should be processed by systemd-coredump.
+  # If disabled, core dumps appear in the current directory of the crashing process
   systemd.coredump.enable = true;
+
   systemd.targets = {
     sleep.enable = false;
     suspend.enable = false;
