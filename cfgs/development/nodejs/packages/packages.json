@@ -20,5 +20,7 @@
   "jsinspect",
   "tmi",
   "commitizen",
+  "rollup",
+  "pnpm",
   "iron-node"
 ]

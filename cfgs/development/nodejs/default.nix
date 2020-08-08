@@ -41,6 +41,8 @@ let
     ocaml-language-server
     eslint_d
     create-react-app
+    rollup
+    pnpm
     svgo
     prettier
     # jsdoc
