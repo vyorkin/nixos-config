@@ -100,6 +100,8 @@ to manually to update the documentation.
 
 ### OCaml
 
+Remove `OCAML_TOPLEVEL_PATH` from `~/.opam/opam-init/variables.sh`
+
 ```
 opam install tuareg merlin ocp-indent odoc ocamlformat
 opam pin add ocaml-lsp-server https://github.com/ocaml/ocaml-lsp.git
@@ -146,10 +148,6 @@ To find the path:
 ```sh
 readlink -f $(which fzn-gecode)
 ```
-
-### OCaml
-
-Remove `OCAML_TOPLEVEL_PATH` from `~/.opam/opam-init/variables.sh`
 
 ### Coq
 
