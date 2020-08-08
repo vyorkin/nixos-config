@@ -25,6 +25,11 @@ let
     jsinspect
     tmi
     commitizen
+
+    # TODO: Find out how install scoped packages
+    # at_microsoft_slash_rush
+    # rush
+
     # iron-node
   ];
   nixpkgs = with pkgs.nodePackages; [
