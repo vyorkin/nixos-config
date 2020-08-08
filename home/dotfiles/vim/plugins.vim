@@ -76,17 +76,24 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'stephenway/postcss.vim'
 Plug 'wavded/vim-stylus'
 
-" javascript, jsx, json, tern
+" javascript, jsx
 Plug 'pangloss/vim-javascript'
-Plug 'othree/yajs.vim'
-Plug 'othree/es.next.syntax.vim'
-Plug 'othree/javascript-libraries-syntax.vim'
 Plug '1995eaton/vim-better-javascript-completion'
-Plug 'sheerun/vim-json'
-Plug 'gutenye/json5.vim'
+
+" alternative to pangloss/vim-javascript:
+" Plug 'othree/yajs.vim'
+" Plug 'othree/es.next.syntax.vim'
+" Plug 'othree/javascript-libraries-syntax.vim'
+
+" tern
 Plug 'marijnh/tern_for_vim'
 
+" coverage
 Plug 'ruanyl/coverage.vim'
+
+" json
+Plug 'elzr/vim-json'
+Plug 'gutenye/json5.vim'
 
 " typescript
 Plug 'Quramy/tsuquyomi'
