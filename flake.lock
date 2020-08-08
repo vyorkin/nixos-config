@@ -244,11 +244,11 @@
     "zsh": {
       "flake": false,
       "locked": {
-        "lastModified": 1596810349,
-        "narHash": "sha256-pS+CWnPNPNQow+CZta7iNSQFvwDc/ZfelQyPivcqWGg=",
+        "lastModified": 1596817950,
+        "narHash": "sha256-KWN0YPHWCdss3OUD1KTz8WeIQ6dBnGC0ypX/Y44zlX4=",
         "owner": "vyorkin",
         "repo": "zshrc",
-        "rev": "505811cac157409436abc559f1f82350dbb5567f",
+        "rev": "a889fbb92825a929122a77f64b5b40fca2a0cf49",
         "type": "github"
       },
       "original": {
