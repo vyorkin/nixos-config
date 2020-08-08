@@ -149,6 +149,8 @@ readlink -f $(which fzn-gecode)
 
 ### OCaml
 
+Remove `OCAML_TOPLEVEL_PATH` from `~/.opam/opam-init/variables.sh`
+
 ```
 opam repo add beta https://github.com/ocaml/ocaml-beta-repository.git
 ```
