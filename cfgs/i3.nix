@@ -12,20 +12,14 @@ in {
       configFile = ../home/dotfiles/i3/config;
       extraSessionCommands = ''
         xrdb -merge -I$HOME ~/.Xresources
-
-        autorandr -c
-        nm-applet &
-        blueman-applet &
-        pasystray &
         dunst &
-        flameshot &
-
-        xset r rate 300 65
       '';
+
+      # TODO: Start dunst service properly (by using services.dunst)
 
       extraPackages = with pkgs; [
         bumblebeeStatus
-        # unclutter
+        unclutter
         # i3lock
         # i3lock-color
         # i3lock-fancy
@@ -40,7 +34,19 @@ in {
       ];
     };
 
-    displayManager.sddm.enable = true;
-    desktopManager.plasma5.enable = true;
+    displayManager = {
+      defaultSession = "none+i3";
+      lightdm = {
+        enable = true;
+        greeters.mini = {
+          enable = true;
+          user = "vyorkin";
+        };
+      };
+      job = {
+        logToFile = true;
+        logToJournal = true;
+      };
+    };
   };
 }

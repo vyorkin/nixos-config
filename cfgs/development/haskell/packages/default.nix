@@ -25,7 +25,12 @@ in with packageSet; [
   brittany
 
   hoogle
+
   # hindent
+
+  # Fresh fork of hindent
+  # floskell
+
   stylish-haskell
   hlint
   codex
@@ -45,7 +50,7 @@ in with packageSet; [
 
   # ATS
 
-  ats-pkg
+  # ats-pkg
   hs2ats
 
   # Broken

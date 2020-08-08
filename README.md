@@ -87,14 +87,28 @@ Tools:
 
 Lorri: https://github.com/target/lorri/blob/master/contrib/daemon.md
 
+### Vim/NeoVim
+
+#### OCaml
+
+Note that you need to run:
+
+```vimscript
+:execute "helptags " . substitute(system('opam config var share'),'\n$','','''') .  "/merlin/vim/doc"
+```
+
+to manually to update the documentation
+
 ### NodeJS
 
-The workaround to install node packages globally.
-See `~/.npmrc`:
+Enable the workaround to be able to install node packages globally.
+Make sure to create the following directory:
 
 ```bash
 $ mkdir ~/.npm-packages
 ```
+
+This directory is used in the `~/.npmrc`.
 
 ### Rust
 
@@ -107,7 +121,7 @@ $ cargo install rusty-tags
 $ rustup component add rustfmt-preview --toolchain nightly
 $ cargo +nightly install racer
 $ cargo install bootimage cargo-xbuild
-$ cargo install hunter navi
+$ cargo install elba hunter navi
 ```
 
 ### Go
@@ -135,10 +149,20 @@ readlink -f $(which fzn-gecode)
 
 ### OCaml
 
-Remove `OCAML_TOPLEVEL_PATH` from `~/.opam/opam-init/variables.sh`
-
 ```
 opam repo add beta https://github.com/ocaml/ocaml-beta-repository.git
+```
+
+Install tools and common/core packages:
+
+```
+opam install tuareg merlin ocp-indent odoc
+opam pin add ocaml-lsp-server https://github.com/ocaml/ocaml-lsp.git
+opam install ocaml-lsp-server
+
+opam install core core_bench stdio ppx_deriving ppx_inline_test ppx_expect
+opam install fmt cmdliner lwt js_of_ocaml logs textutils
+opam install alcotest qcheck qcheck-alcotest
 ```
 
 ### Coq

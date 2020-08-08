@@ -5,7 +5,7 @@
     skype
     slack
     slack-term
-    # discord
+    discord
     zoom-us
     tdesktop
     nheko

@@ -20,7 +20,10 @@
     xorg.xbacklight
     xrandr-invert-colors
     arandr
+
+    # TODO: Maybe the cause of OBS stuttering
     autorandr
+
     xbindkeys
     xbindkeys-config
     xidlehook

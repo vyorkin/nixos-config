@@ -5,11 +5,6 @@
     gtk = {
       enable = true;
 
-      gtk2.extraConfig = ''
-        gtk-cursor-theme-name = capitaine-cursors;
-      '';
-      gtk3.extraConfig = { gtk-cursor-theme-name = "capitaine-cursors"; };
-
       theme = {
         name = "Arc-Dark";
         package = pkgs.arc-theme;

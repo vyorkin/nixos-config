@@ -21,5 +21,4 @@
   networking.useDHCP = false;
   networking.interfaces.enp4s0.useDHCP = true;
   networking.interfaces.wlp3s0.useDHCP = true;
-  networking.enableIntel3945ABGFirmware = true;
 }

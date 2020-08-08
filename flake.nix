@@ -7,8 +7,15 @@
       id = "nixpkgs";
     };
 
-    # Previous stable version of nixpkgs
-    nixpkgs-old = {
+    nixpkgs-20 = {
+      type = "github";
+      owner = "nixos";
+      repo = "nixpkgs";
+      ref = "nixos-20.03";
+      flake = false;
+    };
+
+    nixpkgs-19 = {
       type = "github";
       owner = "nixos";
       repo = "nixpkgs";

@@ -86,7 +86,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    pasystray
     pavucontrol
     pulsemixer
   ];

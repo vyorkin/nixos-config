@@ -3,8 +3,10 @@
 {
   programs.mosh.enable = true;
 
-  services.openssh = {
-    enable = true;
-    passwordAuthentication = false;
+  services = {
+    openssh = {
+      enable = true;
+      passwordAuthentication = false;
+    };
   };
 }

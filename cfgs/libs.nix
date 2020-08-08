@@ -14,8 +14,11 @@ in {
     libusb
     libtool
     texinfo
+    grpc
+    gobject-introspection
+
+    glib
     # For xwidget-webkit in Emacs
     glib-networking
-    grpc
   ];
 }

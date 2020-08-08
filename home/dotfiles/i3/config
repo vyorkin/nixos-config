@@ -149,20 +149,19 @@ workspace 1  output DisplayPort-1 eDP-1 DP-2
 workspace 2  output DisplayPort-1 eDP-1 DP-2
 workspace 3  output DisplayPort-1 eDP-1 DP-2
 workspace 4  output DisplayPort-1 eDP-1 DP-2
+workspace 5  output DisplayPort-1 eDP-1 DP-2
+workspace 6  output DisplayPort-1 eDP-1 DP-2
 
-workspace 5  output DisplayPort-1 eDP-1 HDMI-1
-workspace 6  output DisplayPort-1 eDP-1 HDMI-1
 workspace 7  output HDMI-A-1 DisplayPort-1 eDP-1 HDMI-1
 workspace 8  output HDMI-A-1 DisplayPort-1 eDP-1 HDMI-1
-
-workspace 9  output HDMI-A-0 DisplayPort-1 eDP-1 DP-1
-workspace 10 output HDMI-A-0 DisplayPort-1 eDP-1 DP-1
+workspace 9  output HDMI-A-0 DisplayPort-1 eDP-1 HDMI-1
+workspace 10 output HDMI-A-0 DisplayPort-1 eDP-1 HDMI-1
 
 workspace 11 output DisplayPort-1 HDMI-A-0 eDP-1 DP-1
 workspace 12 output DisplayPort-1 HDMI-A-0 eDP-1 DP-1
 
-workspace 13 output HDMI-A-0 DisplayPort-1 eDP-1 HDMI-1
-workspace 14 output HDMI-A-0 DisplayPort-1 eDP-1 HDMI-1
+workspace 13 output HDMI-A-0 DisplayPort-1 eDP-1 DP-1
+workspace 14 output HDMI-A-0 DisplayPort-1 eDP-1 DP-1
 
 workspace 15 output HDMI-A-1 DisplayPort-1 eDP-1 DP-1
 workspace 16 output HDMI-A-1 DisplayPort-1 eDP-1 DP-1
@@ -265,7 +264,8 @@ bar {
   font pango:FiraCode 10
   position bottom
 
-  status_command bumblebee-status -m date time disk load memory -p interval=1 home.path=/home getcrypto.getltc=0 getcrypto.geteth=0 github.token=e6fed7b612143808e139e657e876176e40747a55 ping.address=87.250.250.242 ping.probes=3 ping.interval=120 -t greyish-powerline
+  # TODO: Maybe the cause of OBS stuttering
+  # status_command bumblebee-status -m date time disk load memory -p interval=1 home.path=/home getcrypto.getltc=0 getcrypto.geteth=0 github.token=e6fed7b612143808e139e657e876176e40747a55 ping.address=87.250.250.242 ping.probes=3 ping.interval=120 -t greyish-powerline
 
   # status_command i3status-rs ~/.config/i3/status.toml
 

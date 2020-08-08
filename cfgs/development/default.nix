@@ -14,9 +14,10 @@
     ./rust.nix
     # ./tcl.nix
     ./go.nix
-    # ./haskell
+    ./haskell
     ./ocaml
-    # ./agda.nix
+    ./sml.nix
+    ./agda.nix
     ./java.nix
     ./arduino.nix
   ];
@@ -55,7 +56,10 @@
     # dhall-text
 
     elixir
+
     idris
+    idris2
+
     nim
     racket
     swiProlog

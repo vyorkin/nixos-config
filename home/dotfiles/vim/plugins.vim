@@ -97,10 +97,16 @@ Plug 'Shougo/vimproc.vim'
 Plug 'flowtype/vim-flow'
 
 " reasonml
-Plug 'reasonml-editor/vim-reason-plus'
+" Plug 'reasonml/vim-reason'
 
 " julia
 Plug 'dcjones/julia-minimalist-vim'
+
+" slime (just like in Emacs)
+Plug 'jpalardy/vim-slime'
+
+" sml
+Plug 'jez/vim-better-sml'
 
 " ruby
 Plug 'vim-ruby/vim-ruby'

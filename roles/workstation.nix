@@ -1,8 +1,8 @@
 { pkgs, config, ... }:
 
 
-# let angular_plymouth_theme = pkgs.callPackage ../pkgs/custom/plymouth-theme { };
-# in
+let angular_plymouth_theme = pkgs.callPackage ../pkgs/custom/plymouth-theme { };
+in
 {
   imports = [
     ../cfgs/x11
@@ -13,7 +13,6 @@
     ../cfgs/pulseaudio.nix
     # ../cfgs/jack.nix
 
-    ../cfgs/bluetooth.nix
     ../cfgs/logitech.nix
     ../cfgs/web-browsers.nix
     ../cfgs/tor.nix
@@ -31,13 +30,13 @@
     ../cfgs/streaming.nix
     ../cfgs/security.nix
     ../cfgs/messaging.nix
-    # ../cfgs/automation.nix
+    ../cfgs/automation.nix
 
     ../cfgs/opengl.nix
     ../cfgs/vulkan.nix
     ../cfgs/sdl.nix
 
-    # ../cfgs/documentation.nix
+    ../cfgs/documentation.nix
     # ../cfgs/office.nix
 
     ../cfgs/file-managers.nix
@@ -55,7 +54,7 @@
     # ../cfgs/scraping.nix
     ../cfgs/docker.nix
     # ../cfgs/kubernetes.nix
-    # ../cfgs/forensics.nix
+    ../cfgs/forensics.nix
     ../cfgs/dropbox.nix
     # ../cfgs/electronics.nix
     ../cfgs/db
@@ -92,14 +91,20 @@
     };
   };
 
-  boot.loader.timeout = 0;
+  boot = {
+    loader.timeout = 0;
 
-  # Enable Plymouth boot splash screen
-  # boot.plymouth = {
-  #   enable = false;
-  #   theme = "angular";
-  #   themePackages = with pkgs; [ angular_plymouth_theme ];
-  # };
+    # Mount a tmpfs on /tmp during boot
+    tmpOnTmpfs = true;
+
+    # Enable Plymouth boot splash screen
+    plymouth = {
+      enable = false;
+      # angular, darth_vader, blockchain, hexagon_red
+      theme = "angular";
+      themePackages = with pkgs; [ angular_plymouth_theme ];
+    };
+  };
 
   systemd.coredump.enable = true;
   systemd.targets = {
@@ -111,6 +116,11 @@
 
   services = {
     locate.enable = true;
+
+    # Enable handling of hotplug and sleep events by autorandr
+    autorandr.enable = true;
+
+    printing.enable = true;
 
     # Synchronise time using chrony
     chrony.enable = true;
