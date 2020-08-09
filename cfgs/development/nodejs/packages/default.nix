@@ -2,7 +2,7 @@
 
 { inputs, pkgs ? import <nixpkgs> {
     inherit system;
-  }, system ? builtins.currentSystem, nodejs ? pkgs."nodejs-latest"}:
+  }, system ? builtins.currentSystem, nodejs ? pkgs."nodejs-12_x"}:
 
 let
   nodeEnv = import ./node-env.nix {

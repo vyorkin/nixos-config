@@ -135,7 +135,7 @@ $ go get -u github.com/isacikgoz/gitbatch/cmd/gitbatch
 ### TypeScript
 
 ```bash
-$ npm i -g typescript microsoft@rush
+$ npm i -g typescript typescript-formatter microsoft@rush
 ```
 
 ### Why3

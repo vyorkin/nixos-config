@@ -57,7 +57,7 @@ let
   ];
 in {
   environment.systemPackages = with pkgs; [
-    nodejs_latest
+    nodejs-12_x
     yarn
     flow
   ] ++ custom ++ nixpkgs;

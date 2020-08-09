@@ -24,6 +24,7 @@
     gitAndTools.pass-git-helper
     gitinspector
     gitstats
+    gibo
     # mercurial
   ];
 }
