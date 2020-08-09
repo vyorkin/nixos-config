@@ -2,7 +2,7 @@
   protocol = https
 
 [include]
-  path= ~/.gitconfig/user
+  path= ~/.gitcfg/user
 
 [alias]
   count = !git shortlog -sn
