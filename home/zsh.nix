@@ -35,17 +35,6 @@ in {
 
       plugins = with pkgs; [
         {
-          name = "zsh-async";
-          file = "async.plugin.zsh";
-          src = fetchFromGitHub {
-            owner = "mafredri";
-            repo = "zsh-async";
-            rev = "490167c4aa5a870b3da1458859bcf3a9d1e24f97";
-            sha256 = "1vlr8fkk3k4cz3sxz3qmlkfsqxw251igbn9raz3lga4p213m98jb";
-            # date = 2020-05-14T20:58:18+03:00;
-          };
-        }
-        {
           name = "zsh-history-substring-search";
           src = zsh-history-substring-search;
         }
@@ -65,8 +54,8 @@ in {
           src = fetchFromGitHub {
             owner = "geometry-zsh";
             repo = "geometry";
-            rev = "9a3129a0eb472b4a04230667a90b1c5fb5680bad";
-            sha256 = "sha256-xpw5AbrQiW/V4U5RMhbmBG2LrgH2vT9ehjKjj5sD0TA=";
+            rev = "d78d0daab3e16d19043fd225fe30bf38de3b33ad";
+            sha256 = "sha256-S7WNIkgmsnUlSNCD+C67oKMhOiSwqluytGSG0eLYxWs=";
           };
         }
         {
@@ -133,17 +122,29 @@ in {
             # date = 2020-06-20T08:47:00-06:00;
           };
         }
-        {
-          name = "zsh-fuzzy-search-and-edit";
-          file = "plugin.zsh";
-          src = fetchFromGitHub {
-            owner = "seletskiy";
-            repo = "zsh-fuzzy-search-and-edit";
-            rev = "bd4182bd81b176fedd8fa13c62e2c6662390e025";
-            sha256 = "005l5ihhzlb3rpa34ikwfjc10glcdjph6qzjs5w7vdznd8gdcag2";
-            # date = 2019-12-20T15:20:28+03:00;
-          };
-        }
+        # TODO: Breaks geometry for some reason
+        # {
+        #   name = "zsh-async";
+        #   file = "async.plugin.zsh";
+        #   src = fetchFromGitHub {
+        #     owner = "mafredri";
+        #     repo = "zsh-async";
+        #     rev = "490167c4aa5a870b3da1458859bcf3a9d1e24f97";
+        #     sha256 = "1vlr8fkk3k4cz3sxz3qmlkfsqxw251igbn9raz3lga4p213m98jb";
+        #     # date = 2020-05-14T20:58:18+03:00;
+        #   };
+        # }
+        # {
+        #   name = "zsh-fuzzy-search-and-edit";
+        #   file = "plugin.zsh";
+        #   src = fetchFromGitHub {
+        #     owner = "seletskiy";
+        #     repo = "zsh-fuzzy-search-and-edit";
+        #     rev = "bd4182bd81b176fedd8fa13c62e2c6662390e025";
+        #     sha256 = "005l5ihhzlb3rpa34ikwfjc10glcdjph6qzjs5w7vdznd8gdcag2";
+        #     # date = 2019-12-20T15:20:28+03:00;
+        #   };
+        # }
         {
           name = "fast-syntax-highlighting";
           src = fetchFromGitHub {
