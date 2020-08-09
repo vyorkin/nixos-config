@@ -8,10 +8,10 @@
         target = ".emacs.d/purescript-mode";
       };
 
-      # "agda" = {
-      #   source = "${inputs.emacs}/lisp/agda";
-      #   target = ".emacs.d/lisp/agda";
-      # };
+      "agda" = {
+        source = "${inputs.emacs}/lisp/agda";
+        target = ".emacs.d/lisp/agda";
+      };
 
       "ats-mode" = {
         source = "${inputs.emacs}/lisp/ats-mode.el";

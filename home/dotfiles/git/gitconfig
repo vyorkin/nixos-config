@@ -1,9 +1,9 @@
 [hub]
   protocol = https
-[user]
-  name = Vasiliy Yorkin
-  email = vasiliy.yorkin@gmail.com
-  signingkey = 78C78F27
+
+[include]
+  path= ~/.gitconfig/user
+
 [alias]
   count = !git shortlog -sn
 
