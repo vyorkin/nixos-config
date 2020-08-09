@@ -15,10 +15,7 @@
       ".goobookrc" = { source = "${inputs.secrets}/goobookrc"; };
       ".goobook_auth.json" = { source = "${inputs.secrets}/goobook_auth.json"; };
       ".bumblebee-status.conf" = { source = "${inputs.secrets}/bumblebee-status.conf"; };
-      ".gitcfg" = {
-        source = "${inputs.secrets}/gitcfg";
-        recursive = true;
-      };
+      ".gitcfg" = { source = "${inputs.secrets}/gitcfg"; };
 
       "secrets" = {
         source = "${inputs.secrets}/emacs";

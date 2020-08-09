@@ -234,8 +234,8 @@
     "secrets": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-MUav+KSjpWrjeaOdGgTW11x3sccUgepRGafTEcOFlPM=",
-        "path": "/root/projects/personal/dotsecrets",
+        "narHash": "sha256-Pzicy7Ci+OwjpEgtposNZTyoDRLmpd0ACkWwM1ZPVAo=",
+        "path": "/home/vyorkin/projects/personal/dotsecrets",
         "type": "path"
       },
       "original": {

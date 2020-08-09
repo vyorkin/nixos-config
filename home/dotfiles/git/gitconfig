@@ -2,7 +2,9 @@
   protocol = https
 
 [include]
-  path= ~/.gitcfg/user
+  path = .gitcfg/personal
+[includeIf "gitdir:~/projects/work"]
+  path = .gitcfg/work
 
 [alias]
   count = !git shortlog -sn
