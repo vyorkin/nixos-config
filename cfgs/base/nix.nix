@@ -11,6 +11,7 @@
     nix-index
     nix-serve
     nix-review
+    nix-top
     # nixops
     any-nix-shell
     cachix
