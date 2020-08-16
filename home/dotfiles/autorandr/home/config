@@ -1,16 +1,19 @@
-output DisplayPort-0
+output DVI-D-1
 off
-output DVI-D-0
+output DP-1
 off
-output HDMI-A-0
-crtc 1
-mode 1920x1080
-pos 0x0
-rate 60.00
-rotate left
-output DisplayPort-1
+output DP-2
 crtc 0
 mode 3440x1440
-pos 1080x187
-primary
+pos 1680x0
 rate 50.00
+output HDMI-2
+crtc 2
+mode 1920x1080
+pos 5120x92
+rate 60.00
+output HDMI-1
+crtc 1
+mode 1680x1050
+pos 0x195
+rate 59.95
