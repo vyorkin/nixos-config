@@ -34,15 +34,19 @@ in {
       ];
     };
 
+    displayManager.sddm.enable = true;
+
+    desktopManager.plasma5.enable = true;
+
     displayManager = {
-      defaultSession = "none+i3";
-      lightdm = {
-        enable = true;
-        greeters.mini = {
-          enable = true;
-          user = "vyorkin";
-        };
-      };
+      # defaultSession = "none+i3";
+      # lightdm = {
+      #   enable = true;
+      #   greeters.mini = {
+      #     enable = true;
+      #     user = "vyorkin";
+      #   };
+      # };
       job = {
         logToFile = true;
         logToJournal = true;

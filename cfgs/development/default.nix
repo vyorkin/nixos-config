@@ -19,6 +19,7 @@
     ./sml.nix
     ./agda.nix
     ./java.nix
+    ./wordpress.nix
     ./arduino.nix
   ];
 

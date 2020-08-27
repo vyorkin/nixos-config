@@ -10,10 +10,10 @@ rate 59.95
 output DP-2
 crtc 1
 mode 2560x1440
-pos 3840x0
+pos 2560x0
 rate 59.96
 output DP-1
 crtc 0
 mode 2560x1440
-pos 7680x0
+pos 5120x0
 rate 59.96

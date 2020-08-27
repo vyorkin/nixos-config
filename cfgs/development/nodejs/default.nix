@@ -47,7 +47,7 @@ let
     eslint_d
     create-react-app
     rollup
-    pnpm
+    # pnpm
     svgo
     prettier
     # jsdoc
@@ -60,5 +60,6 @@ in {
     nodejs-12_x
     yarn
     flow
+    deno
   ] ++ custom ++ nixpkgs;
 }

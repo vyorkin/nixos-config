@@ -101,7 +101,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'Shougo/vimproc.vim'
 
 " flowtype
-Plug 'flowtype/vim-flow'
+" Plug 'flowtype/vim-flow'
 
 " reasonml
 " Plug 'reasonml/vim-reason'

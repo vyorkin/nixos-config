@@ -135,6 +135,8 @@ in
   };
 
   networking.firewall = {
+    enable = true;
+
     allowPing = false;
     allowedTCPPorts = [
       # ssh:
@@ -142,6 +144,7 @@ in
 
       # http:
       80
+      443
       8080
       8081
       8082
