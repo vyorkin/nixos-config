@@ -36,6 +36,7 @@
     linuxPackages.cpupower
 
     _1password
+    # _1password-gui
 
     xflux
     xflux-gui
