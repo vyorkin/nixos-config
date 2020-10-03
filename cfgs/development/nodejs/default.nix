@@ -45,7 +45,7 @@ let
     bash-language-server
     ocaml-language-server
     eslint_d
-    create-react-app
+    # create-react-app
     rollup
     # pnpm
     svgo

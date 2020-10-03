@@ -234,13 +234,9 @@
     "secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1596998854,
-        "narHash": "sha256-6v1kg/f1Ir0NIzf6kuv+n+L6yE1rZbEAYVsW0mrf6wU=",
-        "ref": "master",
-        "rev": "dc2a139d3b87273f80046833d66240f9b9092de6",
-        "revCount": 39,
-        "type": "git",
-        "url": "ssh://github.com/vyorkin/dotsecrets.git"
+        "narHash": "sha256-Pzicy7Ci+OwjpEgtposNZTyoDRLmpd0ACkWwM1ZPVAo=",
+        "path": "/home/vyorkin/projects/personal/dotsecrets",
+        "type": "path"
       },
       "original": {
         "id": "secrets",

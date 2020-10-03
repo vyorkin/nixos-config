@@ -4,16 +4,16 @@ output HDMI-2
 off
 output HDMI-1
 crtc 2
-mode 2560x1440
+mode 2880x1620
 pos 0x0
-rate 59.95
+rate 59.97
 output DP-2
 crtc 1
-mode 2560x1440
-pos 2560x0
+mode 3200x1800
+pos 2880x0
 rate 59.96
 output DP-1
 crtc 0
-mode 2560x1440
-pos 5120x0
+mode 3200x1800
+pos 6080x0
 rate 59.96

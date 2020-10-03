@@ -45,7 +45,8 @@ in {
             owner = "zsh-users";
             repo = "zsh-autosuggestions";
             rev = "ae315ded4dba10685dbbafbfa2ff3c1aefeb490d";
-            sha256 = "sha256-xv4eleksJzomCtLsRUj71RngIJFw8+A31O6/p7i4okA=";
+            sha256 = "0h52p2waggzfshvy1wvhj4hf06fmzd44bv6j18k3l9rcx6aixzn6";
+            # date = 2020-01-06T21:12:21-07:00;
           };
         }
         {
@@ -75,8 +76,9 @@ in {
           src = fetchFromGitHub {
             owner = "zsh-users";
             repo = "zsh-completions";
-            rev = "4407a48b961128bf5e6f3b9310808157f2be1a07";
-            sha256 = "sha256-XmU4cYGQt7O3icPN1HyfkFjh2EossAHKuWTaKcocpX0=";
+            rev = "454d236d3a793668b873a7b522353c68ec182cfa";
+            sha256 = "1mpy041dg8b9krbsy5yg6p3mn1wyf1wg9j99m4y5686hljbmgxkf";
+            # date = 2020-09-01T12:12:00+09:00;
           };
         }
         {
@@ -96,9 +98,9 @@ in {
           src = fetchFromGitHub {
             owner = "djui";
             repo = "alias-tips";
-            rev = "29bf28c1b6abea03c582e48ee262feb69b324650";
-            sha256 = "0fpz0xrqjchzhld45c8y8i9r8s14k2pwc4ccl69idr29v53m8m2m";
-            # date = 2018-12-10T17:45:33+01:00;
+            rev = "40d8e206c6d6e41e039397eb455bedca578d2ef8";
+            sha256 = "17cifxi4zbzjh1damrwi2fyhj8x0y2m2qcnwgh4i62m1vysgv9xb";
+            # date = 2020-05-25T11:31:48+02:00;
           };
         }
         {
@@ -106,9 +108,9 @@ in {
           file = "fzf-marks.plugin.zsh";
           src = fetchgit {
             url = "https://github.com/urbainvaes/fzf-marks";
-            rev = "366908cbb7e25407a2b8670cec55ac70ac540ebb";
-            sha256 = "0pi7896frl6f41iqldxg3r14msc750bxha68fp3npxwz6akqqrbj";
-            # date = 2020-06-15T21:32:20+02:00;
+            rev = "19c526a521ca231a8396362614979b6af2ad6262";
+            sha256 = "02sb8jjx6316cpp99baq5jqaw54a7a45j6w62zsp1k69kq6k4kn4";
+            # date = 2020-08-12T11:17:18+02:00;
           };
         }
         {
@@ -122,18 +124,17 @@ in {
             # date = 2020-06-20T08:47:00-06:00;
           };
         }
-        # TODO: Breaks geometry for some reason
-        # {
-        #   name = "zsh-async";
-        #   file = "async.plugin.zsh";
-        #   src = fetchFromGitHub {
-        #     owner = "mafredri";
-        #     repo = "zsh-async";
-        #     rev = "490167c4aa5a870b3da1458859bcf3a9d1e24f97";
-        #     sha256 = "1vlr8fkk3k4cz3sxz3qmlkfsqxw251igbn9raz3lga4p213m98jb";
-        #     # date = 2020-05-14T20:58:18+03:00;
-        #   };
-        # }
+        {
+          name = "zsh-async";
+          file = "async.plugin.zsh";
+          src = fetchFromGitHub {
+            owner = "mafredri";
+            repo = "zsh-async";
+            rev = "490167c4aa5a870b3da1458859bcf3a9d1e24f97";
+            sha256 = "1vlr8fkk3k4cz3sxz3qmlkfsqxw251igbn9raz3lga4p213m98jb";
+            # date = 2020-05-14T20:58:18+03:00;
+          };
+        }
         # {
         #   name = "zsh-fuzzy-search-and-edit";
         #   file = "plugin.zsh";
@@ -150,9 +151,9 @@ in {
           src = fetchFromGitHub {
             owner = "zdharma";
             repo = "fast-syntax-highlighting";
-            rev = "865566ce48cfd9bb5cdbaf5b1a74b0a675f4ccd4";
+            rev = "a47b5088636c3678c7baa22710d10b0c45bc9265";
             sha256 = "00d6nssh73k26w69fdp8iff1xghyr8ziy5w5a2li0z9lvm6j0nik";
-            # date = 2020-07-04T01:56:49+02:00;
+            # date = 2020-08-12T01:48:43+02:00;
           };
         }
       ];
