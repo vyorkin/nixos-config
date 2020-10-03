@@ -21,6 +21,7 @@
     ./java.nix
     ./wordpress.nix
     ./arduino.nix
+    ./kafka.nix
   ];
 
   environment.systemPackages = with pkgs; [
