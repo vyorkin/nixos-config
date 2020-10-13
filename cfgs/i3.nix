@@ -5,6 +5,8 @@ in {
   sound.mediaKeys.enable = true;
   # I use Home Manager to manage X session
 
+  # security.pam.services.sddm.enableKwallet = true;
+
   services.xserver = {
     windowManager.i3 = {
       enable = true;
@@ -36,7 +38,7 @@ in {
 
     displayManager.sddm.enable = true;
 
-    desktopManager.plasma5.enable = true;
+    # desktopManager.plasma5.enable = true;
 
     displayManager = {
       # defaultSession = "none+i3";

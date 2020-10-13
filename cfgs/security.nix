@@ -24,5 +24,9 @@
     sslscan
     super
     twa
+
+    kwallet-pam
+    # kwalletcli
+    # kwalletmanager
  ];
 }
