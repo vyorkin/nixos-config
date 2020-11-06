@@ -17,6 +17,7 @@
     ../cfgs/vim.nix
     ../cfgs/emacs.nix
     ../cfgs/http-clients.nix
+    ../cfgs/ws-clients.nix
     ../cfgs/ssh.nix
   ];
 }

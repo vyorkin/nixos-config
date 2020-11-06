@@ -288,6 +288,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'dyng/ctrlsf.vim'
 Plug 'rking/ag.vim'
 Plug 'mbbill/undotree'
+
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 

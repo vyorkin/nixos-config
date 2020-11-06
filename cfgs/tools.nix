@@ -36,7 +36,9 @@
     linuxPackages.cpupower
 
     _1password
+    # google-authenticator
     # _1password-gui
+    # sudolikeaboss
 
     xflux
     xflux-gui
