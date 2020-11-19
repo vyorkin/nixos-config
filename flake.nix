@@ -30,7 +30,7 @@
       type = "github";
       owner = "rycee";
       repo = "home-manager";
-      ref = "bqv-flakes";
+      ref = "master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -41,18 +41,6 @@
       owner = "NixOS";
       repo = "nixos-hardware";
       flake = false;
-    };
-
-    # Community-driven meta repository for Nix packages:
-    # https://github.com/nix-community/NUR In contrast to
-    # Nixpkgs, packages are built from source and are not
-    # reviewed by any Nixpkgs member. Allows to share new
-    # packages from the community in a faster and more
-    # decentralized way
-    NUR = {
-      type = "github";
-      owner = "nix-community";
-      repo = "NUR";
     };
 
     # Automated, pre-built packages for Wayland (sway/wlroots)

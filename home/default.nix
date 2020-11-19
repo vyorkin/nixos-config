@@ -31,6 +31,8 @@
     ./autorandr.nix
   ];
 
+  home-manager.useGlobalPkgs = true;
+
   home-manager.users.vyorkin = {
     news.display = "silent";
 

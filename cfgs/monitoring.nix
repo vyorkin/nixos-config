@@ -12,7 +12,7 @@
 
   environment.systemPackages = with pkgs; [
     htop
-    ytop
+    # ytop
     gotop
     iotop
     ctop
