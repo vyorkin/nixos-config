@@ -7,6 +7,7 @@
     redis
     mysql
     sqlite
+    rocksdb
     # mongodb
   ];
 }

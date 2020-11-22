@@ -24,36 +24,39 @@ in
     # ../cfgs/vnc.nix
     ../cfgs/terminal.nix
     ../cfgs/monitoring.nix
-    ../cfgs/emulators.nix
+    # ../cfgs/emulators.nix
     ../cfgs/json.nix
     ../cfgs/github-clients.nix
     ../cfgs/streaming.nix
     ../cfgs/security.nix
     ../cfgs/messaging.nix
-    ../cfgs/automation.nix
+    # ../cfgs/automation.nix
 
     ../cfgs/opengl.nix
-    ../cfgs/vulkan.nix
-    ../cfgs/sdl.nix
+    # ../cfgs/vulkan.nix
+    # ../cfgs/sdl.nix
 
-    ../cfgs/documentation.nix
+    # ../cfgs/documentation.nix
     # ../cfgs/office.nix
 
     ../cfgs/file-managers.nix
     ../cfgs/code-editors.nix
-    ../cfgs/remote-control.nix
+    # ../cfgs/remote-control.nix
     # ../cfgs/devops.nix
-    ../cfgs/network-scanners.nix
+    # ../cfgs/network-scanners.nix
     ../cfgs/torrents.nix
     ../cfgs/blogging.nix
     # ../cfgs/trading.nix
     ../cfgs/management.nix
     ../cfgs/text.nix
     ../cfgs/spell.nix
-    ../cfgs/tex.nix
+    # ../cfgs/tex.nix
     # ../cfgs/scraping.nix
     ../cfgs/docker.nix
     # ../cfgs/kubernetes.nix
+    # ../cfgs/aws.nix
+    # ../cfgs/gcp.nix
+    # ../cfgs/grafana.nix
     ../cfgs/forensics.nix
     ../cfgs/dropbox.nix
     # ../cfgs/electronics.nix
@@ -162,6 +165,13 @@ in
 
       # vnc
       5900
+
+      # prometheus
+      9090
+      # alertmanager
+      9093
+      # grafana
+      3033
 
       # postgresql:
       # 5432

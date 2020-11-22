@@ -19,9 +19,9 @@
     ./sml.nix
     ./agda.nix
     ./java.nix
-    ./wordpress.nix
+    # ./wordpress.nix
     ./arduino.nix
-    ./kafka.nix
+    # ./kafka.nix
   ];
 
   environment.systemPackages = with pkgs; [
