@@ -5,7 +5,7 @@ let
 in
   {
     environment.systemPackages = with pkgs; [
-      (pkgs.vim_configurable.override { python3 = true; })
+      (vim_configurable.override { python = python3; })
       neovim
       neovimGtk
     ];

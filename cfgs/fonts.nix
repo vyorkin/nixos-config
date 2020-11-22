@@ -5,7 +5,6 @@
     fontconfig = {
       enable = true;
       useEmbeddedBitmaps = true;
-      penultimate.enable = true;
       defaultFonts = {
         monospace = [ "Hack" ];
         sansSerif = [ "Roboto" ];
@@ -13,7 +12,8 @@
       };
     };
 
-    enableFontDir = true;
+    fontDir.enable = true;
+
     enableGhostscriptFonts = true;
 
     fonts = with pkgs; [
