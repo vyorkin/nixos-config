@@ -10,6 +10,23 @@
     wavemon.enable = true;
   };
 
+  services = {
+    prometheus = { enable = true; };
+
+    # loki = {
+    #   enable = true;
+    #   dataDir = "/var/lib/loki";
+    # };
+
+    grafana = {
+      enable = true;
+      port = 3033;
+      domain = "localhost";
+      protocol = "http";
+      dataDir = "/var/lib/grafana";
+    };
+  };
+
   environment.systemPackages = with pkgs; [
     htop
     ytop

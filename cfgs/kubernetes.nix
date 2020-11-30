@@ -8,5 +8,6 @@
     kubecfg
     kind
     kail
+    minikube
   ];
 }
