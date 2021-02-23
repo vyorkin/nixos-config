@@ -144,6 +144,8 @@
   default = matching
 [merge]
   ff = only
+[pull]
+  rebase = false
 [commit]
   template = ~/.gitmessage
   gpgsign = false
@@ -153,7 +155,7 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
 [gui]
-  fontui = -family Hack -size 14 -weight normal -slant roman -underline 0 -overstrike 0
-  fontdiff = -family Hack -size 12 -weight normal -slant roman -underline 0 -overstrike 0
+  fontui = -family JetBrains Mono -size 14 -weight normal -slant roman -underline 0 -overstrike 0
+  fontdiff = -family JetBrains Mono -size 12 -weight normal -slant roman -underline 0 -overstrike 0
 [github]
   user = vyorkin
