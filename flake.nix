@@ -159,19 +159,18 @@
   };
 
   outputs = { nixpkgs, nix, self, deploy-rs, ... }@inputs: {
-    modules = import ./modules;
-    profiles = import ./profiles;
-
+    nixosModules = import ./modules;
+    nixosProfiles = import ./profiles;
     nixosConfigurations = with nixpkgs.lib;
-    let
-      hosts = builtins.attrNames (builtins.readDir ./hosts);
-      mkHost = name:
-      nixosSystem {
-        system = builtins.readFile (./hosts + "/${name}/system");
-        modules = [(import (./hosts + "/${name}"))];
-        specialArgs = { inherit inputs; };
-      };
-    in genAttrs hosts mkHost;
+      let
+        hosts = builtins.attrNames (builtins.readDir ./hosts);
+        mkHost = name:
+            nixosSystem {
+              system = builtins.readFile (./hosts + "/${name}/system");
+              modules = [(import (./hosts + "/${name}"))];
+              specialArgs = { inherit inputs; };
+            };
+      in genAttrs hosts mkHost;
 
     legacyPackages.x86_64-linux =
       (builtins.head (builtins.attrValues self.nixosConfigurations)).pkgs;

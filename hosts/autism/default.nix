@@ -1,9 +1,9 @@
 { inputs, ... }: {
-  imports = with inputs.self.modules; [
+  imports = with inputs.self.nixosModules; [
     ./hardware
     ./nix.nix
     ./services.nix
 
-    inputs.self.profiles.desktop
+    inputs.self.nixosProfiles.desktop
   ];
 }
