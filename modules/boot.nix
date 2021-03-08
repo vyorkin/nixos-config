@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   boot = {
@@ -8,8 +8,12 @@
 
       efi.canTouchEfiVariables = true;
 
-      # Automatically add other operating system to the grub menu
-      grub.useOSProber = true;
+      grub = {
+        # Disable the GNU GRUB boot loader.
+        enable = lib.mkForce false;
+        # Automatically add other operating system to the grub menu
+        useOSProber = true;
+      };
     };
 
     # Delete all files in /tmp during boot
