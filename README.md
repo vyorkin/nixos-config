@@ -21,15 +21,11 @@ ln -sf nixos-config /etc/nixos
 
 4. (Optional) Edit `const.nix`
 
-5. (Optional) Add **your** `secrets` input to registry:
-
-```sh
-sudo nix flake add secrets git+ssh://foo/bar.git
 ```
 
 (If you’re me then take a look at the dotsecrets README.md)
 
-6. Build and deploy the NixOS host:
+5. Build and deploy the NixOS host:
 
 
 ```sh
@@ -39,9 +35,9 @@ make build/yourhost
 ### Layout
 
 - `flakes.nix` - Metadata describing this repository
-- `setup.nix` - System and Nix related configuration
 - `hosts/` - Host specific configurations
 - `modules/` - Package configurations
+- `profiles/` - Profiles (server, laptop, desktop, etc)
 - `packages/` - Local/custom derivations
 
 ### Haskell
