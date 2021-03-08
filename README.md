@@ -1,4 +1,4 @@
-## NixOS config for my machines
+## NixOS config for my hosts
 
 ### Setup
 
@@ -19,13 +19,7 @@ ln -sf nixos-config /etc/nixos
 3. (Optional) Add your new host configuration files to
    `hosts/yourhost/*` and add the corresponding target to `Makefile`.
 
-4. (Optional) Edit `const.nix`
-
-```
-
-(If you’re me then take a look at the dotsecrets README.md)
-
-5. Build and deploy the NixOS host:
+4. Build and deploy the NixOS host:
 
 
 ```sh
@@ -34,6 +28,7 @@ make build/yourhost
 
 ### Layout
 
+- `Makefile` - Contains targets to build host systems
 - `flakes.nix` - Metadata describing this repository
 - `hosts/` - Host specific configurations
 - `modules/` - Package configurations
