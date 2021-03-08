@@ -160,6 +160,9 @@
   };
 
   outputs = { nixpkgs, nix, self, deploy-rs, ... }@inputs: {
+    modules = import ./modules;
+    profiles = import ./profiles;
+
     nixosConfigurations = with nixpkgs.lib;
     let
       hosts = map (fname: builtins.head (builtins.match "(.*)\\.nix" fname))

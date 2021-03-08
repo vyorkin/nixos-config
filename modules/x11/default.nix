@@ -1,0 +1,5 @@
+{
+  imports = [
+    ./xserver/base.nix
+  ];
+}
