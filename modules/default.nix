@@ -12,7 +12,7 @@ builtins.listToAttrs (builtins.map (path: {
   ./nix.nix
   ./nixpkgs.nix
   ./services.nix
-  ./locale
+  ./locale.nix
 
   ./x11
   ./x11/xserver/i3.nix

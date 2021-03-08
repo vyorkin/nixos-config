@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  imports = with inputs.self.modules [
+  imports = with inputs.self.modules; [
     ./hardware
     ./nix.nix
     ./services.nix

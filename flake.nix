@@ -29,7 +29,7 @@
     };
 
     # Nix-flakes deployment tool
-    deploy.rs.url = "github:serokell/deploy-rs";
+    deploy-rs.url = "github:serokell/deploy-rs";
 
     # Provides a basic system for managing a user environment
     # using the Nix package manager together with the Nix
@@ -111,8 +111,7 @@
     };
 
     secrets = {
-      type = "indirect";
-      id = "secrets";
+      url = "git+ssh://git@github.com/vyorkin/dotsecrets.git";
       flake = false;
     };
 
@@ -165,12 +164,11 @@
 
     nixosConfigurations = with nixpkgs.lib;
     let
-      hosts = map (fname: builtins.head (builtins.match "(.*)\\.nix" fname))
-      (builtins.attrNames (builtins.readDir ./hosts));
+      hosts = builtins.attrNames (builtins.readDir ./hosts);
       mkHost = name:
       nixosSystem {
         system = builtins.readFile (./hosts + "/${name}/system");
-        modules = [(import ./default.nix { name })];
+        modules = [(import (./hosts + "/${name}"))];
         specialArgs = { inherit inputs; };
       };
     in genAttrs hosts mkHost;
@@ -182,7 +180,7 @@
 
     deploy = {
       user = "root";
-      nodes = "autism" = {
+      nodes.autism = {
         hostname =
 	  self.nixosConfigurations.autism.config.networking.hostName;
 	profiles.system.path = deploy-rs.x86_64-linux.activate.nixos

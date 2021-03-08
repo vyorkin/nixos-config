@@ -1,4 +1,4 @@
-{ lib ... }:
+{ lib, ... }:
 
 {
   # High-resolution display
