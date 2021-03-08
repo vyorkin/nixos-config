@@ -1,10 +1,10 @@
-.PHONY: build/notbad build/autism clean
+.PHONY: setup/notbad setup/autism clean
 
-build/notbad:
-	sudo nixos-rebuild build --flake ".#notbad"
+setup/notbad:
+	sudo nixos-rebuild switch --flake ".#notbad"
 
-build/autism:
-	sudo nixos-rebuild build --flake ".#autism"
+setup/autism:
+	sudo nixos-rebuild switch --flake ".#autism"
 
 clean:
 	unlink ./result

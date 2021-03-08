@@ -23,7 +23,7 @@ ln -sf nixos-config /etc/nixos
 
 
 ```sh
-make build/yourhost
+make setup/yourhost
 ```
 
 ### Layout
