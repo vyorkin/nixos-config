@@ -1,11 +1,7 @@
 {
-  boot = {
-    initrd = {
-      availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
-      kernelModules = [ ];
-    };
+  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
+  boot.initrd.kernelModules = [ ];
 
-    kernelModules = [ "kvm-amd" ];
-    extraModulePackages = [ ];
-  };
+  boot.kernelModules = [ "kvm-amd" ];
+  boot.extraModulePackages = [ ];
 }
