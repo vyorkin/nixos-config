@@ -34,11 +34,6 @@
     consoleLogLevel = 3;
 
     kernel = {
-      # Lower the balance between swapping applications and
-      # freeing cache. At 100, the kernel will always prefer to
-      # find inactive pages and swap them out. Default is 60
-      sysctl."vm.swappiness" = lib.mkDefault 1;
-
       # Enable all functions of sysrq. It is a magical key combo
       # you can hit which the kernel will respond to regardless of
       # whatever else it is doing, unless it is completely locked up.
