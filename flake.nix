@@ -166,7 +166,7 @@
         hosts = builtins.attrNames (builtins.readDir ./hosts);
         mkHost = name:
             nixosSystem {
-              system = builtins.readFile (./hosts + "/${name}/system");
+              system = removeSuffix "\n" (builtins.readFile (./hosts + "/${name}/system"));
               modules = [(import (./hosts + "/${name}"))];
               specialArgs = { inherit inputs; };
             };
