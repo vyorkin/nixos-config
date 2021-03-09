@@ -4,7 +4,7 @@ let
   theme = config.themes.colors;
   apps = config.apps;
 
-  browser1 = app.browser.cmd;
+  browser1 = apps.browser.cmd;
   browser2 = "${pkgs.google-chrome}/bin/google-chrome-stable";
   browser3 = "${pkgs.tor-browser}/bin/tor-browser";
   browser4 = "${pkgs.qutebrowser}/bin/qutebrowser";
@@ -93,7 +93,7 @@ in {
 
       keybindings = let
         script = name: content: "exec ${pkgs.writeScript name content}";
-      in ({
+      in {
         "${modifier}+q" = "kill";
         "${modifier}+Shift+q" = "move container to workspace temp; [workspace=__focused__] kill; workspace temp; move container to workspace temp; workspace temp";
         "${modifier}+Return" = "exec ${term1}";
@@ -198,13 +198,7 @@ in {
         "button2" = "kill";
         "--whole-window ${modifier}+button2" = "kill";
 
-      } // builtins.listToAttrs (builtins.map (x: {
-        name = "${modifier}+${builtins.elemAt x 0}";
-        value = "workspace ${builtins.elemAt x 1}";
-      }) workspaces) // builtins.listToAttrs (builtins.map (x: {
-        name = "${modifier}+Shift+${builtins.elemAt x 0}";
-        value = "move container to workspace ${builtins.elemAt x 1}";
-      }) workspaces));
+      };
 
       keycodebindings = { };
 

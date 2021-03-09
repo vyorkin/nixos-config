@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }:
 
 {
   home-manager.users.vyorkin.home.packages = with pkgs; [

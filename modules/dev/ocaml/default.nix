@@ -1,4 +1,4 @@
-in {
+{
   home-manager.users.vyorkin = {
     home.file = {
       ".utoprc" = { source = ./utoprc; };

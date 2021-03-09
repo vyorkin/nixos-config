@@ -1,3 +1,5 @@
+{ lib, ... }:
+
 {
   # Set the time zone
   time.timeZone = "Europe/Moscow";

@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   # Enable a low-level configuration system and settings
   # management tool. Its main purpose is to provide a back end

@@ -38,7 +38,7 @@ builtins.listToAttrs (builtins.map (path: {
   ./apps/scm/git.nix
   ./apps/shell/zsh.nix
   ./apps/editor/emacs.nix
-  ./apps/reading/zathura.nix
+  ./apps/reading/zathura
   ./apps/web/firefox.nix
   ./apps/web/google-chrome.nix
 

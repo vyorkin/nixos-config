@@ -16,6 +16,22 @@
         "type": "github"
       }
     },
+    "base16-unclaimed-schemes": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1527170198,
+        "narHash": "sha256-YV2tgexpyeLqm6d8WaBwT9QPAHT/gxhiFpxQq03xdhA=",
+        "owner": "chriskempson",
+        "repo": "base16-unclaimed-schemes",
+        "rev": "d6b93456dc1012628faec572387814f59e0b854a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "chriskempson",
+        "repo": "base16-unclaimed-schemes",
+        "type": "github"
+      }
+    },
     "deploy-rs": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -101,16 +117,32 @@
         "type": "github"
       }
     },
+    "gitconfig": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1609102494,
+        "narHash": "sha256-bgSK+P22Mn+A2qcDLuKGb2PA5Z8hj/EI+RxyIfvyaZA=",
+        "ref": "master",
+        "rev": "e848f1c178f36e53e3054c1aad01c43f4560333f",
+        "revCount": 4,
+        "type": "git",
+        "url": "ssh://git@github.com/vyorkin/gitconfig.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "ssh://git@github.com/vyorkin/gitconfig.git"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1615014591,
-        "narHash": "sha256-zKLLOn6gFbI1gmlqMdIPkMJBiOmkVPIwprtvzZa1mhw=",
+        "lastModified": 1615236417,
+        "narHash": "sha256-ialggc4ff+coOaKIxreoynh+FPSs2cergePIQE1U8jE=",
         "owner": "rycee",
         "repo": "home-manager",
-        "rev": "abc9d96d19e2c8a7f3a32b74894dc16ba4c25df0",
+        "rev": "57a7e5e2c53de58215fdac1910470bef36dd30cd",
         "type": "github"
       },
       "original": {
@@ -224,11 +256,11 @@
     "nixos-hardware": {
       "flake": false,
       "locked": {
-        "lastModified": 1615019476,
-        "narHash": "sha256-BYm1OOJYwPsd6nRT2EsiSWr2rCg3cI9HTlhyYPc8c+Q=",
+        "lastModified": 1615281383,
+        "narHash": "sha256-23XBOcZapDtm7IzYYHub4tNpo4AsSz6qLXsHTCNuDAA=",
         "owner": "NixOS",
         "repo": "nixos-hardware",
-        "rev": "720d531b1cc0b4824d295bb38f3784aebf91a1a1",
+        "rev": "831de9cac9ff2ea8cf4c3742020ea92e82ac8ac3",
         "type": "github"
       },
       "original": {
@@ -290,11 +322,11 @@
     "nixpkgs-20-09": {
       "flake": false,
       "locked": {
-        "lastModified": 1615028506,
-        "narHash": "sha256-OiRfJ81e/kDAtg6YOlaVbvXLZ6tbo2Av/SEC1qs4WnE=",
+        "lastModified": 1615229948,
+        "narHash": "sha256-bVADeNndFwv2V5oWTYM/5Dx6Eqfvb6bY8uR5ODRkUZM=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "37b47da04ca50d17934881192e65ad2df83704b5",
+        "rev": "1c7f02b0b9f115ccbc122ce39ae99debc1af857a",
         "type": "github"
       },
       "original": {
@@ -322,11 +354,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1615194570,
-        "narHash": "sha256-ydH80uUs4xXcwvzQfZU71JP3aTQL4Rjkdo9iBTwiHcs=",
+        "lastModified": 1615325713,
+        "narHash": "sha256-0Sa7tufJgxJfycz5GMUI80VyJ2qP91IMNedUudyBYpk=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "6692b32105610b17efa5a00d8e5e87fd4be49734",
+        "rev": "909a4ba5fe89fe865f8321ba6cfb5a4350e6ea59",
         "type": "github"
       },
       "original": {
@@ -368,10 +400,12 @@
     "root": {
       "inputs": {
         "base16-kitty": "base16-kitty",
+        "base16-unclaimed-schemes": "base16-unclaimed-schemes",
         "deploy-rs": "deploy-rs",
         "dotpryrc": "dotpryrc",
         "emacs": "emacs",
         "ghacks": "ghacks",
+        "gitconfig": "gitconfig",
         "home-manager": "home-manager",
         "kitty-themes": "kitty-themes",
         "materia-theme": "materia-theme",
