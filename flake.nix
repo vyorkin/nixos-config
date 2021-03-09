@@ -59,6 +59,8 @@
       flake = false;
     };
 
+    lambda-launcher.url = "github:balsoft/lambda-launcher";
+
     # LSB&FHS compatibility for NixOS.
     # Intended for containers and VMs.
     # https://github.com/balsoft/nixos-fhs-compat
