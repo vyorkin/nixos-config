@@ -12,6 +12,8 @@ let
   term1 = apps.term.cmd;
   term2 = "${pkgs.kitty}/bin/kitty";
 
+  hyper = "Mod3";
+
   lock_fork =
     pkgs.writeShellScript "lock_fork" "sudo /run/current-system/sw/bin/lock &";
   lock = pkgs.writeShellScript "lock"
@@ -66,7 +68,6 @@ in {
       };
       focus.followMouse = false;
       focus.forceWrapping = true;
-      hyper = "Mod3";
       modifier = "Mod4";
       window = {
         border = 1;
