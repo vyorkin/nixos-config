@@ -27,7 +27,7 @@
 
     home-manager.users.vyorkin.xdg.mimeApps = {
       enable = true;
-      defaultApps =
+      defaultApplications =
         with config.defaultApps;
         builtins.mapAttrs (name: value:
           if value ? desktop then [ "${value.desktop}.desktop" ] else value) {
