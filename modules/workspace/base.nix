@@ -8,7 +8,10 @@
   };
 
   home-manager.users.vyorkin = {
-    xdg.enable = true;
+    xdg = {
+      enable = true;
+      userDirs.enable = true;
+    };
 
     home.activation."mimeapps-remove" = {
       before = [ "linkGeneration" ];
@@ -19,9 +22,9 @@
     news.display = "silent";
     systemd.user.startServices = true;
 
-    programs.direnv.enable = true;
-    programs.direnv.enableNixDirenvIntegration = true;
+    programs.direnv = {
+      enable = true;
+      enableNixDirenvIntegration = true;
+    };
   };
-
-  home-manager.users.vyorkin.home.stateVersion = "20.09";
 }

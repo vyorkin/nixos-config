@@ -1,9 +1,14 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
+  environment.etc.nixpkgs.source = inputs.nixpkgs;
+
   nix = {
     # Enable nix-flakes
-    package = pkgs.nixFlakes;
+    registry.self.flake = inputs.self;
+    package = inputs.nix.packages.x86_64-linux.nix;
+    # package = pkgs.nixFlakes;
+
     extraOptions = ''
       experimental-features = nix-command flakes
 
