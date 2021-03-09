@@ -1,0 +1,15 @@
+attributes:
+- content
+- foreign_key
+- inheritance
+disconnected: true
+filename: erd
+filetype: pdf
+indirect: true
+inheritance: false
+markup: true
+notation: bachman
+orientation: vertical
+polymorphism: false
+warn: false
+title: true

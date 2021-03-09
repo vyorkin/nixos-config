@@ -32,7 +32,7 @@ make setup/yourhost
 - `flakes.nix` - Metadata describing this repository
 - `hosts/` - Host specific configurations
 - `modules/` - Package configurations
-- `profiles/` - Profiles (server, laptop, desktop, etc)
+- `profiles/` - Profiles (server, desktop)
 - `packages/` - Local/custom derivations
 
 ### Haskell

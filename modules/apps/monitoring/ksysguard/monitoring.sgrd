@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE KSysGuardWorkSheet>
+<WorkSheet locked="0" rows="3" title="CPU load" columns="1" interval="0.5">
+ <host name="localhost" port="-1" shell="" command="ksysguardd"/>
+ <display autoRange="1" labels="1" svgBackground="" hLines="1" hScale="6" fontSize="8" vScroll="0" row="0" rowSpan="1" unit="" vDistance="30" showUnit="0" stacked="0" class="FancyPlotter" manualRange="0" columnSpan="1" version="1" column="0" title="Total Load" vLines="0">
+  <beam hostName="localhost" color="0xff0057ae" sensorType="float" sensorName="cpu/system/TotalLoad"/>
+ </display>
+ <display autoRange="1" labels="1" svgBackground="" hLines="1" hScale="6" fontSize="8" vScroll="0" row="1" rowSpan="1" unit="" vDistance="30" showUnit="0" stacked="0" class="FancyPlotter" manualRange="0" columnSpan="1" version="1" column="0" title="Average Clock Frequency" vLines="0">
+  <beam hostName="localhost" color="0xff0057ae" sensorType="float" sensorName="cpu/system/AverageClock"/>
+ </display>
+ <display autoRange="1" labels="1" svgBackground="" hLines="1" hScale="6" fontSize="8" vScroll="0" row="2" rowSpan="1" unit="" vDistance="30" showUnit="0" stacked="0" class="FancyPlotter" manualRange="0" columnSpan="1" version="1" column="0" title="Temperature" vLines="0">
+  <beam hostName="localhost" color="0xff0057ae" sensorType="float" sensorName="lmsensors/k10temp-pci-00c3/Tdie"/>
+  <beam hostName="localhost" color="0xffe20800" sensorType="float" sensorName="lmsensors/k10temp-pci-00c3/Tctl"/>
+ </display>
+</WorkSheet>

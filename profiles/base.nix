@@ -7,11 +7,15 @@
     system
     network
     nix
+    overlay
     nixpkgs
     services
+    security
     locale
-    x11
+    home
     users
-    apps
+
+    git
+    zsh
   ];
 }

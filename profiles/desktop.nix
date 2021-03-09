@@ -2,6 +2,22 @@
   imports = with inputs.self.nixosModules; [
     ./base.nix
 
-    i3
+    workspace
+    cursor
+    gtk
+    gnome
+    sway
+    virtualisation
+
+    themes
+
+    apps
+    alacritty
+    emacs
+    zathura
+    firefox
+    google-chrome
+
+    dev
   ];
 }

@@ -1,0 +1,7 @@
+maxhistorysize: Just 1000
+completionPromptLimit: Just 1000
+historyDuplicates: IgnoreConsecutive
+bellStyle: VisualBell
+
+bind: f7 : r e l o a d
+keyseq: "^[[18~" f7

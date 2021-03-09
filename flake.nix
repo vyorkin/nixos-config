@@ -89,10 +89,11 @@
       flake = false;
     };
 
-    ghacks = {
+    # A collection of themes that have no repositories for homes
+    base16-unclaimed-schemes = {
       type = "github";
-      owner = "ghacksuserjs";
-      repo = "ghacks-user.js";
+      owner = "chriskempson";
+      repo = "base16-unclaimed-schemes";
       flake = false;
     };
 
@@ -110,8 +111,20 @@
       flake = false;
     };
 
+    ghacks = {
+      type = "github";
+      owner = "ghacksuserjs";
+      repo = "ghacks-user.js";
+      flake = false;
+    };
+
     secrets = {
       url = "git+ssh://git@github.com/vyorkin/dotsecrets.git";
+      flake = false;
+    };
+
+    gitconfig = {
+      url = "git+ssh://git@github.com/vyorkin/gitconfig.git";
       flake = false;
     };
 
@@ -184,6 +197,13 @@
 	  self.nixosConfigurations.autism.config.networking.hostName;
 	profiles.system.path = deploy-rs.x86_64-linux.activate.nixos
 	  self.nixosConfigurations.autism;
+      };
+
+      nodes.notbad = {
+        hostname =
+	  self.nixosConfigurations.notbad.config.networking.hostName;
+	profiles.system.path = deploy-rs.x86_64-linux.activate.nixos
+	  self.nixosConfigurations.notbad;
       };
     };
   };

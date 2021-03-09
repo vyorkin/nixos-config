@@ -1,0 +1,52 @@
+-- :set prompt "∀x. x ⊢ "
+-- :set prompt "ΠΣ: "
+
+:set prompt "\ESC[38;5;208m\STXλ>\ESC[m\STX "
+:set prompt-cont " | "
+
+:set stop :list
+:set +c
+-- :set +t
+
+-- better errors
+:set -ferror-spans -freverse-errors -fprint-expanded-synonyms
+
+-- work with local .ghci
+:def r. const(return ":cmd readFile \".ghci\"")
+:def rr \m -> return (":reload " ++ m ++ "\n:r.")
+:def >> \x -> return (":! echo \"" ++ x ++ "\" >> .ghci")
+
+-- Hoogle (cabal install hoogle && hoogle data)
+:def hoogle     \str -> return $ ":! hoogle search --color --count=10 " ++ show str
+:def hoogle-all \str -> return $ ":! hoogle search --color "            ++ show str
+:def doc        \str -> return $ ":! hoogle search --color --info "     ++ show str
+
+-- Pointfree and Pointful (cabal install pointfree pointful)
+:def pointfree \str -> return $ ":! pointfree " ++ show str
+:def pf        \str -> return $ ":! pointfree " ++ show str
+:def pointful  \str -> return $ ":! pointful " ++ show str
+
+:def pp1 \_ -> return (":set -package pretty-show\nimport Text.Show.Pretty (pPrint, ppShow)\n:set -interactive-print pPrint")
+:def pp2 \_ -> return (":set -package pretty-simple\nimport Text.Pretty.Simple (pPrint)\n:set -interactive-print pPrint")
+:def nopp \_ -> return (":set -interactive-print System.IO.print")
+
+:def x \_ -> return ":set -XOverloadedStrings -XOverloadedLists"
+
+:def nip const(return ":set -XNoImplicitPrelude\nimport qualified Prelude")
+
+-- switch to Universum
+:def uni const(return ":set -XNoImplicitPrelude\nimport Universum as U\nimport qualified Prelude")
+
+-- switch to Relude
+:def rel const(return ":set -XNoImplicitPrelude\nimport Relude as U\nimport qualified Prelude")
+
+-- do some Turtle
+:def turt const(return ":set -XOverloadedStrings\nimport Turtle\nimport qualified Data.Text as T")
+
+-- source commands from file
+:def source \fn -> return (":cmd readFile " ++ fn)
+
+-- Some default imports
+import Control.Monad
+import Control.Applicative
+import Control.Arrow
