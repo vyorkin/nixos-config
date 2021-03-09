@@ -166,8 +166,8 @@ in {
         "${modifier}+F5" = "reload";
         "${modifier}+Shift+F5" = "exit";
 
-        "${modifier}+Shift+h" = "layout splith";
-        "${modifier}+Shift+v" = "layout splitv";
+        "${modifier}+Control+Shift+h" = "layout splith";
+        "${modifier}+Control+Shift+v" = "layout splitv";
         "${modifier}+g" = "split h";
         "${modifier}+v" = "split v";
 
