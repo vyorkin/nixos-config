@@ -2,7 +2,7 @@
 
 let
   theme = config.themes.colors;
-  apps = config.apps;
+  apps = config.defaultApps;
 
   browser1 = apps.browser.cmd;
   browser2 = "${pkgs.google-chrome}/bin/google-chrome-stable";

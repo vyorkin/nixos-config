@@ -1,11 +1,11 @@
 { pkgs, config, lib, ... }:
 {
-  options.apps = lib.mkOption {
+  options.defaultApps = lib.mkOption {
     type = lib.types.attrs;
     description = "Preferred applications";
   };
   config = rec {
-    apps = {
+    defaultApps = {
       term = {
         cmd = "${pkgs.alacritty}/bin/alacritty";
         desktop = "alacritty";
@@ -21,14 +21,14 @@
     };
 
     environment.sessionVariables = {
-      EDITOR = config.apps.editor.cmd;
-      VISUAL = config.apps.editor.cmd;
+      EDITOR = config.defaultApps.editor.cmd;
+      VISUAL = config.defaultApps.editor.cmd;
     };
 
     home-manager.users.vyorkin.xdg.mimeApps = {
       enable = true;
-      apps =
-        with config.apps;
+      defaultApps =
+        with config.defaultApps;
         builtins.mapAttrs (name: value:
           if value ? desktop then [ "${value.desktop}.desktop" ] else value) {
             "text/html" = browser;
