@@ -59,10 +59,11 @@
       flake = false;
     };
 
+    # GTK launcher
     lambda-launcher.url = "github:balsoft/lambda-launcher";
 
     # Bleeding edge Emacs
-    emacs-overlay = {
+    emacs = {
       type = "github";
       owner = "nix-community";
       repo = "emacs-overlay";
@@ -132,33 +133,33 @@
       flake = false;
     };
 
-    gitconfig = {
+    git-config = {
       url = "git+ssh://git@github.com/vyorkin/gitconfig.git";
       flake = false;
     };
 
-    zsh = {
+    zsh-config = {
       type = "github";
       owner = "vyorkin";
       repo = "zshrc";
       flake = false;
     };
 
-    tmux = {
+    tmux-config = {
       type = "github";
       owner = "vyorkin";
       repo = "tmux.conf";
       flake = false;
     };
 
-    vim = {
+    vim-config = {
       type = "github";
       owner = "vyorkin";
       repo = "vimrc";
       flake = false;
     };
 
-    emacs = {
+    emacs-config = {
       type = "github";
       owner = "vyorkin";
       repo = "emacs.d";
@@ -180,7 +181,7 @@
     };
   };
 
-  outputs = { nixpkgs, nix, self, deploy-rs, emacs-overlay, ... }@inputs: {
+  outputs = { nixpkgs, nix, self, deploy-rs, emacs, ... }@inputs: {
     nixosModules = import ./modules;
     nixosProfiles = import ./profiles;
     nixosConfigurations = with nixpkgs.lib;

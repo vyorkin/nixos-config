@@ -5,9 +5,9 @@
     programs.git.enable = true;
 
     home.file = {
-      ".gitconfig" = { source = "${inputs.gitconfig}/gitconfig"; };
-      ".gitignore" = { source = "${inputs.gitconfig}/gitignore"; };
-      ".gitmessage" = { source = "${inputs.gitconfig}/gitmessage"; };
+      ".gitconfig" = { source = "${inputs.git-config}/gitconfig"; };
+      ".gitignore" = { source = "${inputs.git-config}/gitignore"; };
+      ".gitmessage" = { source = "${inputs.git-config}/gitmessage"; };
     };
   };
 }

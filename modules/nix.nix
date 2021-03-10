@@ -5,7 +5,10 @@
 
   nix = {
     # Enable nix-flakes
-    registry.self.flake = inputs.self;
+    registry = {
+      self.flake = inputs.self;
+      emacs.flake = inputs.emacs;
+    };
     package = inputs.nix.packages.x86_64-linux.nix;
     # package = pkgs.nixFlakes;
 

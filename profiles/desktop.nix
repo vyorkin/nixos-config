@@ -12,8 +12,14 @@
     themes
 
     apps
+
+    kitty
     alacritty
+    tmux
+
     emacs
+    vim
+
     zathura
     firefox
     google-chrome

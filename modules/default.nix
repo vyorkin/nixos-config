@@ -32,12 +32,20 @@ builtins.listToAttrs (builtins.map (path: {
   ./workspace/sway
 
   ./apps
+
   ./apps/terminal/alacritty.nix
   ./apps/terminal/kitty.nix
+  ./apps/terminal/tmux.nix
+
   ./apps/scm/git.nix
+
   ./apps/shell/zsh.nix
+
   ./apps/editor/emacs.nix
+  ./apps/editor/vim.nix
+
   ./apps/reading/zathura
+
   ./apps/web/firefox.nix
   ./apps/web/google-chrome.nix
 

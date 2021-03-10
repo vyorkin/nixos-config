@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:
 
 let
-  initExtra = builtins.readFile "${inputs.zsh}/zshrc";
+  initExtra = builtins.readFile "${inputs.zsh-config}/zshrc";
 in {
   environment.sessionVariables.SHELL = "zsh";
   # Symlink /share/zsh
@@ -9,11 +9,11 @@ in {
 
   home-manager.users.vyorkin = {
     home.file = {
-      ".zshenv" = { source = "${inputs.zsh}/zshenv"; };
-      ".zprofile" = { source = "${inputs.zsh}/zprofile"; };
-      ".zlogin" = { source = "${inputs.zsh}/zlogin"; };
-      ".zlogout" = { source = "${inputs.zsh}/zlogout"; };
-      ".zconfig" = { source = "${inputs.zsh}/zconfig"; };
+      ".zshenv" = { source = "${inputs.zsh-config}/zshenv"; };
+      ".zprofile" = { source = "${inputs.zsh-config}/zprofile"; };
+      ".zlogin" = { source = "${inputs.zsh-config}/zlogin"; };
+      ".zlogout" = { source = "${inputs.zsh-config}/zlogout"; };
+      ".zconfig" = { source = "${inputs.zsh-config}/zconfig"; };
     };
 
     programs.zsh = {
