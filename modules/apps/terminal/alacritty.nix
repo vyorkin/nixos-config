@@ -18,7 +18,9 @@ in {
 
       shell.program = "${pkgs.zsh}/bin/zsh";
 
-      cursor.style = "Beam";
+      cursor.style = "Block";
+
+      live_config_reload = true;
 
       colors = {
         primary = {

@@ -3,7 +3,7 @@
   home-manager.users.vyorkin = {
     programs.emacs = {
       enable = true;
-      package = inputs.emacs-overlay.emacsGit;
+      package = inputs.emacs-overlay.pkgs.emacsGit;
     };
 
     home.packages = [
