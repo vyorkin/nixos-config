@@ -8,13 +8,11 @@ let
   });
 in {
   nixpkgs.overlays = [
-    # inputs.nix.overlay
+    inputs.emacs.overlay
     (self: super: rec {
       nix = super.nix // {
         meta = super.nix.meta // { platforms = lib.platforms.unix; };
       };
-
-      emacs = inputs.emacs.overlay;
 
       nur = (import inputs.NUR {
         pkgs = old;
