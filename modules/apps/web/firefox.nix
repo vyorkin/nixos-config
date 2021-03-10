@@ -18,9 +18,6 @@ in {
       profiles.default = {
         id = 0;
         userChrome = ''
-          #TabsToolbar {
-            visibility: collapse;
-          }
           toolbar#nav-bar, nav-bar-customization-target {
             background: ${theme.bg} !important;
           }
@@ -47,11 +44,6 @@ in {
           "font.name.sans-serif.x-western" = "IBM Plex Sans";
           "font.name.serif.x-western" = "IBM Plex Serif";
 
-          "browser.display.background_color" = theme.bg;
-          "browser.display.foreground_color" = theme.fg;
-          "browser.display.document_color_use" = 2;
-          "browser.anchor_color" = theme.fg;
-          "browser.visited_color" = theme.blue;
           "browser.display.use_document_fonts" = true;
           "pdfjs.disabled" = true;
           "media.videocontrols.picture-in-picture.enabled" = true;
