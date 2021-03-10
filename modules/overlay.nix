@@ -14,6 +14,8 @@ in {
         meta = super.nix.meta // { platforms = lib.platforms.unix; };
       };
 
+      emacs = inputs.emacs.overlay;
+
       nur = (import inputs.NUR {
         pkgs = old;
         nurpkgs = pkgs;

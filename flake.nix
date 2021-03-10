@@ -181,7 +181,7 @@
     };
   };
 
-  outputs = { nixpkgs, nix, self, deploy-rs, emacs, ... }@inputs: {
+  outputs = { nixpkgs, nix, self, deploy-rs, ... }@inputs: {
     nixosModules = import ./modules;
     nixosProfiles = import ./profiles;
     nixosConfigurations = with nixpkgs.lib;
