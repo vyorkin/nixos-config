@@ -59,11 +59,15 @@ in {
       };
       font = { name = "IBM Plex 12"; };
       gtk3 = {
+        bookmarks = [
+          "file:///home/vyorkin/projects Projects"
+        ];
         extraConfig = {
           gtk-cursor-theme-name = "Breeze";
         };
       };
     };
+
     home.sessionVariables.GTK_THEME = "Generated";
   };
 }
