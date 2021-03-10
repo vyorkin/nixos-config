@@ -1,9 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   home-manager.users.vyorkin = {
     programs.emacs = {
       enable = true;
-      package = pkgs.emacs;
+      package = inputs.emacs-overlay.emacsGit;
     };
 
     home.packages = [

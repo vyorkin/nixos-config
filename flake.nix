@@ -61,6 +61,13 @@
 
     lambda-launcher.url = "github:balsoft/lambda-launcher";
 
+    # Bleeding edge Emacs
+    emacs-overlay = {
+      type = "github";
+      owner = "nix-community";
+      repo = "emacs-overlay";
+    };
+
     # LSB&FHS compatibility for NixOS.
     # Intended for containers and VMs.
     # https://github.com/balsoft/nixos-fhs-compat
