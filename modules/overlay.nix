@@ -2,7 +2,7 @@
 
 let
   system = "x86_64-linux";
-  old = import inputs.nixpkgs-old ({
+  old = import inputs.nixpkgs-20-09 ({
     config = config.nixpkgs.config;
     localSystem = { inherit system; };
   });

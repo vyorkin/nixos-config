@@ -1,8 +1,9 @@
-
 { pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
-    google-chrome
+    bat
+    screenfetch
+    tree
   ];
 }

@@ -203,7 +203,6 @@ in {
 
         "button2" = "kill";
         "--whole-window ${modifier}+button2" = "kill";
-
       };
 
       keycodebindings = { };

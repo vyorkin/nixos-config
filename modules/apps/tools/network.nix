@@ -1,8 +1,10 @@
-
 { pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
-    google-chrome
+    prettyping
+    telnet
+    nmap
+    nmcli
   ];
 }

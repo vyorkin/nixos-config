@@ -12,18 +12,15 @@
     themes
 
     apps
-
-    kitty
-    alacritty
-    tmux
-
-    emacs
-    vim
-
-    zathura
-    firefox
-    google-chrome
-
+    tools
+    fm
+    terminal
+    editor
+    reading
+    messaging
+    web
+    db
+    devops
     dev
   ];
 }

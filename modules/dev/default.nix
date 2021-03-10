@@ -1,5 +1,6 @@
 {
   imports = [
+    ./base.nix
     ./agda
     ./haskell
     ./ocaml

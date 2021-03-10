@@ -1,8 +1,8 @@
-
 { pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
-    google-chrome
+    eksctl
+    awscli2
   ];
 }

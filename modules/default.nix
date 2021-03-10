@@ -33,21 +33,36 @@ builtins.listToAttrs (builtins.map (path: {
 
   ./apps
 
+  ./apps/tools
+
+  ./apps/terminal
   ./apps/terminal/alacritty.nix
   ./apps/terminal/kitty.nix
   ./apps/terminal/tmux.nix
 
+  ./apps/fm
   ./apps/scm/git.nix
 
   ./apps/shell/zsh.nix
+  ./apps/shell/fish.nix
 
+  ./apps/editor
   ./apps/editor/emacs.nix
   ./apps/editor/vim.nix
+  ./apps/editor/vscode.nix
 
+  ./apps/reading
   ./apps/reading/zathura
 
+  ./apps/messaging
+
+  ./apps/web
   ./apps/web/firefox.nix
   ./apps/web/google-chrome.nix
+  ./apps/web/brave.nix
+
+  ./apps/db
+  ./apps/devops
 
   ./dev
 ])

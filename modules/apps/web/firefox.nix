@@ -17,14 +17,6 @@ in {
 
       profiles.default = {
         id = 0;
-        userChrome = ''
-          toolbar#nav-bar, nav-bar-customization-target {
-            background: ${theme.bg} !important;
-          }
-          @-moz-document url("about:newtab") {
-            * { background-color: ${theme.bg}  !important; }
-          }
-        '';
         settings = {
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
 

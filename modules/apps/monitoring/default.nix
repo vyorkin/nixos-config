@@ -1,5 +1,6 @@
 {
   imports = [
     ./ksysguard
+    ./htop.nix
   ];
 }

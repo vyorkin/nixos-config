@@ -1,8 +1,9 @@
-
 { pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
-    google-chrome
+    curl
+    wget
+    httpie
   ];
 }

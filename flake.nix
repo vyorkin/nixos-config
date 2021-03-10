@@ -20,11 +20,8 @@
       flake = false;
     };
 
-    nixpkgs-19-03 = {
-      type = "github";
-      owner = "nixos";
-      repo = "nixpkgs";
-      ref = "nixos-19.03";
+    nixpkgs-19-09 = {
+      url = "github:nixos/nixpkgs/nixos-19.09";
       flake = false;
     };
 
@@ -120,6 +117,9 @@
       repo = "base16-kitty";
       flake = false;
     };
+
+    nix-zsh-completions.url = "github:Ma27/nix-zsh-completions/flakes";
+    nix-zsh-completions.flake = false;
 
     ghacks = {
       type = "github";

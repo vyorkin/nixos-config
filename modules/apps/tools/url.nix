@@ -1,8 +1,9 @@
-
 { pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
-    google-chrome
+    urlscan
+    urlview
+    urlwatch
   ];
 }

@@ -1,8 +1,13 @@
-
 { pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
-    google-chrome
+    zlib
+    zip
+    unzip
+    bzip2
+    zstd
+    unrar
+    atool
   ];
 }

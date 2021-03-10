@@ -1,6 +1,8 @@
 { pkgs, lib, config, inputs, ... }:
 
 {
+  # Whether core dumps should be processed by systemd-coredump.
+  # If disabled, core dumps appear in the current directory of the crashing process
   systemd.coredump.enable = true;
 
   environment.systemPackages = [
@@ -13,10 +15,6 @@
     '')
   ];
 
-  environment.sessionVariables = config.home-manager.users.vyorkin.home.sessionVariables // {
-    NIX_AUTO_RUN = "1";
-  };
-
   home-manager.users.vyorkin = {
     xdg = {
       enable = true;
@@ -27,14 +25,6 @@
       before = [ "linkGeneration" ];
       after = [ ];
       data = "rm -f /home/vyorkin/.config/mimeapps.list";
-    };
-
-    news.display = "silent";
-    systemd.user.startServices = true;
-
-    programs.direnv = {
-      enable = true;
-      enableNixDirenvIntegration = true;
     };
   };
 }
