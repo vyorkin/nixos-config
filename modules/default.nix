@@ -31,7 +31,6 @@ builtins.listToAttrs (builtins.map (path: {
   ./workspace/gnome
   ./workspace/sway
 
-
   ./apps
   ./apps/terminal/alacritty.nix
   ./apps/terminal/kitty.nix

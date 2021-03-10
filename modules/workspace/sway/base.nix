@@ -34,6 +34,11 @@ in {
 
   users.users.vyorkin.extraGroups = [ "sway" ];
 
+  environment.loginShellInit = ''
+    [[ "$(tty)" == /dev/tty? ]] && sudo /run/current-system/sw/bin/lock this
+    [[ "$(tty)" == /dev/tty1 ]] && sway
+  '';
+
   home-manager.users.vyorkin.wayland.windowManager.sway = {
     enable = true;
     config = rec {
