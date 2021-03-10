@@ -1,9 +1,13 @@
 { pkgs, inputs, ... }:
+
+let
+  emacs = inputs.emacs-overlay.emacsGit.override;
+in
 {
   home-manager.users.vyorkin = {
     programs.emacs = {
       enable = true;
-      package = inputs.emacs-overlay.pkgs.emacsGit;
+      package = emacs;
     };
 
     home.packages = [
