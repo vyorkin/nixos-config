@@ -50,6 +50,7 @@
       "http://cache.nixos.org"
 
       "https://nix-community.cachix.org"
+      "https://nixpkgs-wayland.cachix.org"
       "https://nixcache.reflex-frp.org"
       "https://nixfmt.cachix.org"
       "https://all-hies.cachix.org"
@@ -62,6 +63,7 @@
 
     binaryCachePublicKeys = [
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+      "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
       "cache.dhall-lang.org:I9/H18WHd60olG5GsIjolp7CtepSgJmM2CsO813VTmM="
       "dhall.cachix.org-1:8laGciue2JBwD49ICFtg+cIF8ddDaW7OFBjDb/dHEAo="
     ];

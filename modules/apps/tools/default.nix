@@ -13,5 +13,6 @@
     ./disk.nix
     ./network.nix
     ./aws.nix
+    ./media.nix
   ];
 }

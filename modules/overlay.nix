@@ -9,6 +9,8 @@ let
 in {
   nixpkgs.overlays = [
     inputs.emacs.overlay
+    inputs.nixpkgs-wayland.overlay
+
     (self: super: rec {
       nix = super.nix // {
         meta = super.nix.meta // { platforms = lib.platforms.unix; };
@@ -20,8 +22,6 @@ in {
       }).repos;
 
       inherit old;
-
-      lambda-launcher = inputs.lambda-launcher.defaultPackage.x86_64-linux;
 
       weechatScripts.wee-slack = super.weechatScripts.wee-slack.overrideAttrs (oa: {
         src = inputs.wee-slack;

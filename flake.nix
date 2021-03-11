@@ -48,16 +48,9 @@
     };
 
     # Automated, pre-built packages for Wayland (sway/wlroots)
-    # tools for NixOS: https://github.com/colemickens/nixpkgs-wayland
     nixpkgs-wayland = {
-      type = "github";
-      owner = "colemickens";
-      repo = "nixpkgs-wayland";
-      flake = false;
+      url = "github:colemickens/nixpkgs-wayland";
     };
-
-    # GTK launcher
-    lambda-launcher.url = "github:balsoft/lambda-launcher";
 
     # Bleeding edge Emacs
     emacs = {

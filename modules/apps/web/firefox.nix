@@ -18,9 +18,9 @@ in {
       profiles.default = {
         id = 0;
         settings = {
-          "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-
           "extensions.autoDisableScopes" = 0;
+
+          "dom.webgpu.enabled" = true;
 
           "browser.search.defaultenginename" = "Google";
           "browser.search.selectedEngine" = "Google";
@@ -30,7 +30,6 @@ in {
           "browser.uidensity" = 1;
           "browser.search.openintab" = true;
           "xpinstall.signatures.required" = false;
-          "extensions.update.enabled" = false;
 
           "font.name.monospace.x-western" = "IBM Plex Mono";
           "font.name.sans-serif.x-western" = "IBM Plex Sans";

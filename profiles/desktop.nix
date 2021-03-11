@@ -21,6 +21,8 @@
     web
     db
     devops
+    media
+    streaming
     dev
   ];
 }
