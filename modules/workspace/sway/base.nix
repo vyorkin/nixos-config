@@ -32,8 +32,9 @@ in {
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
-    extraPackages = lib.mkForce (with pkgs; [ swayidle xwayland ]);
+    extraPackages = lib.mkForce (with pkgs; [ swayidle ]);
   };
+  programs.xwayland.enable = false;
 
   users.users.vyorkin.extraGroups = [ "sway" ];
 
@@ -44,6 +45,8 @@ in {
 
   home-manager.users.vyorkin.wayland.windowManager.sway = {
     enable = true;
+    xwayland = false;
+
     config = rec {
       fonts = [ "IBM Plex 9" ];
 
@@ -327,6 +330,7 @@ in {
       mouse_warping container
       hide_edge_borders --i3 smart
       exec pkill swaynag
+      xwayland disable
     '';
   };
 }

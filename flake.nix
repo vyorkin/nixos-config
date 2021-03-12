@@ -31,12 +31,7 @@
     # Provides a basic system for managing a user environment
     # using the Nix package manager together with the Nix
     # libraries found in Nixpkgs: https://github.com/rycee/home-manager
-    home-manager = {
-      type = "github";
-      owner = "rycee";
-      repo = "home-manager";
-      ref = "master";
-    };
+    home-manager.url = "github:rycee/home-manager";
 
     # NixOS profiles covering hardware quirks:
     # https://github.com/NixOS/nixos-hardware
@@ -53,20 +48,12 @@
     };
 
     # Bleeding edge Emacs
-    emacs = {
-      type = "github";
-      owner = "nix-community";
-      repo = "emacs-overlay";
-    };
+    emacs.url = "github:nix-community/emacs-overlay";
 
     # LSB&FHS compatibility for NixOS.
     # Intended for containers and VMs.
     # https://github.com/balsoft/nixos-fhs-compat
-    nixos-fhs-compat = {
-      type = "github";
-      owner = "balsoft";
-      repo = "nixos-fhs-compat";
-    };
+    nixos-fhs-compat.url = "github:balsoft/nixos-fhs-compat";
 
     weechat-scripts = {
       type = "github";

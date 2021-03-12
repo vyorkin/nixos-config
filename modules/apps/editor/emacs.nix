@@ -4,7 +4,7 @@
   home-manager.users.vyorkin = {
     programs.emacs = {
       enable = true;
-      package = pkgs.emacsGit;
+      package = pkgs.emacsPgtk;
     };
 
     services.emacs.enable = true;
