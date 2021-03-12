@@ -1,24 +1,26 @@
-{ pkgs, inputs, ... }:
+{ lib, pkgs, inputs, ... }:
 
 {
   environment.etc.nixpkgs.source = inputs.nixpkgs;
 
   nix = {
+    # Needed for nix-shell to work without channels
+    nixPath = lib.mkForce [ "nixpkgs=/etc/nixpkgs" ];
+
     # Enable nix-flakes
     registry = {
       self.flake = inputs.self;
       emacs.flake = inputs.emacs;
     };
     package = inputs.nix.packages.x86_64-linux.nix;
-    # package = pkgs.nixFlakes;
 
     extraOptions = ''
       experimental-features = nix-command flakes
 
       keep-outputs = true
-      cores = 2
+      cores = 4
       connect-timeout = 3
-      max-jobs = 4
+      max-jobs = 6
       min-free = ${toString (500 * 1024 * 1024)}
       max-free = ${toString (5 * 1024 * 1024 * 1024)}
     '';

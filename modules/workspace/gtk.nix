@@ -11,7 +11,7 @@ let
       MENU_BG=${theme.bg}
       MENU_FG=${theme.fg}
       ACCENT_BG=${theme.alt}
-      SEL_BG=${theme.blue}
+      SEL_BG=${theme.dark}
       SEL_FG=${theme.bg}
       TXT_BG=${theme.bg}
       TXT_FG=${theme.fg}

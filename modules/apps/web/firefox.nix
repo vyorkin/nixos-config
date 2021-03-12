@@ -32,10 +32,6 @@ in {
           "font.name.monospace.x-western" = "IBM Plex Mono";
           "font.name.sans-serif.x-western" = "IBM Plex Sans";
           "font.name.serif.x-western" = "IBM Plex Serif";
-
-          "browser.display.use_document_fonts" = true;
-          "pdfjs.disabled" = true;
-          "media.videocontrols.picture-in-picture.enabled" = true;
         };
       };
     };

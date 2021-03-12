@@ -72,6 +72,7 @@ in {
           text = theme.fg;
         };
       };
+
       gaps = {
         inner = 0;
         smartGaps = true;
@@ -243,8 +244,6 @@ in {
 
           "${modifier}+s" = "gaps inner current plus 1";
           "${modifier}+Shift+s" = "gaps inner current minus 1";
-          "${modifier}+z" = "gaps output current plus 1";
-          "${modifier}+Shift+z" = "gaps output current minus 1";
 
           "${hyper}+Shift+l" = "exec ${pkgs.playerctl}/bin/playerctl next";
           "${hyper}+Shift+h" = "exec ${pkgs.playerctl}/bin/playerctl previous";

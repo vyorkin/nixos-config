@@ -178,7 +178,6 @@
       },
       "original": {
         "owner": "rycee",
-        "ref": "master",
         "repo": "home-manager",
         "type": "github"
       }
