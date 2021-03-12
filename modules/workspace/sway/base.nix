@@ -32,7 +32,7 @@ in {
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
-    extraPackages = lib.mkForce (with pkgs; [ swayidle swaylock-effects xwayland ]);
+    extraPackages = lib.mkForce (with pkgs; [ swayidle xwayland ]);
   };
 
   users.users.vyorkin.extraGroups = [ "sway" ];
@@ -324,11 +324,7 @@ in {
     wrapperFeatures = { gtk = true; };
     extraConfig = ''
       default_border pixel 1
-      for_window [title="~nwg"] border none
       mouse_warping container
-      floating_minimum_size 320 x 240
-      floating_maximum_size 1400 x 1000
-      popup_during_fullscreen leave_fullscreen
       hide_edge_borders --i3 smart
       exec pkill swaynag
     '';

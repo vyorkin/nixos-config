@@ -20,8 +20,6 @@ in {
         settings = {
           "extensions.autoDisableScopes" = 0;
 
-          "dom.webgpu.enabled" = true;
-
           "browser.search.defaultenginename" = "Google";
           "browser.search.selectedEngine" = "Google";
           "browser.urlbar.placeholderName" = "Google";
