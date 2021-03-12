@@ -6,6 +6,8 @@
       delay = 5;
       showCpuFrequency = true;
       showCpuUsage = true;
+      treeView = true;
+      hideUserlandThreads = true;
     };
   };
 }

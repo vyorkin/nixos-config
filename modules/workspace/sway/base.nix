@@ -32,7 +32,8 @@ in {
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
-    extraPackages = lib.mkForce (with pkgs; [ swayidle ]);
+    extraPackages = lib.mkForce
+      (with pkgs; [ swayidle waybar wofi j4-dmenu-desktop wlogout flashfocus ]);
   };
   programs.xwayland.enable = false;
 
@@ -49,6 +50,7 @@ in {
 
     config = rec {
       fonts = [ "IBM Plex 9" ];
+      bars = [ ];
 
       colors = rec {
         background = theme.bg;
@@ -102,12 +104,14 @@ in {
       };
 
       startup = [
-        { command = browser1; }
         { command = "${pkgs.xorg.xrdb}/bin/xrdb -merge ~/.Xresources"; }
         {
           command =
             "swayidle -w before-sleep '${lock_fork}' lock '${lock_fork}' unlock 'pkill -9 swaylock'";
         }
+        { command = "${pkgs.flashfocus}/bin/flashfocus"; }
+        { command = browser1; }
+        { command = apps.messenger.cmd; }
       ];
 
       modes = {
@@ -137,8 +141,7 @@ in {
         let script = name: content: "exec ${pkgs.writeScript name content}";
         in {
           "${modifier}+q" = "kill";
-          "${modifier}+Shift+q" =
-            "move container to workspace temp; [workspace=__focused__] kill; workspace temp; move container to workspace temp; workspace temp";
+          "${modifier}+Shift+q" = "exec ${pkgs.wlogout}/bin/wlogout";
 
           "${hyper}+Shift+c" = "reload";
           "${hyper}+Shift+r" = "restart";
@@ -284,8 +287,7 @@ in {
             ''wl-paste | curl -F"file=@-" https://0x0.st | wl-copy'';
           "${modifier}+b" = "focus mode_toggle";
 
-          "${modifier}+Space" =
-            script "nwggrid" "${pkgs.nwg-launchers}/bin/nwggrid";
+          "${modifier}+Space" = script "" "${pkgs.wofi}/bin/wofi --show drun";
 
           "XF86AudioPlay" = "exec ${pkgs.playerctl}/bin/playerctl play-pause";
           "XF86AudioNext" = "exec ${pkgs.playerctl}/bin/playerctl next";
@@ -326,9 +328,8 @@ in {
     wrapperFeatures = { gtk = true; };
     extraConfig = ''
       default_border pixel 1
-      mouse_warping container
+      mouse_warping none
       hide_edge_borders --i3 smart
-      exec pkill swaynag
       xwayland disable
     '';
   };

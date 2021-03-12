@@ -1,5 +1,7 @@
 {
   home-manager.users.vyorkin = {
+    programs.zathura.enable = true;
+
     home.file = {
       "zathura" = {
         source = ./zathurarc;

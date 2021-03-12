@@ -5,6 +5,7 @@
     workspace
     cursor
     gtk
+    qt
     gnome
     sway
     virtualisation
@@ -21,6 +22,7 @@
     web
     db
     devops
+    monitoring
     media
     streaming
     dev

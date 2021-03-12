@@ -28,6 +28,7 @@ builtins.listToAttrs (builtins.map (path: {
   ./workspace
   ./workspace/cursor.nix
   ./workspace/gtk.nix
+  ./workspace/qt.nix
   ./workspace/gnome
   ./workspace/sway
 
@@ -54,6 +55,7 @@ builtins.listToAttrs (builtins.map (path: {
   ./apps/web/brave.nix
   ./apps/db
   ./apps/devops
+  ./apps/monitoring
   ./apps/media
   ./apps/streaming
 

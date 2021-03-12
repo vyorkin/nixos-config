@@ -18,6 +18,10 @@
         cmd = "${pkgs.firefox-wayland}/bin/firefox";
         desktop = "firefox";
       };
+      messenger = {
+        cmd = "${pkgs.tdesktop}/bin/telegram-desktop";
+        desktop = "telegram";
+      };
     };
 
     environment.sessionVariables = {
