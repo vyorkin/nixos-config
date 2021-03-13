@@ -13,8 +13,7 @@
 
   environment.sessionVariables = {
     XKB_DEFAULT_LAYOUT = "us,ru";
-    XKB_DEFAULT_OPTIONS =
-      "grp:ctrl_shift_toggle,grp_led:caps,caps:ctrl_modifier,misc:typo,lv3:ralt_switch";
+    XKB_DEFAULT_OPTIONS = "grp:ctrl_shift_toggle,grp_led:caps";
     LANG = lib.mkForce "en_US.UTF-8";
   };
 

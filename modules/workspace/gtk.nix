@@ -11,8 +11,8 @@ let
       MENU_BG=${theme.bg}
       MENU_FG=${theme.fg}
       ACCENT_BG=${theme.alt}
-      SEL_BG=${theme.dark}
-      SEL_FG=${theme.bg}
+      SEL_BG=${theme.gray}
+      SEL_FG=${theme.fg}
       TXT_BG=${theme.bg}
       TXT_FG=${theme.fg}
       HDR_BTN_BG=${theme.bg}

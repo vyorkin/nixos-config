@@ -5,6 +5,5 @@
     ./mako.nix
     ./waybar
     ./wofi
-    ./gammastep.nix
   ];
 }

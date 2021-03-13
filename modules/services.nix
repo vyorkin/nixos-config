@@ -59,5 +59,7 @@
       # Pressing power button means hibernate
       extraConfig = "HandlePowerKey=hibernate";
     };
+
+    interception-tools = { enable = true; };
   };
 }
