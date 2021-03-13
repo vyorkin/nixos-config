@@ -12,7 +12,8 @@ let
   term1 = apps.term.cmd;
   term2 = "${pkgs.kitty}/bin/kitty";
 
-  hyper = "Mod3";
+  mod = "Mod4";
+  hyper = "Alt_R";
 
   lock_fork =
     pkgs.writeShellScript "lock_fork" "sudo /run/current-system/sw/bin/lock &";
@@ -33,9 +34,9 @@ in {
     enable = true;
     wrapperFeatures.gtk = true;
     extraPackages = lib.mkForce
-      (with pkgs; [ swayidle waybar wofi j4-dmenu-desktop wlogout flashfocus ]);
+      (with pkgs; [ swayidle waybar swaykbdd swaybg wofi j4-dmenu-desktop wlogout flashfocus  ]);
   };
-  programs.xwayland.enable = false;
+  programs.xwayland.enable = true;
 
   users.users.vyorkin.extraGroups = [ "sway" ];
 
@@ -46,9 +47,16 @@ in {
 
   home-manager.users.vyorkin.wayland.windowManager.sway = {
     enable = true;
-    xwayland = false;
+    xwayland = true;
 
     config = rec {
+      input = {
+        "*" = {
+          repeat_delay = "200";
+          repeat_rate = "40";
+        };
+      };
+
       fonts = [ "IBM Plex 9" ];
       bars = [ ];
 
@@ -86,7 +94,7 @@ in {
         forceWrapping = true;
       };
 
-      modifier = "Mod4";
+      modifier = mod;
 
       window = {
         border = 1;
@@ -109,9 +117,14 @@ in {
           command =
             "swayidle -w before-sleep '${lock_fork}' lock '${lock_fork}' unlock 'pkill -9 swaylock'";
         }
-        { command = "${pkgs.flashfocus}/bin/flashfocus"; }
-        { command = browser1; }
-        { command = apps.messenger.cmd; }
+        {
+          command = "${pkgs.swaykbdd}/bin/swaykbdd";
+        }
+        {
+          command = "${pkgs.flashfocus}/bin/flashfocus";
+        }
+        # { command = browser1; }
+        # { command = apps.messenger.cmd; }
       ];
 
       modes = {
@@ -130,11 +143,6 @@ in {
           k = "resize shrink height ${step2} px";
           l = "resize grow width ${step2} px";
         };
-
-        system = {
-          c = "reload";
-          r = "restart";
-        };
       };
 
       keybindings =
@@ -142,9 +150,8 @@ in {
         in {
           "${modifier}+q" = "kill";
           "${modifier}+Shift+q" = "exec ${pkgs.wlogout}/bin/wlogout";
-
-          "${hyper}+Shift+c" = "reload";
-          "${hyper}+Shift+r" = "restart";
+          "${modifier}+Shift+c" = "reload";
+          "${modifier}+Shift+r" = "restart";
 
           # Layout
 
@@ -216,20 +223,10 @@ in {
           "${modifier}+Comma" = "workspace prev";
           "${modifier}+Period" = "workspace next";
 
-          "${modifier}+h" = "focus child; focus left";
-          "${modifier}+j" = "focus child; focus down";
-          "${modifier}+k" = "focus child; focus up";
-          "${modifier}+l" = "focus child; focus right";
-
           "${modifier}+Control+h" = "focus parent; focus left";
           "${modifier}+Control+j" = "focus parent; focus down";
           "${modifier}+Control+k" = "focus parent; focus up";
           "${modifier}+Control+l" = "focus parent; focus right";
-
-          "${modifier}+Shift+h" = "move left";
-          "${modifier}+Shift+j" = "move down";
-          "${modifier}+Shift+k" = "move up";
-          "${modifier}+Shift+l" = "move right";
 
           # Fullscreen / Floating
 
@@ -241,7 +238,6 @@ in {
 
           "${modifier}+r" = "mode resize";
           "${modifier}+d" = "mode display";
-          "${modifier}+Alt_R" = "mode system";
 
           # Gaps
 
@@ -287,7 +283,8 @@ in {
             ''wl-paste | curl -F"file=@-" https://0x0.st | wl-copy'';
           "${modifier}+b" = "focus mode_toggle";
 
-          "${modifier}+Space" = script "" "${pkgs.wofi}/bin/wofi --show drun";
+          "${modifier}+Space" =
+            script "" "${pkgs.wofi}/bin/wofi --show drun -f -i --width 320";
 
           "XF86AudioPlay" = "exec ${pkgs.playerctl}/bin/playerctl play-pause";
           "XF86AudioNext" = "exec ${pkgs.playerctl}/bin/playerctl next";
@@ -327,10 +324,24 @@ in {
     };
     wrapperFeatures = { gtk = true; };
     extraConfig = ''
+      bindsym --to-code {
+        ${mod}+h focus child; focus left
+        ${mod}+j focus child; focus down
+        ${mod}+k focus child; focus up
+        ${mod}+l focus child; focus right
+
+        ${mod}+Shift+h move left
+        ${mod}+Shift+j move down
+        ${mod}+Shift+k move up
+        ${mod}+Shift+l move right
+      }
+
       default_border pixel 1
       mouse_warping none
       hide_edge_borders --i3 smart
-      xwayland disable
+      exec pkill swaynag
+
+      output * bg ~/Pictures/wallpapers/7.jpeg fill
     '';
   };
 }

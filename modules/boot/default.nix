@@ -1,6 +1,7 @@
 { lib, pkgs, ... }:
 
-{
+let angular_plymouth_theme = pkgs.callPackage ./plymouth/angular.nix { };
+in {
   boot = {
     loader = {
       # Use the systemd-boot EFI boot loader
@@ -16,6 +17,13 @@
       };
     };
 
+    # Enable plymouth boot splash screen
+    plymouth = {
+      enable = true;
+      theme = "angular";
+      themePackages = [ angular_plymouth_theme ];
+    };
+
     # Delete all files in /tmp during boot
     cleanTmpDir = true;
 
@@ -27,7 +35,7 @@
     # pti on/off - Enable/disable Page Table Isolation (PTI).
     #              Protects from attacks on the shared user/kernel address space,
     #              but with a cost of a little perfomance overhead
-    kernelParams = ["quiet" "splash"];
+    kernelParams = [ "quiet" "splash" ];
 
     # All Kernel Messages with a log level smaller
     # than this setting will be printed to the console

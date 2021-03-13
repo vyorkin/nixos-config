@@ -87,11 +87,11 @@
     },
     "emacs": {
       "locked": {
-        "lastModified": 1615496115,
-        "narHash": "sha256-6FiWzKKSlsKo0zOM2FywSKZpa9xkLeT2CqUudYqCuOE=",
+        "lastModified": 1615594909,
+        "narHash": "sha256-okSiUQV0Qq1mAkmdbkWzqOnJxGnapaWsbeHumb4FEEw=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "daa4b15755f6cccb462efed696abceee0994bb96",
+        "rev": "1b67b256be67f19fbdb1a92eda4794fc078f82b3",
         "type": "github"
       },
       "original": {
@@ -103,11 +103,11 @@
     "emacs-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1614506705,
-        "narHash": "sha256-VsiIUTLmvWGmI3C7QDC63EdRooKbPOYvVn2An4T/XaM=",
+        "lastModified": 1615645652,
+        "narHash": "sha256-fbF2IeNZBg2+rH+Zl/ZbOI2fxqD/eSa/tPlCt8ZLWQ0=",
         "owner": "vyorkin",
         "repo": "emacs.d",
-        "rev": "8ac94e09f718c5739bd0b728780454a53fdef3e8",
+        "rev": "ace9bac9a3b6c0fd3e4882a86a5b277779273164",
         "type": "github"
       },
       "original": {
@@ -303,11 +303,11 @@
     "nixos-hardware": {
       "flake": false,
       "locked": {
-        "lastModified": 1615281383,
-        "narHash": "sha256-23XBOcZapDtm7IzYYHub4tNpo4AsSz6qLXsHTCNuDAA=",
+        "lastModified": 1615652054,
+        "narHash": "sha256-jqXKU8Ovpi7MmPRqGf2FB3QOPcZtGwO2MFc0AYiOPjg=",
         "owner": "NixOS",
         "repo": "nixos-hardware",
-        "rev": "831de9cac9ff2ea8cf4c3742020ea92e82ac8ac3",
+        "rev": "31f61b90ddb9257b94888ee17ccf96236e180c76",
         "type": "github"
       },
       "original": {
@@ -369,11 +369,11 @@
     "nixpkgs-20-09": {
       "flake": false,
       "locked": {
-        "lastModified": 1615373830,
-        "narHash": "sha256-PxZCX08I7rEVxyGDIYFx7mHJ01WQi9+rdXhI/b/Q+FM=",
+        "lastModified": 1615540211,
+        "narHash": "sha256-GCcG/w9qDVxVz0LvC61GZbPY6opWndrOiN7xEJAUdlw=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "89a06218ca0b931ab872a9c99aa479285183d3c7",
+        "rev": "aceb539221d6c4ad92c361ed32beb90e201b9204",
         "type": "github"
       },
       "original": {
@@ -405,11 +405,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1615501409,
-        "narHash": "sha256-7UlcDYL440MmAtetw7rljoC9fdyQ0bTbF/qWfjok56Q=",
+        "lastModified": 1615656460,
+        "narHash": "sha256-WGV+VIdWnibh2qvCT9lQH3WCrpWEuRW5uSRPLocHEEY=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "7ef425d2769c182f82b02eccfebca3a0c3179270",
+        "rev": "5e367ecef917dadbe3e977b281a33c1fc9cf6e59",
         "type": "github"
       },
       "original": {
@@ -434,11 +434,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1615259932,
-        "narHash": "sha256-IXecmbqCr+XCtFwzBO3tHEd8PoJ4X4EyPZebKbV2ioE=",
+        "lastModified": 1615532953,
+        "narHash": "sha256-SWpaGjrp/INzorEqMz3HLi6Uuk9I0KAn4YS8B4n3q5g=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "29b0d4d0b600f8f5dd0b86e3362a33d4181938f9",
+        "rev": "916ee862e87ac5ee2439f2fb7856386b4dc906ae",
         "type": "github"
       },
       "original": {
@@ -593,11 +593,11 @@
     "weechat-scripts": {
       "flake": false,
       "locked": {
-        "lastModified": 1615036762,
-        "narHash": "sha256-mk4HoZxvDSPL3duo1tSVKgprwKjgJis9xyE2KZQaemQ=",
+        "lastModified": 1615596346,
+        "narHash": "sha256-jeBkjUiUipTQ4Slv412x9NfXcrdfjF6vLI32GBcRd+c=",
         "owner": "weechat",
         "repo": "scripts",
-        "rev": "191cbe60daa8f55dc7b3a40c148745a3bc10c4bc",
+        "rev": "8f34f42cf6495eddd1d05050c2d5691d71bbf322",
         "type": "github"
       },
       "original": {
@@ -609,11 +609,11 @@
     "zsh-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1615374068,
-        "narHash": "sha256-zy6KqMgIwJVqRbhNpXzLQnw3p2Dug/Fooo2ygwXYUS4=",
+        "lastModified": 1615630742,
+        "narHash": "sha256-n7QNTbkap8N5Bd5CDMBIE73HjWkwbSC+mqLhMRmzGIY=",
         "owner": "vyorkin",
         "repo": "zshrc",
-        "rev": "53656d3d8c21ed4677dd5dae5d8f27f3ac145ce6",
+        "rev": "84a4a5d37ce37db768d1f5a35f23fa39d1fb05d1",
         "type": "github"
       },
       "original": {

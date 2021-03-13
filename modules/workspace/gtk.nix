@@ -4,7 +4,7 @@ let
   materia_colors = pkgs.writeTextFile {
     name = "gtk-generated-colors";
     text = ''
-      BG=${theme.bg}
+      BG=${theme.bg}AA
       FG=${theme.fg}
       BTN_BG=${theme.bg}
       BTN_FG=${theme.fg}

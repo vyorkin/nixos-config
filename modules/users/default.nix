@@ -5,9 +5,9 @@ let
   vyorkin = import ./vyorkin.nix { inherit authorizedKeys; };
 in {
   users = {
-    # Disable adding new user and groups to the system
+    # Enable adding new user and groups to the system
     # with the ordinary useradd and groupadd commands
-    mutableUsers = false;
+    mutableUsers = true;
 
     defaultUserShell = pkgs.zsh;
     users = {

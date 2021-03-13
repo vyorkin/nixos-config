@@ -12,8 +12,8 @@ in {
       };
 
       window.padding = {
-        x = 2;
-        y = 2;
+        x = 4;
+        y = 10;
       };
 
       shell.program = "${pkgs.zsh}/bin/zsh";
@@ -21,6 +21,8 @@ in {
       cursor.style = "Block";
 
       live_config_reload = true;
+
+      background_opacity = 0.9;
 
       colors = {
         primary = {

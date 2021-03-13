@@ -15,8 +15,12 @@
         desktop = "emacsclient";
       };
       browser = {
-        cmd = "${pkgs.firefox-wayland}/bin/firefox";
-        desktop = "firefox";
+        cmd = "${pkgs.google-chrome}/bin/google-chrome-stable";
+        desktop = "google chrome";
+      };
+      reader = {
+        cmd = "${pkgs.zathura}/bin/zathura";
+        desktop = "zathura";
       };
       messenger = {
         cmd = "${pkgs.tdesktop}/bin/telegram-desktop";

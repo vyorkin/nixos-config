@@ -3,6 +3,7 @@
     ./base.nix
 
     workspace
+    ssh
     cursor
     gtk
     qt

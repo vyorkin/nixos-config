@@ -1,5 +1,14 @@
+{ pkgs, ... }:
+
 {
+  imports = [
+    ./hoogle.nix
+  ];
+
   home-manager.users.vyorkin = {
+    home.packages = with pkgs; [
+      haskell.compiler.ghc901
+    ];
     home.file = {
       "ghci.conf" = {
         source = ./ghci;

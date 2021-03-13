@@ -6,7 +6,7 @@ builtins.listToAttrs (builtins.map (path: {
   value = import path;
 }) [
   ./hardware
-  ./boot.nix
+  ./boot
   ./system.nix
   ./network.nix
   ./nix.nix
@@ -26,6 +26,7 @@ builtins.listToAttrs (builtins.map (path: {
   ./x11/xserver/libinput.nix
 
   ./workspace
+  ./workspace/ssh.nix
   ./workspace/cursor.nix
   ./workspace/gtk.nix
   ./workspace/qt.nix

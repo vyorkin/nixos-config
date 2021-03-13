@@ -1,8 +1,6 @@
 { config, pkgs, lib, ... }:
 
-let
-  theme = config.themes.colors;
-in {
+{
   environment.sessionVariables = {
     MOZ_USE_XINPUT2 = "1";
     MOZ_DBUS_REMOTE = "1";

@@ -80,10 +80,11 @@ in
           font-family: "IBM Plex";
           font-size: 13px;
           min-height: 0;
+          opacity: 0.8;
         }
 
         window#waybar {
-          background: ${theme.bg};
+          background: ${theme.bg}99;
           color: ${theme.fg};
         }
 
