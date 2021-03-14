@@ -123,8 +123,6 @@ in {
         {
           command = "${pkgs.flashfocus}/bin/flashfocus";
         }
-        # { command = browser1; }
-        # { command = apps.messenger.cmd; }
       ];
 
       modes = {
@@ -223,11 +221,6 @@ in {
           "${modifier}+Comma" = "workspace prev";
           "${modifier}+Period" = "workspace next";
 
-          "${modifier}+Control+h" = "focus parent; focus left";
-          "${modifier}+Control+j" = "focus parent; focus down";
-          "${modifier}+Control+k" = "focus parent; focus up";
-          "${modifier}+Control+l" = "focus parent; focus right";
-
           # Fullscreen / Floating
 
           "${modifier}+f" = "fullscreen toggle; floating toggle";
@@ -244,12 +237,16 @@ in {
           "${modifier}+s" = "gaps inner current plus 1";
           "${modifier}+Shift+s" = "gaps inner current minus 1";
 
+          # Player
+
           "${hyper}+Shift+l" = "exec ${pkgs.playerctl}/bin/playerctl next";
           "${hyper}+Shift+h" = "exec ${pkgs.playerctl}/bin/playerctl previous";
           "${hyper}+Shift+p" =
             "exec ${pkgs.playerctl}/bin/playerctl play-pause";
           "${hyper}+Shift+o" =
             "exec ${pkgs.lxqt.pavucontrol-qt}/bin/pavucontrol-qt";
+
+          # Screenshots
 
           "${modifier}+Print" = script "screenshot"
             "${pkgs.grim}/bin/grim Pictures/$(date +'%Y-%m-%d+%H:%M:%S').png";

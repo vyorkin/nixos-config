@@ -1,8 +1,13 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   home-manager.users.vyorkin = {
-    programs.git.enable = true;
+    programs.git = {
+      enable = true;
+
+      # Enable delta syntax highlighter
+      delta.enable = true;
+    };
 
     home.file = {
       ".gitconfig" = { source = "${inputs.git-config}/gitconfig"; };

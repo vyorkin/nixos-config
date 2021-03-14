@@ -84,7 +84,7 @@ in
         }
 
         window#waybar {
-          background: ${theme.bg}99;
+          background: ${theme.bg};
           color: ${theme.fg};
         }
 

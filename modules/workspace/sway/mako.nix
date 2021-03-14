@@ -15,7 +15,7 @@ in {
       maxVisible = 10;
       backgroundColor = "${theme.bg}AA";
       textColor = theme.fg;
-      borderColor = "${theme.blue}AA";
+      borderColor = "${theme.gray}AA";
       progressColor = "over ${theme.green}";
       iconPath = "${pkgs.papirus-icon-theme}/share/icons/Papirus-Dark";
       maxIconSize = 24;

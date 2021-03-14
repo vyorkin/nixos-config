@@ -6,6 +6,8 @@
     coreutils
     pciutils
     usbutils
+    elfutils
+    patchelf
     bat
     screenfetch
     tree

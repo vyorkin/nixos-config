@@ -9,6 +9,8 @@
     redis
     mysql
     sqlite
+    sqlitebrowser
     rocksdb
+    mdbtools
   ];
 }

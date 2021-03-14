@@ -8,6 +8,7 @@
       automake
       m4
       gnumake
+      gdb
       cmake
       ccls
       meson

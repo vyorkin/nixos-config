@@ -25,7 +25,6 @@
     devops
     monitoring
     media
-    streaming
     dev
   ];
 }
