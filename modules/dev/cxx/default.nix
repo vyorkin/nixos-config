@@ -14,6 +14,7 @@
       meson
       ninja
       ccache
+      cpplint
     ];
   };
 }

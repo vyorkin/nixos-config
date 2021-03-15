@@ -6,5 +6,6 @@
     grim
     slurp
     pass-wayland
+    wf-recorder
   ];
 }

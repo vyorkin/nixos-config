@@ -33,8 +33,16 @@ in {
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
-    extraPackages = lib.mkForce
-      (with pkgs; [ swayidle waybar swaykbdd swaybg wofi j4-dmenu-desktop wlogout flashfocus  ]);
+    extraPackages = lib.mkForce (with pkgs; [
+      swayidle
+      waybar
+      swaykbdd
+      swaybg
+      wofi
+      j4-dmenu-desktop
+      wlogout
+      flashfocus
+    ]);
   };
   programs.xwayland.enable = true;
 
@@ -117,12 +125,8 @@ in {
           command =
             "swayidle -w before-sleep '${lock_fork}' lock '${lock_fork}' unlock 'pkill -9 swaylock'";
         }
-        {
-          command = "${pkgs.swaykbdd}/bin/swaykbdd";
-        }
-        {
-          command = "${pkgs.flashfocus}/bin/flashfocus";
-        }
+        { command = "${pkgs.swaykbdd}/bin/swaykbdd"; }
+        { command = "${pkgs.flashfocus}/bin/flashfocus"; }
       ];
 
       modes = {

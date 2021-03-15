@@ -5,5 +5,6 @@
     prettyping
     telnet
     nmap
+    iw
   ];
 }

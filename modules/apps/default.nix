@@ -7,8 +7,8 @@
   config = rec {
     defaultApps = {
       term = {
-        cmd = "${pkgs.alacritty}/bin/alacritty";
-        desktop = "alacritty";
+        cmd = "${pkgs.kitty}/bin/kitty";
+        desktop = "kitty";
       };
       editor = {
         cmd = "${config.home-manager.users.vyorkin.programs.emacs.finalPackage}/bin/emacsclient -c $@";

@@ -13,5 +13,6 @@
     nix-review
     nix-top
     any-nix-shell
+    niv
   ];
 }
