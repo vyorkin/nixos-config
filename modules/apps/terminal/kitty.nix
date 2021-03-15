@@ -23,8 +23,8 @@ in {
       enable_audio_bell no
       window_alert_on_bell yes
       bell_on_tab yes
-      window_margin_width 10.0
-      window_padding_width 10.0
+      window_margin_width 5.0
+      window_padding_width 5.0
       inactive_text_alpha 0.9
       tab_bar_min_tabs 1
       background_opacity 0.9

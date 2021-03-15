@@ -1,9 +1,9 @@
-{ pkgs, config, lib, ... }:
-{
+{ pkgs, config, lib, ... }: {
   options.defaultApps = lib.mkOption {
     type = lib.types.attrs;
     description = "Preferred applications";
   };
+
   config = rec {
     defaultApps = {
       term = {
@@ -11,12 +11,25 @@
         desktop = "kitty";
       };
       editor = {
-        cmd = "${config.home-manager.users.vyorkin.programs.emacs.finalPackage}/bin/emacsclient -c $@";
+        cmd =
+          "${config.home-manager.users.vyorkin.programs.emacs.finalPackage}/bin/emacsclient -c $@";
         desktop = "emacsclient";
       };
       browser = {
         cmd = "${pkgs.google-chrome}/bin/google-chrome-stable";
-        desktop = "google chrome";
+        desktop = "google-chrome";
+      };
+      fm = {
+        cmd = "${pkgs.gnome3.nautilus}/bin/nautilus";
+        desktop = "org.gnome.Nautilus";
+      };
+      monitor = {
+        cmd = "${pkgs.gnome3.gnome-system-monitor}/bin/gnome-system-monitor";
+        desktop = "gnome-system-monitor";
+      };
+      archive = {
+        cmd = "${pkgs.gnome3.file-roller}/bin/file-roller";
+        desktop = "org.gnome.FileRoller";
       };
       reader = {
         cmd = "${pkgs.zathura}/bin/zathura";
@@ -35,11 +48,17 @@
 
     home-manager.users.vyorkin.xdg.mimeApps = {
       enable = true;
-      defaultApplications =
-        with config.defaultApps;
+      defaultApplications = with config.defaultApps;
         builtins.mapAttrs (name: value:
           if value ? desktop then [ "${value.desktop}.desktop" ] else value) {
             "text/html" = browser;
+            "image/*" = { desktop = "org.gnome.eog"; };
+            "application/zip" = archive;
+            "application/rar" = archive;
+            "application/7z" = archive;
+            "application/*tar" = archive;
+
+            "application/pdf" = reader;
 
             "x-scheme-handler/http" = browser;
             "x-scheme-handler/https" = browser;

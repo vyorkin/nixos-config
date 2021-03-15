@@ -44,6 +44,10 @@
   environment.sessionVariables.XDG_CURRENT_DESKTOP = "X-Generic";
 
   home-manager.users.vyorkin = {
+    home.activation.gnome = ''
+      $DRY_RUN_CMD mkdir -p "$XDG_DATA_HOME/.npm-packages"
+    '';
+
     dconf.settings = {
       "org/gnome/nautilus/icon-view" = {
         captions = [ "size" "date_modified" "none" ];
