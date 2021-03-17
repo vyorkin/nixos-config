@@ -2,9 +2,10 @@
 
 {
   home-manager.users.vyorkin = {
-    home.packages = with pkgs; [
-      obs-studio
-      obs-wlrobs
-    ];
+    programs.obs-studio = {
+      enable = true;
+      package = pkgs.obs-studio;
+      plugins = [ pkgs.obs-wlrobs ];
+    };
   };
 }
