@@ -21,6 +21,7 @@ in {
     nix-top
     any-nix-shell
     niv
+    appimage-run
 
     # Generators
 
