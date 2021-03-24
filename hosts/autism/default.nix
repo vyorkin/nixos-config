@@ -6,8 +6,9 @@
 
     inputs.self.nixosProfiles.desktop
 
-    streaming
+    # streaming
     pentest
+    gaming
   ];
 
   location = {

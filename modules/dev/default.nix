@@ -8,6 +8,7 @@
     ./cxx
     ./clojure
     ./ruby
+    ./python
     ./js
   ];
 }

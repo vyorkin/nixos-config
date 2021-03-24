@@ -58,8 +58,9 @@ builtins.listToAttrs (builtins.map (path: {
   ./apps/devops
   ./apps/monitoring
   ./apps/media
-  ./apps/streaming
+  # ./apps/streaming
   ./apps/pentest
+  ./apps/gaming
 
   ./dev
 ])

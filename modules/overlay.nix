@@ -9,7 +9,7 @@ let
 in {
   nixpkgs.overlays = [
     inputs.emacs.overlay
-    inputs.nixpkgs-wayland.overlay
+    # inputs.nixpkgs-wayland.overlay
 
     (self: super: rec {
       nix = super.nix // {
