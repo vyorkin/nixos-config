@@ -21,6 +21,7 @@
     reading
     messaging
     web
+    torrent
     db
     devops
     monitoring

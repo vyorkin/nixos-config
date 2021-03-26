@@ -54,6 +54,7 @@ builtins.listToAttrs (builtins.map (path: {
   ./apps/web/firefox.nix
   ./apps/web/google-chrome.nix
   ./apps/web/brave.nix
+  ./apps/torrent.nix
   ./apps/db
   ./apps/devops
   ./apps/monitoring
