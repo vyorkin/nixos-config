@@ -3,7 +3,8 @@
 {
   home-manager.users.vyorkin = {
     home.packages = with pkgs; [
-      qbittorrent
+      transmission
+      stig
     ];
   };
 }
