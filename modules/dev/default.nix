@@ -5,6 +5,7 @@
     ./haskell
     ./ocaml
     ./coq.nix
+    ./rust
     ./cxx
     ./clojure
     ./ruby
