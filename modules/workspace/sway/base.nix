@@ -65,7 +65,10 @@ in {
         };
       };
 
-      fonts = [ "IBM Plex 9" ];
+      fonts = {
+        names = [ "IBM Plex 9" ];
+      };
+
       bars = [ ];
 
       colors = rec {

@@ -26,7 +26,7 @@
     # I" view, for example
     geoclue2.enable = true;
 
-    gnome3 = {
+    gnome = {
       core-os-services.enable = true;
       core-utilities.enable = true;
       evolution-data-server.enable = true;

@@ -37,7 +37,7 @@ in {
       file = { ".npmrc" = { source = ./npmrc; }; };
 
       packages = with pkgs;
-        [ nodejs-15_x yarn flow deno ] ++ nixPkgs ++ extPkgs;
+        [ nodejs_latest yarn flow deno ] ++ nixPkgs ++ extPkgs;
     };
   };
 }

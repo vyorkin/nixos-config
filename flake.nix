@@ -98,8 +98,12 @@
       flake = false;
     };
 
-    nix-zsh-completions.url = "github:Ma27/nix-zsh-completions/flakes";
-    nix-zsh-completions.flake = false;
+    nix-zsh-completions = {
+      type = "github";
+      owner = "spwhitt";
+      repo = "nix-zsh-completions";
+      flake = false;
+    };
 
     ghacks = {
       type = "github";
