@@ -8,7 +8,9 @@
     gtk
     qt
     gnome
+
     sway
+
     virtualisation
 
     themes

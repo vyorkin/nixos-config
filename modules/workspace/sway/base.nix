@@ -39,7 +39,6 @@ in {
       swaykbdd
       swaybg
       wofi
-      j4-dmenu-desktop
       wlogout
       flashfocus
     ]);
@@ -345,7 +344,7 @@ in {
       hide_edge_borders --i3 smart
       exec pkill swaynag
 
-      output * bg ~/Pictures/wallpapers/7.jpeg fill
+      output * bg ~/Pictures/wallpapers/5.jpeg fill
     '';
   };
 }

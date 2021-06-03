@@ -22,7 +22,6 @@ builtins.listToAttrs (builtins.map (path: {
 
   ./x11
   ./x11/xserver/sddm.nix
-  ./x11/xserver/i3.nix
   ./x11/xserver/libinput.nix
 
   ./workspace
@@ -32,6 +31,7 @@ builtins.listToAttrs (builtins.map (path: {
   ./workspace/qt.nix
   ./workspace/gnome
   ./workspace/sway
+  ./workspace/i3
 
   ./apps
   ./apps/tools

@@ -16,8 +16,8 @@
         desktop = "emacsclient";
       };
       browser = {
-        cmd = "${pkgs.google-chrome}/bin/google-chrome-stable";
-        desktop = "google-chrome";
+        cmd = "${pkgs.firefox}/bin/firefox";
+        desktop = "firefox";
       };
       fm = {
         cmd = "${pkgs.gnome3.nautilus}/bin/nautilus";
