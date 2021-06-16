@@ -1,9 +1,8 @@
 { pkgs, lib, config, ... }:
 let
-  theme = config.themes.colors;
   apps = config.defaultApps;
 in {
-  inherit apps theme;
+  inherit apps;
 
   browser1 = apps.browser.cmd;
   browser2 = "${pkgs.google-chrome}/bin/google-chrome-stable";

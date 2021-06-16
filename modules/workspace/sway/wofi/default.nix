@@ -1,7 +1,6 @@
 { config, lib, pkgs, ... }:
 
 let
-  theme = config.themes.colors;
   wofiConfig = {
     key_left = "Control_L-h";
     key_down = "Control_L-j";
@@ -11,27 +10,27 @@ let
     insensitive = true;
   };
 
-  wofiTheme = with config.theme.colors; ''
+  wofiTheme = ''
     window {
       margin: 0px;
-      border: 1px solid ${theme.dark};
-      background-color: ${theme.bg};
+      border: 1px solid #222222;
+      background-color: #000000;
     }
     #input {
       margin: 5px;
       border: none;
-      color: ${theme.fg};
-      background-color: ${theme.dark};
+      color: #FFFFFF;
+      background-color: #222222;
     }
     #inner-box {
       margin: 5px;
       border: none;
-      background-color: ${theme.dark};
+      background-color: #222222;
     }
     #outer-box {
       margin: 5px;
       border: none;
-      background-color: ${theme.dark};
+      background-color: #222222;
     }
     #scroll {
       margin: 0px;
@@ -40,14 +39,14 @@ let
     #text {
       margin: 5px;
       border: none;
-      color: ${theme.fg};
+      color: #FFFFFF;
     }
     #text:selected {
-      color: ${theme.fg};
+      color: #FFFFFF;
     }
     #entry:selected {
-      background-color: ${theme.bg};
-      color: ${theme.fg};
+      background-color: #000000;
+      color: #FFFFFF;
     }
   '';
 in {

@@ -14,12 +14,6 @@
     # session-wide message bus
     dbus.packages = with pkgs; [ gnome3.dconf ];
 
-    # Enable GNOME Virtual file system.
-    # For the user this could mean that the same file manager
-    # you use to browse your local files, could also be used to
-    # browse files on a remote server
-    gvfs.enable = true;
-
     # Provides geolocation services, that is, it lets
     # applications find the user's geographical position. A
     # mapping application could use this to present a "where am

@@ -1,6 +1,5 @@
-{ config, pkgs, lib, ... }:
-let theme = config.themes.colors;
-in {
+{ pkgs, lib, ... }:
+{
   home-manager.users.vyorkin.programs.alacritty = {
     enable = true;
     settings = {
@@ -26,18 +25,22 @@ in {
 
       colors = {
         primary = {
-          background = theme.bg;
-          foreground = theme.fg;
+          background = "#000000";
+          foreground = "#FFFFFF";
         };
         cursor = {
-          text = theme.alt;
-          cursor = theme.fg;
+          text = "#111111";
+          cursor = "#FFFFFF";
         };
         normal = {
-          black = theme.bg;
-          inherit (theme) red green yellow blue cyan;
-          magenta = theme.purple;
-          white = theme.fg;
+          black = "#000000";
+          red = "#FF0000";
+          green = "#22BC22";
+          yellow = "#FFFF00";
+          blue = "#0000FF";
+          cyan = "#00FFFF";
+          magenta = "#FF00FF";
+          white = "#FFFFFF";
         };
       };
     };

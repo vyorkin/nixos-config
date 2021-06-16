@@ -15,6 +15,10 @@
     '')
   ];
 
+  environment.loginShellInit = lib.mkBefore ''
+    [[ "$(tty)" == /dev/tty? ]] && sudo /run/current-system/sw/bin/lock this
+  '';
+
   home-manager.users.vyorkin = {
     xdg = {
       enable = true;

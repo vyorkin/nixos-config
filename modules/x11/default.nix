@@ -1,6 +1,7 @@
 {
   imports = [
     ./xserver/base.nix
-    ./xresources.nix
+    ./packages.nix
+    ./files.nix
   ];
 }

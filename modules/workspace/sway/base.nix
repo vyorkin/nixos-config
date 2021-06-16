@@ -1,7 +1,6 @@
 { pkgs, lib, config, ... }:
 
 let
-  theme = config.themes.colors;
   apps = config.defaultApps;
 
   browser1 = apps.browser.cmd;
@@ -35,6 +34,7 @@ in {
     wrapperFeatures.gtk = true;
     extraPackages = lib.mkForce (with pkgs; [
       swayidle
+      xwayland
       waybar
       swaykbdd
       swaybg
@@ -47,10 +47,7 @@ in {
 
   users.users.vyorkin.extraGroups = [ "sway" ];
 
-  environment.loginShellInit = ''
-    [[ "$(tty)" == /dev/tty? ]] && sudo /run/current-system/sw/bin/lock this
-    [[ "$(tty)" == /dev/tty1 ]] && sway
-  '';
+  environment.loginShellInit = lib.mkAfter ''[[ "$(tty)" == /dev/tty1 ]] && sway'';
 
   home-manager.users.vyorkin.wayland.windowManager.sway = {
     enable = true;
@@ -65,31 +62,33 @@ in {
       };
 
       fonts = {
-        names = [ "IBM Plex 9" ];
+        names = [ "IBM Plex Sans" ];
+        style = "Regular";
+        size = 9.0;
       };
 
       bars = [ ];
 
       colors = rec {
-        background = theme.bg;
+        background = "#000000";
         unfocused = {
-          text = theme.dark;
-          border = theme.dark;
-          background = theme.bg;
-          childBorder = theme.dark;
-          indicator = theme.fg;
+          text = "#222222";
+          border = "#222222";
+          background = "#000000";
+          childBorder = "#222222";
+          indicator = "#FFFFFF";
         };
         focusedInactive = unfocused;
         urgent = unfocused // {
-          text = theme.fg;
-          border = theme.orange;
-          childBorder = theme.orange;
+          text = "#FFFFFF";
+          border = "FFA500";
+          childBorder = "FFA500";
         };
         focused = unfocused // {
-          childBorder = theme.gray;
-          border = theme.yellow;
-          background = theme.dark;
-          text = theme.fg;
+          childBorder = "#444444";
+          border = "#FFFF00";
+          background = "#222222";
+          text = "#FFFFFF";
         };
       };
 
@@ -101,7 +100,7 @@ in {
 
       focus = {
         followMouse = false;
-        forceWrapping = true;
+        # forceWrapping = true;
       };
 
       modifier = mod;

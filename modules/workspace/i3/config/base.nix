@@ -1,37 +1,34 @@
 { pkgs, lib, config, ... }:
 
-let env = import ./env.nix;
+let env = import ./env.nix { inherit pkgs lib config; };
 in rec {
-  input = {
-    "*" = {
-      repeat_delay = "200";
-      repeat_rate = "40";
-    };
+  fonts = {
+    names = [ "IBM Plex Sans" ];
+    style = "Regular";
+    size = 9.0;
   };
-
-  fonts = { names = [ "IBM Plex 9" ]; };
   bars = [ ];
 
   colors = rec {
-    background = env.theme.bg;
+    background = "#000000";
     unfocused = {
-      text = env.theme.dark;
-      border = env.theme.dark;
-      background = env.theme.bg;
-      childBorder = env.theme.dark;
-      indicator = env.theme.fg;
+      text = "#222222";
+      border = "#222222";
+      background = "#000000";
+      childBorder = "#222222";
+      indicator = "#FFFFFF";
     };
     focusedInactive = unfocused;
     urgent = unfocused // {
-      text = env.theme.fg;
-      border = env.theme.orange;
-      childBorder = env.theme.orange;
+      text = "#FFFFFF";
+      border = "#FF8C00";
+      childBorder = "#FFA500";
     };
     focused = unfocused // {
-      childBorder = env.theme.gray;
-      border = env.theme.yellow;
-      background = env.theme.dark;
-      text = env.theme.fg;
+      childBorder = "#444444";
+      border = "#FFFF00";
+      background = "#222222";
+      text = "#FFFFFF";
     };
   };
 

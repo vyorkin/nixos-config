@@ -76,28 +76,6 @@
       flake = false;
     };
 
-    # A collection of themes that have no repositories for homes
-    base16-unclaimed-schemes = {
-      type = "github";
-      owner = "chriskempson";
-      repo = "base16-unclaimed-schemes";
-      flake = false;
-    };
-
-    kitty-themes = {
-      type = "github";
-      owner = "dexpota";
-      repo = "kitty-themes";
-      flake = false;
-    };
-
-    base16-kitty = {
-      type = "github";
-      owner = "kdrag0n";
-      repo = "base16-kitty";
-      flake = false;
-    };
-
     nix-zsh-completions = {
       type = "github";
       owner = "spwhitt";

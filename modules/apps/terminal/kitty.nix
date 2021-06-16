@@ -1,7 +1,6 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, lib, ... }:
 
-let theme = config.themes.colors;
-in {
+{
   home-manager.users.vyorkin.programs.kitty = {
     enable = true;
 
@@ -18,7 +17,6 @@ in {
       scrollback_lines -1
       url_color #FFFF00
       url_style curly
-      open_url_modifiers kitty_mod
       mouse_hide_wait 3.0
       enable_audio_bell no
       window_alert_on_bell yes
@@ -27,7 +25,7 @@ in {
       window_padding_width 5.0
       inactive_text_alpha 0.9
       tab_bar_min_tabs 1
-      background_opacity 0.9
+      background_opacity 1
       dynamic_background_opacity yes
       dim_opacity 0.75
     '';

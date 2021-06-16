@@ -1,0 +1,44 @@
+// ROFI Color theme
+// User: SmokeKing
+// vim:ft=css
+* {
+    background-color: rgba (0, 0, 0, 0%);
+    text-color: rgba (220, 220, 220, 100%);
+}
+#window {
+    padding: 20;
+    fullscreen: true;
+    anchor: east;
+    location: east;
+    orientation: horizontal;
+    children: [dummy, mainbox];
+}
+#dummy { expand: true; }
+#mainbox {
+    padding: 10;
+    expand: false;
+    background-color: rgba (20, 20, 25, 100%);
+}
+#message { padding: 10 10 10; }
+#listview { spacing: 2; padding: 1em 0.4em 1em 1em; }
+#element { padding: 5 10 5; }
+#element.selected {
+    border: 0 0 2;
+    text-color: rgb (95, 215, 255);
+    border-color: rgba (0, 0, 0, 100%);
+}
+#sidebar { padding: 5 8 8; }
+#button { padding: 8 0 8; }
+#button.selected {
+    border: 0 0 2;
+    padding: 8 0 8;
+    text-color: rgb (95, 215, 255);
+    border-color: rgba (0, 0, 0, 100%);
+}
+#inputbar {
+    border: 0 0 2;
+    padding: 0% 1.8% 0% 0.2%;
+    border-color: rgba (0, 0, 0, 100%);
+}
+#entry { width: 18em; padding: 8 8 1; }
+#prompt { padding: 8 8 8 8; }

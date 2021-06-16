@@ -1,11 +1,36 @@
 { pkgs, lib, config, ... }:
 
 let
-  cfg = import ./config/base.nix { };
+  cfg = import ./config/base.nix { inherit pkgs lib config; };
   env = import ./config/env.nix { };
 in {
-  home-manager.users.vyorkin.xsession.windowManager.i3 = {
-    enable = true;
-    package = pkgs.i3-gaps;
+  services.xserver = {
+    windowManager.i3 = {
+      enable = true;
+      package = pkgs.i3-gaps;
+      configFile = ./config/native;
+    };
+  };
+
+  environment.systemPackages = with pkgs; [
+    xrandr-invert-colors
+    dmenu
+    nitrogen
+    rofi
+    dunst
+  ];
+
+  home-manager.users.vyorkin = {
+    home.file = {
+      "dunst" = {
+        source = ./dunst;
+        target = ".config/dunst";
+        recursive = true;
+      };
+      "rofi" = {
+        source = ./rofi;
+        target = ".config/rofi";
+      };
+    };
   };
 }

@@ -10,7 +10,9 @@
       name = "Breeze";
     };
 
-    home.file.".icons/default".source =
-      "${pkgs.breeze-qt5}/share/icons/breeze_cursors";
+    # home.file = {
+    #   ".icons/default" = { source = "${pkgs.breeze-qt5}/share/icons/breeze_cursors"; };
+    #   ".icons/Breeze" = { source = "${pkgs.breeze-qt5}/share/icons/breeze_cursors"; };
+    # };
   };
 }

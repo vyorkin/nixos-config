@@ -1,8 +1,6 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
-let
-  theme = config.themes.colors;
-in {
+{
   home-manager.users.vyorkin = {
     wayland.windowManager.sway.config.startup = [{ command = "mako"; }];
     programs.mako = {
@@ -13,10 +11,10 @@ in {
       height = 80;
       defaultTimeout = 10000;
       maxVisible = 10;
-      backgroundColor = "${theme.bg}AA";
-      textColor = theme.fg;
-      borderColor = "${theme.gray}AA";
-      progressColor = "over ${theme.green}";
+      backgroundColor = "#000000AA";
+      textColor = "#FFFFFF";
+      borderColor = "#444444AA";
+      progressColor = "over #11AA11";
       iconPath = "${pkgs.papirus-icon-theme}/share/icons/Papirus-Dark";
       maxIconSize = 24;
     };

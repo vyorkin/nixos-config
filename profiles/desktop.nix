@@ -9,11 +9,11 @@
     qt
     gnome
 
-    sway
+    x11
+    lightdm
+    i3
 
     virtualisation
-
-    themes
 
     apps
     tools

@@ -1,0 +1,318 @@
+set $hyper Mod3
+set $mod Mod4
+set $alt Mod1
+
+set $term1 kitty
+set $term2 kitty
+set $browser1 firefox
+set $browser2 google-chrome-stable
+set $browser3 qutebrowser
+set $browser4 tor-browser
+
+set $shutdown shutdown -h now
+set $reboot reboot
+
+# set $lock betterlockscreen -l blur -t $unlock_text
+set $lock rm -f /tmp/screen.png && i3lock-pixeled
+
+set $unlock_text "unlock me"
+
+set $step 1
+
+font IBM Plex Sans 9
+
+new_window pixel 0
+new_float normal
+
+gaps outer 0
+gaps inner 0
+
+# Only enable gaps on a workspace when there is at least one container
+smart_gaps on
+smart_borders on
+
+focus_follows_mouse no
+
+mouse_warping none
+# Hide edge borders only if there is one window with no gaps
+hide_edge_borders smart_no_gaps
+workspace_auto_back_and_forth yes
+force_display_urgency_hint 500 ms
+focus_wrapping no
+floating_modifier $mod
+
+floating_minimum_size 320 x 240
+floating_maximum_size 1200 x 700
+popup_during_fullscreen leave_fullscreen
+
+bindsym $mod+Return exec $term1
+bindsym $mod+Shift+Return exec $term2
+
+bindsym $mod+q kill
+
+bindsym $mod+space exec rofi -show run -opacity 10 -font "IBM Plex Sans 12"
+bindsym $mod+Shift+space exec rofi -show window -i -lines 10 -eh 1
+bindsym $mod+Shift+r exec " dmenu_run -nf '#F3F4F5' -nb '#2F343F' -sb '#1793D1' -sf '#f3f4f5' -fn 'firacode-12' -p 'run:'"
+
+bindsym Mod1+Tab exec --no-startup-id rofi -show window
+
+bindsym --release Print exec "flameshot gui"
+
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+g split h
+bindsym $mod+v split v
+
+bindsym $mod+s gaps inner current plus 1
+bindsym $mod+Shift+s gaps inner current minus 1
+
+bindsym $mod+z gaps outer current plus 1
+bindsym $mod+Shift+z gaps outer current minus 1
+
+bindsym $mod+f fullscreen toggle
+
+bindsym $mod+Shift+u layout stacking
+bindsym $mod+Shift+i layout tabbed
+bindsym $mod+Shift+o layout toggle split
+
+bindsym $mod+Shift+f floating toggle
+bindsym $mod+Shift+t focus mode_toggle
+
+bindsym $mod+a focus parent
+
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+bindsym $hyper+1 workspace 11
+bindsym $hyper+2 workspace 12
+bindsym $hyper+3 workspace 13
+bindsym $hyper+4 workspace 14
+bindsym $hyper+5 workspace 15
+bindsym $hyper+6 workspace 16
+bindsym $hyper+7 workspace 17
+bindsym $hyper+8 workspace 18
+bindsym $hyper+9 workspace 19
+bindsym $hyper+0 workspace 20
+
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+bindsym $hyper+Shift+1 move container to workspace 11
+bindsym $hyper+Shift+2 move container to workspace 12
+bindsym $hyper+Shift+3 move container to workspace 13
+bindsym $hyper+Shift+4 move container to workspace 14
+bindsym $hyper+Shift+5 move container to workspace 15
+bindsym $hyper+Shift+6 move container to workspace 16
+bindsym $hyper+Shift+7 move container to workspace 17
+bindsym $hyper+Shift+8 move container to workspace 18
+bindsym $hyper+Shift+9 move container to workspace 19
+bindsym $hyper+Shift+0 move container to workspace 20
+
+workspace 1  output DisplayPort-1 eDP-1 DP-2
+workspace 2  output DisplayPort-1 eDP-1 DP-2
+workspace 3  output DisplayPort-1 eDP-1 DP-2
+workspace 4  output DisplayPort-1 eDP-1 DP-2
+workspace 5  output DisplayPort-1 eDP-1 DP-2
+workspace 6  output DisplayPort-1 eDP-1 DP-2
+
+workspace 7  output HDMI-A-1 DisplayPort-1 eDP-1 HDMI-1
+workspace 8  output HDMI-A-1 DisplayPort-1 eDP-1 HDMI-1
+workspace 9  output HDMI-A-0 DisplayPort-1 eDP-1 HDMI-1
+workspace 10 output HDMI-A-0 DisplayPort-1 eDP-1 HDMI-1
+
+workspace 11 output DisplayPort-1 HDMI-A-0 eDP-1 DP-1
+workspace 12 output DisplayPort-1 HDMI-A-0 eDP-1 DP-1
+
+workspace 13 output HDMI-A-0 DisplayPort-1 eDP-1 DP-1
+workspace 14 output HDMI-A-0 DisplayPort-1 eDP-1 DP-1
+
+workspace 15 output HDMI-A-1 DisplayPort-1 eDP-1 DP-1
+workspace 16 output HDMI-A-1 DisplayPort-1 eDP-1 DP-1
+
+workspace 17 output DisplayPort-1 HDMI-A-0 eDP-1 DP-2
+workspace 18 output DisplayPort-1 HDMI-A-0 eDP-1 DP-2
+workspace 19 output DisplayPort-1 HDMI-A-0 eDP-1 DP-2
+workspace 20 output DisplayPort-1 HDMI-A-0 eDP-1 DP-2
+
+bindsym $hyper+Shift+c reload
+bindsym $hyper+Shift+r restart
+
+bindsym $hyper+Shift+s exec --no-startup-id systemctl suspend
+bindsym $hyper+Shift+i exec --no-startup-id xrandr-invert-colors
+
+# App quick launch
+
+bindsym $hyper+h exec $term1 -e htop
+bindsym $hyper+y exec $term2 -e ytop
+bindsym $hyper+w exec $browser3
+bindsym $hyper+m exec $term1 -e neomutt
+bindsym $hyper+r exec $term1 -e ranger
+bindsym $hyper+o exec nautilus
+bindsym $hyper+z exec zathura
+bindsym $hyper+v exec $term1 -e rtv
+bindsym $hyper+space exec emacsclient -nc
+
+# App quick focus
+
+bindsym $hyper+e [class="(?i)qutebrowser"] focus
+bindsym $hyper+d [class="Firefox"] focus
+bindsym $hyper+u [class="(?i)Chrome"] focus
+bindsym $hyper+t [class="Tor"] focus
+
+bindsym $hyper+q [class="Telegram"] focus
+bindsym $hyper+s [class="Slack"] focus
+bindsym $hyper+g [class="Gitter"] focus
+bindsym $hyper+k [class="Spotify"] focus
+bindsym $hyper+f [class="Emacs"] focus
+bindsym $hyper+c [class="Code"] focus
+bindsym $hyper+i [class="kitty"] focus
+bindsym $hyper+j [class="cool-retro-term"] focus
+bindsym $hyper+b [class="Zathura"] focus
+bindsym $hyper+p [class="mpv"] focus
+
+mode "resize" {
+  bindsym h resize shrink width $step px or $step ppt
+  bindsym j resize grow height $step px or $step ppt
+  bindsym k resize shrink height $step px or $step ppt
+  bindsym l resize grow width $step px or $step ppt
+
+  bindsym Left resize shrink width $step px or $step ppt
+  bindsym Down resize grow height $step px or $step ppt
+  bindsym Up resize shrink height $step px or $step ppt
+  bindsym Right resize grow width $step px or $step ppt
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+bindsym XF86ScreenSaver	exec --no-startup-id $lock
+
+bindsym $mod+comma workspace prev
+bindsym $mod+period workspace next
+
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $lock, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec systemctl suspend, mode "default"
+    bindsym h exec systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Alt_R mode "$mode_system"
+
+bindsym $mod+x exec --no-startup-id $lock
+
+set $display_mode Display [w]ork [h]ome [d]esk [t]v [m]obile
+bindsym $mod+d mode $display_mode
+mode "$display_mode" {
+  bindsym w exec --no-startup-id autorandr --load work, mode "default"
+  bindsym h exec --no-startup-id autorandr --load home, mode "default"
+  bindsym d exec --no-startup-id autorandr --load desk, mode "default"
+  bindsym t exec --no-startup-id autorandr --load tv, mode "default"
+  bindsym m exec --no-startup-id autorandr --load mobile, mode "default"
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+bar {
+  font IBM Plex Sans 9
+  position bottom
+
+  colors {
+    background #000000
+    statusline #FFFFFF
+    separator  #666666
+
+    focused_workspace  #222222 #4D444E #FFFFFF
+    active_workspace   #222222 #222222 #FFFFFF
+    inactive_workspace #222222 #222222 #888888
+    urgent_workspace   #222222 #900000 #FFFFFF
+    binding_mode       #222222 #900000 #FFFFFF
+  }
+}
+
+# Move workspaces between outputs
+bindsym $mod+y move workspace to output down
+
+# LIGHT
+
+# class                   border  bground text    indicator child_border
+# client.focused          #DFDFDF #FFFFFF #000000 #2E9EF4   #DDDDDD
+# client.focused_inactive #DFDFDF #F0F0F0 #000000 #484E50   #CCCCCC
+# client.unfocused        #DFDFDF #F0F0F0 #555555 #292D2E   #BBBBBB
+# client.urgent           #2F343A #F5000F #000000 #900000   #AAAAAA
+# client.placeholder      #000000 #FFFFFF #444444 #000000   #EEEEEE
+
+# client.background       #FFFFFF
+
+# DARK
+
+# class                 border  bground text    indicator child_border
+client.focused          #FFFF00 #000000 #FFFF00 #FFFF00   #FFFF00
+client.focused_inactive #EE8888 #000000 #ffffff #EE8888   #EE8888
+client.unfocused        #222222 #222222 #888888 #292D2E   #222222
+client.urgent           #540000 #700000 #FFFFFF #900000   #900000
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+
+client.background       #FFFFFF
+
+for_window [class="^.*"] border pixel 2
+
+# Windows starting in floating mode
+for_window [class="Transmission"] floating enable border normal
+for_window [class="Nitrogen"] floating enable border normal
+for_window [class="(?i)virtualbox"] floating enable border normal
+for_window [class="Arandr"] floating enable
+for_window [class="(?i)threadscope"] floating enable border normal
+
+assign [class="Virtualbox"] 8
+assign [class="Gimp|Vlc|Slack|(?i)Spotify"] 9
+assign [class="Skype|Gitter|Telegram"] 10
+assign [class="(?i)Discord"] 11
+
+exec --no-startup-id xcape -e 'Caps_Lock=Escape;Control_L=Escape;Control_R=Escape'
+exec --no-startup-id xmodmap ~/.Xmodmap
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id telegram-desktop

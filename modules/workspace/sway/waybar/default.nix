@@ -1,8 +1,5 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
-let
-  theme = config.themes.colors;
-in
 {
   home-manager.users.vyorkin = {
     programs.waybar = {
@@ -83,8 +80,8 @@ in
         }
 
         window#waybar {
-          background: ${theme.bg};
-          color: ${theme.fg};
+          background: #000000;
+          color: #FFFFFF;
         }
 
         #window {
@@ -95,23 +92,23 @@ in
         #workspaces button {
           padding: 0 5px;
           background: transparent;
-          color: ${theme.fg};
+          color: #FFFFFF;
           border-top: 1px solid transparent;
         }
 
         #workspaces button:hover {
           padding: 0 5px;
-          background: ${theme.yellow};
-          color: ${theme.bg};
+          background: #FFFF00;
+          color: #000000;
         }
 
         #workspaces button.focused {
-          border-top: 1px solid ${theme.yellow};
+          border-top: 1px solid #FFFF00;
         }
 
         #mode {
-          background: ${theme.blue};
-          border-bottom: 3px solid ${theme.fg};
+          background: #0000FF;
+          border-bottom: 3px solid #FFFFFF;
         }
 
         #clock, #cpu, #memory, #network, #pulseaudio, #tray, #mode {
@@ -125,13 +122,13 @@ in
 
         @keyframes blink {
           to {
-              background-color: ${theme.fg};
-              color: ${theme.bg};
+              background-color: #FFFFFF;
+              color: #000000;
           }
         }
 
         #battery.warning:not(.charging) {
-          color: ${theme.fg};
+          color: #FFFFFF;
           animation-name: blink;
           animation-duration: 0.5s;
           animation-timing-function: linear;
@@ -149,14 +146,14 @@ in
         }
 
         #network.disconnected {
-          background: ${theme.red};
+          background: #FF0000;
         }
 
         #pulseaudio {
         }
 
         #pulseaudio.muted {
-          background: ${theme.gray};
+          background: #444444;
         }
 
         #tray {

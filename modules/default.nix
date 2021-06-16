@@ -18,10 +18,10 @@ builtins.listToAttrs (builtins.map (path: {
   ./virtualisation.nix
   ./home.nix
   ./users
-  ./themes.nix
 
   ./x11
   ./x11/xserver/sddm.nix
+  ./x11/xserver/lightdm.nix
   ./x11/xserver/libinput.nix
 
   ./workspace
@@ -59,7 +59,7 @@ builtins.listToAttrs (builtins.map (path: {
   ./apps/devops
   ./apps/monitoring
   ./apps/media
-  # ./apps/streaming
+  ./apps/streaming
   ./apps/pentest
   ./apps/gaming
 
