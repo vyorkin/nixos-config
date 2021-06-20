@@ -114,6 +114,13 @@
       flake = false;
     };
 
+    tpm = {
+      type = "github";
+      owner = "tmux-plugins";
+      repo = "tpm";
+      flake = false;
+    };
+
     vim-config = {
       type = "github";
       owner = "vyorkin";

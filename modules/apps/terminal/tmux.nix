@@ -3,12 +3,10 @@
 {
   home-manager.users.vyorkin = {
     home.file = {
-      ".tmux" = { source = "${inputs.tmux-config}/tmux"; };
+      ".tmux/plugins/tpm" = { source = inputs.tpm; };
+      ".tmux.conf" = { source = "${inputs.tmux-config}/tmux.conf"; };
     };
 
-    programs.tmux = {
-      enable = true;
-      extraConfig = builtins.readFile "${inputs.tmux-config}/tmux.conf";
-    };
+    programs.tmux.enable = true;
   };
 }
