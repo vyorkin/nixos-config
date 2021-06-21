@@ -18,6 +18,8 @@ in {
     nitrogen
     rofi
     dunst
+    betterlockscreen
+    i3lock-pixeled
   ];
 
   home-manager.users.vyorkin = {
