@@ -188,7 +188,7 @@ bindsym $hyper+space exec emacsclient -nc
 
 # App quick focus
 
-bindsym $hyper+e [class="(?i)qutebrowser"] focus
+bindsym $hyper+e [class="(?i)Discord"] focus
 bindsym $hyper+d [class="Firefox"] focus
 bindsym $hyper+u [class="(?i)Chrome"] focus
 bindsym $hyper+t [class="Tor"] focus
