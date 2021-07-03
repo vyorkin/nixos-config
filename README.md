@@ -2,6 +2,27 @@
 
 ### Setup
 
+0. Enable nix flakes:
+
+Add the following to your `/etc/nixos/configuration.nix`:
+
+```nix
+{ pkgs, ... }: {
+  nix = {
+    package = pkgs.nixUnstable;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+   };
+}
+```
+
+Switch:
+
+```sh
+sudo nixos-rebuild switch
+```
+
 1. Backup your original config
 
 ```sh
