@@ -1,7 +1,7 @@
 {
   services.xserver.displayManager.lightdm = {
     greeters.mini = {
-      enable = false;
+      enable = true;
       user = "vyorkin";
 
       extraConfig = ''

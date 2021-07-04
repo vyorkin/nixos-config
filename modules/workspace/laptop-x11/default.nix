@@ -8,7 +8,12 @@
 
     # GUI for xbindkeys
     xbindkeys-config
+
+    xorg.xbacklight
   ];
+
+  # Install Light backlight control command
+  programs.light.enable = true;
 
   home-manager.users.vyorkin = {
     home.file = {
