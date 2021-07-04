@@ -8,6 +8,7 @@
   home-manager.users.vyorkin = {
     home.packages = with pkgs; [
       haskell.compiler.ghc901
+      cabal-install
     ];
     home.file = {
       "ghci.conf" = {

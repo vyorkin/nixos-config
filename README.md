@@ -97,6 +97,7 @@ This directory is used in the `~/.npmrc`.
 $ rustup toolchain add nightly
 $ rustup default nightly
 $ rustup component add rust-src
+$ rustup component add rls
 $ cargo install bingrep
 $ cargo install rusty-tags
 $ rustup component add rustfmt-preview --toolchain nightly
