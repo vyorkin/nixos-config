@@ -12,6 +12,8 @@ in {
     };
   };
 
+  services.compton.enable = true;
+
   environment.systemPackages = with pkgs; [
     xrandr-invert-colors
     dmenu
@@ -24,6 +26,7 @@ in {
 
   home-manager.users.vyorkin = {
     home.file = {
+      ".compton.conf" = { source = ./compton.conf; };
       "dunst" = {
         source = ./dunst;
         target = ".config/dunst";

@@ -4,7 +4,7 @@
     ./nix.nix
     ./services.nix
 
-    inputs.self.nixosProfiles.desktop
+    inputs.self.nixosProfiles.desktop-i3
   ];
 
   location = {

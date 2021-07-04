@@ -9,9 +9,7 @@
     qt
     gnome
 
-    x11
     lightdm
-    i3
 
     virtualisation
 
