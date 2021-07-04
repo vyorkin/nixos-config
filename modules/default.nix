@@ -33,6 +33,8 @@ builtins.listToAttrs (builtins.map (path: {
   ./workspace/sway
   ./workspace/i3
 
+  ./workspace/laptop-x11
+
   ./apps
   ./apps/tools
   ./apps/terminal
