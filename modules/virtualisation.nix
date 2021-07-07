@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   virtualisation = {
     docker = {
@@ -19,4 +21,6 @@
     # this machine to libvirt VMs, both local and remote
     spiceUSBRedirection.enable = true;
   };
+
+  home-manager.users.vyorkin.home.packages = with pkgs; [ docker-compose ];
 }
