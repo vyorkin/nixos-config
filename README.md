@@ -97,6 +97,9 @@ This directory is used in the `~/.npmrc`.
 $ rustup toolchain add nightly
 $ rustup default nightly
 $ rustup component add rust-src
+$ rustup +nightly component add rust-analyzer-preview
+$ git clone https://github.com/rust-analyzer/rust-analyzer.git && cd rust-analyzer
+$ cargo xtask install --server
 $ rustup component add rls
 $ cargo install bingrep
 $ cargo install rusty-tags

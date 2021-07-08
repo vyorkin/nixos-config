@@ -527,11 +527,11 @@
     "vim-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1617226522,
-        "narHash": "sha256-wHSxVVK1KtMauFyEcvD/0ipWgNgUAqOUPnBK/K8Blww=",
+        "lastModified": 1625752777,
+        "narHash": "sha256-wor9HEZx/W4bTftcIeLWiFMehf95z4sC4kRzBXSQ3T0=",
         "owner": "vyorkin",
         "repo": "vimrc",
-        "rev": "6cfe2c1570feda3041d24fbd5cf40fec0d90ec45",
+        "rev": "08179ba5c1818f4e98c1445bf16d767bbd0947de",
         "type": "github"
       },
       "original": {
