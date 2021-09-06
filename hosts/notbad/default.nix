@@ -6,6 +6,8 @@
 
     inputs.self.nixosProfiles.desktop-i3
     laptop-x11
+
+    streaming
   ];
 
   location = {
