@@ -6,7 +6,6 @@ let
   p3-packages = python-packages:
     with python-packages; [
       keyring
-      python-language-server
       virtualenv
       virtualenvwrapper
       pyserial

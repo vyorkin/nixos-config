@@ -6,7 +6,7 @@
       enable = true;
       package = pkgs.obs-studio;
 
-      # Only needed for Wayland
+      # Wayland-only plugins
       # plugins = [ pkgs.obs-wlrobs ];
     };
   };

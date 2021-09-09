@@ -55,6 +55,13 @@
     # https://github.com/balsoft/nixos-fhs-compat
     nixos-fhs-compat.url = "github:balsoft/nixos-fhs-compat";
 
+    kitty-themes = {
+      type = "github";
+      owner = "dexpota";
+      repo = "kitty-themes";
+      flake = false;
+    };
+
     weechat-scripts = {
       type = "github";
       owner = "weechat";

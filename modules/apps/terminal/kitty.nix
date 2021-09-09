@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ inputs, pkgs, lib, ... }:
 
 {
   home-manager.users.vyorkin.programs.kitty = {
@@ -10,6 +10,8 @@
     };
 
     extraConfig = ''
+      include ${inputs.kitty-themes}/themes/Ayu.conf
+
       font_size 12.0
       cursor #EEEEEE
       cursor_text_color #DDDDDD
