@@ -592,11 +592,11 @@
     "zsh-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1619801665,
-        "narHash": "sha256-sNgU9aDVxBw+ATd8AVysrLgEpNTy2SQcD2YAwe7Qtr0=",
+        "lastModified": 1631213896,
+        "narHash": "sha256-rdkjUUo57d+mVGS4/X1hRbgYtyngMhWDBUsyQipQPOE=",
         "owner": "vyorkin",
         "repo": "zshrc",
-        "rev": "facda6e6a88e65e16e2f822ec1432ab55ad616ca",
+        "rev": "bbee003503a9a7bd9fde5d81a70163bf1c88d063",
         "type": "github"
       },
       "original": {
