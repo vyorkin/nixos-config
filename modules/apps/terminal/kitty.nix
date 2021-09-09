@@ -23,6 +23,7 @@
       enable_audio_bell no
       window_alert_on_bell yes
       bell_on_tab yes
+      clipboard_control write-primary write-clipboard no-append
       window_margin_width 5.0
       window_padding_width 5.0
       inactive_text_alpha 0.9

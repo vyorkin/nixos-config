@@ -5,6 +5,7 @@
     ./base.nix
     ./nix.nix
     ./search.nix
+    ./screencasting.nix
     ./compression.nix
     ./http.nix
     ./websocket.nix
