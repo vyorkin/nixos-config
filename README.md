@@ -103,6 +103,7 @@ $ cargo xtask install --server
 $ rustup component add rls
 $ cargo install bingrep
 $ cargo install rusty-tags
+$ cargo install cargo-udeps && cargo +nightly udeps
 $ rustup component add rustfmt-preview --toolchain nightly
 $ cargo +nightly install racer
 $ cargo install bootimage cargo-xbuild
