@@ -177,7 +177,6 @@ bindsym $hyper+Shift+i exec --no-startup-id xrandr-invert-colors
 # App quick launch
 
 bindsym $hyper+h exec $term1 -e htop
-bindsym $hyper+y exec $term2 -e ytop
 bindsym $hyper+w exec $browser3
 bindsym $hyper+m exec $term1 -e neomutt
 bindsym $hyper+r exec $term1 -e ranger
