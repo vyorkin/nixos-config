@@ -22,6 +22,12 @@
     # its machine, facilitating user access to those services
     avahi.enable = true;
 
+    # Many GTK-based file managers like Nautilus, Thunar, and PCManFM can browse samba
+    # shares thanks to GVFS. GVFS is a dbus daemon which must be running for this to work.
+    # If you use Gnome, you have nothing to do as the module already enables it for you,
+    # but in less full-featured desktop environments, some further configuration options are needed.
+    gvfs.enable = true;
+
     # Basically EarlyOOM prevents freezes due to running out of memory.
     # Checks the amount of available memory and free swap up to
     # 10 times a second (less often if there is a lot of free memory).
