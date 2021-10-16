@@ -22,9 +22,6 @@ in {
         id = 0;
 
         userChrome = ''
-          #TabsToolbar {
-            visibility: collapse;
-          }
           toolbar#nav-bar, nav-bar-customization-target {
             background: ${thm.base00} !important;
           }
