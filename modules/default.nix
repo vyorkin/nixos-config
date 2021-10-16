@@ -18,6 +18,7 @@ builtins.listToAttrs (builtins.map (path: {
   ./virtualisation.nix
   ./home.nix
   ./users
+  ./themes.nix
 
   ./x11
   ./x11/xserver/sddm.nix

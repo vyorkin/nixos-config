@@ -2,11 +2,12 @@
   imports = with inputs.self.nixosModules; [
     ./base.nix
 
+    themes
     workspace
     ssh
     cursor
     gtk
-    qt
+    # qt
     gnome
 
     lightdm

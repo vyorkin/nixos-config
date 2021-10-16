@@ -18,7 +18,11 @@
 
       programs.direnv = {
         enable = true;
-        nix-direnv.enable = true;
+        nix-direnv = {
+          enable = true;
+          enableFlakes = true;
+          # package = inputs.nix-direnv.defaultPackage.${pkgs.system};
+        };
       };
 
       home.stateVersion = "20.09";

@@ -11,8 +11,9 @@
         desktop = "kitty";
       };
       editor = {
-        cmd =
-          "${config.home-manager.users.vyorkin.programs.emacs.finalPackage}/bin/emacsclient -c $@";
+      cmd = toString (pkgs.writeShellScript "emacsclient-newwindow" ''
+        ${config.home-manager.users.vyorkin.programs.emacs.finalPackage}/bin/emacsclient -c "$@"
+      '');
         desktop = "emacsclient";
       };
       browser = {
@@ -38,6 +39,14 @@
       messenger = {
         cmd = "${pkgs.tdesktop}/bin/telegram-desktop";
         desktop = "telegram";
+      };
+      text_processor = {
+        cmd = "${pkgs.abiword}/bin/abiword";
+        desktop = "abiword";
+      };
+      spreadsheet = {
+        cmd = "${pkgs.gnumeric}/bin/gnumeric";
+        desktop = "gnumeric";
       };
     };
 

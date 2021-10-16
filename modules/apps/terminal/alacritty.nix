@@ -1,12 +1,13 @@
-{ pkgs, lib, ... }:
+{ config, pkgs, lib, ... }:
+
 {
   home-manager.users.vyorkin.programs.alacritty = {
     enable = true;
     settings = {
 
       font = rec {
-        normal.family = "JetBrains Mono";
-        size = 12;
+        normal.family = config.themes.fonts.mono.family;
+        size = config.themes.fonts.mono.size;
         bold = { style = "Bold"; };
       };
 
@@ -23,24 +24,23 @@
 
       background_opacity = 0.9;
 
-      colors = {
+      colors = with pkgs.my.thmHash; {
         primary = {
-          background = "#000000";
-          foreground = "#FFFFFF";
+          background = base00;
+          foreground = base05;
         };
         cursor = {
-          text = "#111111";
-          cursor = "#FFFFFF";
+          text = base02;
+          cursor = base00;
         };
         normal = {
-          black = "#000000";
-          red = "#FF0000";
-          green = "#22BC22";
-          yellow = "#FFFF00";
-          blue = "#0000FF";
-          cyan = "#00FFFF";
-          magenta = "#FF00FF";
-          white = "#FFFFFF";
+          black = base00;
+          red = base08;
+          green = base0B;
+          yellow = base0A;
+          blue = base0D;
+          magenta = base0E;
+          white = base07;
         };
       };
     };

@@ -55,6 +55,37 @@
     # https://github.com/balsoft/nixos-fhs-compat
     nixos-fhs-compat.url = "github:balsoft/nixos-fhs-compat";
 
+    # The Nix User Repository - community-driven meta repository for Nix packages
+    NUR = {
+      url = "github:nix-community/NUR";
+      flake = false;
+    };
+
+    # Modules to help you handle persistent state on systems with ephemeral root storage
+    impermanence.url = "github:nix-community/impermanence";
+
+    # A few Nix expressions suitable for inclusion in Nix User Repository
+    rycee = {
+      url = "gitlab:rycee/nur-expressions";
+      flake = false;
+    };
+
+    # A faster, persistent implementation of direnv's use_nix, to replace the built-in one
+    nix-direnv = { url = "github:nix-community/nix-direnv"; };
+
+    # CLI email client
+    himalaya.url = "github:soywod/himalaya";
+
+    nheko = {
+      url = "github:nheko-reborn/nheko";
+      flake = false;
+    };
+
+    mtxclient ={
+      url = "github:nheko-reborn/mtxclient";
+      flake = false;
+    };
+
     kitty-themes = {
       type = "github";
       owner = "dexpota";

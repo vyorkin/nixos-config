@@ -3,6 +3,8 @@
 let
   apps = config.defaultApps;
 
+  thm = pkgs.my.thmHash;
+
   browser1 = apps.browser.cmd;
   browser2 = "${pkgs.google-chrome}/bin/google-chrome-stable";
   browser3 = "${pkgs.tor-browser}/bin/tor-browser";
@@ -62,7 +64,7 @@ in {
       };
 
       fonts = {
-        names = [ "IBM Plex Sans" ];
+        names = [ config.themes.fonts.main.family ];
         style = "Regular";
         size = 9.0;
       };
@@ -70,25 +72,25 @@ in {
       bars = [ ];
 
       colors = rec {
-        background = "#000000";
+        background = thm.base00;
         unfocused = {
-          text = "#222222";
-          border = "#222222";
-          background = "#000000";
-          childBorder = "#222222";
-          indicator = "#FFFFFF";
+          text = thm.base02;
+          border = thm.base01;
+          background = thm.base00;
+          childBorder = thm.base01;
+          indicator = thm.base07;
         };
         focusedInactive = unfocused;
         urgent = unfocused // {
-          text = "#FFFFFF";
-          border = "FFA500";
-          childBorder = "FFA500";
+          text = thm.base05;
+          border = thm.base09;
+          childBorder = thm.base09;
         };
         focused = unfocused // {
-          childBorder = "#444444";
-          border = "#FFFF00";
-          background = "#222222";
-          text = "#FFFFFF";
+          childBorder = thm.base03;
+          border = thm.base03;
+          background = thm.base01;
+          text = thm.base05;
         };
       };
 
@@ -343,7 +345,7 @@ in {
       hide_edge_borders --i3 smart
       exec pkill swaynag
 
-      output * bg ~/Pictures/wallpapers/5.jpeg fill
+      output * bg ${thm.base00} solid_color
     '';
   };
 }

@@ -1,17 +1,20 @@
-{ pkgs, lib, ... }:
+{ pkgs, config, lib, ... }:
+
 {
   fonts = {
-    fontconfig = {
-      enable = lib.mkForce true;
+    fontconfig =
+      let fonts = config.themes.fonts;
+      in {
+        enable = lib.mkForce true;
 
-      # Use embedded bitmaps for fonts like Calibri
-      useEmbeddedBitmaps = true;
+        # Use embedded bitmaps for fonts like Calibri
+        useEmbeddedBitmaps = true;
 
-      # System-wide default fonts
-      defaultFonts = {
-        monospace = [ "IBM Plex Mono 13" ];
-        sansSerif = [ "IBM Plex Sans 13" ];
-        serif = [ "IBM Plex Serif 13" ];
+        # System-wide default fonts
+        defaultFonts = {
+          monospace = [ "${fonts.mono.family} ${toString fonts.mono.size}" ];
+          sansSerif = [ "${fonts.main.family} ${toString fonts.main.size}" ];
+          serif = [ "${fonts.serif.family} ${toString fonts.serif.size}" ];
       };
     };
 
@@ -29,6 +32,7 @@
       jetbrains-mono
       hasklig
       hack-font
+      nerdfonts
 
       material-design-icons
       material-icons
@@ -53,5 +57,20 @@
       source-code-pro
       symbola
     ];
+  };
+
+  themes.fonts = {
+    main = {
+      family = "IBM Plex Sans";
+      size = 13;
+    };
+    serif = {
+      family = "IBM Plex Serif";
+      size = 13;
+    };
+    mono = {
+      family = "IBM Plex Mono";
+      size = 13;
+    };
   };
 }

@@ -8,7 +8,7 @@
 
     streaming
     pentest
-    gaming
+    # gaming
   ];
 
   location = {

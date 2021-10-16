@@ -15,9 +15,9 @@
     dbus.packages = with pkgs; [ gnome3.dconf ];
 
     # Provides geolocation services, that is, it lets
-    # applications find the user's geographical position. A
-    # mapping application could use this to present a "where am
-    # I" view, for example
+    # applications find the user's geographical position.
+    # A mapping application could use this to present a
+    # "where am # I" view, for example
     geoclue2.enable = true;
 
     gnome = {
@@ -75,9 +75,9 @@
         thumbnail-limit = 10;
       };
 
-      "org/gnome/evince/default" = {
-        inverted-colors = true;
-      };
+      "org/gnome/desktop/interface" = { cursor-theme = "default"; };
+
+      "org/gnome/evince/default" = { inverted-colors = true; };
 
       "org/gnome/maps" = {
         night-mode = true;
