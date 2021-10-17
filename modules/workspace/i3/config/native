@@ -50,11 +50,11 @@ bindsym $mod+Shift+Return exec $term2
 
 bindsym $mod+q kill
 
-bindsym $mod+space exec rofi -show run -opacity 10 -font "IBM Plex Sans 12"
-bindsym $mod+Shift+space exec rofi -show window -i -lines 10 -eh 1
-bindsym $mod+Shift+r exec " dmenu_run -nf '#F3F4F5' -nb '#2F343F' -sb '#1793D1' -sf '#f3f4f5' -fn 'firacode-12' -p 'run:'"
+bindsym $mod+space exec rofi -show run -theme hack 
+bindsym $mod+Shift+space exec rofi -show window -i -lines 10 -eh 1 -theme hack 
+bindsym $mod+Shift+r exec " dmenu_run -nf '#F3F4F5' -nb '#000000' -sb '#1793D1' -sf '#f3f4f5' -fn 'firacode-12' -p 'run:'"
 
-bindsym Mod1+Tab exec --no-startup-id rofi -show window
+bindsym Mod1+Tab exec --no-startup-id rofi -show window -theme hack 
 
 bindsym --release Print exec "flameshot gui"
 

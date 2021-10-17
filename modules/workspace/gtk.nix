@@ -40,9 +40,6 @@ in {
         bookmarks = [
           "file:///home/vyorkin/projects Projects"
         ];
-        extraConfig = {
-          gtk-cursor-theme-name = "Breeze";
-        };
       };
     };
 
