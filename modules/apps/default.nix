@@ -40,6 +40,10 @@
         cmd = "${pkgs.tdesktop}/bin/telegram-desktop";
         desktop = "telegram";
       };
+      # matrix = {
+      #   cmd = "${pkgs.nheko}/bin/nheko";
+      #   desktop = "nheko";
+      # };
       text_processor = {
         cmd = "${pkgs.abiword}/bin/abiword";
         desktop = "abiword";

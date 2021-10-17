@@ -62,15 +62,15 @@
   themes.fonts = {
     main = {
       family = "IBM Plex Sans";
-      size = 12;
+      size = 10;
     };
     serif = {
       family = "IBM Plex Serif";
-      size = 12;
+      size = 10;
     };
     mono = {
       family = "IBM Plex Mono";
-      size = 12;
+      size = 10;
     };
   };
 }
