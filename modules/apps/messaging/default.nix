@@ -9,6 +9,7 @@
       zoom-us
       tdesktop
       gitter
+      gomuks
       # nheko
     ];
   };

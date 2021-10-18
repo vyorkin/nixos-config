@@ -29,6 +29,7 @@
   };
 
   home-manager.users.vyorkin.home.packages = with pkgs; [
+    pamixer
     # A Pulseaudio mixer in Qt (port of pavucontrol).
     # Can be used to adjust all controls provided by PulseAudio.
     # See: https://github.com/lxqt/pavucontrol-qt

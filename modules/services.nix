@@ -69,6 +69,10 @@
     interception-tools = { enable = true; };
   };
 
+  home-manager.users.vyorkin = {
+    home.packages = with pkgs; [ acpi ];
+  };
+
   services.openvpn = {
     servers = {
       home = {

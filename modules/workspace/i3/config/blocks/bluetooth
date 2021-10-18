@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+if rfkill | grep bluetooth > /dev/null; then
+  if rfkill | grep bluetooth | grep blocked > /dev/null; then
+    if bluetoothctl info > /dev/null; then
+      if pactl list sinks | grep bluez > /dev/null; then
+        echo -n ""
+      else
+        echo -n ""
+      fi
+    else
+      echo -n ""
+    fi
+  else
+    echo -n ""
+  fi
+fi

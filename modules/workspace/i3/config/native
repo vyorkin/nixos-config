@@ -50,11 +50,11 @@ bindsym $mod+Shift+Return exec $term2
 
 bindsym $mod+q kill
 
-bindsym $mod+space exec rofi -show run -theme hack 
-bindsym $mod+Shift+space exec rofi -show window -i -lines 10 -eh 1 -theme hack 
+bindsym $mod+space exec rofi -show run -theme hack
+bindsym $mod+Shift+space exec rofi -show window -i -lines 10 -eh 1 -theme hack
 bindsym $mod+Shift+r exec " dmenu_run -nf '#F3F4F5' -nb '#000000' -sb '#1793D1' -sf '#f3f4f5' -fn 'firacode-12' -p 'run:'"
 
-bindsym Mod1+Tab exec --no-startup-id rofi -show window -theme hack 
+bindsym Mod1+Tab exec --no-startup-id rofi -show window -theme hack
 
 bindsym --release Print exec "flameshot gui"
 
@@ -256,13 +256,15 @@ mode "$display_mode" {
 }
 
 bar {
-  font IBM Plex Sans 9
+  font pango:IBM Plex Sans, Material Icons, Roboto Mono 10
   position bottom
 
+  status_command CUSTOM_BLOCKS_DIR=~/.config/i3blocks-custom CONTRIB_BLOCKS_DIR=~/.config/i3blocks-contrib i3blocks 
+
   colors {
-    background #000000
+    background #111111
     statusline #FFFFFF
-    separator  #666666
+    separator  #444444
 
     focused_workspace  #222222 #4D444E #FFFFFF
     active_workspace   #222222 #222222 #FFFFFF

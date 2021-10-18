@@ -73,6 +73,14 @@
     # A faster, persistent implementation of direnv's use_nix, to replace the built-in one
     nix-direnv = { url = "github:nix-community/nix-direnv"; };
 
+    # Official repository for community contributed blocklets 
+    i3blocks-contrib = {
+      type = "github";
+      owner = "vivien";
+      repo = "i3blocks-contrib";
+      flake = false;
+    };
+
     # CLI email client
     himalaya.url = "github:soywod/himalaya";
 

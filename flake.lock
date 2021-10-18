@@ -250,6 +250,22 @@
         "type": "github"
       }
     },
+    "i3blocks-contrib": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1634320481,
+        "narHash": "sha256-2+nRWL44L4NVhmEVCFrl5NQaveymDnLO6KYQkK2EWFo=",
+        "owner": "vivien",
+        "repo": "i3blocks-contrib",
+        "rev": "e674a627a29054c458bdfe21e456272bb4494913",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vivien",
+        "repo": "i3blocks-contrib",
+        "type": "github"
+      }
+    },
     "impermanence": {
       "locked": {
         "lastModified": 1611747548,
@@ -650,6 +666,7 @@
         "git-config": "git-config",
         "himalaya": "himalaya",
         "home-manager": "home-manager",
+        "i3blocks-contrib": "i3blocks-contrib",
         "impermanence": "impermanence",
         "kitty-themes": "kitty-themes",
         "materia-theme": "materia-theme",

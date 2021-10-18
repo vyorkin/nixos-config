@@ -7,9 +7,6 @@
       in {
         enable = lib.mkForce true;
 
-        # Use embedded bitmaps for fonts like Calibri
-        useEmbeddedBitmaps = true;
-
         # System-wide default fonts
         defaultFonts = {
           monospace = [ "${fonts.mono.family} ${toString fonts.mono.size}" ];
@@ -62,15 +59,15 @@
   themes.fonts = {
     main = {
       family = "IBM Plex Sans";
-      size = 10;
+      size = 12;
     };
     serif = {
       family = "IBM Plex Serif";
-      size = 10;
+      size = 12;
     };
     mono = {
       family = "IBM Plex Mono";
-      size = 10;
+      size = 12;
     };
   };
 }
