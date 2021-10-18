@@ -7,7 +7,6 @@
       # Automatically mount new devices
       udiskie = {
         enable = true;
-        tray = "always";
       };
     };
   };
