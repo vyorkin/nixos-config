@@ -262,9 +262,9 @@ bar {
   status_command CUSTOM_BLOCKS_DIR=~/.config/i3blocks-custom CONTRIB_BLOCKS_DIR=~/.config/i3blocks-contrib i3blocks 
 
   colors {
-    background #111111
+    background #000000
     statusline #FFFFFF
-    separator  #444444
+    separator  #333333
 
     focused_workspace  #222222 #4D444E #FFFFFF
     active_workspace   #222222 #222222 #FFFFFF
