@@ -5,16 +5,19 @@ case $BLOCK_BUTTON in
      5) sudo light -U 5;;
 esac
 LIGHT=`light | cut -f 1 -d '.'`
-if [[ $LIGHT -lt 33 ]]
-then
-  icon=
-else
-  if [[ $LIGHT -lt 66 ]]
+
+if [[ -n "$LIGHT" ]]; then
+  if [[ $LIGHT -lt 33 ]]
   then
-    icon=
+    icon=
   else
-    icon=
+    if [[ $LIGHT -lt 66 ]]
+    then
+      icon=
+    else
+      icon=
+    fi
   fi
+  [[ -n $BLOCK_BUTTON ]] && text=" $LIGHT"
+  echo "<span font='Material Icons'>$icon</span>$text"
 fi
-[[ -n $BLOCK_BUTTON ]] && text=" $LIGHT"
-echo "<span font='Material Icons'>$icon</span>$text"
