@@ -108,6 +108,7 @@ $ rustup component add rustfmt-preview --toolchain nightly
 $ cargo +nightly install racer
 $ cargo install bootimage cargo-xbuild
 $ cargo install elba hunter navi
+$ cargo install evcxr_repl
 ```
 
 ### Go
