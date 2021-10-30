@@ -1,9 +1,10 @@
 { config, ... }:
 
 {
-  environment.sessionVariables = config.home-manager.users.vyorkin.home.sessionVariables // {
-    NIX_AUTO_RUN = "1";
-  };
+  environment.sessionVariables =
+    config.home-manager.users.vyorkin.home.sessionVariables // {
+      NIX_AUTO_RUN = "1";
+    };
 
   home-manager = {
     useGlobalPkgs = true;
@@ -14,7 +15,9 @@
 
       # Start new or changed services automatically.
       # Stop obsolte services from the previous generation
-      systemd.user.startServices = true;
+      systemd.user = {
+        startServices = true;
+      };
 
       programs.direnv = {
         enable = true;

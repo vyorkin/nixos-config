@@ -31,9 +31,13 @@ gaps inner 0
 smart_gaps on
 smart_borders on
 
-focus_follows_mouse no
+# Focus follows your mouse movements as the mouse crosses window borders
+focus_follows_mouse yes
 
-mouse_warping none
+# When switching focus to a window on a different output
+# the mouse cursor is warped to the center of that window
+mouse_warping output
+
 # Hide edge borders only if there is one window with no gaps
 hide_edge_borders smart_no_gaps
 workspace_auto_back_and_forth yes
@@ -41,9 +45,10 @@ force_display_urgency_hint 500 ms
 focus_wrapping no
 floating_modifier $mod
 
-floating_minimum_size 320 x 240
-floating_maximum_size 1200 x 700
+floating_minimum_size 640 x 480
+floating_maximum_size 1440 x 900
 popup_during_fullscreen leave_fullscreen
+
 
 bindsym $mod+Return exec $term1
 bindsym $mod+Shift+Return exec $term2
@@ -258,8 +263,9 @@ mode "$display_mode" {
 bar {
   font pango:IBM Plex Sans, Material Icons, Roboto Mono 10
   position bottom
+  tray_output primary
 
-  status_command CUSTOM_BLOCKS_DIR=~/.config/i3blocks-custom CONTRIB_BLOCKS_DIR=~/.config/i3blocks-contrib i3blocks 
+  status_command CUSTOM_BLOCKS_DIR=~/.config/i3blocks-custom CONTRIB_BLOCKS_DIR=~/.config/i3blocks-contrib i3blocks
 
   colors {
     background #000000
@@ -291,15 +297,15 @@ bindsym $mod+y move workspace to output down
 # DARK
 
 # class                 border  bground text    indicator child_border
-client.focused          #FFFF00 #000000 #FFFF00 #FFFF00   #FFFF00
-client.focused_inactive #EE8888 #000000 #ffffff #EE8888   #EE8888
+client.focused          #CCCCCC #000000 #CCCCCC #CCCCCC   #CCCCCC
+client.focused_inactive #999999 #000000 #ffffff #999999   #999999
 client.unfocused        #222222 #222222 #888888 #292D2E   #222222
 client.urgent           #540000 #700000 #FFFFFF #900000   #900000
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
 client.background       #FFFFFF
 
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 
 # Windows starting in floating mode
 for_window [class="Transmission"] floating enable border normal
@@ -312,6 +318,11 @@ assign [class="Virtualbox"] 8
 assign [class="Gimp|Vlc|Slack|(?i)Spotify"] 10
 assign [class="Skype|Gitter|Telegram"] 10
 assign [class="(?i)Discord"] 10
+
+# Never turn off screen
+exec_always xset s off
+exec_always xset -dpms
+exec_always xset s noblank
 
 exec --no-startup-id xcape -e 'Caps_Lock=Escape;Control_L=Escape;Control_R=Escape'
 exec --no-startup-id xmodmap ~/.Xmodmap
