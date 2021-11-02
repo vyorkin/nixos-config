@@ -30,6 +30,8 @@ let
     sloc
     js-beautify
     tern
+    typescript
+    typescript-language-server
   ];
 in {
   home-manager.users.vyorkin = {
