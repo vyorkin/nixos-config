@@ -10,6 +10,7 @@
     terraform
     tflint
     terraform-docs
+    terraform-lsp
     terraform-providers.aws
     terraform-providers.docker
     terraform-providers.google
