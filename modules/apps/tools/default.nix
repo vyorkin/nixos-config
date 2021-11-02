@@ -15,6 +15,7 @@
     ./network.nix
     ./aws.nix
     ./media.nix
+    ./blogging.nix
     ./raspberry.nix
   ];
 }

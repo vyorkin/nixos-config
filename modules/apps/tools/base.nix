@@ -12,5 +12,6 @@
     bat
     screenfetch
     tree
+    dig
   ];
 }
