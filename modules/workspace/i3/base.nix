@@ -39,7 +39,7 @@ in {
       activeOpacity = "0.98";
 
       # Backend to use: glx or xrender.
-      backend = "glx";
+      backend = "xrender";
 
       # Disable background blur on transparent windows.
       blur = false;
