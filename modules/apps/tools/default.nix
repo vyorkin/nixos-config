@@ -16,6 +16,7 @@
     ./aws.nix
     ./media.nix
     ./blogging.nix
+    ./finance.nix
     ./raspberry.nix
   ];
 }

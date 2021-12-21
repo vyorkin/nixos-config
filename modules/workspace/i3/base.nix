@@ -36,7 +36,7 @@ in {
       enable = true;
 
       # Opacity of active windows.
-      activeOpacity = "0.98";
+      activeOpacity = "0.9";
 
       # Backend to use: glx or xrender.
       backend = "xrender";
@@ -54,7 +54,7 @@ in {
       ];
 
       # Don't fade windows in and out.
-      fade = false;
+      fade = true;
 
       # Time between fade animation step (in ms).
       fadeDelta = 7;
@@ -70,7 +70,7 @@ in {
       # inactiveDim = "0.2";
 
       # Opacity of inactive windows.
-      inactiveOpacity = "0.9";
+      inactiveOpacity = "0.8";
 
       # Opacity of dropdown and popup mune.
       menuOpacity = "0.90";

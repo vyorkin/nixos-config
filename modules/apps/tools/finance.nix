@@ -2,7 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    duf
-    ncdu
+    ledger-live-desktop
   ];
 }

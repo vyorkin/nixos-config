@@ -2,6 +2,6 @@
 
 {
   home-manager.users.vyorkin = {
-    home.packages = with pkgs; [ abiword gnumeric ];
+    home.packages = with pkgs; [ abiword gnumeric obsidian ];
   };
 }

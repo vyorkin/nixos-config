@@ -5,5 +5,6 @@
     ffmpeg-full
     ffmpegthumbnailer
     imagemagickBig
+    kdenlive
   ];
 }
