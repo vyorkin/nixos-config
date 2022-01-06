@@ -4,5 +4,6 @@
     ./vim.nix
     ./vscode.nix
     ./office.nix
+    ./gamedev.nix
   ];
 }

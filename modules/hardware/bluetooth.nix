@@ -11,10 +11,8 @@
 
     # Modern headsets will generally try to connect using the A2DP profile.
     # To enable this we need to add the following lines:
-    settings = {
-      General = {
-        Enable = "Source,Sink,Media,Socket";
-      };
-    };
+    settings = { General = { Enable = "Source,Sink,Media,Socket"; }; };
   };
+
+  services.blueman.enable = true;
 }

@@ -20,12 +20,12 @@
     # 2. Enable JACK support
     package = pkgs.pulseaudioFull; # .override { jackaudioSupport = true; };
 
-    # While pulseaudio itself only has support for the
-    # SBC bluetooth codec there is out-of-tree support for AAC, APTX, APTX-HD and LDAC.
-    extraModules = [pkgs.pulseaudio-modules-bt];
-
     # For compatibility with 32-bit applications
     support32Bit = true;
+
+    # While pulseaudio itself only has support for the
+    # SBC bluetooth codec there is out-of-tree support for AAC, APTX, APTX-HD and LDAC.
+    # extraModules = [pkgs.pulseaudio-modules-bt];
   };
 
   home-manager.users.vyorkin.home.packages = with pkgs; [

@@ -857,11 +857,11 @@
     "zsh-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1631213896,
-        "narHash": "sha256-rdkjUUo57d+mVGS4/X1hRbgYtyngMhWDBUsyQipQPOE=",
+        "lastModified": 1641507043,
+        "narHash": "sha256-KdNC5AbrBOdmf5Ctht4ZgWIVC+UBySos6wbAEPrNeRg=",
         "owner": "vyorkin",
         "repo": "zshrc",
-        "rev": "bbee003503a9a7bd9fde5d81a70163bf1c88d063",
+        "rev": "78b281f4aae9b8c037da0c0ba636a40308fa45d0",
         "type": "github"
       },
       "original": {

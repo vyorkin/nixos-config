@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   security = {
     # Whether users of the wheel group must provide a
@@ -15,4 +17,9 @@
     # See: https://github.com/netblue30/firejail
     firejail.enable = true;
   };
+
+  home-manager.users.vyorkin.home.packages = with pkgs; [
+    _1password
+    _1password-gui
+  ];
 }
