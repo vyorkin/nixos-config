@@ -181,7 +181,7 @@ Sign-in and (optionally) install these extensions:
 * [bypass paywills](https://github.com/iamadamdev/bypass-paywalls-chrome)
 * [adblock plus](https://addons.mozilla.org/en-US/firefox/addon/adblock-plus/)
 * [stylish](https://addons.mozilla.org/ru/firefox/addon/stylish/)
-* [surfingkeys](https://addons.mozilla.org/ru/firefox/addon/surfingkeys_ff/) + load settings from [this gist](https://gist.githubusercontent.com/vyorkin/c5d9cfa63da9811ed0062c5f1440f754/raw/12742b47426899547467eadef09ba8e9d56b3ce3/surfingkeys.txt)
+* [surfingkeys](https://addons.mozilla.org/ru/firefox/addon/surfingkeys_ff/) + load settings from [this gist](https://gist.github.com/vyorkin/c5d9cfa63da9811ed0062c5f1440f754)
 * [tab suspender](https://addons.mozilla.org/ru/firefox/addon/ff-tab-suspender/) + set timeout to 720 seconds or more
 * [one tab](https://addons.mozilla.org/ru/firefox/addon/onetab/)
 * [tree style tab](https://addons.mozilla.org/ru/firefox/addon/tree-style-tab/)

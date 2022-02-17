@@ -4,24 +4,11 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    nixpkgs-20-09 = {
+    nixpkgs-21-11 = {
       type = "github";
       owner = "nixos";
       repo = "nixpkgs";
-      ref = "nixos-20.09";
-      flake = false;
-    };
-
-    nixpkgs-20-03 = {
-      type = "github";
-      owner = "nixos";
-      repo = "nixpkgs";
-      ref = "nixos-20.03";
-      flake = false;
-    };
-
-    nixpkgs-19-09 = {
-      url = "github:nixos/nixpkgs/nixos-19.09";
+      ref = "nixos-21.11";
       flake = false;
     };
 

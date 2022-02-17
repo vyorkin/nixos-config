@@ -12,7 +12,7 @@
     # Packages whose D-Bus configuration files should be included
     # in the configuration of the D-Bus system-wide or
     # session-wide message bus
-    dbus.packages = with pkgs; [ gnome3.dconf ];
+    dbus.packages = with pkgs; [ dconf ];
 
     # Provides geolocation services, that is, it lets
     # applications find the user's geographical position.
