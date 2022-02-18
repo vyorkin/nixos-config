@@ -16,7 +16,7 @@
         opacity = 0.9;
         padding = {
           x = 4;
-          y = 10;
+          y = 4;
         };
         decorations = "none";
       };

@@ -23,7 +23,6 @@
         enable = true;
         nix-direnv = {
           enable = true;
-          # package = inputs.nix-direnv.defaultPackage.${pkgs.system};
         };
       };
 
