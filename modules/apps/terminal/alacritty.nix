@@ -7,22 +7,25 @@
 
       font = rec {
         normal.family = config.themes.fonts.mono.family;
-        size = config.themes.fonts.mono.size;
+        size = 8;
         bold = { style = "Bold"; };
+        use_thin_strokes = false;
       };
 
-      window.padding = {
-        x = 4;
-        y = 10;
+      window = {
+        opacity = 0.9;
+        padding = {
+          x = 4;
+          y = 10;
+        };
+        decorations = "none";
       };
 
       shell.program = "${pkgs.zsh}/bin/zsh";
 
-      cursor.style = "Block";
+      cursor.style = "Underline";
 
       live_config_reload = true;
-
-      background_opacity = 0.9;
 
       colors = with pkgs.my.thmHash; {
         primary = {
@@ -30,8 +33,8 @@
           foreground = base05;
         };
         cursor = {
-          text = base02;
-          cursor = base00;
+          text = base00;
+          cursor = base0E;
         };
         normal = {
           black = base00;

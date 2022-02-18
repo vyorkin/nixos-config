@@ -2,8 +2,7 @@
 
 {
   home-manager.users.vyorkin.programs.kitty = {
-    enable = true;
-    package = inputs.nixpkgs-21-11.kitty;
+    enable = false;
 
     font = {
       package = pkgs.jetbrains-mono;

@@ -803,11 +803,11 @@
     "vim-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1642764987,
-        "narHash": "sha256-dPzwqxiWTw2mxNVv2R4nSsvUhZdtfZXr2jFVL7h0Ny4=",
+        "lastModified": 1645187429,
+        "narHash": "sha256-7eXMVY8pA4KePl5289zrsrYl7akQAe3dT7HIJmP/BmQ=",
         "owner": "vyorkin",
         "repo": "vimrc",
-        "rev": "17fd9682fd4dbed2799fd22287196c259358b911",
+        "rev": "468e7bcf83d3a6a6d3c5ffe7516bbc4ffd1d900f",
         "type": "github"
       },
       "original": {
@@ -851,11 +851,11 @@
     "zsh-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1641509503,
-        "narHash": "sha256-Y4wsN8On3eKhsRHjvortbXsrWZAG20Sjo3UFI/vzGR4=",
+        "lastModified": 1645139815,
+        "narHash": "sha256-1QJgLm2anM0FIdlMzNTIS9uyGFlcEn2yv5VbNm0xiU8=",
         "owner": "vyorkin",
         "repo": "zshrc",
-        "rev": "92e55b6e7ed93840aa2534d6f727416bd040be91",
+        "rev": "920455269fe3d875c21afc5bf2dfe64fd7e13b1c",
         "type": "github"
       },
       "original": {

@@ -5,7 +5,7 @@ let
   extPkgs = with genPkgs; [
     colorguard
     git-issues
-    git-labelmaker
+    # git-labelmaker
     madge
     psi
     now

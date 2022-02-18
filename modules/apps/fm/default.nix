@@ -10,7 +10,7 @@
 
   home-manager.users.vyorkin = {
     programs.broot = {
-      enable = true;
+      enable = false;
     };
   };
 }

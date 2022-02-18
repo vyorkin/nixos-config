@@ -198,6 +198,10 @@ Sign-in and (optionally) install these extensions:
 * [merge-all-windows](https://addons.mozilla.org/en-US/firefox/addon/merge-window/)
 * [gnome-shell-integration/](https://addons.mozilla.org/en-US/firefox/addon/gnome-shell-integration/) (for GNOME)
 
+### Ethereum
+
+https://github.com/dapphub/dapptools
+
 ### GitHub
 
 * `gist --login`

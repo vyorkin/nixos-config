@@ -19,7 +19,7 @@
 
     # Allow unprivileged user to pass USB devices connected to
     # this machine to libvirt VMs, both local and remote
-    spiceUSBRedirection.enable = true;
+    # spiceUSBRedirection.enable = true;
   };
 
   home-manager.users.vyorkin.home.packages = with pkgs; [ docker-compose ];

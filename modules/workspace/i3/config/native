@@ -2,8 +2,8 @@ set $hyper Mod3
 set $mod Mod4
 set $alt Mod1
 
-set $term1 kitty
-set $term2 kitty
+set $term1 alacritty
+set $term2 alacritty
 set $browser1 firefox
 set $browser2 google-chrome-stable
 set $browser3 qutebrowser
@@ -203,7 +203,7 @@ bindsym $hyper+g [class="Gitter"] focus
 bindsym $hyper+k [class="Spotify"] focus
 bindsym $hyper+f [class="Emacs"] focus
 bindsym $hyper+c [class="Code"] focus
-bindsym $hyper+i [class="kitty"] focus
+bindsym $hyper+i [class="Alacritty"] focus
 bindsym $hyper+j [class="cool-retro-term"] focus
 bindsym $hyper+b [class="Zathura"] focus
 bindsym $hyper+p [class="mpv"] focus
