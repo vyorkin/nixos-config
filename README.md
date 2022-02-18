@@ -202,6 +202,10 @@ Sign-in and (optionally) install these extensions:
 
 https://github.com/dapphub/dapptools
 
+```sh
+npm i -g solhint
+```
+
 ### GitHub
 
 * `gist --login`

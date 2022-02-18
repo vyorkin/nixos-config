@@ -4,7 +4,8 @@
     ./agda
     ./haskell
     ./ocaml
-    ./coq.nix
+    ./formal.nix
+    ./blockchain.nix
     ./rust
     ./cxx
     ./clojure
