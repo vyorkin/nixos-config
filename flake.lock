@@ -803,11 +803,11 @@
     "vim-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1645187429,
-        "narHash": "sha256-7eXMVY8pA4KePl5289zrsrYl7akQAe3dT7HIJmP/BmQ=",
+        "lastModified": 1645214130,
+        "narHash": "sha256-WYTK9HdJ4TgMvzPikqYoAiQ2XIHaLC01qbmCHQftKi0=",
         "owner": "vyorkin",
         "repo": "vimrc",
-        "rev": "468e7bcf83d3a6a6d3c5ffe7516bbc4ffd1d900f",
+        "rev": "52ce15bfe3c660bf18b435bb11e750800f7dcba1",
         "type": "github"
       },
       "original": {
