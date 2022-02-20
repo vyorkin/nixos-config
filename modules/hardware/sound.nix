@@ -11,10 +11,18 @@
 # More info: https://nixos.wiki/wiki/PulseAudio
 
 {
-  sound.enable = true;
+  # sound.enable = true;
+
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
 
   hardware.pulseaudio = {
-    enable = true;
+    enable = false;
 
     # 1. Only the full build has Bluetooth support
     # 2. Enable JACK support
