@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     prettyping
-    telnet
+    inetutils
     nmap
     iw
   ];

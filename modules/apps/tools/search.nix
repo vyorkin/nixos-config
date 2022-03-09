@@ -10,7 +10,7 @@
     rdfind
     ack
     ripgrep
-    ag
+    silver-searcher
     fzf
     skim
     fzy

@@ -3,7 +3,7 @@
 {
   home-manager.users.vyorkin = {
     home.packages = with pkgs; [
-      skype
+      skypeforlinux
       slack
       discord
       zoom-us

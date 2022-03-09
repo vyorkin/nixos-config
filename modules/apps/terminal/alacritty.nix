@@ -7,7 +7,7 @@
 
       font = rec {
         normal.family = config.themes.fonts.mono.family;
-        size = 8;
+        size = 10;
         bold = { style = "Bold"; };
         use_thin_strokes = false;
       };
