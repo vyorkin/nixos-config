@@ -5,7 +5,7 @@
   };
 
   home-manager.users.vyorkin = {
-    xsession.pointerCursor = {
+    home.pointerCursor = {
       package = pkgs.breeze-qt5;
       name = "Breeze";
     };

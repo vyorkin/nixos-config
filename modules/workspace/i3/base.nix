@@ -36,22 +36,10 @@ in {
       enable = true;
 
       # Opacity of active windows.
-      activeOpacity = "0.9";
+      activeOpacity = 0.9;
 
       # Backend to use: glx or xrender.
       backend = "xrender";
-
-      # Disable background blur on transparent windows.
-      blur = false;
-
-      # List of windows to exclude background blur.
-      # See the picom(1) man page for more examples.
-      blurExclude = [
-        "window_type = 'dock'"
-        "window_type = 'desktop'"
-        "class_g = 'i3-frame'"
-        "_GTK_FRAME_EXTENTS@:c"
-      ];
 
       # Don't fade windows in and out.
       fade = true;
@@ -64,22 +52,16 @@ in {
       fadeExclude = [];
 
       # Opacity change between fade steps (in and out).
-      fadeSteps = [ "0.05" "0.05" ];
+      fadeSteps = [ 0.05 0.05 ];
 
       # Dim inactive windows.
       # inactiveDim = "0.2";
 
       # Opacity of inactive windows.
-      inactiveOpacity = "0.8";
+      inactiveOpacity = 0.8;
 
       # Opacity of dropdown and popup mune.
-      menuOpacity = "0.90";
-
-      # Avoid shadow on drag-and-drop windows.
-      noDNDShadow = true;
-
-      # Avoid shadow on docks.
-      noDockShadow = true;
+      menuOpacity = 0.9;
 
       # Draw window shadows.
       shadow = true;
@@ -113,45 +95,10 @@ in {
       shadowOffsets = [ (-5) 0 ];
 
       # Window shadows opacity (number in range 0 - 1).
-      shadowOpacity = "0.8";
+      shadowOpacity = 0.8;
 
       # Disable vertical synchronization.
       vSync = false;
-
-      extraOptions = ''
-        # Shadow
-        shadow-radius = 10;
-        shadow-red = 0.11;
-        shadow-green = 0.12;
-        shadow-blue = 0.13;
-        shadow-ignore-shaped = true;
-
-        # Opacity
-        frame-opacity = 0.90;  # i.e. titlebars, borders
-        inactive-opacity-override = false;
-        # opacity-rule = [
-        #   "99:class_g = 'Google-chrome' && focused",
-        #   "99:class_g = 'Firefox' && focused"
-        # ];
-
-        mark-wmwin-focused = true;
-        mark-ovredir-focused = true;
-
-        # Use EWMH _NET_WM_ACTIVE_WINDOW to determine which window is focused instead of using FocusIn/Out events.
-        # Usually more reliable but depends on a EWMH-compliant WM.
-        use-ewmh-active-win = true;
-
-        # Detect rounded corners and treat them as rectangular when --shadow-ignore-shaped is on.
-        detect-rounded-corners = true;
-
-        # detect-client-opacity = true;
-        dbe = false;
-        unredir-if-possible = false;
-        focus-exclude = [ "class_g = 'Cairo-clock'" ];
-        detect-transient = true;
-        detect-client-leader = true;
-        invert-color-include = [ ];
-      '';
     };
 
     home.file = {

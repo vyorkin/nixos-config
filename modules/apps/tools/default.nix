@@ -8,7 +8,6 @@
     ./screencasting.nix
     ./compression.nix
     ./http.nix
-    ./websocket.nix
     ./json.nix
     ./url.nix
     ./disk.nix
