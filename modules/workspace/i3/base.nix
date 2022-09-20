@@ -81,9 +81,6 @@ in {
       # Avoid shadow on docks.
       noDockShadow = true;
 
-      # Automatically detect screen refresh rate.
-      refreshRate = 0;
-
       # Draw window shadows.
       shadow = true;
 
