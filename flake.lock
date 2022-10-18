@@ -971,11 +971,11 @@
     "zsh-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1662413777,
-        "narHash": "sha256-OAzIMTdWIM++AEj+UsnwpZnB1NvL8mjYgfemL5t9jHw=",
+        "lastModified": 1663762227,
+        "narHash": "sha256-7ZjDQrsp3Qm95OSWwXa8dcMSRp3iCQ6Q3FHHKGHSgMw=",
         "owner": "vyorkin",
         "repo": "zshrc",
-        "rev": "c20c1f119fb2437667db051fdea94f074e7b72d5",
+        "rev": "821ce4c43ad804d9ce4f3e4dd47d9d7bedf90eec",
         "type": "github"
       },
       "original": {

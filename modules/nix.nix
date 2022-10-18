@@ -18,6 +18,7 @@
       experimental-features = nix-command flakes
 
       keep-outputs = true
+      keep-derivations = true
       cores = 4
       connect-timeout = 3
       max-jobs = 6
