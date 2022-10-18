@@ -11,7 +11,6 @@ let
     now
     json-package
     localtunnel
-    gitbook-cli
     manpm
     available-versions
     git-recall
