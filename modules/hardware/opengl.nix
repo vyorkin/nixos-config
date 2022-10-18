@@ -16,6 +16,6 @@
     driSupport32Bit = true;
 
     # Use Mesa OpenGL drivers
-    package = pkgs.mesa_drivers;
+    # package = pkgs.mesa_drivers;
   };
 }

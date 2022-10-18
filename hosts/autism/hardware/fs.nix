@@ -5,16 +5,16 @@
 
 {
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/50ee6242-7f53-4700-ba3b-c8871fbf82c3";
+    { device = "/dev/disk/by-label/nixos";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/47A6-14D0";
+    { device = "/dev/disk/by-label/boot";
       fsType = "vfat";
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/b6550012-e5ff-474c-bf4a-d9f6b35cab9f"; }
+    [ { device = "/dev/disk/by-label/swap"; }
     ];
 }

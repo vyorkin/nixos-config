@@ -32,3 +32,4 @@
   useDefaultShell = true;
   openssh.authorizedKeys.keys = authorizedKeys;
 }
+

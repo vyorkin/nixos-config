@@ -10,7 +10,8 @@
     # qt
     gnome
 
-    lightdm
+    # lightdm
+    sddm
 
     virtualisation
 
