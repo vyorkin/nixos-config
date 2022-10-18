@@ -47,6 +47,16 @@ ln -sf nixos-config /etc/nixos
 make setup/yourhost
 ```
 
+### Manual steps
+
+Install zplug:
+
+```
+git clone https://github.com/zplug/zplug.git ~/.zplug
+```
+
+Setup tmux config as described [here](https://github.com/vyorkin/tmux.conf).
+
 ### Layout
 
 - `Makefile` - Contains targets to build host systems
@@ -102,6 +112,7 @@ $ git clone https://github.com/rust-analyzer/rust-analyzer.git && cd rust-analyz
 $ cargo xtask install --server
 $ rustup component add rls
 $ cargo install bingrep
+$ cargo install --locker broot
 $ cargo install rusty-tags
 $ cargo install cargo-udeps && cargo +nightly udeps
 $ rustup component add rustfmt-preview --toolchain nightly
@@ -109,6 +120,24 @@ $ cargo +nightly install racer
 $ cargo install bootimage cargo-xbuild
 $ cargo install elba hunter navi
 $ cargo install evcxr_repl
+```
+
+Run `boot` at least one time.
+
+Add `~/.cargo/env`:
+
+```
+#!/bin/sh
+# rustup shell setup
+# affix colons on either side of $PATH to simplify matching
+case ":${PATH}:" in
+    *:"$HOME/.cargo/bin":*)
+        ;;
+    *)
+        # Prepending path in case a system-installed rustc needs to be overridden
+        export PATH="$HOME/.cargo/bin:$PATH"
+        ;;
+esac
 ```
 
 ### Go
