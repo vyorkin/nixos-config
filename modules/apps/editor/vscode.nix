@@ -1,7 +1,7 @@
 {
   home-manager.users.vyorkin = {
     programs.vscode = {
-      enable = false;
+      enable = true;
     };
   };
 }

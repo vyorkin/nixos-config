@@ -9,7 +9,7 @@ in {
     # with the ordinary useradd and groupadd commands
     mutableUsers = true;
 
-    defaultUserShell = pkgs.zsh;
+    # defaultUserShell = pkgs.zsh;
     users = {
       root.openssh.authorizedKeys.keys = authorizedKeys;
       vyorkin = vyorkin;

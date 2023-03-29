@@ -1,9 +1,11 @@
 {
   services.openssh = {
     enable = true;
-    passwordAuthentication = false;
-    permitRootLogin = "no";
-    forwardX11 = true;
+    settings = {
+      passwordAuthentication = false;
+      permitRootLogin = "no";
+      # forwardX11 = true;
+    };
     ports = [ 22 ];
   };
 

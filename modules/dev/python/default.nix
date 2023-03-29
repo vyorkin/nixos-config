@@ -2,7 +2,7 @@
 
 with pkgs;
 let
-  p2-packages = python-packages: with python-packages; [ pyserial ];
+  # p2-packages = python-packages: with python-packages; [ pyserial ];
   p3-packages = python-packages:
     with python-packages; [
       keyring
@@ -15,7 +15,7 @@ in {
 
   home-manager.users.vyorkin = {
     home.packages = with pkgs; [
-      (python.withPackages p2-packages)
+      # (python.withPackages p2-packages)
       (python3.withPackages p3-packages)
     ];
   };

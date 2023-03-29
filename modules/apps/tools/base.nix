@@ -10,7 +10,7 @@
     patchelf
     util-linux
     bat
-    khal
+    # khal
     screenfetch
     tree
     dig

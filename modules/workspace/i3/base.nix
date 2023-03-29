@@ -36,7 +36,7 @@ in {
       enable = true;
 
       # Opacity of active windows.
-      activeOpacity = 0.9;
+      activeOpacity = 1.0;
 
       # Backend to use: glx or xrender.
       backend = "xrender";
@@ -58,10 +58,10 @@ in {
       # inactiveDim = "0.2";
 
       # Opacity of inactive windows.
-      inactiveOpacity = 0.8;
+      inactiveOpacity = 1;
 
       # Opacity of dropdown and popup mune.
-      menuOpacity = 0.9;
+      menuOpacity = 1;
 
       # Draw window shadows.
       shadow = true;
