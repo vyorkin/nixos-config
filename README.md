@@ -120,6 +120,8 @@ $ cargo +nightly install racer
 $ cargo install bootimage cargo-xbuild
 $ cargo install elba hunter navi
 $ cargo install evcxr_repl
+$ cargo install cargo-watch cargo-edit cargo-nextest cargo-modules cargo-audit
+$ cargo install cargo-tarpaulin cargo-make cargo-release
 ```
 
 Run `boot` at least one time.
